@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geza Horvath — ServiceNow Architect (Editorial Hybrid)</title>
+  <meta name="description" content="ServiceNow Architect portfolio with 8+ years driving platform architecture, enterprise integrations, and cross-system automation — Editorial Hybrid Edition.">
+  <!-- Fonts: Raleway, Open Sans, Montserrat, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../shared/chat-widget.css">
+</head>
+<body class="editorial-theme">
+
+  <!-- =========================================================================
+       TOP NAVIGATION BAR (EDITORIAL HYBRID STYLE)
+       ========================================================================= -->
+  <header class="top-navbar" id="top-navbar" aria-label="Main navigation">
+    <div class="top-navbar-container">
+      <div class="top-nav-brand">
+        <a href="#about" class="brand-link" aria-label="Geza Horvath — Back to top">
+          <div class="brand-logo-mini">
+            <svg viewBox="0 0 80 80" class="mini-logo-svg">
+              <path d="M 12 12 L 52 12 L 70 30 L 70 68 L 28 68 L 10 50 Z" stroke-width="3" fill="none"/>
+            </svg>
+            <span class="mini-logo-text">gh</span>
+          </div>
+          <span class="brand-text">Geza Horvath</span>
+        </a>
+      </div>
+
+      <nav class="top-nav-menu" aria-label="In-page navigation links">
+        <ul class="top-nav-list">
+          <li>
+            <a class="nav-link active" href="#about">
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#experience">
+              <span class="nav-text">Experience</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#competencies">
+              <span class="nav-text">Competencies</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#certifications">
+              <span class="nav-text"><span class="full-label">Credentials & Education</span><span class="short-label">Credentials</span></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="top-nav-actions">
+        <div class="version-nav" aria-label="Version Switcher">
+          <span class="v-label">Versions:</span>
+          <a href="/" class="v-btn">Original</a>
+          <a href="/v3-mavrk/" class="v-btn">Editorial</a>
+          <a href="/v4-editorial/" class="v-btn active">Hybrid</a>
+          <a href="/v5-sidebar/" class="v-btn">21st.dev</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Background cursor spotlight tracking overlay -->
+  <div id="spotlight" class="spotlight"></div>
+
+  <div class="site-container">
+
+    <!-- =========================================================================
+         LEFT COLUMN (STICKY SIDEBAR: LOGO, BIO, AI ASSISTANT, SOCIAL)
+         ========================================================================= -->
+    <header class="sidebar-header">
+      <div>
+        <!-- Editorial Monogram Geometric Logo -->
+        <div class="sidebar-logo-wrapper">
+          <div class="logo">
+            <svg viewBox="0 0 80 80" class="logo-svg">
+              <path d="M 12 12 L 52 12 L 70 30 L 70 68 L 28 68 L 10 50 Z" stroke-width="2.5" fill="none"/>
+            </svg>
+            <span class="logo-text">gh</span>
+          </div>
+        </div>
+
+        <h1 class="author-title">
+          <a href="/v4-editorial/">Geza Horvath</a>
+        </h1>
+        <h2 class="author-role">
+          ServiceNow Architect
+        </h2>
+        <p class="author-lead">
+          Enterprise ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations, and cross-system automation.
+        </p>
+
+        <div class="status-pill">
+          <span class="status-indicator-dot"></span>
+          <span>8+ Years Platform Architecture · Open to Opportunities</span>
+        </div>
+
+        <!-- Inline AI Cloud Assistant Section (Prominent, directly below status-pill) -->
+        <div id="ai-cloud-container"></div>
+      </div>
+
+      <!-- Social & Direct Contact Links -->
+      <ul class="social-links" aria-label="Contact and social media links">
+        <li class="social-item">
+          <a href="https://www.linkedin.com/in/geza-horvath-16288a185" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn Profile" title="LinkedIn">
+            <svg class="social-icon" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="mailto:ghorvath@gmail.com" onclick="event.preventDefault(); copyText('ghorvath@gmail.com', 'Email');" aria-label="Email Geza Horvath" title="ghorvath@gmail.com">
+            <svg class="social-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <a href="tel:+436601082050" onclick="event.preventDefault(); copyText('+43 660 108 2050', 'Phone');" aria-label="Call Geza Horvath" title="+43 660 108 2050">
+            <svg class="social-icon" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.053 15.053 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1.01A11.36 11.36 0 018.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-.99-1.02z"/></svg>
+          </a>
+        </li>
+        <li class="social-item">
+          <span style="display: flex; align-items: center; font-size: 13px; color: var(--c-text-muted);" title="Pressbaum, Austria">
+            <svg class="social-icon" style="margin-right: 6px;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Pressbaum, Austria
+          </span>
+        </li>
+      </ul>
+    </header>
+
+    <!-- =========================================================================
+         RIGHT COLUMN (SCROLLABLE CONTENT SECTIONS)
+         ========================================================================= -->
+    <main id="content" class="main-content">
+
+      <!-- SECTION 1: ABOUT (EXECUTIVE PROFILE) -->
+      <section id="about" class="section-block" aria-label="About me">
+        <div class="sticky-mobile-header">
+          <h2 class="section-label">About</h2>
+        </div>
+        <div class="about-card">
+          <p class="about-paragraph justified">
+            <strong class="highlight-dark">ServiceNow Architect with 8+ years</strong> driving <strong class="highlight-dark">platform architecture, enterprise integrations, and cross-system automation</strong>. Bootstrapped a <strong class="highlight-accent">greenfield 6-instance ServiceNow landscape</strong>, steered platform decoupling through a corporate divestiture, and architected core <strong class="highlight-accent">ITSM, CMDB/Discovery, HAM</strong>, and <strong class="highlight-accent">Vulnerability Response</strong> solutions. Built an in-house <strong class="highlight-buff">agentic AI engineering toolchain in VS Code</strong> adopted by the developer team to accelerate platform delivery.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: EXPERIENCE -->
+      <section id="experience" class="section-block" aria-label="Work experience">
+        <div class="sticky-mobile-header">
+          <h2 class="section-label">Experience</h2>
+        </div>
+
+        <ol class="card-list">
+
+          <!-- ROLE 1: ONTINUE -->
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2023-02 — Present</header>
+              <div class="card-content">
+                <h3 class="card-headline">
+                  <a href="https://www.linkedin.com/in/geza-horvath-16288a185" target="_blank" rel="noreferrer noopener" aria-label="ServiceNow Architect at Ontinue">
+                    <span>ServiceNow Architect – Business Applications · Ontinue</span>
+                    <svg class="arrow-icon" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+                  </a>
+                </h3>
+                <div class="card-company">Remote / Vienna, Austria</div>
+
+                <ul class="card-bullet-list">
+                  <li>Lead ServiceNow platform architecture, roadmaps, and release governance following the corporate operational spin-off from Open Systems.</li>
+                  <li>Architected and deployed <strong>ITSM</strong>, <strong>CMDB</strong>, <strong>Hardware Asset Management (HAM)</strong>, and <strong>Vulnerability Response (VR)</strong> integrated with Tenable and Nessus scanners.</li>
+                  <li>Established continuous infrastructure discovery via <strong>MID Servers</strong>, <strong>Azure Cloud Discovery</strong>, <strong>Agent Client Collector (ACC)</strong>, and <strong>Service Graph Connectors</strong>.</li>
+                  <li>Engineered cross-platform HR boarding automations connecting <strong>BambooHR</strong>, ServiceNow, and <strong>Microsoft Entra ID (Azure AD)</strong> via REST endpoints and Power Automate.</li>
+                  <li>Built and deployed an in-house <strong>VS Code agentic AI toolchain</strong> with custom skills for automated code reviews and GlideScript generation, adopted team-wide to accelerate delivery.</li>
+                  <li>Own corporate Business Applications access governance, user management, and <strong>Salesforce</strong> administration.</li>
+                  <li>Manage data pipelines across <strong>Cloudomation</strong> (Python middleware) and <strong>Jitterbit</strong>, verifying ETL loads and troubleshooting data warehouse synchronization via SQL.</li>
+                </ul>
+
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li class="tag-badge">ServiceNow</li>
+                  <li class="tag-badge">ITSM</li>
+                  <li class="tag-badge">CMDB & Discovery</li>
+                  <li class="tag-badge">HAM</li>
+                  <li class="tag-badge">VR (Tenable / Nessus)</li>
+                  <li class="tag-badge">BambooHR</li>
+                  <li class="tag-badge">Microsoft Entra ID</li>
+                  <li class="tag-badge accent">VS Code Agentic AI</li>
+                  <li class="tag-badge">Salesforce</li>
+                  <li class="tag-badge">Cloudomation</li>
+                  <li class="tag-badge">Jitterbit</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- ROLE 2: OPEN SYSTEMS -->
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2022-05 — 2023-02</header>
+              <div class="card-content">
+                <h3 class="card-headline">
+                  <a href="https://www.linkedin.com/in/geza-horvath-16288a185" target="_blank" rel="noreferrer noopener" aria-label="ServiceNow Architect – Business Applications at Open Systems">
+                    <span>ServiceNow Architect – Business Applications · Open Systems</span>
+                    <svg class="arrow-icon" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+                  </a>
+                </h3>
+                <div class="card-company">Hybrid / Vienna, Austria</div>
+
+                <ul class="card-bullet-list">
+                  <li>Bootstrapped the greenfield ServiceNow ecosystem by standing up and configuring <strong>6 initial instances</strong> with standardized security, ACLs, and update-set pipelines.</li>
+                  <li>Established baseline instance cloning runbooks, release gates, and platform upgrade procedures.</li>
+                  <li>Executed the technical platform separation and infrastructure decoupling required for the operational spin-off into Ontinue.</li>
+                </ul>
+
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li class="tag-badge">6-Instance Topology</li>
+                  <li class="tag-badge">Platform Bootstrapping</li>
+                  <li class="tag-badge">Cloning Runbooks</li>
+                  <li class="tag-badge">Release Gates</li>
+                  <li class="tag-badge">Platform Separation</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- ROLE 3: TRICENTIS -->
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2018-08 — 2022-04</header>
+              <div class="card-content">
+                <h3 class="card-headline">
+                  <a href="https://www.linkedin.com/in/geza-horvath-16288a185" target="_blank" rel="noreferrer noopener" aria-label="Senior ServiceNow Developer at Tricentis GmbH">
+                    <span>Senior ServiceNow Developer · Tricentis GmbH</span>
+                    <svg class="arrow-icon" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"/></svg>
+                  </a>
+                </h3>
+                <div class="card-company">Vienna, Austria</div>
+
+                <ul class="card-bullet-list">
+                  <li>Delivered high-availability platform solutions across ITSM and Custom Applications in an Agile/Scrum engineering team.</li>
+                  <li>Engineered bi-directional REST integrations with core enterprise platforms: Workday, JIRA, Coveo AI Search, and Cornerstone.</li>
+                  <li>Executed high-risk database migrations, including an ITSM-to-CSM schema migration and consolidating legacy acquisitions data into ServiceNow.</li>
+                  <li>Rescued an external vendor's stalled implementation, refactoring broken scripts and data models under tight deadlines for production cutover.</li>
+                </ul>
+
+                <ul class="tag-list" aria-label="Technologies used">
+                  <li class="tag-badge">REST Integrations</li>
+                  <li class="tag-badge">Workday</li>
+                  <li class="tag-badge">JIRA</li>
+                  <li class="tag-badge">Coveo AI Search</li>
+                  <li class="tag-badge">Cornerstone</li>
+                  <li class="tag-badge">ITSM to CSM</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <!-- ROLE 4: EARLY CAREER -->
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">Early Career</header>
+              <div class="card-content">
+                <h3 class="card-headline">
+                  <span>Early Career Logistics & Operations</span>
+                </h3>
+                <div class="card-company">Service24 GmbH & Avis Budget Group</div>
+
+                <ul class="card-bullet-list">
+                  <li><strong>Mobility Manager</strong> | Service24 GmbH (2016 – 2018) • <strong>Customer Care Specialist</strong> | Avis Budget Group (2015 – 2016)</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- SECTION 3: CORE COMPETENCIES -->
+      <section id="competencies" class="section-block" aria-label="Core Competencies">
+        <div class="sticky-mobile-header">
+          <h2 class="section-label">Competencies</h2>
+        </div>
+
+        <div class="competency-section-box">
+          <h3 class="competency-title">
+            <span class="competency-icon">◈</span> Platform Architecture
+          </h3>
+          <p class="competency-desc">
+            6-Instance Multi-Environment Topology, Release Governance, Cloning Runbooks, Scoped Apps, ATF Test Suites, Instance Upgrades.
+          </p>
+          <ul class="tag-list">
+            <li class="tag-badge">6-Instance Topology</li>
+            <li class="tag-badge">Release Governance</li>
+            <li class="tag-badge">Cloning Runbooks</li>
+            <li class="tag-badge">Scoped Apps</li>
+            <li class="tag-badge">ATF Test Suites</li>
+            <li class="tag-badge">Instance Upgrades</li>
+          </ul>
+        </div>
+
+        <div class="competency-section-box">
+          <h3 class="competency-title">
+            <span class="competency-icon">◈</span> Modules & Operations
+          </h3>
+          <p class="competency-desc">
+            ITSM, CMDB, Discovery (MID Servers, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).
+          </p>
+          <ul class="tag-list">
+            <li class="tag-badge">ITSM</li>
+            <li class="tag-badge">CMDB</li>
+            <li class="tag-badge">Discovery (MID Servers)</li>
+            <li class="tag-badge">Azure Cloud</li>
+            <li class="tag-badge">ACC</li>
+            <li class="tag-badge">Service Graph</li>
+            <li class="tag-badge">HAM</li>
+            <li class="tag-badge">VR (Tenable / Nessus)</li>
+          </ul>
+        </div>
+
+        <div class="competency-section-box">
+          <h3 class="competency-title">
+            <span class="competency-icon">◈</span> Integrations & Data
+          </h3>
+          <p class="competency-desc">
+            Scripted REST, Webhooks, Middleware (Cloudomation, Jitterbit), Relational Data Warehouses (SQL), IntegrationHub.
+          </p>
+          <ul class="tag-list">
+            <li class="tag-badge">Scripted REST</li>
+            <li class="tag-badge">Webhooks</li>
+            <li class="tag-badge">Cloudomation</li>
+            <li class="tag-badge">Jitterbit</li>
+            <li class="tag-badge">SQL Verification</li>
+            <li class="tag-badge">IntegrationHub</li>
+          </ul>
+        </div>
+
+        <div class="competency-section-box">
+          <h3 class="competency-title">
+            <span class="competency-icon">◈</span> Enterprise Automation & Identity
+          </h3>
+          <p class="competency-desc">
+            Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST triggers, End-to-End Onboarding/Offboarding Automations.
+          </p>
+          <ul class="tag-list">
+            <li class="tag-badge">Microsoft Entra ID</li>
+            <li class="tag-badge">BambooHR</li>
+            <li class="tag-badge">Power Automate</li>
+            <li class="tag-badge">Boarding Automations</li>
+          </ul>
+        </div>
+
+        <div class="competency-section-box">
+          <h3 class="competency-title">
+            <span class="competency-icon">◈</span> AI & Engineering Tooling
+          </h3>
+          <p class="competency-desc">
+            VS Code Agentic Development Pipelines, Custom Agent Skills, Modern JavaScript / GlideScript, Python (Foundational).
+          </p>
+          <ul class="tag-list">
+            <li class="tag-badge accent">VS Code Agentic Pipelines</li>
+            <li class="tag-badge accent">Custom Agent Skills</li>
+            <li class="tag-badge">GlideScript</li>
+            <li class="tag-badge">Modern JavaScript</li>
+            <li class="tag-badge">Python</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SECTION 4: CERTIFICATIONS & EDUCATION -->
+      <section id="certifications" class="section-block" aria-label="Certifications & Education">
+        <div class="sticky-mobile-header">
+          <h2 class="section-label">Credentials & Education</h2>
+        </div>
+
+        <h3 class="card-subheading" style="margin-bottom: 16px;">Certifications</h3>
+        <ol class="card-list" style="margin-bottom: 48px;">
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2026</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Develop Generative AI Applications: Get Started – IBM (Coursera, 2026)</span>
+                </h4>
+                <ul class="tag-list">
+                  <li class="tag-badge accent">Generative AI</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2020</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Certified System Administrator (CSA) – ServiceNow (2020)</span>
+                </h4>
+                <ul class="tag-list">
+                  <li class="tag-badge">ServiceNow CSA</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2019</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Certified Application Developer (CAD) – ServiceNow (2019)</span>
+                </h4>
+                <ul class="tag-list">
+                  <li class="tag-badge">ServiceNow CAD</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">Rice Univ.</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Python Programming (Parts 1 & 2) & Principles of Computing – Rice University</span>
+                </h4>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+
+        <h3 class="card-subheading" style="margin-bottom: 16px;">Education</h3>
+        <ol class="card-list">
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2017 — 2018</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Junior Java Programmer (Intensive 5-Month Program) | Braining Hub, Budapest (2017 – 2018)</span>
+                </h4>
+              </div>
+            </div>
+          </li>
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2012 — 2015</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Master of Arts: International Relations | Corvinus University of Budapest (2012 – 2015)</span>
+                </h4>
+              </div>
+            </div>
+          </li>
+
+          <li class="card-item">
+            <div class="card-grid">
+              <header class="card-period">2006 — 2009</header>
+              <div class="card-content">
+                <h4 class="card-headline">
+                  <span>Bachelor of Science: Security and Defense Policy | Zrínyi Miklós National Defence University (2006 – 2009)</span>
+                </h4>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>
+          © 2026 Geza Horvath · Pressbaum, Austria · <a href="mailto:ghorvath@gmail.com">ghorvath@gmail.com</a>
+        </p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="../script.js"></script>
+  <script src="../shared/chat-widget.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      ResumeChat.init({
+        endpoint: 'http://Gezas-Mac-mini.local:5678/webhook/resume-chat'
+      });
+    });
+  </script>
+</body>
+</html>
