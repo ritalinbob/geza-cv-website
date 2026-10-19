@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geza Horvath — ServiceNow Architect (21st.dev Sidebar Template)</title>
+  <meta name="description" content="Resume of Geza Horvath, Enterprise ServiceNow Architect, built with modern shadcn / 21st.dev sticky sidebar portfolio design.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../shared/chat-widget.css">
+</head>
+<body>
+
+  <!-- Floating Version Switcher Bar -->
+  <div class="version-nav" aria-label="Version Switcher">
+    <span class="v-label">Versions:</span>
+    <a href="/" class="v-btn">Original (Cream)</a>
+    <a href="/v3-mavrk/" class="v-btn">Editorial</a>
+    <a href="/v5-sidebar/" class="v-btn active">21st.dev</a>
+  </div>
+
+  <div class="app-layout">
+
+    <!-- =========================================================================
+         STICKY PROFILE SIDEBAR (21st.dev Component Architecture)
+         ========================================================================= -->
+    <aside class="profile-sidebar">
+      <div class="sidebar-card">
+
+        <!-- Theme Toggle Switcher -->
+        <div class="theme-toggle-row">
+          <div class="status-chip">
+            <span class="pulse-dot"></span>
+            <span>Available for Opportunities</span>
+          </div>
+          <button id="themeToggle" class="theme-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            <span class="theme-icon sun">☀</span>
+            <span class="theme-icon moon">☽</span>
+          </button>
+        </div>
+
+        <!-- Avatar & Identity -->
+        <div class="profile-header">
+          <div class="avatar-wrapper">
+            <div class="avatar-initials">GH</div>
+            <div class="online-badge" title="Active"></div>
+          </div>
+          
+          <h1 class="profile-name">
+            <span>Geza Horvath</span>
+            <span class="verified-icon" title="Verified Professional">✓</span>
+          </h1>
+          <p class="profile-role">ServiceNow Architect</p>
+          <p class="profile-location">📍 Pressbaum (Vienna Area), Austria</p>
+        </div>
+
+        <!-- Self-writing Signature Graphic -->
+        <div class="signature-box" title="Signature">
+          <svg class="sig-svg" viewBox="0 0 240 60">
+            <path class="sig-path" d="M 20 40 Q 40 10 60 30 T 100 25 T 140 35 Q 170 15 200 30 Q 220 40 230 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sig-caption">Platform Governance & Architecture</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="sidebar-actions">
+          <button class="action-btn primary" onclick="copyText('ghorvath@gmail.com', 'Email');">
+            <span class="btn-icon">📋</span>
+            <span>Copy Email</span>
+          </button>
+          <a href="mailto:ghorvath@gmail.com" class="action-btn secondary">
+            <span class="btn-icon">✉</span>
+            <span>Send Email</span>
+          </a>
+        </div>
+
+        <!-- Inline AI Cloud Assistant Section -->
+        <div id="ai-cloud-container"></div>
+
+        <!-- Contact & Social Icon Strip -->
+        <div class="social-strip">
+          <a href="https://www.linkedin.com/in/geza-horvath-16288a185" target="_blank" rel="noreferrer noopener" class="social-btn" title="LinkedIn Profile">
+            <span>in</span>
+          </a>
+          <a href="tel:+436601082050" onclick="event.preventDefault(); copyText('+43 660 108 2050', 'Phone');" class="social-btn" title="Call Phone">
+            <span>✆</span>
+          </a>
+          <a href="mailto:ghorvath@gmail.com" class="social-btn" title="Email">
+            <span>@</span>
+          </a>
+        </div>
+
+        <div class="sidebar-address-meta">
+          Pressbaum, Austria
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- =========================================================================
+         MAIN CONTENT FEED
+         ========================================================================= -->
+    <main class="content-feed">
+
+      <!-- Metrics Row -->
+      <section class="stats-row">
+        <div class="stat-card">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Years ServiceNow Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Instance Greenfield Setup</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Automated HR Boarding</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">AI</div>
+          <div class="stat-label">VS Code Agentic Toolchain</div>
+        </div>
+      </section>
+
+      <!-- Section: About Me -->
+      <section class="feed-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">About Me</h2>
+          <span class="section-sub">Executive Profile</span>
+        </div>
+        <div class="content-card">
+          <p class="lead-text justified">
+            <strong class="highlight-bright">ServiceNow Architect with 8+ years</strong> driving <strong class="highlight-bright">platform architecture, enterprise integrations, and cross-system automation</strong>. Bootstrapped a <strong class="highlight-indigo">greenfield 6-instance ServiceNow landscape</strong>, steered platform decoupling through a corporate divestiture, and architected core <strong class="highlight-indigo">ITSM, CMDB/Discovery, HAM</strong>, and <strong class="highlight-indigo">Vulnerability Response</strong> solutions. Built an in-house <strong class="highlight-emerald">agentic AI engineering toolchain in VS Code</strong> adopted by the developer team to accelerate platform delivery.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section: Experience -->
+      <section class="feed-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Experience</h2>
+          <span class="section-sub">Chronological Career & Platform Achievements</span>
+        </div>
+
+        <div class="experience-stack">
+
+          <!-- Role 1: Ontinue -->
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="role-title">ServiceNow Architect – Business Applications</h3>
+                <div class="company-name">Ontinue</div>
+              </div>
+              <div class="date-badge">2023-02 – Present</div>
+            </div>
+            <div class="exp-location">📍 Remote / Vienna, Austria</div>
+            
+            <ul class="verbatim-bullets">
+              <li>Lead ServiceNow platform architecture, roadmaps, and release governance following the corporate operational spin-off from Open Systems.</li>
+              <li>Architected and deployed <strong>ITSM</strong>, <strong>CMDB</strong>, <strong>Hardware Asset Management (HAM)</strong>, and <strong>Vulnerability Response (VR)</strong> integrated with Tenable and Nessus scanners.</li>
+              <li>Established continuous infrastructure discovery via <strong>MID Servers</strong>, <strong>Azure Cloud Discovery</strong>, <strong>Agent Client Collector (ACC)</strong>, and <strong>Service Graph Connectors</strong>.</li>
+              <li>Engineered cross-platform HR boarding automations connecting <strong>BambooHR</strong>, ServiceNow, and <strong>Microsoft Entra ID (Azure AD)</strong> via REST endpoints and Power Automate.</li>
+              <li>Built and deployed an in-house <strong>VS Code agentic AI toolchain</strong> with custom skills for automated code reviews and GlideScript generation, adopted team-wide to accelerate delivery.</li>
+              <li>Own corporate Business Applications access governance, user management, and <strong>Salesforce</strong> administration.</li>
+              <li>Manage data pipelines across <strong>Cloudomation</strong> (Python middleware) and <strong>Jitterbit</strong>, verifying ETL loads and troubleshooting data warehouse synchronization via SQL.</li>
+            </ul>
+
+            <div class="tech-chips">
+              <span class="chip">ServiceNow</span>
+              <span class="chip">ITSM</span>
+              <span class="chip">CMDB & Discovery</span>
+              <span class="chip">HAM</span>
+              <span class="chip">VR (Tenable / Nessus)</span>
+              <span class="chip">BambooHR</span>
+              <span class="chip">Microsoft Entra ID</span>
+              <span class="chip highlight">VS Code Agentic AI</span>
+              <span class="chip">Salesforce</span>
+              <span class="chip">Cloudomation</span>
+              <span class="chip">Jitterbit</span>
+            </div>
+          </article>
+
+          <!-- Role 2: Open Systems -->
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="role-title">ServiceNow Architect – Business Applications</h3>
+                <div class="company-name">Open Systems</div>
+              </div>
+              <div class="date-badge">2022-05 – 2023-02</div>
+            </div>
+            <div class="exp-location">📍 Hybrid / Vienna, Austria</div>
+            
+            <ul class="verbatim-bullets">
+              <li>Bootstrapped the greenfield ServiceNow ecosystem by standing up and configuring <strong>6 initial instances</strong> with standardized security, ACLs, and update-set pipelines.</li>
+              <li>Established baseline instance cloning runbooks, release gates, and platform upgrade procedures.</li>
+              <li>Executed the technical platform separation and infrastructure decoupling required for the operational spin-off into Ontinue.</li>
+            </ul>
+
+            <div class="tech-chips">
+              <span class="chip">6-Instance Topology</span>
+              <span class="chip">Platform Bootstrapping</span>
+              <span class="chip">Cloning Runbooks</span>
+              <span class="chip">Release Gates</span>
+              <span class="chip">Platform Separation</span>
+            </div>
+          </article>
+
+          <!-- Role 3: Tricentis -->
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="role-title">Senior ServiceNow Developer</h3>
+                <div class="company-name">Tricentis GmbH</div>
+              </div>
+              <div class="date-badge">2018-08 – 2022-04</div>
+            </div>
+            <div class="exp-location">📍 Vienna, Austria</div>
+            
+            <ul class="verbatim-bullets">
+              <li>Delivered high-availability platform solutions across ITSM and Custom Applications in an Agile/Scrum engineering team.</li>
+              <li>Engineered bi-directional REST integrations with core enterprise platforms: Workday, JIRA, Coveo AI Search, and Cornerstone.</li>
+              <li>Executed high-risk database migrations, including an ITSM-to-CSM schema migration and consolidating legacy acquisitions data into ServiceNow.</li>
+              <li>Rescued an external vendor's stalled implementation, refactoring broken scripts and data models under tight deadlines for production cutover.</li>
+            </ul>
+
+            <div class="tech-chips">
+              <span class="chip">REST Integrations</span>
+              <span class="chip">Workday</span>
+              <span class="chip">JIRA</span>
+              <span class="chip">Coveo AI Search</span>
+              <span class="chip">Cornerstone</span>
+              <span class="chip">ITSM to CSM</span>
+            </div>
+          </article>
+
+          <!-- Role 4: Early Career -->
+          <article class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="role-title">Early Career Logistics & Operations</h3>
+                <div class="company-name">Service24 GmbH & Avis Budget Group</div>
+              </div>
+              <div class="date-badge">2015 – 2018</div>
+            </div>
+            
+            <ul class="verbatim-bullets">
+              <li><strong>Mobility Manager</strong> | Service24 GmbH (2016 – 2018) • <strong>Customer Care Specialist</strong> | Avis Budget Group (2015 – 2016)</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Section: Core Competencies -->
+      <section class="feed-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Core Competencies</h2>
+          <span class="section-sub">Categorized Enterprise Expertise</span>
+        </div>
+
+        <div class="comp-matrix">
+          
+          <div class="comp-block">
+            <h4>Platform Architecture:</h4>
+            <p>6-Instance Multi-Environment Topology, Release Governance, Cloning Runbooks, Scoped Apps, ATF Test Suites, Instance Upgrades.</p>
+          </div>
+
+          <div class="comp-block">
+            <h4>Modules & Operations:</h4>
+            <p>ITSM, CMDB, Discovery (MID Servers, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).</p>
+          </div>
+
+          <div class="comp-block">
+            <h4>Integrations & Data:</h4>
+            <p>Scripted REST, Webhooks, Middleware (Cloudomation, Jitterbit), Relational Data Warehouses (SQL), IntegrationHub.</p>
+          </div>
+
+          <div class="comp-block">
+            <h4>Enterprise Automation & Identity:</h4>
+            <p>Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST triggers, End-to-End Onboarding/Offboarding Automations.</p>
+          </div>
+
+          <div class="comp-block">
+            <h4>AI & Engineering Tooling:</h4>
+            <p>VS Code Agentic Development Pipelines, Custom Agent Skills, Modern JavaScript / GlideScript, Python (Foundational).</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section: Credentials & Education -->
+      <section class="feed-section">
+        <div class="section-title-wrap">
+          <h2 class="section-heading">Credentials & Education</h2>
+          <span class="section-sub">Certifications & Academic Degrees</span>
+        </div>
+
+        <div class="cred-duo">
+          <div class="cred-card">
+            <h4>Certifications</h4>
+            <ul class="verbatim-bullets">
+              <li><strong>Develop Generative AI Applications: Get Started</strong> – IBM (Coursera, 2026)</li>
+              <li><strong>Certified System Administrator (CSA)</strong> – ServiceNow (2020)</li>
+              <li><strong>Certified Application Developer (CAD)</strong> – ServiceNow (2019)</li>
+              <li><strong>Python Programming (Parts 1 & 2) & Principles of Computing</strong> – Rice University</li>
+            </ul>
+          </div>
+
+          <div class="cred-card">
+            <h4>Education</h4>
+            <ul class="verbatim-bullets">
+              <li><strong>Junior Java Programmer (Intensive 5-Month Program)</strong> | Braining Hub, Budapest (2017 – 2018)</li>
+              <li><strong>Master of Arts: International Relations</strong> | Corvinus University of Budapest (2012 – 2015)</li>
+              <li><strong>Bachelor of Science: Security and Defense Policy</strong> | Zrínyi Miklós National Defence University (2006 – 2009)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="feed-footer">
+        <p>© 2026 Geza Horvath · Pressbaum, Austria · <a href="mailto:ghorvath@gmail.com">ghorvath@gmail.com</a></p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-msg" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script src="../shared/chat-widget.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      ResumeChat.init({
+        endpoint: 'http://Gezas-Mac-mini.local:5678/webhook/resume-chat'
+      });
+    });
+  </script>
+</body>
+</html>

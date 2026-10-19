@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Local environment / IDE
+.vscode/
+.idea/

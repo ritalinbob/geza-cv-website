@@ -1,0 +1,132 @@
+{
+  "profile": {
+    "name": "Géza Horváth",
+    "title": "ServiceNow Architect",
+    "location": "Pressbaum / Vienna, Austria",
+    "email": "ghorvath@gmail.com",
+    "phone": "+43 660 108 2050",
+    "linkedin": "https://www.linkedin.com/in/geza-horvath-16288a185",
+    "summary": "ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations, and cross-system automation. Bootstrapped a greenfield 6-instance ServiceNow landscape, steered platform decoupling through a corporate divestiture, and architected core ITSM, CMDB/Discovery, HAM, and Vulnerability Response solutions. Built an in-house agentic AI engineering toolchain in VS Code adopted by the developer team to accelerate platform delivery.",
+    "years_experience_servicenow": "8+ years (since 2018 in core ServiceNow development and architecture)",
+    "title_correction_note": "Works in enterprise business applications and ServiceNow architecture, but was NOT an Enterprise Business Applications Lead. Accurate title is ServiceNow Architect."
+  },
+  "core_competencies": {
+    "platform_architecture": "6-Instance Multi-Environment Topology, Release Governance, Cloning Runbooks, Scoped Apps, ATF Test Suites, Instance Upgrades.",
+    "modules_and_operations": "ITSM, CMDB, Discovery (MID Servers, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).",
+    "integrations_and_data": "Scripted REST, Webhooks, Middleware (Cloudomation, Jitterbit), Relational Data Warehouses (SQL), IntegrationHub.",
+    "enterprise_automation_identity": "Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST triggers, End-to-End Onboarding/Offboarding Automations.",
+    "ai_and_engineering_tooling": "VS Code Agentic Development Pipelines, Custom Agent Skills, Modern JavaScript / GlideScript, Python (Foundational)."
+  },
+  "work_experience": [
+    {
+      "company": "Ontinue",
+      "location": "Remote / Vienna, Austria",
+      "role": "ServiceNow Architect (Business Applications)",
+      "period": "2023-02 – Present",
+      "highlights": [
+        "Lead ServiceNow platform architecture, roadmaps, and release governance following the corporate operational spin-off from Open Systems.",
+        "Architected and deployed ITSM, CMDB, Hardware Asset Management (HAM), and Vulnerability Response (VR) integrated with Tenable and Nessus scanners.",
+        "Established continuous infrastructure discovery via MID Servers, Azure Cloud Discovery, Agent Client Collector (ACC), and Service Graph Connectors.",
+        "Engineered cross-platform HR boarding automations connecting BambooHR, ServiceNow, and Microsoft Entra ID (Azure AD) via REST endpoints and Power Automate.",
+        "Built and deployed an in-house VS Code agentic AI toolchain with custom skills for automated code reviews and GlideScript generation, adopted team-wide to accelerate delivery.",
+        "Own corporate Business Applications access governance, user management, and Salesforce administration.",
+        "Manage data pipelines across Cloudomation (Python middleware) and Jitterbit, verifying ETL loads and troubleshooting data warehouse synchronization via SQL."
+      ]
+    },
+    {
+      "company": "Open Systems",
+      "location": "Hybrid / Vienna, Austria",
+      "role": "ServiceNow Architect – Business Applications",
+      "period": "2022-05 – 2023-02",
+      "highlights": [
+        "Bootstrapped the greenfield ServiceNow ecosystem by standing up and configuring 6 initial instances with standardized security, ACLs, and update-set pipelines.",
+        "Established baseline instance cloning runbooks, release gates, and platform upgrade procedures.",
+        "Executed the technical platform separation and infrastructure decoupling required for the operational spin-off into Ontinue."
+      ]
+    },
+    {
+      "company": "Tricentis GmbH",
+      "location": "Vienna, Austria",
+      "role": "Senior ServiceNow Developer",
+      "period": "2018-08 – 2022-04",
+      "highlights": [
+        "Delivered high-availability platform solutions across ITSM and Custom Applications in an Agile/Scrum engineering team.",
+        "Engineered bi-directional REST integrations with core enterprise platforms: Workday, JIRA, Coveo AI Search, and Cornerstone.",
+        "Executed high-risk database migrations, including an ITSM-to-CSM schema migration and consolidating legacy acquisitions data into ServiceNow.",
+        "Rescued an external vendor's stalled implementation, refactoring broken scripts and data models under tight deadlines for production cutover."
+      ]
+    },
+    {
+      "company": "Early Career",
+      "location": "Austria",
+      "roles": [
+        "Mobility Manager | Service24 GmbH (2016 – 2018)",
+        "Customer Care Specialist | Avis Budget Group (2015 – 2016)"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Develop Generative AI Applications: Get Started",
+      "issuer": "IBM (Coursera)",
+      "year": 2026
+    },
+    {
+      "name": "Certified System Administrator (CSA)",
+      "issuer": "ServiceNow",
+      "year": 2020
+    },
+    {
+      "name": "Certified Application Developer (CAD)",
+      "issuer": "ServiceNow",
+      "year": 2019
+    },
+    {
+      "name": "Python Programming (Parts 1 & 2) & Principles of Computing",
+      "issuer": "Rice University"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Junior Java Programmer (Intensive 5-Month Program)",
+      "institution": "Braining Hub, Budapest",
+      "period": "2017 – 2018"
+    },
+    {
+      "degree": "Master of Arts: International Relations",
+      "institution": "Corvinus University of Budapest",
+      "period": "2012 – 2015"
+    },
+    {
+      "degree": "Bachelor of Science: Security and Defense Policy",
+      "institution": "Zrínyi Miklós National Defence University",
+      "period": "2006 – 2009"
+    }
+  ],
+  "frequently_asked_recruiter_questions": [
+    {
+      "q": "How many years of ServiceNow experience does he have?",
+      "a": "Géza has 8+ years of dedicated, hands-on experience in the ServiceNow ecosystem, working from Senior Developer up to ServiceNow Architect."
+    },
+    {
+      "q": "Was he the Enterprise Business Applications Lead?",
+      "a": "No. While Géza works with business applications and enterprise platform strategy, his official role is ServiceNow Architect. He was not a Lead in that specific position."
+    },
+    {
+      "q": "What integrations has he built?",
+      "a": "Géza has architected and delivered bi-directional scripted REST and webhook integrations connecting ServiceNow with Workday, Jira, Coveo AI Search, Cornerstone, BambooHR, and Microsoft Entra ID (Azure AD), as well as middleware pipelines via Cloudomation and Jitterbit."
+    },
+    {
+      "q": "Does he have CMDB and Discovery experience?",
+      "a": "Yes, extensive experience. He architected CMDB, Discovery via MID Servers, Azure Cloud Discovery, Agent Client Collector (ACC), Service Graph Connectors, Hardware Asset Management (HAM), and Vulnerability Response integrated with Tenable and Nessus."
+    },
+    {
+      "q": "What certifications does he hold?",
+      "a": "He holds ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), IBM Generative AI Applications certification, and Python certifications from Rice University."
+    },
+    {
+      "q": "Is he open to remote or hybrid positions?",
+      "a": "Yes, Géza is based in Pressbaum / Vienna, Austria, and is open to hybrid roles in the Vienna region or fully remote opportunities."
+    }
+  ]
+}

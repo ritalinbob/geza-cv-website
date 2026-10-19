@@ -1,0 +1,169 @@
+{
+  "name": "AI Resume Chat Assistant (Mac mini M4)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "resume-chat",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Extract and sanitize incoming question\nconst body = $input.item.json.body || $input.item.json;\nconst rawQuestion = (body.question || '').trim();\nconst sessionId = body.sessionId || ('sess_' + Math.random().toString(36).substring(2, 10));\nconst clientTimestamp = body.timestamp || new Date().toISOString();\n\nif (!rawQuestion || rawQuestion.length === 0) {\n  throw new Error('Question cannot be empty');\n}\n\n// 2. Bound question length\nconst question = rawQuestion.substring(0, 300);\n\n// 3. System prompt with strict grounding and anti-hallucination rules\nconst systemPrompt = `You are Géza Horváth's personal AI Career Assistant. Your job is to answer recruiter inquiries strictly, accurately, and politely from the VERIFIED PROFILE below.\n\n### STRICT GROUNDING RULES:\n1. Answer ONLY using facts present in the verified profile.\n2. If asked about a skill, certification, company, or metric NOT in the profile, explicitly answer: \"I do not have verified information on that in Géza's profile. Please reach out to Géza directly at ghorvath@gmail.com or on LinkedIn.\"\n3. NEVER invent dates, roles, or project details. Do not speculate.\n4. Regarding role title: Géza works in enterprise business applications and ServiceNow architecture, but was NOT an Enterprise Business Applications Lead. His accurate title is ServiceNow Architect.\n5. Keep answers professional, concise, articulate, and recruiter-focused (2-4 sentences or bullet points).\n\n### VERIFIED PROFILE:\nName: Géza Horváth\nTitle: ServiceNow Architect\nLocation: Pressbaum / Vienna, Austria (Open to hybrid in Vienna area or remote)\nEmail: ghorvath@gmail.com | Phone: +43 660 108 2050 | LinkedIn: https://www.linkedin.com/in/geza-horvath-16288a185\nExperience: 8+ years dedicated hands-on ServiceNow architecture & development (since 2018), 14+ years in cross-functional business applications.\nCertifications:\n- ServiceNow Certified Application Developer (CAD, 2019)\n- ServiceNow Certified System Administrator (CSA, 2020)\n- IBM Develop Generative AI Applications (Coursera, 2026)\n- Rice University Python Programming & Principles of Computing\nKey Roles:\n- Ontinue (2023-02 – Present): ServiceNow Architect (Business Applications). Greenfield multi-environment governance, ITSM, CMDB, HAM, Vulnerability Response (Tenable, Nessus), Discovery (MID Servers, Azure Cloud, ACC, Service Graph Connectors), HR boarding (BambooHR + Microsoft Entra ID), in-house agentic AI toolchain in VS Code, Salesforce administration, Cloudomation/Jitterbit data pipelines.\n- Open Systems (2022-05 – 2023-02): ServiceNow Architect – Business Applications. Bootstrapped 6 initial instances, cloning runbooks, release gates, platform decoupling for operational spin-off.\n- Tricentis GmbH (2018-08 – 2022-04): Senior ServiceNow Developer. Core ITSM and Custom Apps, REST integrations (Workday, Jira, Coveo AI Search, Cornerstone), high-risk ITSM-to-CSM schema migration.\n- Early Career: Service24 GmbH (2016-2018), Avis Budget Group (2015-2016).\nEducation:\n- Junior Java Programmer (2017-2018) | Braining Hub, Budapest\n- Master of Arts: International Relations (2012-2015) | Corvinus University of Budapest\n- Bachelor of Science: Security and Defense Policy (2006-2009) | Zrínyi Miklós National Defence University`;\n\nreturn {\n  json: {\n    question: question,\n    sessionId: sessionId,\n    clientTimestamp: clientTimestamp,\n    systemPrompt: systemPrompt,\n    startTime: Date.now()\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "input-sanitizer",
+      "name": "Sanitize & Build Prompt"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"qwen2.5:7b\",\n  \"prompt\": {{ JSON.stringify($json.question) }},\n  \"system\": {{ JSON.stringify($json.systemPrompt) }},\n  \"stream\": false,\n  \"options\": {\n    \"temperature\": 0.1,\n    \"top_p\": 0.9\n  }\n}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        0
+      ],
+      "id": "ollama-inference",
+      "name": "Ollama LLM (qwen2.5:7b)"
+    },
+    {
+      "parameters": {
+        "jsCode": "const prev = $('Sanitize & Build Prompt').item.json;\nconst ollamaResponse = $input.item.json;\nconst answer = (ollamaResponse.response || '').trim();\nconst durationMs = Date.now() - prev.startTime;\nconst timestamp = new Date().toISOString();\n\nconst logEntry = {\n  timestamp: timestamp,\n  sessionId: prev.sessionId,\n  question: prev.question,\n  answer: answer,\n  durationMs: durationMs,\n  model: 'qwen2.5:7b'\n};\n\nreturn {\n  json: {\n    status: 'success',\n    answer: answer,\n    sessionId: prev.sessionId,\n    durationMs: durationMs,\n    logLine: JSON.stringify(logEntry) + '\\n'\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        660,
+        0
+      ],
+      "id": "format-response",
+      "name": "Format Response"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "fileName": "={{ $env.HOME || '/root' }}/resume-ai/chat_inquiries.jsonl",
+        "fileContent": "={{ $json.logLine }}"
+      },
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        880,
+        -100
+      ],
+      "id": "persist-inquiry",
+      "name": "Persist Inquiry (JSONL)",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"success\",\n  \"answer\": {{ JSON.stringify($json.answer) }},\n  \"sessionId\": {{ JSON.stringify($json.sessionId) }},\n  \"durationMs\": {{ $json.durationMs }}\n}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Access-Control-Allow-Headers",
+                "value": "Content-Type, Accept"
+              },
+              {
+                "name": "Access-Control-Allow-Methods",
+                "value": "POST, OPTIONS"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        100
+      ],
+      "id": "respond-to-webhook",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sanitize & Build Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sanitize & Build Prompt": {
+      "main": [
+        [
+          {
+            "node": "Ollama LLM (qwen2.5:7b)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ollama LLM (qwen2.5:7b)": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response": {
+      "main": [
+        [
+          {
+            "node": "Persist Inquiry (JSONL)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

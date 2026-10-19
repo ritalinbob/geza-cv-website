@@ -1,0 +1,510 @@
+/* ==========================================================================
+   GEZA HORVATH — PORTFOLIO (VERSION 3: EDITORIAL POSTER STYLE)
+   Inspired by: https://codepen.io/mavrK/pen/PzGvdJ
+   Palette: Warm Buff (#f7e0c1), Slate Gray (#68707c), Crisp White & Jet Black
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+:root {
+  --c-buff: #f7e0c1;
+  --c-buff-dark: #e8caa3;
+  --c-topbar: #5c6470;
+  --c-topbar-dark: #474e59;
+  --c-text-dark: #1a1a1a;
+  --c-text-body: #333333;
+  --c-text-light: #777777;
+  --c-greyed: #dedede;
+  --c-line: #999999;
+  --c-white: #ffffff;
+
+  --font-title: 'Raleway', sans-serif;
+  --font-heading: 'Open Sans', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-logo: 'Montserrat', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--c-text-body);
+  background-color: #eae7e1;
+  background-image: 
+    radial-gradient(circle at 100% 0%, rgba(247, 224, 193, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 0% 100%, rgba(92, 100, 112, 0.15) 0%, transparent 50%);
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* ==========================================================================
+   VERSION SWITCHER BAR
+   ========================================================================== */
+
+.version-nav {
+  position: fixed;
+  top: 14px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border: 1px solid #cccccc;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.v-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--c-text-light);
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.v-btn {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 999px;
+  color: var(--c-text-dark);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.v-btn:hover {
+  color: #000;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.v-btn.active {
+  background: var(--c-topbar);
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .version-nav {
+    position: static;
+    margin: 12px auto;
+    max-width: 92%;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================================================================
+   PAGE POSTER CONTAINER
+   ========================================================================== */
+
+.page-frame {
+  max-width: 1200px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  background-color: var(--c-white);
+  box-shadow: 6px 14px 35px 0px rgba(0, 0, 0, 0.28);
+}
+
+/* ==========================================================================
+   TOP BAR (DARK SLATE WITH ULTRA-LIGHT NAME)
+   ========================================================================== */
+
+.top-bar {
+  height: 200px;
+  background-color: var(--c-topbar);
+  color: #fff;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 25px;
+}
+
+.name-container {
+  margin-left: calc(340px + 4%);
+  width: calc(96% - 340px);
+  text-align: center;
+}
+
+.author-name {
+  font-family: var(--font-title);
+  font-size: clamp(32px, 4.5vw, 56px);
+  letter-spacing: 8px;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   OVERLAPPING SIDEBAR (WARM BUFF #f7e0c1)
+   ========================================================================== */
+
+.side-bar {
+  position: absolute;
+  top: 50px;
+  left: 3%;
+  width: 330px;
+  background-color: var(--c-buff);
+  padding: 270px 28px 40px;
+  z-index: 10;
+  box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.mugshot {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: relative;
+  width: 170px;
+  height: 170px;
+}
+
+.logo-svg {
+  width: 100%;
+  height: 100%;
+  stroke: #1a1a1a;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.logo-text {
+  position: absolute;
+  top: 54%;
+  right: 22%;
+  font-family: var(--font-logo);
+  font-size: 44px;
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: -2px;
+}
+
+.contact-details {
+  margin-bottom: 24px;
+}
+
+.contact-line {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--c-text-dark);
+}
+
+.contact-line a {
+  color: var(--c-text-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-line a:hover {
+  text-decoration: underline;
+  color: var(--c-topbar-dark);
+}
+
+/* Side Headers */
+.side-header {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--c-text-dark);
+  margin: 30px auto 14px;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #888888;
+}
+
+.social {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.social a {
+  color: var(--c-text-dark);
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: var(--c-topbar-dark);
+  text-decoration: underline;
+}
+
+.social::before {
+  content: "◈";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--c-topbar);
+  font-size: 14px;
+}
+
+.list-thing {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--c-text-dark);
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: 6px;
+}
+
+.list-thing::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--c-topbar);
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   RIGHT CONTENT CONTAINER
+   ========================================================================== */
+
+.content-container {
+  margin-left: calc(340px + 4%);
+  width: calc(96% - 340px);
+  padding: 35px 40px 60px 20px;
+}
+
+.title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--c-text-dark);
+  margin-bottom: 12px;
+}
+
+.separator {
+  width: 220px;
+  height: 2px;
+  background-color: var(--c-line);
+  margin: 0 auto 30px;
+}
+
+/* Iconic mavrK .caps.greyed banner */
+.caps {
+  text-transform: uppercase;
+}
+
+.greyed {
+  background-color: var(--c-greyed);
+  width: 100%;
+  max-width: 620px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  letter-spacing: 6px;
+  font-weight: 700;
+  color: var(--c-text-dark);
+  padding: 5px 0;
+  margin: 32px auto 20px 0;
+  border-left: 4px solid var(--c-topbar);
+}
+
+.summary-paragraph {
+  font-size: 14.5px;
+  line-height: 1.84;
+  color: var(--c-text-body);
+  margin-bottom: 30px;
+  padding: 20px 24px;
+  background: #fafaf8;
+  border: 1px solid #e8e8e4;
+  border-left: 4px solid var(--c-topbar);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.summary-paragraph.justified {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.summary-paragraph .highlight-dark {
+  color: var(--c-text-dark);
+  font-weight: 700;
+}
+
+.summary-paragraph .highlight-slate {
+  color: #ffffff;
+  font-weight: 600;
+  background: var(--c-topbar);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.summary-paragraph .highlight-buff {
+  color: #4a3419;
+  font-weight: 600;
+  background: var(--c-buff);
+  border: 1px solid var(--c-buff-dark);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+/* Job Blocks */
+.job-block {
+  margin-bottom: 24px;
+}
+
+.job-role {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: var(--c-text-dark);
+  margin-bottom: 2px;
+}
+
+.light {
+  color: var(--c-text-light);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Verbatim Bullet Points */
+.verbatim-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.verbatim-bullets li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--c-text-body);
+  text-align: justify;
+}
+
+.verbatim-bullets li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--c-topbar);
+  font-weight: bold;
+}
+
+.verbatim-bullets li strong {
+  color: var(--c-text-dark);
+}
+
+/* Competency Group */
+.comp-group {
+  margin-bottom: 18px;
+  background: #fbfbfb;
+  border: 1px solid #ececec;
+  padding: 14px 18px;
+  border-radius: 4px;
+}
+
+.comp-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--c-text-dark);
+  margin-bottom: 6px;
+}
+
+/* Editorial Footer */
+.editorial-footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--c-line);
+  font-size: 12.5px;
+  color: var(--c-text-light);
+  text-align: center;
+}
+
+.editorial-footer a {
+  color: var(--c-text-dark);
+  font-weight: 600;
+}
+
+/* Toast */
+.toast-msg {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  background: var(--c-topbar-dark);
+  color: #fff;
+  border: 1px solid var(--c-buff);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.toast-msg.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+  .top-bar {
+    height: auto;
+    padding: 30px 20px;
+  }
+  .name-container {
+    margin-left: 0;
+    width: 100%;
+  }
+  .side-bar {
+    position: static;
+    width: 100%;
+    padding: 30px 24px;
+    box-shadow: none;
+  }
+  .mugshot {
+    position: static;
+    transform: none;
+    margin: 0 auto 20px;
+  }
+  .content-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 30px 24px;
+  }
+}
