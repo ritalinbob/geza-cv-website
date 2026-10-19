@@ -166,20 +166,23 @@
       if (endpointsToTry.indexOf(ep) === -1) endpointsToTry.push(ep);
     });
 
-    // Locate mounting point (just below sidebar-nav)
+    // Locate mounting point (prefer explicit #ai-cloud-container, then below .status-pill)
     var container = document.getElementById('ai-cloud-container');
     if (!container) {
-      var nav = document.querySelector('.sidebar-nav') || document.querySelector('.sidebar-actions') || document.querySelector('.contact-details');
-      if (nav && nav.parentNode) {
+      var anchor = document.querySelector('.status-pill') || document.querySelector('.sidebar-nav') || document.querySelector('.sidebar-actions') || document.querySelector('.contact-details');
+      if (anchor && anchor.parentNode) {
         container = document.createElement('div');
         container.id = 'ai-cloud-container';
-        nav.parentNode.insertBefore(container, nav.nextSibling);
+        anchor.parentNode.insertBefore(container, anchor.nextSibling);
       } else {
         container = document.createElement('div');
         container.id = 'ai-cloud-container';
         document.body.prepend(container);
       }
     }
+
+    var showPills = Boolean(options.showPills);
+    var pillsMarkup = showPills ? '<div class="ai-suggestion-pills" id="ai-suggestion-pills"></div>' : '';
 
     // Render Component HTML
     container.innerHTML = 
@@ -210,7 +213,7 @@
             '</svg>' +
           '</button>' +
         '</form>' +
-        '<div class="ai-suggestion-pills" id="ai-suggestion-pills"></div>' +
+        pillsMarkup +
         '<div class="ai-stage" id="ai-stage" aria-live="polite"></div>' +
       '</div>';
 
@@ -221,18 +224,20 @@
     var stage = container.querySelector('#ai-stage');
     var statusBadge = container.querySelector('#ai-status-badge');
 
-    // Populate quick pills
-    SUGGESTION_PILLS.forEach(function (pill) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'ai-pill-btn';
-      btn.textContent = pill.label;
-      btn.addEventListener('click', function () {
-        input.value = pill.query;
-        handleSubmit(pill.query);
+    // Populate quick pills only if explicitly enabled
+    if (showPills && pillsContainer) {
+      SUGGESTION_PILLS.forEach(function (pill) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'ai-pill-btn';
+        btn.textContent = pill.label;
+        btn.addEventListener('click', function () {
+          input.value = pill.query;
+          handleSubmit(pill.query);
+        });
+        pillsContainer.appendChild(btn);
       });
-      pillsContainer.appendChild(btn);
-    });
+    }
 
     // Render 3D Thinking Orb (Processing State)
     function renderThinkingOrb() {

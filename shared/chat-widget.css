@@ -84,8 +84,8 @@ body.dark .ai-assistant-container,
    ========================================================================== */
 
 .ai-assistant-container {
-  margin-top: 32px;
-  margin-bottom: 28px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   width: 100%;
   max-width: 440px;
   display: flex;
