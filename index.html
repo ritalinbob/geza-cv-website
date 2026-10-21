@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="v4-editorial/styles.css">
-  <link rel="stylesheet" href="shared/chat-widget.css">
+  <link rel="stylesheet" href="shared/chat-widget.css?v=arch1">
 </head>
 <body class="editorial-theme">
 
@@ -351,7 +351,14 @@
 
   <!-- Client-side Scripts -->
   <script src="script.js"></script>
-  <script src="shared/chat-widget.js"></script>
+  <script src="shared/chat-widget.js?v=arch1"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      ResumeChat.init({
+        endpoint: 'http://Gezas-Mac-mini.local:5678/webhook/resume-chat'
+      });
+    });
+  </script>
 
 </body>
 </html>

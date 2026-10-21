@@ -536,3 +536,605 @@ body.dark .ai-assistant-container,
     margin-bottom: 28px;
   }
 }
+
+/* ==========================================================================
+   AI ASSISTANT ARCHITECTURE FLOWCHART MODAL & TRIGGER
+   Matches editorial design tokens, buff/slate palette, and neo-editorial shadows
+   ========================================================================== */
+
+/* Trigger link button positioned under Geza's AI Assistant section */
+.ai-arch-link-container {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.ai-arch-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  font-family: inherit;
+  font-size: 0.79rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ai-text-sub);
+  background: rgba(92, 100, 112, 0.08);
+  border: 1px solid rgba(92, 100, 112, 0.22);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+  line-height: 1.25;
+  outline: none;
+}
+
+.ai-arch-trigger-btn:hover {
+  color: var(--ai-accent);
+  background: var(--c-buff, #f7e0c1);
+  border-color: var(--ai-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--ai-accent-rgb), 0.15);
+}
+
+.ai-arch-trigger-btn:focus-visible {
+  outline: 2px solid var(--ai-accent);
+  outline-offset: 2px;
+}
+
+.ai-arch-btn-icon {
+  color: var(--ai-accent);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ai-arch-btn-arrow {
+  transition: transform 0.2s ease;
+  font-weight: 700;
+  color: var(--ai-accent);
+}
+
+.ai-arch-trigger-btn:hover .ai-arch-btn-arrow {
+  transform: translateX(3px);
+}
+
+/* Body lock when modal is open */
+body.ai-modal-open {
+  overflow: hidden !important;
+}
+
+/* Modal Backdrop (Centered popup frame) */
+.ai-arch-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(18, 20, 24, 0.68);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ai-arch-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal Frame */
+.ai-arch-modal-frame {
+  background-color: #FAF7F0;
+  background-image: 
+    radial-gradient(circle at 100% 0%, rgba(247, 224, 193, 0.5) 0%, transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(92, 100, 112, 0.08) 0%, transparent 40%);
+  border: 2px solid #111111;
+  border-radius: 14px;
+  box-shadow: 8px 8px 0px #111111, 0 24px 50px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  overflow: hidden;
+  transform: scale(0.96) translateY(12px);
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ai-arch-modal-backdrop.is-open .ai-arch-modal-frame {
+  transform: scale(1) translateY(0);
+}
+
+.ai-arch-modal-frame:focus-visible {
+  outline: 2px solid var(--ai-accent);
+  outline-offset: -2px;
+}
+
+/* Modal Header */
+.ai-arch-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px 16px;
+  border-bottom: 1.5px solid rgba(17, 17, 17, 0.12);
+  background: rgba(247, 224, 193, 0.32);
+}
+
+.ai-arch-modal-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ai-arch-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ai-arch-badge-pill {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  background: rgba(92, 100, 112, 0.12);
+  color: #474E59;
+  border: 1px solid rgba(92, 100, 112, 0.24);
+}
+
+.ai-arch-badge-pill.highlight {
+  background: rgba(34, 197, 94, 0.14);
+  color: #15803D;
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.ai-arch-modal-heading {
+  font-family: var(--font-title, 'Raleway', sans-serif);
+  font-size: 1.42rem;
+  font-weight: 800;
+  color: #111111;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.ai-arch-modal-subheading {
+  font-size: 0.86rem;
+  color: #555555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Close Button */
+.ai-arch-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1.5px solid #111111;
+  background: #FFFFFF;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 0px #111111;
+  transition: all 0.18s ease;
+  outline: none;
+}
+
+.ai-arch-close-btn:hover {
+  background: #111111;
+  color: #FFFFFF;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--ai-accent);
+}
+
+.ai-arch-close-btn:focus-visible {
+  outline: 2px solid var(--ai-accent);
+  outline-offset: 2px;
+}
+
+/* Modal Body */
+.ai-arch-modal-body {
+  padding: 22px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  scrollbar-width: thin;
+}
+
+/* FLOWCHART PIPELINE */
+.ai-flowchart {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 6px;
+}
+
+/* Step Card */
+.ai-flow-step {
+  background: #FFFFFF;
+  border: 1.5px solid #111111;
+  border-radius: 12px;
+  padding: 16px 14px;
+  box-shadow: 4px 4px 0px #111111;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.ai-flow-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px #111111;
+}
+
+.ai-flow-step.highlight-step {
+  background: #FFFDF9;
+  border-color: var(--ai-accent);
+  box-shadow: 4px 4px 0px var(--ai-accent);
+}
+
+.ai-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.ai-step-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #5C6470;
+  letter-spacing: 0.05em;
+}
+
+.ai-step-badge.highlight {
+  color: var(--ai-accent);
+}
+
+.ai-step-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(247, 224, 193, 0.45);
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  flex-shrink: 0;
+}
+
+.ai-flow-step.highlight-step .ai-step-icon-wrap {
+  background: rgba(var(--ai-accent-rgb), 0.12);
+  color: var(--ai-accent);
+  border-color: rgba(var(--ai-accent-rgb), 0.3);
+}
+
+.ai-step-title {
+  font-family: var(--font-title, 'Raleway', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ai-step-desc {
+  font-size: 0.8rem;
+  color: #444444;
+  line-height: 1.45;
+  margin: 0;
+  flex: 1;
+}
+
+.ai-step-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(17, 17, 17, 0.14);
+}
+
+.ai-step-tag {
+  font-weight: 700;
+  font-size: 0.74rem;
+  color: #111111;
+}
+
+.ai-step-tag.accent {
+  color: var(--ai-accent);
+}
+
+.ai-step-subnote {
+  color: #777777;
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+/* Connecting Arrow between steps */
+.ai-flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ai-accent);
+  font-size: 1.35rem;
+  font-weight: 800;
+  padding: 0 2px;
+  user-select: none;
+}
+
+.ai-arrow-symbol {
+  animation: aiArrowGlide 2s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes aiArrowGlide {
+  0%, 100% { transform: translateX(0); opacity: 0.75; }
+  50% { transform: translateX(3px); opacity: 1; }
+}
+
+/* RECRUITER TAKEAWAYS / VALUE BOXES */
+.ai-arch-takeaways {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ai-takeaway-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(17, 17, 17, 0.14);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ai-takeaway-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ai-takeaway-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ai-takeaway-title {
+  font-family: var(--font-title, 'Raleway', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ai-takeaway-desc {
+  font-size: 0.76rem;
+  color: #555555;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Modal Footer */
+.ai-arch-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  border-top: 1.5px solid rgba(17, 17, 17, 0.12);
+  background: rgba(247, 224, 193, 0.22);
+}
+
+.ai-arch-footer-hint {
+  font-size: 0.78rem;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-arch-footer-hint kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #FFFFFF;
+  border: 1px solid #111111;
+  border-radius: 4px;
+  box-shadow: 1px 1px 0px #111111;
+  color: #111111;
+}
+
+.ai-arch-close-action {
+  padding: 8px 20px;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+  background: #111111;
+  color: #FFFFFF;
+  border: 1.5px solid #111111;
+  border-radius: 8px;
+  box-shadow: 3px 3px 0px var(--ai-accent);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  outline: none;
+}
+
+.ai-arch-close-action:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px var(--ai-accent);
+  background: var(--ai-accent);
+  border-color: var(--ai-accent);
+}
+
+.ai-arch-close-action:focus-visible {
+  outline: 2px solid var(--ai-accent);
+  outline-offset: 2px;
+}
+
+/* RESPONSIVE BREAKPOINTS FOR FLOWCHART */
+@media (max-width: 860px) {
+  .ai-arch-modal-backdrop {
+    padding: 12px;
+  }
+
+  .ai-arch-modal-frame {
+    max-height: 94vh;
+  }
+
+  .ai-flowchart {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ai-flow-arrow {
+    transform: rotate(90deg);
+    padding: 2px 0;
+  }
+
+  .ai-arch-takeaways {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .ai-arch-modal-header {
+    padding: 16px 18px 12px;
+  }
+
+  .ai-arch-modal-body {
+    padding: 16px 18px;
+  }
+
+  .ai-arch-modal-footer {
+    padding: 12px 18px;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .ai-arch-close-action {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ai-arch-footer-hint {
+    justify-content: center;
+  }
+}
+
+/* DARK MODE ADAPTATIONS */
+html.dark .ai-arch-modal-frame,
+body.dark .ai-arch-modal-frame,
+.dark .ai-arch-modal-frame {
+  background-color: #18181B;
+  background-image: none;
+  border-color: #3F3F46;
+  box-shadow: 8px 8px 0px #38BDF8, 0 24px 50px rgba(0, 0, 0, 0.6);
+}
+
+html.dark .ai-arch-modal-header,
+body.dark .ai-arch-modal-header,
+.dark .ai-arch-modal-header {
+  background: rgba(39, 39, 42, 0.65);
+  border-bottom-color: #27272A;
+}
+
+html.dark .ai-arch-modal-heading,
+body.dark .ai-arch-modal-heading,
+.dark .ai-arch-modal-heading {
+  color: #F4F4F5;
+}
+
+html.dark .ai-arch-modal-subheading,
+body.dark .ai-arch-modal-subheading,
+.dark .ai-arch-modal-subheading {
+  color: #A1A1AA;
+}
+
+html.dark .ai-flow-step,
+body.dark .ai-flow-step,
+.dark .ai-flow-step {
+  background: #27272A;
+  border-color: #3F3F46;
+  box-shadow: 4px 4px 0px #09090B;
+}
+
+html.dark .ai-flow-step.highlight-step,
+body.dark .ai-flow-step.highlight-step,
+.dark .ai-flow-step.highlight-step {
+  background: #2D2A26;
+  border-color: #38BDF8;
+  box-shadow: 4px 4px 0px #38BDF8;
+}
+
+html.dark .ai-step-title,
+body.dark .ai-step-title,
+.dark .ai-step-title {
+  color: #F4F4F5;
+}
+
+html.dark .ai-step-desc,
+body.dark .ai-step-desc,
+.dark .ai-step-desc {
+  color: #D4D4D8;
+}
+
+html.dark .ai-takeaway-card,
+body.dark .ai-takeaway-card,
+.dark .ai-takeaway-card {
+  background: #27272A;
+  border-color: #3F3F46;
+}
+
+html.dark .ai-takeaway-title,
+body.dark .ai-takeaway-title,
+.dark .ai-takeaway-title {
+  color: #F4F4F5;
+}
+
+html.dark .ai-takeaway-desc,
+body.dark .ai-takeaway-desc,
+.dark .ai-takeaway-desc {
+  color: #A1A1AA;
+}
+
+html.dark .ai-arch-close-btn,
+body.dark .ai-arch-close-btn,
+.dark .ai-arch-close-btn {
+  background: #27272A;
+  border-color: #3F3F46;
+  color: #F4F4F5;
+  box-shadow: 2px 2px 0px #09090B;
+}
+
+html.dark .ai-arch-modal-footer,
+body.dark .ai-arch-modal-footer,
+.dark .ai-arch-modal-footer {
+  background: #202023;
+  border-top-color: #27272A;
+}
+
