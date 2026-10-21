@@ -42,6 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach((section) => observer.observe(section));
 
+  // Instant active state update on navigation link click
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
   // 3. Toast Helper for Quick Copy Actions
   const toast = document.getElementById("toast");
   let toastTimer = null;

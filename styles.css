@@ -203,14 +203,14 @@ button {
 @media (min-width: 1024px) {
   .sidebar-header {
     position: sticky;
-    top: 0;
+    top: 64px;
     display: flex;
-    max-height: 100vh;
+    max-height: calc(100vh - 64px);
     width: 46%;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     overflow-y: auto;
     scrollbar-width: none;
   }
@@ -283,60 +283,187 @@ button {
 }
 
 /* ==========================================================================
-   IN-PAGE NAV (STICKY JUMP LINKS WITH GROWING INDICATOR)
+   TOP NAVIGATION BAR (STICKY HEADER WITH IN-PAGE JUMP LINKS & VERSION SWITCHER)
    ========================================================================== */
 
-.sidebar-nav {
-  display: none;
-  margin-top: 56px;
+.top-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 90;
+  background: rgba(252, 251, 244, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(120, 53, 15, 0.12);
+  box-shadow: 0 4px 20px -2px rgba(68, 64, 60, 0.05);
 }
 
-@media (min-width: 1024px) {
-  .sidebar-nav {
-    display: block;
+.top-navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .top-navbar-container {
+    padding: 0 48px;
   }
 }
 
-.nav-list {
-  list-style: none;
-  width: max-content;
+@media (min-width: 1024px) {
+  .top-navbar-container {
+    padding: 0 64px;
+  }
 }
 
-.nav-link {
+/* Brand monogram & link */
+.top-nav-brand .brand-link {
   display: flex;
   align-items: center;
-  padding: 12px 0;
-  cursor: pointer;
+  gap: 10px;
+  text-decoration: none;
 }
 
-.nav-indicator {
-  margin-right: 16px;
-  height: 1px;
+.brand-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
-  background-color: var(--nav-line);
-  transition: all var(--transition-normal);
-}
-
-.nav-text {
-  font-size: 12px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-primary-bg);
+  border: 1px solid var(--accent-primary-border);
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
-.nav-link:hover .nav-indicator,
-.nav-link:focus-visible .nav-indicator,
-.nav-link.active .nav-indicator {
-  width: 64px;
-  background-color: var(--accent-primary);
+.brand-link:hover .brand-monogram {
+  background: var(--accent-primary);
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
-.nav-link:hover .nav-text,
-.nav-link:focus-visible .nav-text,
-.nav-link.active .nav-text {
+.brand-text {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text-bright);
+}
+
+/* Nav links */
+.top-nav-menu {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.top-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav-list .nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.top-nav-list .nav-link:hover {
+  color: var(--text-bright);
+  background: rgba(120, 53, 15, 0.06);
+}
+
+.top-nav-list .nav-link.active {
+  color: var(--accent-primary);
+  background: var(--accent-primary-bg);
+  border-color: var(--accent-primary-border);
+  font-weight: 700;
+  box-shadow: 0 2px 8px -2px rgba(154, 52, 18, 0.15);
+}
+
+.short-label {
+  display: none;
+}
+
+/* Version switcher in top-navbar */
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.top-nav-actions .version-nav {
+  position: static;
+  margin: 0;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(120, 53, 15, 0.12);
+  padding: 4px 10px;
+}
+
+@media (max-width: 900px) {
+  .full-label {
+    display: none;
+  }
+  .short-label {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-navbar-container {
+    height: 58px;
+    padding: 0 20px;
+    gap: 10px;
+  }
+  .brand-text {
+    display: none;
+  }
+  .top-nav-list {
+    gap: 3px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .top-nav-list::-webkit-scrollbar {
+    display: none;
+  }
+  .top-nav-list .nav-link {
+    padding: 5px 10px;
+    font-size: 11.5px;
+  }
+  .top-nav-actions .version-nav {
+    padding: 3px 6px;
+  }
+  .v-label {
+    display: none;
+  }
+  .v-btn {
+    padding: 2px 6px;
+    font-size: 10.5px;
+  }
 }
 
 /* ==========================================================================
@@ -381,7 +508,7 @@ button {
 @media (min-width: 1024px) {
   .main-content {
     width: 52%;
-    padding-top: 96px;
+    padding-top: 48px;
     padding-bottom: 96px;
   }
 }

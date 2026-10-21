@@ -11,20 +11,55 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
       "position": [
-        0,
+        -620,
         0
       ],
-      "id": "webhook-trigger",
-      "name": "Webhook Trigger"
+      "id": "29dc7650-1f06-4454-a256-da7831499b80",
+      "name": "Webhook Trigger",
+      "webhookId": "14cf8730-e4be-40d2-b698-cfcde02175ef"
     },
     {
       "parameters": {
-        "jsCode": "// 1. Extract and sanitize incoming question\nconst body = $input.item.json.body || $input.item.json;\nconst rawQuestion = (body.question || '').trim();\nconst sessionId = body.sessionId || ('sess_' + Math.random().toString(36).substring(2, 10));\nconst clientTimestamp = body.timestamp || new Date().toISOString();\n\nif (!rawQuestion || rawQuestion.length === 0) {\n  throw new Error('Question cannot be empty');\n}\n\n// 2. Bound question length\nconst question = rawQuestion.substring(0, 300);\n\n// 3. System prompt with strict grounding and anti-hallucination rules\nconst systemPrompt = `You are Géza Horváth's personal AI Career Assistant. Your job is to answer recruiter inquiries strictly, accurately, and politely from the VERIFIED PROFILE below.\n\n### STRICT GROUNDING RULES:\n1. Answer ONLY using facts present in the verified profile.\n2. If asked about a skill, certification, company, or metric NOT in the profile, explicitly answer: \"I do not have verified information on that in Géza's profile. Please reach out to Géza directly at ghorvath@gmail.com or on LinkedIn.\"\n3. NEVER invent dates, roles, or project details. Do not speculate.\n4. Regarding role title: Géza works in enterprise business applications and ServiceNow architecture, but was NOT an Enterprise Business Applications Lead. His accurate title is ServiceNow Architect.\n5. Keep answers professional, concise, articulate, and recruiter-focused (2-4 sentences or bullet points).\n\n### VERIFIED PROFILE:\nName: Géza Horváth\nTitle: ServiceNow Architect\nLocation: Pressbaum / Vienna, Austria (Open to hybrid in Vienna area or remote)\nEmail: ghorvath@gmail.com | Phone: +43 660 108 2050 | LinkedIn: https://www.linkedin.com/in/geza-horvath-16288a185\nExperience: 8+ years dedicated hands-on ServiceNow architecture & development (since 2018), 14+ years in cross-functional business applications.\nCertifications:\n- ServiceNow Certified Application Developer (CAD, 2019)\n- ServiceNow Certified System Administrator (CSA, 2020)\n- IBM Develop Generative AI Applications (Coursera, 2026)\n- Rice University Python Programming & Principles of Computing\nKey Roles:\n- Ontinue (2023-02 – Present): ServiceNow Architect (Business Applications). Greenfield multi-environment governance, ITSM, CMDB, HAM, Vulnerability Response (Tenable, Nessus), Discovery (MID Servers, Azure Cloud, ACC, Service Graph Connectors), HR boarding (BambooHR + Microsoft Entra ID), in-house agentic AI toolchain in VS Code, Salesforce administration, Cloudomation/Jitterbit data pipelines.\n- Open Systems (2022-05 – 2023-02): ServiceNow Architect – Business Applications. Bootstrapped 6 initial instances, cloning runbooks, release gates, platform decoupling for operational spin-off.\n- Tricentis GmbH (2018-08 – 2022-04): Senior ServiceNow Developer. Core ITSM and Custom Apps, REST integrations (Workday, Jira, Coveo AI Search, Cornerstone), high-risk ITSM-to-CSM schema migration.\n- Early Career: Service24 GmbH (2016-2018), Avis Budget Group (2015-2016).\nEducation:\n- Junior Java Programmer (2017-2018) | Braining Hub, Budapest\n- Master of Arts: International Relations (2012-2015) | Corvinus University of Budapest\n- Bachelor of Science: Security and Defense Policy (2006-2009) | Zrínyi Miklós National Defence University`;\n\nreturn {\n  json: {\n    question: question,\n    sessionId: sessionId,\n    clientTimestamp: clientTimestamp,\n    systemPrompt: systemPrompt,\n    startTime: Date.now()\n  }\n};"
+        "fileSelector": "/Users/gezahorvath/.n8n-files/geza-cv-context.md",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        -400,
+        0
+      ],
+      "id": "read-context-file",
+      "name": "Read CV Context File",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "binaryPropertyName": "data",
+        "destinationKey": "contextText",
+        "options": {
+          "keepSource": "json"
+        }
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        0
+      ],
+      "id": "extract-context-text",
+      "name": "Extract Context Text",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Extract and sanitize incoming question\nconst webhookData = $('Webhook Trigger').item.json;\nconst body = webhookData.body || webhookData;\nconst rawQuestion = (body.question || '').trim();\nconst sessionId = body.sessionId || ('sess_' + Math.random().toString(36).substring(2, 10));\nconst clientTimestamp = body.timestamp || new Date().toISOString();\n\nif (!rawQuestion || rawQuestion.length === 0) {\n  throw new Error('Question cannot be empty');\n}\n\n// 2. Bound question length\nconst question = rawQuestion.substring(0, 300);\n\n// 3. Retrieve context text extracted from the CV context file on disk\nlet profileContext = '';\ntry {\n  profileContext = ($('Extract Context Text').item.json.contextText || '').trim();\n} catch (e) {\n  profileContext = '';\n}\n\n// Fallback in the rare event of disk read failure\nif (!profileContext || profileContext.length < 50) {\n  profileContext = `Name: Géza Horváth\nTitle: ServiceNow Architect\nLocation: Pressbaum / Vienna, Austria\nEmail: ghorvath@gmail.com | Phone: +43 660 108 2050\nExperience: 8+ years dedicated hands-on ServiceNow architecture & development (since 2018).`;\n}\n\n// 4. System prompt with strict grounding and anti-hallucination rules\nconst systemPrompt = `You are Géza Horváth's personal AI Career Assistant. Your job is to answer recruiter inquiries strictly, accurately, and politely from the VERIFIED PROFILE AND CONTEXT DOSSIER below.\n\n### STRICT GROUNDING RULES:\n1. Answer ONLY using facts present in the verified profile and context dossier.\n2. If asked about a skill, certification, company, project, or metric NOT in the profile/context, explicitly answer: \"I do not have verified information on that in Géza's profile. Please reach out to Géza directly at ghorvath@gmail.com or on LinkedIn.\"\n3. NEVER invent dates, roles, or project details. Do not speculate.\n4. Regarding role title: Géza works in enterprise business applications and ServiceNow architecture, but was NOT an Enterprise Business Applications Lead. His accurate title is ServiceNow Architect.\n5. Keep answers professional, concise, articulate, and recruiter-focused (2-4 sentences or bullet points).\n6. Always represent Géza Horváth in the third person or as his career assistant.\n\n### VERIFIED PROFILE & CONTEXT DOSSIER:\n${profileContext}`;\n\nreturn {\n  json: {\n    question: question,\n    sessionId: sessionId,\n    clientTimestamp: clientTimestamp,\n    systemPrompt: systemPrompt,\n    startTime: Date.now()\n  }\n};"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        220,
+        40,
         0
       ],
       "id": "input-sanitizer",
@@ -38,13 +73,13 @@
         "specifyBody": "json",
         "jsonBody": "={\n  \"model\": \"qwen2.5:7b\",\n  \"prompt\": {{ JSON.stringify($json.question) }},\n  \"system\": {{ JSON.stringify($json.systemPrompt) }},\n  \"stream\": false,\n  \"options\": {\n    \"temperature\": 0.1,\n    \"top_p\": 0.9\n  }\n}",
         "options": {
-          "timeout": 30000
+          "timeout": 45000
         }
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        440,
+        260,
         0
       ],
       "id": "ollama-inference",
@@ -57,7 +92,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        660,
+        480,
         0
       ],
       "id": "format-response",
@@ -72,7 +107,7 @@
       "type": "n8n-nodes-base.writeBinaryFile",
       "typeVersion": 1,
       "position": [
-        880,
+        700,
         -100
       ],
       "id": "persist-inquiry",
@@ -105,7 +140,7 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
       "position": [
-        880,
+        700,
         100
       ],
       "id": "respond-to-webhook",
@@ -114,6 +149,28 @@
   ],
   "connections": {
     "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read CV Context File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read CV Context File": {
+      "main": [
+        [
+          {
+            "node": "Extract Context Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Context Text": {
       "main": [
         [
           {

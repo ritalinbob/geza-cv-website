@@ -10,13 +10,54 @@
 </head>
 <body>
 
-  <!-- Floating Version Switcher Bar -->
-  <div class="version-nav" aria-label="Version Switcher">
-    <span class="v-label">Versions:</span>
-    <a href="/" class="v-btn active">Original (Cream)</a>
-    <a href="/v3-mavrk/" class="v-btn">Editorial</a>
-    <a href="/v5-sidebar/" class="v-btn">21st.dev</a>
-  </div>
+  <!-- =========================================================================
+       TOP NAVIGATION BAR (STICKY NAVBAR WITH IN-PAGE JUMP LINKS & VERSION SWITCHER)
+       ========================================================================= -->
+  <header class="top-navbar" id="top-navbar" aria-label="Main navigation">
+    <div class="top-navbar-container">
+      <div class="top-nav-brand">
+        <a href="#about" class="brand-link" aria-label="Geza Horvath — Back to top">
+          <span class="brand-monogram">GH</span>
+          <span class="brand-text">Geza Horvath</span>
+        </a>
+      </div>
+
+      <nav class="top-nav-menu" aria-label="In-page navigation links">
+        <ul class="top-nav-list">
+          <li>
+            <a class="nav-link active" href="#about">
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#experience">
+              <span class="nav-text">Experience</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#competencies">
+              <span class="nav-text">Competencies</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#certifications">
+              <span class="nav-text"><span class="full-label">Credentials & Education</span><span class="short-label">Credentials</span></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="top-nav-actions">
+        <div class="version-nav" aria-label="Version Switcher">
+          <span class="v-label">Versions:</span>
+          <a href="/" class="v-btn active">Original</a>
+          <a href="/v3-mavrk/" class="v-btn">Editorial</a>
+          <a href="/v4-editorial/" class="v-btn">Hybrid</a>
+          <a href="/v5-sidebar/" class="v-btn">21st.dev</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <!-- Background cursor spotlight tracking overlay -->
   <div id="spotlight" class="spotlight"></div>
@@ -24,7 +65,7 @@
   <div class="site-container">
 
     <!-- =========================================================================
-         LEFT COLUMN (STICKY SIDEBAR: BIO, NAV, SOCIAL)
+         LEFT COLUMN (STICKY SIDEBAR: BIO, AI ASSISTANT, SOCIAL)
          ========================================================================= -->
     <header class="sidebar-header">
       <div>
@@ -43,37 +84,7 @@
           <span>8+ Years Platform Architecture · Open to Opportunities</span>
         </div>
 
-        <!-- Sticky in-page jump links -->
-        <nav class="sidebar-nav" aria-label="In-page jump links">
-          <ul class="nav-list">
-            <li>
-              <a class="nav-link active" href="#about">
-                <span class="nav-indicator"></span>
-                <span class="nav-text">About</span>
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="#experience">
-                <span class="nav-indicator"></span>
-                <span class="nav-text">Experience</span>
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="#competencies">
-                <span class="nav-indicator"></span>
-                <span class="nav-text">Competencies</span>
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="#certifications">
-                <span class="nav-indicator"></span>
-                <span class="nav-text">Credentials & Education</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Inline AI Cloud Assistant Section -->
+        <!-- Inline AI Cloud Assistant Section (Prominent, directly below status-pill) -->
         <div id="ai-cloud-container"></div>
       </div>
 

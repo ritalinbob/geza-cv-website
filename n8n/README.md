@@ -14,11 +14,12 @@ Tailscale Funnel (https://your-mac-name.ts.net/webhook/resume-chat)
    │
    ▼
 Mac mini M4: n8n Workflow (Port 5678)
-   ├── 1. Validates & bounds recruiter question (max 300 chars)
-   ├── 2. Injects system prompt + verified profile (knowledge-base.json)
-   ├── 3. Calls Ollama (http://localhost:11434/api/generate) with Qwen 2.5 7B
-   ├── 4. Appends inquiry to ~/resume-ai/chat_inquiries.jsonl
-   └── 5. Responds with JSON answer to client
+   ├── 1. Webhook Trigger receives question (max 300 chars)
+   ├── 2. Reads CV & Context Dossier dynamically (~/.n8n-files/geza-cv-context.md)
+   ├── 3. Extracts text and constructs grounded system prompt
+   ├── 4. Calls Ollama (http://localhost:11434/api/generate) with Qwen 2.5 7B
+   ├── 5. Appends inquiry to ~/resume-ai/chat_inquiries.jsonl
+   └── 6. Responds with JSON answer to client
 ```
 
 ---
@@ -28,7 +29,7 @@ Mac mini M4: n8n Workflow (Port 5678)
 ### Step 1: Deploy files to Mac mini
 From this machine, run the automated transfer script:
 ```bash
-bash /home/gezahorvath/Projects/n8n/transfer-to-mac.sh
+./n8n/transfer-to-mac.sh
 ```
 *(Or transfer manually via scp to `gezahorvath@Gezas-Mac-mini.local:~/resume-ai/`)*
 
@@ -42,27 +43,22 @@ chmod +x setup-mac-mini.sh
 ```
 
 ### Step 3: Start n8n
-If running n8n via Docker on the Mac mini:
+If running n8n via PM2 on the Mac mini:
 ```bash
-docker run -d \
-  --name n8n \
-  --restart unless-stopped \
-  -p 5678:5678 \
-  -e N8N_DEFAULT_BINARY_DATA_MODE=filesystem \
-  -v ~/.n8n:/home/node/.n8n \
-  -v ~/resume-ai:/home/node/resume-ai \
-  n8nio/n8n
+pm2 restart n8n-server
 ```
-Or if running directly via npm:
+Or if running directly:
 ```bash
-npx n8n
+n8n start
 ```
 
-### Step 4: Import the Workflow
-1. Open n8n in your browser: `http://localhost:5678` (or `http://Gezas-Mac-mini.local:5678`).
-2. Go to **Workflows** -> click **Add Workflow** -> click the **...** menu -> select **Import from File**.
-3. Choose `~/resume-ai/resume-chat-workflow.json`.
-4. Toggle the workflow to **Active**.
+### Step 4: Workflow & Dynamic Context File
+The workflow reads `geza-cv-context.md` from disk on every invocation. 
+Whenever you update your CV or add more personality/work-style context to `geza-cv-context.md`, simply transfer it:
+```bash
+scp n8n/geza-cv-context.md gezahorvath@Gezas-Mac-mini.local:~/resume-ai/
+```
+The AI model will immediately begin answering with the latest file content on its very next prompt without needing workflow re-imports or restarts!
 
 ### Step 5: Enable Tailscale Funnel for Public Ingress
 To make the webhook securely accessible by the public website without port-forwarding:
