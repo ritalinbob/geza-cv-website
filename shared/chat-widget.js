@@ -378,11 +378,11 @@
         '<div class="ai-arch-modal-header">' +
           '<div class="ai-arch-modal-titles">' +
             '<div class="ai-arch-badge-row">' +
-              '<span class="ai-arch-badge-pill">Layman Architecture</span>' +
+              '<span class="ai-arch-badge-pill">Architecture</span>' +
               '<span class="ai-arch-badge-pill highlight">🔒 100% Private &amp; Self-Hosted</span>' +
             '</div>' +
             '<h2 id="ai-arch-modal-title" class="ai-arch-modal-heading">How Geza\'s AI Assistant Works</h2>' +
-            '<p class="ai-arch-modal-subheading">A simplified architecture walkthrough designed for HR, recruiters, and hiring managers.</p>' +
+            '<p class="ai-arch-modal-subheading">A simplified architecture walkthrough</p>' +
           '</div>' +
           '<button type="button" class="ai-arch-close-btn" id="ai-arch-modal-close" aria-label="Close architecture popup" title="Close (Esc)">' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
