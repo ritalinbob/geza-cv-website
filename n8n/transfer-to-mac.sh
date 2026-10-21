@@ -6,29 +6,31 @@
 
 set -e
 
-MAC_HOST="Gezas-Mac-mini.local"
-MAC_USER="gezahorvath"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+MAC_HOST="${MAC_HOST:-Gezas-Mac-mini.local}"
+MAC_USER="${MAC_USER:-gezahorvath}"
 DEST_DIR="~/resume-ai"
 
 echo "--------------------------------------------------------"
 echo "📡 Deploying AI Chat Bundle to ${MAC_USER}@${MAC_HOST}..."
 echo "--------------------------------------------------------"
 
-# 1. Create remote directory
-ssh "${MAC_USER}@${MAC_HOST}" "mkdir -p ${DEST_DIR}"
+# 1. Create remote directories
+ssh "${MAC_USER}@${MAC_HOST}" "mkdir -p ${DEST_DIR} ~/.n8n-files"
 
-# 2. Transfer workflow, setup script, and knowledge base
-scp /home/gezahorvath/Projects/n8n/resume-chat-workflow.json \
-    /home/gezahorvath/Projects/n8n/setup-mac-mini.sh \
-    /home/gezahorvath/Projects/n8n/README.md \
-    /home/gezahorvath/Projects/shared/knowledge-base.json \
+# 2. Transfer workflow, setup script, context file, and knowledge base
+scp "${SCRIPT_DIR}/resume-chat-workflow.json" \
+    "${SCRIPT_DIR}/geza-cv-context.md" \
+    "${SCRIPT_DIR}/setup-mac-mini.sh" \
+    "${SCRIPT_DIR}/README.md" \
+    "${REPO_ROOT}/shared/knowledge-base.json" \
     "${MAC_USER}@${MAC_HOST}:${DEST_DIR}/"
 
-# 3. Make scripts executable on Mac mini
-ssh "${MAC_USER}@${MAC_HOST}" "chmod +x ${DEST_DIR}/setup-mac-mini.sh"
+# 3. Copy context file to ~/.n8n-files so n8n file-reader node has sandbox access
+ssh "${MAC_USER}@${MAC_HOST}" "cp ~/resume-ai/geza-cv-context.md ~/.n8n-files/geza-cv-context.md && chmod +x ${DEST_DIR}/setup-mac-mini.sh"
 
 echo "✅ All files successfully deployed to ${MAC_HOST}:${DEST_DIR}/"
-echo "You can now SSH into your Mac mini and run:"
-echo "  ssh ${MAC_USER}@${MAC_HOST}"
-echo "  cd ~/resume-ai && ./setup-mac-mini.sh"
+echo "Context file placed in ~/.n8n-files/geza-cv-context.md"
 echo "--------------------------------------------------------"
