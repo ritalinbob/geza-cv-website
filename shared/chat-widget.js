@@ -292,6 +292,12 @@
       return knowledgeBase.translations[currentLanguage].fallback_general;
     }
 
+    if (currentLanguage === 'de') {
+      return "Basierend auf Gézas verifiziertem Profil: ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM und Vulnerability Response. Kontaktieren Sie ihn direkt unter [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
+    } else if (currentLanguage === 'hu') {
+      return "Horváth Géza hitelesített szakmai profilja alapján: ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Sérülékenységkezelés területén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
+    }
+
     return "Based on Géza's verified profile: ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM, and Vulnerability Response. Contact him directly at [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
   }
 
@@ -301,9 +307,14 @@
       return Promise.reject(new Error('All backend endpoints unreachable'));
     }
 
+    // Always ensure currentLanguage aligns with document html lang if set
+    if (document.documentElement && document.documentElement.lang && ['en', 'de', 'hu'].indexOf(document.documentElement.lang) !== -1) {
+      currentLanguage = document.documentElement.lang;
+    }
+
     var targetUrl = endpoints[index];
     var controller = new AbortController();
-    var timeoutId = setTimeout(function () { controller.abort(); }, 28000);
+    var timeoutId = setTimeout(function () { controller.abort(); }, 45000);
 
     return fetch(targetUrl, {
       method: 'POST',

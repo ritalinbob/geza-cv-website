@@ -71,7 +71,7 @@
         "url": "http://localhost:11434/api/generate",
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"model\": {{ JSON.stringify($json.targetModel) }},\n  \"prompt\": {{ JSON.stringify($json.question) }},\n  \"system\": {{ JSON.stringify($json.systemPrompt) }},\n  \"stream\": false,\n  \"options\": {\n    \"temperature\": 0.1,\n    \"top_p\": 0.9\n  }\n}",
+        "jsonBody": "={\n  \"model\": {{ JSON.stringify($json.targetModel) }},\n  \"prompt\": {{ JSON.stringify($json.question) }},\n  \"system\": {{ JSON.stringify($json.systemPrompt) }},\n  \"stream\": false,\n  \"options\": {\n    \"temperature\": 0.1,\n    \"top_p\": 0.9,\n    \"num_predict\": 250\n  }\n}",
         "options": {
           "timeout": 45000
         }
@@ -185,14 +185,14 @@
       "main": [
         [
           {
-            "node": "Ollama LLM (qwen2.5:7b)",
+            "node": "Ollama LLM",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Ollama LLM (qwen2.5:7b)": {
+    "Ollama LLM": {
       "main": [
         [
           {
