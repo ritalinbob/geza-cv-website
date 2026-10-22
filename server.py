@@ -10,19 +10,26 @@ import urllib.error
 import sys
 import os
 
-PORT = 3000
-MAC_MINI_ENDPOINTS = [
+PORT = int(os.environ.get("PORT", 3030))
+MAC_MINI_CHAT_ENDPOINTS = [
     "http://Gezas-Mac-mini.local:5678/webhook/resume-chat",
     "http://192.168.1.248:5678/webhook/resume-chat",
     "http://192.168.1.128:5678/webhook/resume-chat",
 ]
 
+MAC_MINI_CONTACT_ENDPOINTS = [
+    "http://Gezas-Mac-mini.local:5678/webhook/contact-submit",
+    "http://192.168.1.248:5678/webhook/contact-submit",
+    "http://192.168.1.128:5678/webhook/contact-submit",
+]
+
 class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory="/home/gezahorvath/Projects", **kwargs)
+        serve_dir = os.path.dirname(os.path.abspath(__file__))
+        super().__init__(*args, directory=serve_dir, **kwargs)
 
     def do_OPTIONS(self):
-        if self.path == "/api/chat":
+        if self.path in ("/api/chat", "/api/contact"):
             self.send_response(204)
             self.send_header("Access-Control-Allow-Origin", "*")
             self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -32,11 +39,12 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             super().do_OPTIONS()
 
     def do_POST(self):
-        if self.path == "/api/chat":
+        if self.path in ("/api/chat", "/api/contact"):
+            endpoints = MAC_MINI_CHAT_ENDPOINTS if self.path == "/api/chat" else MAC_MINI_CONTACT_ENDPOINTS
             content_length = int(self.headers.get("Content-Length", 0))
             post_body = self.rfile.read(content_length)
 
-            for endpoint in MAC_MINI_ENDPOINTS:
+            for endpoint in endpoints:
                 try:
                     req = urllib.request.Request(
                         endpoint,
@@ -59,12 +67,12 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
                     print(f"[Proxy] Error contacting {endpoint}: {e}", file=sys.stderr)
                     continue
 
-            # Fallback if both unreachable
+            # Fallback if unreachable
             self.send_response(502)
             self.send_header("Content-Type", "application/json")
             self.send_header("Access-Control-Allow-Origin", "*")
             self.end_headers()
-            self.wfile.write(b'{"status":"error","message":"Mac mini unreachable"}')
+            self.wfile.write(b'{"status":"error","message":"Mac mini automation backend unreachable"}')
         else:
             self.send_response(404)
             self.end_headers()
@@ -72,7 +80,7 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     server_address = ("", PORT)
     httpd = http.server.HTTPServer(server_address, ProxyHTTPRequestHandler)
-    print(f"🚀 Server running at http://localhost:{PORT}/ with /api/chat proxy to Mac mini M4")
+    print(f"🚀 Server running at http://localhost:{PORT}/ with /api/chat and /api/contact proxies")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

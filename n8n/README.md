@@ -69,13 +69,53 @@ Tailscale will display your public HTTPS URL (e.g., `https://macmini.<tailnet>.t
 
 Configure this URL in the portfolio website's `ResumeChat.init({ endpoint: "https://..." })`.
 
+## Automated Workflows
+
+### 1. Recruiter & Opportunity Contact Workflow
+- **Webhook Endpoint**: `http://Gezas-Mac-mini.local:5678/webhook/contact-submit`
+- **Trigger**: Client submits the recruiter contact form at the bottom of the page (`#contact`)
+- **Process**:
+  1. Validates incoming submission fields (Name, Email, Message, Company, Role scope, Phone)
+  2. Generates unique reference code (`sub_...`)
+  3. Executes `save_contact.js` to persist safely into **SQLite Database** (`~/resume-ai/contacts.sqlite`)
+  4. Appends audit log entry to `~/resume-ai/contacts.jsonl`
+  5. Sends high-priority formatted HTML notification email to `ghorvath@gmail.com` with one-click reply
+  6. Responds with JSON success confirmation to the browser
+
+#### SQLite Schema (`~/resume-ai/contacts.sqlite`):
+```sql
+CREATE TABLE contacts (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  submission_id TEXT UNIQUE,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  company TEXT,
+  role_or_interest TEXT,
+  phone TEXT,
+  message TEXT NOT NULL,
+  source TEXT,
+  ip_address TEXT,
+  user_agent TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+
 ---
 
-## Logged Inquiries
-Every question asked by visitors or recruiters is appended to:
-`~/resume-ai/chat_inquiries.jsonl`
+### 2. AI Career Assistant Workflow
+- **Webhook Endpoint**: `http://Gezas-Mac-mini.local:5678/webhook/resume-chat`
+- **Trigger**: Visitor or recruiter asks a question in the career assistant
+- **Process**:
+  1. Webhook Trigger receives question (max 300 chars)
+  2. Reads CV & Context Dossier dynamically (`~/.n8n-files/geza-cv-context.md`)
+  3. Extracts text and constructs grounded system prompt
+  4. Calls Ollama (`http://localhost:11434/api/generate`) with Qwen 2.5 7B
+  5. Appends inquiry to `~/resume-ai/chat_inquiries.jsonl`
+  6. Responds with JSON answer to client
 
-Example record:
-```json
-{"timestamp":"2026-10-18T22:50:00Z","sessionId":"sess_8f3a9d","question":"How many years of ServiceNow experience does he have?","answer":"Géza has 8+ years of dedicated, hands-on experience in the ServiceNow ecosystem (since 2018)...","durationMs":1410,"model":"qwen2.5:7b"}
-```
+---
+
+## Logged Inquiries & Submissions
+- **Contact Inquiries**: `~/resume-ai/contacts.sqlite` & `~/resume-ai/contacts.jsonl`
+- **Chat Inquiries**: `~/resume-ai/chat_inquiries.jsonl`
+

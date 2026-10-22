@@ -101,7 +101,7 @@
     {
       "parameters": {
         "operation": "append",
-        "fileName": "={{ $env.HOME || '/root' }}/resume-ai/chat_inquiries.jsonl",
+        "fileName": "/Users/gezahorvath/resume-ai/chat_inquiries.jsonl",
         "fileContent": "={{ $json.logLine }}"
       },
       "type": "n8n-nodes-base.writeBinaryFile",

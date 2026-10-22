@@ -1,0 +1,164 @@
+{
+  "name": "Recruiter & Contact Form Automation (Mac mini M4)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "contact-submit",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -600,
+        0
+      ],
+      "id": "contact-webhook-trigger",
+      "name": "Webhook Trigger",
+      "webhookId": "contact-form-submit-v1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 1. Extract and sanitize incoming contact details\nconst webhookData = $('Webhook Trigger').item.json;\nconst body = webhookData.body || webhookData;\n\nconst rawName = (body.name || '').trim();\nconst rawEmail = (body.email || '').trim().toLowerCase();\nconst rawCompany = (body.company || '').trim();\nconst rawRole = (body.roleOrInterest || 'Full-time ServiceNow Architecture').trim();\nconst rawPhone = (body.phone || '').trim();\nconst rawMessage = (body.message || '').trim();\nconst rawSource = (body.source || 'geza-cv-website').trim();\n\nif (!rawName) throw new Error('Name is required');\nif (!rawEmail || !rawEmail.includes('@')) {\n  throw new Error('Valid email address is required');\n}\nif (!rawMessage) throw new Error('Message is required');\n\nconst submissionId = 'sub_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 7);\nconst now = new Date();\nconst formattedDate = now.toUTCString();\n\nconst emailSubject = `📬 Recruiter Inquiry: ${rawName}${rawCompany ? ' (' + rawCompany + ')' : ''} — ${rawRole}`;\n\nfunction escapeHtml(str) {\n  if (!str) return '';\n  return str.replace(/&/g, '&amp;')\n            .replace(/</g, '&lt;')\n            .replace(/>/g, '&gt;')\n            .replace(/\"/g, '&quot;')\n            .replace(/'/g, '&#039;');\n}\n\nconst emailHtml = `<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <style>\n    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #eae7e1; margin: 0; padding: 24px; color: #1a1a1a; }\n    .email-container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #dedede; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }\n    .header { background: #5c6470; color: #ffffff; padding: 24px; text-align: left; }\n    .header h1 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }\n    .header p { margin: 6px 0 0 0; font-size: 13px; color: #d0d4dc; }\n    .content { padding: 28px 24px; }\n    .badge { display: inline-block; background: #f7e0c1; color: #874900; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; }\n    .info-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }\n    .info-table td { padding: 10px 12px; font-size: 14px; border-bottom: 1px solid #f0eee8; }\n    .info-table td.label { font-weight: 700; color: #5c6470; width: 140px; text-transform: uppercase; font-size: 11px; letter-spacing: 0.04em; }\n    .info-table td.val { color: #1a1a1a; }\n    .message-box { background: #fdfaf6; border-left: 4px solid #d9381e; padding: 18px; border-radius: 4px; margin-top: 8px; margin-bottom: 24px; }\n    .message-box h4 { margin: 0 0 8px 0; font-size: 12px; font-weight: 700; color: #d9381e; text-transform: uppercase; letter-spacing: 0.05em; }\n    .message-box p { margin: 0; font-size: 14.5px; line-height: 1.6; white-space: pre-wrap; color: #222; }\n    .cta-btn { display: inline-block; background: #d9381e; color: #ffffff !important; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; padding: 12px 24px; border-radius: 999px; margin-bottom: 16px; }\n    .footer { background: #f8f6f0; padding: 16px 24px; font-size: 11.5px; color: #777; border-top: 1px solid #dedede; }\n  </style>\n</head>\n<body>\n  <div class=\"email-container\">\n    <div class=\"header\">\n      <h1>Géza Horváth — ServiceNow Architect</h1>\n      <p>New Recruiter / Opportunity Submission Alert</p>\n    </div>\n    <div class=\"content\">\n      <span class=\"badge\">${escapeHtml(rawRole)}</span>\n      <table class=\"info-table\">\n        <tr>\n          <td class=\"label\">Candidate Name</td>\n          <td class=\"val\"><strong>${escapeHtml(rawName)}</strong></td>\n        </tr>\n        <tr>\n          <td class=\"label\">Email Address</td>\n          <td class=\"val\"><a href=\"mailto:${escapeHtml(rawEmail)}\">${escapeHtml(rawEmail)}</a></td>\n        </tr>\n        <tr>\n          <td class=\"label\">Organization</td>\n          <td class=\"val\">${rawCompany ? escapeHtml(rawCompany) : '<em style=\"color:#888;\">Direct contact (organization unlisted)</em>'}</td>\n        </tr>\n        <tr>\n          <td class=\"label\">Opportunity Scope</td>\n          <td class=\"val\">${escapeHtml(rawRole)}</td>\n        </tr>\n        <tr>\n          <td class=\"label\">Phone</td>\n          <td class=\"val\">${rawPhone ? escapeHtml(rawPhone) : '<em style=\"color:#888;\">Not provided</em>'}</td>\n        </tr>\n        <tr>\n          <td class=\"label\">Received At</td>\n          <td class=\"val\">${escapeHtml(formattedDate)}</td>\n        </tr>\n        <tr>\n          <td class=\"label\">Submission ID</td>\n          <td class=\"val\"><code>${escapeHtml(submissionId)}</code></td>\n        </tr>\n      </table>\n\n      <div class=\"message-box\">\n        <h4>Opportunity / Inquiry Details:</h4>\n        <p>${escapeHtml(rawMessage)}</p>\n      </div>\n\n      <div>\n        <a href=\"mailto:${escapeHtml(rawEmail)}?subject=${encodeURIComponent('Re: ' + rawRole + ' — Géza Horváth')}\" class=\"cta-btn\">\n          Reply to ${escapeHtml(rawName)} &rarr;\n        </a>\n      </div>\n    </div>\n    <div class=\"footer\">\n      Persisted to SQLite database (<code>~/resume-ai/contacts.sqlite</code>). Automated via n8n on Mac mini M4.\n    </div>\n  </div>\n</body>\n</html>`;\n\nconst dbRecord = {\n  submissionId: submissionId,\n  name: rawName,\n  email: rawEmail,\n  company: rawCompany,\n  roleOrInterest: rawRole,\n  phone: rawPhone,\n  message: rawMessage,\n  source: rawSource\n};\n\nconst dbBase64 = Buffer.from(JSON.stringify(dbRecord)).toString('base64');\n\nreturn {\n  json: {\n    submissionId: submissionId,\n    name: rawName,\n    email: rawEmail,\n    company: rawCompany,\n    roleOrInterest: rawRole,\n    phone: rawPhone,\n    message: rawMessage,\n    source: rawSource,\n    dbBase64: dbBase64,\n    createdAt: now.toISOString(),\n    formattedDate: formattedDate,\n    emailSubject: emailSubject,\n    emailHtml: emailHtml,\n    logLine: JSON.stringify({ ...dbRecord, timestamp: now.toISOString() }) + '\\n'\n  }\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -340,
+        0
+      ],
+      "id": "sanitize-format-contact",
+      "name": "Sanitize & Format Input"
+    },
+    {
+      "parameters": {
+        "command": "=/usr/local/bin/node /Users/gezahorvath/resume-ai/save_contact.js {{ $json.dbBase64 }}"
+      },
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -120
+      ],
+      "id": "persist-sqlite-db",
+      "name": "Persist to SQLite DB",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "fileName": "/Users/gezahorvath/resume-ai/contacts.jsonl",
+        "fileContent": "={{ $json.logLine }}"
+      },
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        60
+      ],
+      "id": "persist-jsonl-log",
+      "name": "Persist to JSONL (Audit Log)",
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "fromEmail": "ghorvath@gmail.com",
+        "toEmail": "ghorvath@gmail.com",
+        "subject": "={{ $json.emailSubject }}",
+        "html": "={{ $json.emailHtml }}",
+        "options": {
+          "replyTo": "={{ $json.email }}"
+        }
+      },
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        180,
+        -120
+      ],
+      "id": "send-notification-email",
+      "name": "Send Notification Email",
+      "credentials": {
+        "smtp": {
+          "id": "RtW0kCWZm4SAniIq",
+          "name": "SMTP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"status\": \"success\",\n  \"message\": \"Thank you! Your details and message have been received. Géza will get back to you shortly.\",\n  \"submissionId\": {{ JSON.stringify($json.submissionId) }}\n}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Access-Control-Allow-Headers",
+                "value": "Content-Type, Accept"
+              },
+              {
+                "name": "Access-Control-Allow-Methods",
+                "value": "POST, OPTIONS"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        180,
+        60
+      ],
+      "id": "respond-webhook",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sanitize & Format Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sanitize & Format Input": {
+      "main": [
+        [
+          {
+            "node": "Persist to SQLite DB",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Persist to JSONL (Audit Log)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Notification Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
