@@ -25,6 +25,8 @@ scp "${SCRIPT_DIR}/resume-chat-workflow.json" \
     "${SCRIPT_DIR}/contact-form-workflow.json" \
     "${SCRIPT_DIR}/save_contact.js" \
     "${SCRIPT_DIR}/geza-cv-context.md" \
+    "${SCRIPT_DIR}/geza-cv-context.de.md" \
+    "${SCRIPT_DIR}/geza-cv-context.hu.md" \
     "${SCRIPT_DIR}/setup-mac-mini.sh" \
     "${SCRIPT_DIR}/README.md" \
     "${REPO_ROOT}/shared/knowledge-base.json" \
@@ -33,7 +35,7 @@ scp "${SCRIPT_DIR}/resume-chat-workflow.json" \
 # 3. Configure permissions and sandbox files
 ssh "${MAC_USER}@${MAC_HOST}" "
   set -e
-  cp ~/resume-ai/geza-cv-context.md ~/.n8n-files/geza-cv-context.md
+  cp ~/resume-ai/geza-cv-context*.md ~/.n8n-files/
   chmod +x ${DEST_DIR}/setup-mac-mini.sh ${DEST_DIR}/save_contact.js
 
   # Ensure contacts SQLite schema exists

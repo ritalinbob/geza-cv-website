@@ -5,7 +5,8 @@
  * - Large gradient chat input (inspired by 21st.dev)
  * - Animated 3D-effect thinking orb (inspired by Dribbble)
  * - Appropriately sized answer bubble
- * - No hardware / model name mentions in UI
+ * - Full Multilingual Support: English ('en'), German ('de'), Hungarian ('hu')
+ * - Dynamic architecture flowchart modal with localized explanations
  */
 
 (function () {
@@ -22,13 +23,180 @@
   var activeEndpoint = CANDIDATE_ENDPOINTS[0];
   var sessionId = 'sess_' + Math.random().toString(36).substring(2, 10);
   var knowledgeBase = null;
+  var currentLanguage = 'en';
 
-  var SUGGESTION_PILLS = [
-    { label: '⚡ 8+ Yrs ServiceNow', query: 'How many years of ServiceNow experience does Géza have?' },
-    { label: '🛠️ Architecture Projects', query: 'What enterprise architecture projects has he delivered?' },
-    { label: '📜 Certifications', query: 'What certifications does Géza hold?' },
-    { label: '🔌 Integrations', query: 'What systems and integrations has he connected to ServiceNow?' }
-  ];
+  try {
+    var storedLang = localStorage.getItem('preferred_language');
+    if (storedLang && ['en', 'de', 'hu'].indexOf(storedLang) !== -1) {
+      currentLanguage = storedLang;
+    }
+  } catch (e) {}
+
+  var I18N = {
+    en: {
+      title: "Geza's AI Assistant",
+      subtext: "ask me questions about Geza",
+      placeholder: "Ask me questions about Geza...",
+      online: "Online",
+      archLink: "How this AI works · Architecture Flowchart",
+      thinking: "Thinking",
+      answeredIn: "⚡ Answered in ",
+      answeredInSuffix: "s",
+      verifiedProfile: "Verified Profile",
+      qPrefix: "Q: ",
+      close: "Close",
+      pills: [
+        { label: '⚡ 8+ Yrs ServiceNow', query: 'How many years of ServiceNow experience does Géza have?' },
+        { label: '🛠️ Architecture Projects', query: 'What enterprise architecture projects has he delivered?' },
+        { label: '📜 Certifications', query: 'What certifications does Géza hold?' },
+        { label: '🔌 Integrations', query: 'What systems and integrations has he connected to ServiceNow?' }
+      ],
+      modal: {
+        badge: "Architecture",
+        badgeHighlight: "🔒 100% Private & Self-Hosted",
+        heading: "How Geza's AI Assistant Works",
+        subheading: "A simplified architecture walkthrough",
+        step1Badge: "STEP 01",
+        step1Title: "A Question is Asked",
+        step1Desc: "A visitor or recruiter types a question into the website chat (e.g. <em>&ldquo;How many years of ServiceNow experience does Géza have?&rdquo;</em>).",
+        step1Tag: "Visitor Browser",
+        step1Subnote: "Clean input &middot; Browser",
+        step2Badge: "STEP 02",
+        step2Title: "Transmitted to Home Mac mini",
+        step2Desc: "The question travels securely over an encrypted private mesh (n8n + Tailscale) directly to Géza's home Mac mini server in Vienna.",
+        step2Tag: "Home Server",
+        step2Subnote: "Mac mini M4 &middot; Encrypted",
+        step3Badge: "STEP 03 &middot; CORE",
+        step3Title: "Local LLM Constructs Answer",
+        step3Desc: "A private AI model (Ollama) on the Mac mini retrieves verified resume details from an authentic knowledge base and constructs a factual answer.",
+        step3Tag: "Local AI Model",
+        step3Subnote: "Strictly grounded facts",
+        step4Badge: "STEP 04",
+        step4Title: "Answer Fed Back to Website",
+        step4Desc: "The verified answer is fed back to the website in under 2 seconds, displaying cleanly in the conversation card with zero tracking.",
+        step4Tag: "Real-Time Delivery",
+        step4Subnote: "~1.8s response time",
+        takeaway1Title: "Zero Third-Party Cloud Leaks",
+        takeaway1Desc: "Your questions are never sent to external AI vendors like OpenAI or Google. Everything stays 100% private on Géza's own hardware.",
+        takeaway2Title: "Anti-Hallucination Grounding",
+        takeaway2Desc: "The model is strictly locked to Géza's real career milestones. It never invents certifications or exaggerates experience.",
+        takeaway3Title: "Live Architectural Proof",
+        takeaway3Desc: "Direct demonstration of Géza's enterprise skillset: secure tunneling, API automation (n8n), and local AI engineering.",
+        footerHint: "Keyboard shortcut: Press <kbd>Esc</kbd> to exit",
+        gotIt: "Got it, close"
+      }
+    },
+    de: {
+      title: "Gezas KI-Assistent",
+      subtext: "stellen Sie mir Fragen zu Geza",
+      placeholder: "Fragen zu Geza stellen...",
+      online: "Online",
+      archLink: "Funktionsweise der KI · Architektur-Ablaufdiagramm",
+      thinking: "Denkt nach",
+      answeredIn: "⚡ Beantwortet in ",
+      answeredInSuffix: " s",
+      verifiedProfile: "Verifiziertes Profil",
+      qPrefix: "F: ",
+      close: "Schließen",
+      pills: [
+        { label: '⚡ 8+ Jahre ServiceNow', query: 'Wie viele Jahre Erfahrung mit ServiceNow hat Géza?' },
+        { label: '🛠️ Architekturprojekte', query: 'Welche Plattformarchitektur-Projekte hat er geleitet?' },
+        { label: '📜 Zertifizierungen', query: 'Welche Zertifizierungen besitzt Géza?' },
+        { label: '🔌 Schnittstellen & Integrationen', query: 'Welche Systeme hat er an ServiceNow angebunden?' }
+      ],
+      modal: {
+        badge: "Architektur",
+        badgeHighlight: "🔒 100% Privat & Selbst Gehostet",
+        heading: "Wie Gezas KI-Assistent funktioniert",
+        subheading: "Ein vereinfachter Architektur-Rundgang",
+        step1Badge: "SCHRITT 01",
+        step1Title: "Eine Frage wird gestellt",
+        step1Desc: "Ein Besucher oder Recruiter tippt eine Frage in den Chat der Website ein (z. B. <em>„Wie viele Jahre ServiceNow-Erfahrung hat Géza?“</em>).",
+        step1Tag: "Besucher-Browser",
+        step1Subnote: "Saubere Eingabe &middot; Browser",
+        step2Badge: "SCHRITT 02",
+        step2Title: "Übertragung an den Heim-Mac-mini",
+        step2Desc: "Die Frage wird sicher über ein verschlüsseltes privates Mesh-Netzwerk (n8n + Tailscale) direkt an Gézas Mac-mini-Server in Wien übertragen.",
+        step2Tag: "Heim-Server",
+        step2Subnote: "Mac mini M4 &middot; Verschlüsselt",
+        step3Badge: "SCHRITT 03 &middot; KERN",
+        step3Title: "Lokales LLM erstellt Antwort",
+        step3Desc: "Ein privates KI-Modell (Ollama) auf dem Mac mini greift auf verifizierte Lebenslauf-Details zu und formuliert eine faktenbasierte Antwort.",
+        step3Tag: "Lokales KI-Modell",
+        step3Subnote: "Strikte Faktenbindung",
+        step4Badge: "SCHRITT 04",
+        step4Title: "Antwort zurück zur Website",
+        step4Desc: "Die verifizierte Antwort wird in unter 2 Sekunden zurück an die Website übertragen und sauber ohne jegliches Tracking angezeigt.",
+        step4Tag: "Echtzeit-Auslieferung",
+        step4Subnote: "~1.8s Antwortzeit",
+        takeaway1Title: "Keine Cloud-Datenweitergabe",
+        takeaway1Desc: "Ihre Fragen werden niemals an externe KI-Anbieter wie OpenAI oder Google übermittelt. Alles bleibt 100% privat auf eigener Hardware.",
+        takeaway2Title: "Schutz vor Halluzinationen",
+        takeaway2Desc: "Das Modell ist strikt an Gézas reale Karrieremeilensteine gebunden. Es erfindet weder Zertifizierungen noch übertreibt es Erfahrungen.",
+        takeaway3Title: "Praktischer Architekturbeweis",
+        takeaway3Desc: "Direkte Demonstration von Gézas Kompetenzen: sicheres Tunneling, API-Automatisierung (n8n) und lokales KI-Engineering.",
+        footerHint: "Tastaturkürzel: <kbd>Esc</kbd> drücken zum Schließen",
+        gotIt: "Verstanden, schließen"
+      }
+    },
+    hu: {
+      title: "Géza AI Asszisztense",
+      subtext: "tegyél fel kérdéseket Gézáról",
+      placeholder: "Kérdezz Gézáról...",
+      online: "Elérhető",
+      archLink: "Hogyan működik ez az AI · Architektúra folyamatábra",
+      thinking: "Gondolkodik",
+      answeredIn: "⚡ Válaszolva ",
+      answeredInSuffix: " mp alatt",
+      verifiedProfile: "Hitelesített Profil",
+      qPrefix: "K: ",
+      close: "Bezárás",
+      pills: [
+        { label: '⚡ 8+ év ServiceNow', query: 'Hány év ServiceNow tapasztalattal rendelkezik Géza?' },
+        { label: '🛠️ Architektúra projektek', query: 'Milyen vállalati architektúra projekteket valósított meg?' },
+        { label: '📜 Képesítések', query: 'Milyen tanúsítványokkal rendelkezik Géza?' },
+        { label: '🔌 Integrációk', query: 'Milyen rendszereket kapcsolt össze a ServiceNow-val?' }
+      ],
+      modal: {
+        badge: "Architektúra",
+        badgeHighlight: "🔒 100% Saját Kiszolgálón Fut",
+        heading: "Hogyan működik Géza AI Asszisztense",
+        subheading: "Egyszerűsített architektúra áttekintés",
+        step1Badge: "01. LÉPÉS",
+        step1Title: "Kérdés feltevése",
+        step1Desc: "A látogató vagy toborzó kérdést ír be a weboldal csevegőjébe (pl. <em>„Hány év ServiceNow tapasztalattal rendelkezik Géza?”</em>).",
+        step1Tag: "Látogatói Böngésző",
+        step1Subnote: "Tiszta bemenet &middot; Böngésző",
+        step2Badge: "02. LÉPÉS",
+        step2Title: "Továbbítás az otthoni Mac minire",
+        step2Desc: "A kérdés biztonságosan, titkosított privát hálózaton (n8n + Tailscale) fut be közvetlenül Géza bécsi Mac mini szerverére.",
+        step2Tag: "Otthoni Szerver",
+        step2Subnote: "Mac mini M4 &middot; Titkosított",
+        step3Badge: "03. LÉPÉS &middot; KÖZPONTI",
+        step3Title: "Helyi LLM összeállítja a választ",
+        step3Desc: "A Mac minin futó privát AI modell (Ollama) hitelesített szakmai adatokat olvas be és tényszerű választ állít össze.",
+        step3Tag: "Helyi AI Modell",
+        step3Subnote: "Szigorúan tényalapú",
+        step4Badge: "04. LÉPÉS",
+        step4Title: "Válasz visszaküldése a weboldalra",
+        step4Desc: "A hitelesített válasz kevesebb mint 2 másodpercen belül megjelenik a felületen, teljesen követés- és adatgyűjtés-mentesen.",
+        step4Tag: "Valós idejű szállítás",
+        step4Subnote: "~1.8s válaszidő",
+        takeaway1Title: "Nulla Külső Felhős Adatszivárgás",
+        takeaway1Desc: "A kérdések soha nem kerülnek külső AI szolgáltatókhoz (pl. OpenAI vagy Google). Minden 100%-ban privát marad Géza saját hardverén.",
+        takeaway2Title: "Szigorú Tényalapú Működés",
+        takeaway2Desc: "A modell kizárólag a valós szakmai eredményekre támaszkodik. Nem talál ki képesítéseket és nem túloz.",
+        takeaway3Title: "Élő Architektúra Bizonyíték",
+        takeaway3Desc: "Közvetlen demonstrációja Géza vállalati szakértelmének: biztonságos alagútkezelés, API automatizálás (n8n) és helyi AI mérnökség.",
+        footerHint: "Gyorsbillentyű: <kbd>Esc</kbd> gomb a bezáráshoz",
+        gotIt: "Értem, bezárás"
+      }
+    }
+  };
+
+  function getLangStrings() {
+    return I18N[currentLanguage] || I18N.en;
+  }
 
   function escapeHtml(str) {
     if (!str) return '';
@@ -93,30 +261,41 @@
 
   function fallbackAnswer(question) {
     var q = question.toLowerCase();
+    var t = getLangStrings();
+
     if (!knowledgeBase) {
+      if (currentLanguage === 'de') {
+        return "Géza Horváth ist ServiceNow Architect mit über 8 Jahren dedizierter Plattform-Erfahrung in Wien, Österreich. Kontaktieren Sie ihn direkt unter ghorvath@gmail.com oder auf [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
+      } else if (currentLanguage === 'hu') {
+        return "Horváth Géza ServiceNow Architekt több mint 8 év dedikált platformtapasztalattal Bécsben. Elérhetősége közvetlenül: ghorvath@gmail.com vagy [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
+      }
       return "Géza Horváth is a ServiceNow Architect with 8+ years of dedicated platform experience based in Vienna, Austria. You can connect with him directly via email at ghorvath@gmail.com or on [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
     }
 
     var faqs = knowledgeBase.frequently_asked_recruiter_questions || [];
+    if (currentLanguage !== 'en' && knowledgeBase.translations && knowledgeBase.translations[currentLanguage]) {
+      faqs = knowledgeBase.translations[currentLanguage].frequently_asked_recruiter_questions || faqs;
+    }
+
     for (var i = 0; i < faqs.length; i++) {
       var faq = faqs[i];
       var fq = faq.q.toLowerCase();
-      if ((q.includes('year') || q.includes('how long')) && fq.includes('years')) return faq.a;
-      if ((q.includes('lead') || q.includes('title') || q.includes('role')) && fq.includes('lead')) return faq.a;
-      if ((q.includes('integration') || q.includes('connect') || q.includes('api') || q.includes('rest')) && fq.includes('integration')) return faq.a;
+      if ((q.includes('year') || q.includes('how long') || q.includes('jahr') || q.includes('hány') || q.includes('tapasztalat')) && (fq.includes('year') || fq.includes('jahr') || fq.includes('tapasztalat'))) return faq.a;
+      if ((q.includes('lead') || q.includes('title') || q.includes('role') || q.includes('titel') || q.includes('pozíció')) && (fq.includes('lead') || fq.includes('pozíció'))) return faq.a;
+      if ((q.includes('integration') || q.includes('connect') || q.includes('api') || q.includes('rest') || q.includes('schnittstelle') || q.includes('integráció')) && (fq.includes('integration') || fq.includes('integráció'))) return faq.a;
       if ((q.includes('cmdb') || q.includes('discovery') || q.includes('csdm')) && fq.includes('cmdb')) return faq.a;
-      if ((q.includes('cert') || q.includes('csa') || q.includes('cad')) && fq.includes('cert')) return faq.a;
-      if ((q.includes('location') || q.includes('remote') || q.includes('hybrid') || q.includes('vienna')) && fq.includes('remote')) return faq.a;
+      if ((q.includes('cert') || q.includes('csa') || q.includes('cad') || q.includes('zertifikat') || q.includes('képesítés')) && (fq.includes('cert') || fq.includes('zertifikat') || fq.includes('tanúsítvány'))) return faq.a;
+      if ((q.includes('location') || q.includes('remote') || q.includes('hybrid') || q.includes('vienna') || q.includes('wien') || q.includes('bécs') || q.includes('távmunka')) && (fq.includes('remote') || fq.includes('távmunka'))) return faq.a;
     }
 
-    if (q.includes('education') || q.includes('degree') || q.includes('study')) {
-      return "Géza completed an intensive Junior Java Programmer program at Braining Hub, Budapest (2017-2018), holds an MA in International Relations from Corvinus University (2012-2015), and a BSc in Security & Defense Policy (2006-2009).";
+    if (knowledgeBase.translations && knowledgeBase.translations[currentLanguage] && knowledgeBase.translations[currentLanguage].fallback_general) {
+      return knowledgeBase.translations[currentLanguage].fallback_general;
     }
 
     return "Based on Géza's verified profile: ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM, and Vulnerability Response. Contact him directly at [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
   }
 
-  // Attempt fetch across candidates in order
+  // Attempt fetch across candidate endpoints in order
   function queryBackend(question, endpoints, index) {
     if (index >= endpoints.length) {
       return Promise.reject(new Error('All backend endpoints unreachable'));
@@ -124,7 +303,7 @@
 
     var targetUrl = endpoints[index];
     var controller = new AbortController();
-    var timeoutId = setTimeout(function () { controller.abort(); }, 14000);
+    var timeoutId = setTimeout(function () { controller.abort(); }, 28000);
 
     return fetch(targetUrl, {
       method: 'POST',
@@ -134,6 +313,7 @@
       },
       body: JSON.stringify({
         question: question,
+        language: currentLanguage,
         sessionId: sessionId,
         timestamp: new Date().toISOString()
       }),
@@ -155,8 +335,107 @@
     });
   }
 
+  function updateWidgetText() {
+    var container = document.getElementById('ai-cloud-container');
+    if (!container) return;
+
+    var t = getLangStrings();
+
+    var titleEl = container.querySelector('.ai-section-title-text');
+    if (titleEl) titleEl.textContent = t.title;
+
+    var subtextEl = container.querySelector('.ai-section-subtext');
+    if (subtextEl) subtextEl.textContent = t.subtext;
+
+    var inputEl = container.querySelector('#ai-input-field');
+    if (inputEl) inputEl.setAttribute('placeholder', t.placeholder);
+
+    var statusEl = container.querySelector('.ai-status-label');
+    if (statusEl) statusEl.textContent = t.online;
+
+    var archBtnText = container.querySelector('.ai-arch-btn-text');
+    if (archBtnText) archBtnText.innerHTML = t.archLink;
+
+    // Update modal if currently rendered
+    updateModalText();
+  }
+
+  function updateModalText() {
+    var modal = document.getElementById('ai-arch-modal');
+    if (!modal) return;
+
+    var t = getLangStrings();
+    var m = t.modal;
+
+    var title = modal.querySelector('#ai-arch-modal-title');
+    if (title) title.textContent = m.heading;
+
+    var sub = modal.querySelector('.ai-arch-modal-subheading');
+    if (sub) sub.textContent = m.subheading;
+
+    var b1 = modal.querySelector('.ai-arch-badge-pill:not(.highlight)');
+    if (b1) b1.textContent = m.badge;
+
+    var b2 = modal.querySelector('.ai-arch-badge-pill.highlight');
+    if (b2) b2.innerHTML = m.badgeHighlight;
+
+    // Steps
+    var steps = modal.querySelectorAll('.ai-flow-step');
+    if (steps.length >= 4) {
+      // Step 1
+      steps[0].querySelector('.ai-step-badge').innerHTML = m.step1Badge;
+      steps[0].querySelector('.ai-step-title').textContent = m.step1Title;
+      steps[0].querySelector('.ai-step-desc').innerHTML = m.step1Desc;
+      steps[0].querySelector('.ai-step-tag').textContent = m.step1Tag;
+      steps[0].querySelector('.ai-step-subnote').innerHTML = m.step1Subnote;
+
+      // Step 2
+      steps[1].querySelector('.ai-step-badge').innerHTML = m.step2Badge;
+      steps[1].querySelector('.ai-step-title').textContent = m.step2Title;
+      steps[1].querySelector('.ai-step-desc').innerHTML = m.step2Desc;
+      steps[1].querySelector('.ai-step-tag').textContent = m.step2Tag;
+      steps[1].querySelector('.ai-step-subnote').innerHTML = m.step2Subnote;
+
+      // Step 3
+      steps[2].querySelector('.ai-step-badge').innerHTML = m.step3Badge;
+      steps[2].querySelector('.ai-step-title').textContent = m.step3Title;
+      steps[2].querySelector('.ai-step-desc').innerHTML = m.step3Desc;
+      steps[2].querySelector('.ai-step-tag').textContent = m.step3Tag;
+      steps[2].querySelector('.ai-step-subnote').innerHTML = m.step3Subnote;
+
+      // Step 4
+      steps[3].querySelector('.ai-step-badge').innerHTML = m.step4Badge;
+      steps[3].querySelector('.ai-step-title').textContent = m.step4Title;
+      steps[3].querySelector('.ai-step-desc').innerHTML = m.step4Desc;
+      steps[3].querySelector('.ai-step-tag').textContent = m.step4Tag;
+      steps[3].querySelector('.ai-step-subnote').innerHTML = m.step4Subnote;
+    }
+
+    // Takeaways
+    var takeaways = modal.querySelectorAll('.ai-takeaway-card');
+    if (takeaways.length >= 3) {
+      takeaways[0].querySelector('.ai-takeaway-title').textContent = m.takeaway1Title;
+      takeaways[0].querySelector('.ai-takeaway-desc').textContent = m.takeaway1Desc;
+
+      takeaways[1].querySelector('.ai-takeaway-title').textContent = m.takeaway2Title;
+      takeaways[1].querySelector('.ai-takeaway-desc').textContent = m.takeaway2Desc;
+
+      takeaways[2].querySelector('.ai-takeaway-title').textContent = m.takeaway3Title;
+      takeaways[2].querySelector('.ai-takeaway-desc').textContent = m.takeaway3Desc;
+    }
+
+    var hint = modal.querySelector('.ai-arch-footer-hint');
+    if (hint) hint.innerHTML = m.footerHint;
+
+    var gotItBtn = modal.querySelector('#ai-arch-modal-gotit');
+    if (gotItBtn) gotItBtn.textContent = m.gotIt;
+  }
+
   function initAssistant(options) {
     options = options || {};
+    if (options.language && ['en', 'de', 'hu'].indexOf(options.language) !== -1) {
+      currentLanguage = options.language;
+    }
     loadKnowledgeBase(options.knowledgeBaseUrl);
 
     // Endpoints priority
@@ -181,6 +460,7 @@
       }
     }
 
+    var t = getLangStrings();
     var showPills = Boolean(options.showPills);
     var pillsMarkup = showPills ? '<div class="ai-suggestion-pills" id="ai-suggestion-pills"></div>' : '';
 
@@ -195,17 +475,17 @@
                   '<path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z"/>' +
                 '</svg>' +
               '</span>' +
-              'Geza\'s AI Assistant' +
+              '<span class="ai-section-title-text">' + escapeHtml(t.title) + '</span>' +
             '</h3>' +
-            '<p class="ai-section-subtext">ask me questions about Geza</p>' +
+            '<p class="ai-section-subtext">' + escapeHtml(t.subtext) + '</p>' +
           '</div>' +
           '<div class="ai-status-badge" id="ai-status-badge">' +
             '<span class="ai-status-dot"></span>' +
-            '<span class="ai-status-label">Online</span>' +
+            '<span class="ai-status-label">' + escapeHtml(t.online) + '</span>' +
           '</div>' +
         '</div>' +
         '<form class="ai-input-form" id="ai-input-form">' +
-          '<input type="text" class="ai-input-field" id="ai-input-field" placeholder="Ask me questions about Geza..." maxlength="200" autocomplete="off" />' +
+          '<input type="text" class="ai-input-field" id="ai-input-field" placeholder="' + escapeHtml(t.placeholder) + '" maxlength="200" autocomplete="off" />' +
           '<button type="submit" class="ai-send-btn" id="ai-send-btn" aria-label="Send question">' +
             '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
               '<line x1="5" y1="12" x2="19" y2="12"></line>' +
@@ -226,7 +506,7 @@
                 '<path d="M12 14v1"/>' +
               '</svg>' +
             '</span>' +
-            '<span class="ai-arch-btn-text">How this AI works &middot; Architecture Flowchart</span>' +
+            '<span class="ai-arch-btn-text">' + t.archLink + '</span>' +
             '<span class="ai-arch-btn-arrow">&rarr;</span>' +
           '</button>' +
         '</div>' +
@@ -239,7 +519,6 @@
     var submitBtn = container.querySelector('#ai-send-btn');
     var pillsContainer = container.querySelector('#ai-suggestion-pills');
     var stage = container.querySelector('#ai-stage');
-    var statusBadge = container.querySelector('#ai-status-badge');
     var archTriggerBtn = container.querySelector('#ai-arch-trigger-btn');
 
     if (archTriggerBtn) {
@@ -250,7 +529,7 @@
 
     // Populate quick pills only if explicitly enabled
     if (showPills && pillsContainer) {
-      SUGGESTION_PILLS.forEach(function (pill) {
+      t.pills.forEach(function (pill) {
         var btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'ai-pill-btn';
@@ -265,6 +544,7 @@
 
     // Render 3D Thinking Orb (Processing State)
     function renderThinkingOrb() {
+      var currentT = getLangStrings();
       stage.className = 'ai-stage active';
       stage.innerHTML = 
         '<div class="ai-thinking-card">' +
@@ -275,7 +555,7 @@
             '</div>' +
           '</div>' +
           '<div class="ai-thinking-label">' +
-            '<span>Thinking</span>' +
+            '<span>' + escapeHtml(currentT.thinking) + '</span>' +
             '<div class="ai-thinking-dots">' +
               '<span></span><span></span><span></span>' +
             '</div>' +
@@ -285,17 +565,18 @@
 
     // Render Formed Answer Bubble
     function renderAnswerBubble(queryText, answerMarkdown, latencySec) {
+      var currentT = getLangStrings();
       stage.className = 'ai-stage active';
       
       var latencyHtml = latencySec 
-        ? '<span class="ai-bubble-latency">⚡ Answered in ' + escapeHtml(latencySec) + 's</span>'
-        : '<span class="ai-bubble-latency">Verified Profile</span>';
+        ? '<span class="ai-bubble-latency">' + escapeHtml(currentT.answeredIn) + escapeHtml(latencySec) + escapeHtml(currentT.answeredInSuffix) + '</span>'
+        : '<span class="ai-bubble-latency">' + escapeHtml(currentT.verifiedProfile) + '</span>';
 
       stage.innerHTML = 
         '<div class="ai-answer-bubble">' +
           '<div class="ai-bubble-header">' +
-            '<span class="ai-question-tag" title="' + escapeHtml(queryText) + '">Q: ' + escapeHtml(queryText) + '</span>' +
-            '<button type="button" class="ai-dismiss-btn" aria-label="Dismiss answer" title="Close">' +
+            '<span class="ai-question-tag" title="' + escapeHtml(queryText) + '">' + escapeHtml(currentT.qPrefix) + escapeHtml(queryText) + '</span>' +
+            '<button type="button" class="ai-dismiss-btn" aria-label="' + escapeHtml(currentT.close) + '" title="' + escapeHtml(currentT.close) + '">' +
               '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
                 '<line x1="18" y1="6" x2="6" y2="18"></line>' +
                 '<line x1="6" y1="6" x2="18" y2="18"></line>' +
@@ -355,13 +636,19 @@
   }
 
   // ==========================================================================
-  // ARCHITECTURE FLOWCHART MODAL FRAME (Accessible, Centered, Layman Focus)
+  // ARCHITECTURE FLOWCHART MODAL FRAME (Accessible, Centered, Multilingual)
   // ==========================================================================
   var lastFocusedElement = null;
 
   function createArchitectureModal() {
     var existingModal = document.getElementById('ai-arch-modal');
-    if (existingModal) return existingModal;
+    if (existingModal) {
+      updateModalText();
+      return existingModal;
+    }
+
+    var t = getLangStrings();
+    var m = t.modal;
 
     var modalWrapper = document.createElement('div');
     modalWrapper.id = 'ai-arch-modal';
@@ -378,11 +665,11 @@
         '<div class="ai-arch-modal-header">' +
           '<div class="ai-arch-modal-titles">' +
             '<div class="ai-arch-badge-row">' +
-              '<span class="ai-arch-badge-pill">Architecture</span>' +
-              '<span class="ai-arch-badge-pill highlight">🔒 100% Private &amp; Self-Hosted</span>' +
+              '<span class="ai-arch-badge-pill">' + escapeHtml(m.badge) + '</span>' +
+              '<span class="ai-arch-badge-pill highlight">' + m.badgeHighlight + '</span>' +
             '</div>' +
-            '<h2 id="ai-arch-modal-title" class="ai-arch-modal-heading">How Geza\'s AI Assistant Works</h2>' +
-            '<p class="ai-arch-modal-subheading">A simplified architecture walkthrough</p>' +
+            '<h2 id="ai-arch-modal-title" class="ai-arch-modal-heading">' + escapeHtml(m.heading) + '</h2>' +
+            '<p class="ai-arch-modal-subheading">' + escapeHtml(m.subheading) + '</p>' +
           '</div>' +
           '<button type="button" class="ai-arch-close-btn" id="ai-arch-modal-close" aria-label="Close architecture popup" title="Close (Esc)">' +
             '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
@@ -401,20 +688,18 @@
             '<!-- Step 1: A Question is Asked -->' +
             '<div class="ai-flow-step" data-step="1">' +
               '<div class="ai-step-header">' +
-                '<span class="ai-step-badge">STEP 01</span>' +
+                '<span class="ai-step-badge">' + m.step1Badge + '</span>' +
                 '<span class="ai-step-icon-wrap" aria-hidden="true">' +
                   '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
                     '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>' +
                   '</svg>' +
                 '</span>' +
               '</div>' +
-              '<h3 class="ai-step-title">A Question is Asked</h3>' +
-              '<p class="ai-step-desc">' +
-                'A visitor or recruiter types a question into the website chat (e.g. <em>&ldquo;How many years of ServiceNow experience does Géza have?&rdquo;</em>).' +
-              '</p>' +
+              '<h3 class="ai-step-title">' + escapeHtml(m.step1Title) + '</h3>' +
+              '<p class="ai-step-desc">' + m.step1Desc + '</p>' +
               '<div class="ai-step-footer">' +
-                '<span class="ai-step-tag">Visitor Browser</span>' +
-                '<span class="ai-step-subnote">Clean input &middot; Browser</span>' +
+                '<span class="ai-step-tag">' + escapeHtml(m.step1Tag) + '</span>' +
+                '<span class="ai-step-subnote">' + m.step1Subnote + '</span>' +
               '</div>' +
             '</div>' +
 
@@ -427,7 +712,7 @@
             '<!-- Step 2: Transmitted to Home Mac mini Server -->' +
             '<div class="ai-flow-step" data-step="2">' +
               '<div class="ai-step-header">' +
-                '<span class="ai-step-badge">STEP 02</span>' +
+                '<span class="ai-step-badge">' + m.step2Badge + '</span>' +
                 '<span class="ai-step-icon-wrap" aria-hidden="true">' +
                   '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
                     '<rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>' +
@@ -437,13 +722,11 @@
                   '</svg>' +
                 '</span>' +
               '</div>' +
-              '<h3 class="ai-step-title">Transmitted to Home Mac mini</h3>' +
-              '<p class="ai-step-desc">' +
-                'The question travels securely over an encrypted private mesh (n8n + Tailscale) directly to Géza\'s home Mac mini server in Vienna.' +
-              '</p>' +
+              '<h3 class="ai-step-title">' + escapeHtml(m.step2Title) + '</h3>' +
+              '<p class="ai-step-desc">' + escapeHtml(m.step2Desc) + '</p>' +
               '<div class="ai-step-footer">' +
-                '<span class="ai-step-tag">Home Server</span>' +
-                '<span class="ai-step-subnote">Mac mini M4 &middot; Encrypted</span>' +
+                '<span class="ai-step-tag">' + escapeHtml(m.step2Tag) + '</span>' +
+                '<span class="ai-step-subnote">' + m.step2Subnote + '</span>' +
               '</div>' +
             '</div>' +
 
@@ -453,10 +736,10 @@
               '<span class="ai-arrow-symbol">&rarr;</span>' +
             '</div>' +
 
-            '<!-- Step 3: Local LLM Fetches Details & Constructs Answer -->' +
+            '<!-- Step 3: Local LLM Constructs Answer -->' +
             '<div class="ai-flow-step highlight-step" data-step="3">' +
               '<div class="ai-step-header">' +
-                '<span class="ai-step-badge highlight">STEP 03 &middot; CORE</span>' +
+                '<span class="ai-step-badge highlight">' + m.step3Badge + '</span>' +
                 '<span class="ai-step-icon-wrap" aria-hidden="true">' +
                   '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
                     '<path d="M12 2a8 8 0 0 0-8 8c0 3.37 2.07 6.26 5 7.45V20a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2.55c2.93-1.19 5-4.08 5-7.45a8 8 0 0 0-8-8z"/>' +
@@ -465,13 +748,11 @@
                   '</svg>' +
                 '</span>' +
               '</div>' +
-              '<h3 class="ai-step-title">Local LLM Constructs Answer</h3>' +
-              '<p class="ai-step-desc">' +
-                'A private AI model (Ollama) on the Mac mini retrieves verified resume details from an authentic knowledge base and constructs a factual answer.' +
-              '</p>' +
+              '<h3 class="ai-step-title">' + escapeHtml(m.step3Title) + '</h3>' +
+              '<p class="ai-step-desc">' + escapeHtml(m.step3Desc) + '</p>' +
               '<div class="ai-step-footer">' +
-                '<span class="ai-step-tag accent">Local AI Model</span>' +
-                '<span class="ai-step-subnote">Strictly grounded facts</span>' +
+                '<span class="ai-step-tag accent">' + escapeHtml(m.step3Tag) + '</span>' +
+                '<span class="ai-step-subnote">' + escapeHtml(m.step3Subnote) + '</span>' +
               '</div>' +
             '</div>' +
 
@@ -484,20 +765,18 @@
             '<!-- Step 4: Answer is Fed Back to the Website -->' +
             '<div class="ai-flow-step" data-step="4">' +
               '<div class="ai-step-header">' +
-                '<span class="ai-step-badge">STEP 04</span>' +
+                '<span class="ai-step-badge">' + m.step4Badge + '</span>' +
                 '<span class="ai-step-icon-wrap" aria-hidden="true">' +
                   '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
                     '<polyline points="20 6 9 17 4 12"></polyline>' +
                   '</svg>' +
                 '</span>' +
               '</div>' +
-              '<h3 class="ai-step-title">Answer Fed Back to Website</h3>' +
-              '<p class="ai-step-desc">' +
-                'The verified answer is fed back to the website in under 2 seconds, displaying cleanly in the conversation card with zero tracking.' +
-              '</p>' +
+              '<h3 class="ai-step-title">' + escapeHtml(m.step4Title) + '</h3>' +
+              '<p class="ai-step-desc">' + escapeHtml(m.step4Desc) + '</p>' +
               '<div class="ai-step-footer">' +
-                '<span class="ai-step-tag">Real-Time Delivery</span>' +
-                '<span class="ai-step-subnote">&sim;1.8s response time</span>' +
+                '<span class="ai-step-tag">' + escapeHtml(m.step4Tag) + '</span>' +
+                '<span class="ai-step-subnote">' + escapeHtml(m.step4Subnote) + '</span>' +
               '</div>' +
             '</div>' +
 
@@ -508,22 +787,22 @@
             '<div class="ai-takeaway-card">' +
               '<div class="ai-takeaway-icon">🔒</div>' +
               '<div class="ai-takeaway-body">' +
-                '<h4 class="ai-takeaway-title">Zero Third-Party Cloud Leaks</h4>' +
-                '<p class="ai-takeaway-desc">Your questions are never sent to external AI vendors like OpenAI or Google. Everything stays 100% private on Géza\'s own hardware.</p>' +
+                '<h4 class="ai-takeaway-title">' + escapeHtml(m.takeaway1Title) + '</h4>' +
+                '<p class="ai-takeaway-desc">' + escapeHtml(m.takeaway1Desc) + '</p>' +
               '</div>' +
             '</div>' +
             '<div class="ai-takeaway-card">' +
               '<div class="ai-takeaway-icon">🎯</div>' +
               '<div class="ai-takeaway-body">' +
-                '<h4 class="ai-takeaway-title">Anti-Hallucination Grounding</h4>' +
-                '<p class="ai-takeaway-desc">The model is strictly locked to Géza\'s real career milestones. It never invents certifications or exaggerates experience.</p>' +
+                '<h4 class="ai-takeaway-title">' + escapeHtml(m.takeaway2Title) + '</h4>' +
+                '<p class="ai-takeaway-desc">' + escapeHtml(m.takeaway2Desc) + '</p>' +
               '</div>' +
             '</div>' +
             '<div class="ai-takeaway-card">' +
               '<div class="ai-takeaway-icon">⚡</div>' +
               '<div class="ai-takeaway-body">' +
-                '<h4 class="ai-takeaway-title">Live Architectural Proof</h4>' +
-                '<p class="ai-takeaway-desc">Direct demonstration of Géza\'s enterprise skillset: secure tunneling, API automation (n8n), and local AI engineering.</p>' +
+                '<h4 class="ai-takeaway-title">' + escapeHtml(m.takeaway3Title) + '</h4>' +
+                '<p class="ai-takeaway-desc">' + escapeHtml(m.takeaway3Desc) + '</p>' +
               '</div>' +
             '</div>' +
           '</div>' +
@@ -532,8 +811,8 @@
 
         '<!-- Modal Footer -->' +
         '<div class="ai-arch-modal-footer">' +
-          '<span class="ai-arch-footer-hint">Keyboard shortcut: Press <kbd>Esc</kbd> to exit</span>' +
-          '<button type="button" class="ai-arch-close-action" id="ai-arch-modal-gotit">Got it, close</button>' +
+          '<span class="ai-arch-footer-hint">' + m.footerHint + '</span>' +
+          '<button type="button" class="ai-arch-close-action" id="ai-arch-modal-gotit">' + escapeHtml(m.gotIt) + '</button>' +
         '</div>' +
 
       '</div>';
@@ -596,7 +875,7 @@
       triggerBtn.setAttribute('aria-expanded', 'true');
     }
 
-    // Set focus on the frame or close button
+    // Set focus on frame or close button
     var frame = modal.querySelector('#ai-arch-modal-frame');
     var closeBtn = modal.querySelector('#ai-arch-modal-close');
     setTimeout(function () {
@@ -629,7 +908,16 @@
   window.ResumeChat = {
     init: initAssistant,
     openArchitecture: openArchitectureModal,
-    closeArchitecture: closeArchitectureModal
+    closeArchitecture: closeArchitectureModal,
+    setLanguage: function (lang) {
+      if (['en', 'de', 'hu'].indexOf(lang) !== -1) {
+        currentLanguage = lang;
+        updateWidgetText();
+      }
+    },
+    getLanguage: function () {
+      return currentLanguage;
+    }
   };
 
   // Safe auto-initialize when #ai-cloud-container is found

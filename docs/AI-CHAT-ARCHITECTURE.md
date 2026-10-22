@@ -57,32 +57,55 @@ Option A was confirmed as the target production deployment pattern:
 │  │                                                                   │  │
 │  │  1. Webhook Node: POST /webhook/resume-chat                       │  │
 │  │  2. Sanitizer Node: Bounds question (max 300 chars)               │  │
-│  │  3. Context Node: Injects verified profile (knowledge-base.json)  │  │
-│  │  4. HTTP Request Node: Calls Ollama localhost:11434               │  │
-│  │  5. Response Formatter: Computes latency, builds JSON record      │  │
-│  │  6. Persistence Node: Appends to ~/resume-ai/chat_inquiries.jsonl │  │
-│  │  7. Webhook Response: Returns formatted JSON answer               │  │
+│  │  3. Context Node: Injects localized profile (geza-cv-context.md / .de.md / .hu.md)│  │
+│  │  4. Model Router: Routes to qwen2.5:7b (EN/DE) or hermes3:8b (HU)  │  │
+│  │  5. HTTP Request Node: Calls Ollama localhost:11434               │  │
+│  │  6. Response Formatter: Computes latency, builds JSON record      │  │
+│  │  7. Persistence Node: Appends to ~/resume-ai/chat_inquiries.jsonl │  │
+│  │  8. Webhook Response: Returns formatted JSON answer               │  │
 │  └───────────────────────────────────┬───────────────────────────────┘  │
 │                                      │                                  │
 │                                      ▼                                  │
 │  ┌───────────────────────────────────────────────────────────────────┐  │
 │  │                     LOCAL OLLAMA INFERENCE                        │  │
-│  │            Model: qwen2.5:7b-instruct (4-bit Q4_K_M)              │  │
+│  │     Models: qwen2.5:7b (EN/DE) & hermes3:8b (HU) (4-bit Q4)       │  │
 │  │         - Apple Silicon Metal Unified Memory Acceleration         │  │
-│  │         - Footprint: ~4.7 GB RAM (leaves >6 GB free)              │  │
-│  │         - Speed: 35-45 tokens/sec (sub-2.5s complete response)    │  │
+│  │         - Footprint: ~4.7 GB RAM (leaves >6 GB free on 16GB Mac)  │  │
+│  │         - Speed: 35-45 tokens/sec (sub-2s complete response)      │  │
 │  └───────────────────────────────────────────────────────────────────┘  │
 +─────────────────────────────────────────────────────────────────────────+
 ```
 
 ---
 
-## 2. Strict Anti-Hallucination Grounding Strategy
+## 2. Multilingual Model Benchmarks on Mac mini M4 (16GB RAM)
+
+With 16GB of Unified Memory, macOS and basic daemon processes reserve ~5-6 GB, leaving **~9-10 GB safely available for LLM weights and KV cache** without triggering memory swapping.
+
+Live benchmarks were conducted on `Gezas-Mac-mini.local`:
+
+| Model | Size & Quant | German Fluency | Hungarian Grammar & Morphology | RAM Usage | Deployment Recommendation |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Qwen 2.5 7B** (`qwen2.5:7b`) | 7.6B (Q4_K_M) | **Flawless** (natural enterprise tone) | **Impaired** (exhibits vowel harmony errors like *"projektök"* and awkward case inflection) | ~4.7 GB | **Primary model for English and German** |
+| **Hermes 3 8B** (`hermes3:8b` / Llama 3.1) | 8.0B (Q4_0) | **Very Good** | **Flawless** (accurate vowel harmony, natural Hungarian sentence structure) | ~4.7 GB | **Primary model for Hungarian** (Already installed on Mac mini) |
+| **Llama 3.1 8B** (`llama3.1:8b`) | 8.0B (Q4_K_M) | **Very Good** | **Very Good** | ~4.9 GB | Excellent alternative multilingual all-rounder |
+| **Mistral NeMo 12B** (`mistral-nemo:12b`) | 12.2B (Tekken Tokenizer) | **Excellent** | **Very Good** | ~7.1 GB | High-quality European multilingual model, higher VRAM footprint |
+| **Qwen 2.5 14B** (`qwen2.5:14b`) | 14.7B (Q4_K_M) | **Superb** | **Good** | ~9.0 GB | Tighter memory fit on 16GB system when running alongside n8n |
+
+### Dynamic Model Routing in n8n:
+The n8n workflow reads the incoming `language` parameter (`en`, `de`, `hu`):
+- If `language === 'hu'`, Ollama invokes `hermes3:8b` with `geza-cv-context.hu.md`.
+- If `language === 'de'` or `language === 'en'`, Ollama invokes `qwen2.5:7b` with the corresponding language context.
+
+---
+
+## 3. Strict Anti-Hallucination Grounding Strategy
 
 Rather than using complex chunked vector RAG (which frequently causes retrieval misses on aggregated queries like *"How many total years has he worked in ServiceNow?"*), this system uses **Full In-Context Grounding**:
 
-1. **Context Sizing:** The complete verified resume profile and pre-screened recruiter FAQs total **under 15 KB** (~2,500 tokens).
-2. **Deterministic Coverage:** The complete profile is directly injected into the system prompt with strict negative boundary guardrails:
+1. **Native Context Files:** Separate, verified profile dossiers in each language (`geza-cv-context.md`, `geza-cv-context.de.md`, `geza-cv-context.hu.md`) eliminate translation latency and translation inaccuracies.
+2. **Context Sizing:** The complete verified resume profile totals under 12 KB (~2,500 tokens).
+3. **Deterministic Guardrails:** The complete profile is directly injected into the system prompt with strict negative boundary rules:
    - Must answer only from verified facts.
    - Refuses out-of-scope topics (general trivia, politics, compensation speculation).
    - Clarifies title distinction: ServiceNow Architect (not Lead).
@@ -90,29 +113,21 @@ Rather than using complex chunked vector RAG (which frequently causes retrieval 
 
 ---
 
-## 3. Data Persistence Schema
+## 4. Data Persistence Schema
 
 Recruiter and visitor inquiries are logged to `~/resume-ai/chat_inquiries.jsonl`:
 
 ```json
 {
-  "timestamp": "2026-10-18T22:50:00.123Z",
+  "timestamp": "2026-10-22T23:30:00.123Z",
   "sessionId": "sess_9k2m1b",
-  "question": "How many years of ServiceNow experience does he have?",
-  "answer": "Géza has 8+ years of dedicated, hands-on experience in the ServiceNow ecosystem, working from Senior Developer up to ServiceNow Architect.",
-  "durationMs": 1380,
-  "model": "qwen2.5:7b"
+  "question": "Hány év ServiceNow tapasztalattal rendelkezik Géza?",
+  "answer": "Géza Horváth 8+ év dedikált ServiceNow tapasztalattal rendelkezik (2018 óta), szenior fejlesztőtől ServiceNow architekt szintig.",
+  "durationMs": 1420,
+  "model": "hermes3:8b",
+  "language": "hu"
 }
 ```
-
----
-
-## 4. Frontend Integration & Color Themes
-
-The floating drawer is implemented in Vanilla JavaScript and modern CSS:
-- **Original (`/`):** Inherits warm cream canvas (`#FCFBF4`), deep slate typography, and warm amber accents.
-- **Editorial (`/v3-mavrk/`):** Inherits high-contrast editorial poster styling with black borders, serif headlines, and red accents.
-- **21st.dev (`/v5-sidebar/`):** Dynamically reacts to dark/light mode toggle with shadcn design tokens.
 
 ---
 
@@ -121,17 +136,22 @@ The floating drawer is implemented in Vanilla JavaScript and modern CSS:
 ```
 Projects/
 ├── shared/
-│   ├── chat-widget.js          # Universal modular chat widget
+│   ├── chat-widget.js          # Universal multilingual chat widget
 │   ├── chat-widget.css         # Theme-adaptive styles
-│   └── knowledge-base.json     # Ground truth verified resume & FAQ data
+│   └── knowledge-base.json     # Multilingual offline fallback knowledge base (EN/DE/HU)
 ├── n8n/
-│   ├── resume-chat-workflow.json # Ready-to-import n8n workflow
+│   ├── geza-cv-context.md      # English profile dossier
+│   ├── geza-cv-context.de.md   # German profile dossier
+│   ├── geza-cv-context.hu.md   # Hungarian profile dossier
+│   ├── resume-chat-workflow.json # n8n workflow with language & model routing
+│   ├── contact-form-workflow.json # Recruiter contact form workflow
 │   ├── setup-mac-mini.sh       # Ollama & Tailscale initialization script
-│   ├── transfer-to-mac.sh      # SCP deployment script to Gezas-Mac-mini.local
 │   └── README.md               # Mac mini setup guide
 ├── docs/
-│   └── AI-CHAT-ARCHITECTURE.md # Architecture & technical documentation
-├── index.html                  # Original Cream site with integrated chat
-├── v3-mavrk/index.html         # Editorial site with integrated chat
-└── v5-sidebar/index.html       # 21st.dev site with integrated chat
+│   ├── AI-CHAT-ARCHITECTURE.md    # English architecture documentation
+│   ├── AI-CHAT-ARCHITECTURE.de.md # German architecture documentation
+│   └── AI-CHAT-ARCHITECTURE.hu.md # Hungarian architecture documentation
+├── index.html                  # Main site with editorial language picker (EN | DE | HU)
+├── script.js                   # Interactive behaviors & i18n translation engine
+└── server.py                   # Development server with /api/chat & /api/contact proxies
 ```

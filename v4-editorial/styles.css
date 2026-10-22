@@ -249,6 +249,63 @@ button {
   display: none;
 }
 
+/* ==========================================================================
+   LANGUAGE PICKER (EDITORIAL SEGMENTED PILL)
+   ========================================================================== */
+
+.top-nav-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.lang-picker {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(92, 100, 112, 0.08);
+  border: 1.5px solid rgba(92, 100, 112, 0.22);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  box-shadow: inset 0 1px 2px rgba(26, 26, 26, 0.04);
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: var(--c-text-muted);
+  font-family: var(--font-heading);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--c-text-dark);
+  background: rgba(92, 100, 112, 0.12);
+}
+
+.lang-btn.active {
+  background: var(--c-topbar);
+  color: #ffffff;
+  box-shadow: 0 2px 6px -1px rgba(92, 100, 112, 0.4);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 1px;
+}
+
 
 
 @media (max-width: 900px) {
@@ -281,14 +338,15 @@ button {
     padding: 5px 9px;
     font-size: 11px;
   }
-  .version-nav {
+  .top-nav-actions {
+    margin-left: 2px;
+  }
+  .lang-picker {
+    padding: 2px;
+    gap: 1px;
+  }
+  .lang-btn {
     padding: 3px 6px;
-  }
-  .v-label {
-    display: none;
-  }
-  .v-btn {
-    padding: 2px 6px;
     font-size: 10px;
   }
 }
