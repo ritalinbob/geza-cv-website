@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="v4-editorial/styles.css">
+  <link rel="stylesheet" href="v4-editorial/styles.css?v=albers1">
   <link rel="stylesheet" href="shared/chat-widget.css?v=arch1">
 </head>
 <body class="editorial-theme">
@@ -24,10 +24,40 @@
       <div class="top-nav-brand">
         <a href="#about" class="brand-link" aria-label="Geza Horvath — Back to top">
           <div class="brand-logo-mini">
-            <svg viewBox="0 0 80 80" class="mini-logo-svg">
-              <path d="M 12 12 L 52 12 L 70 30 L 70 68 L 28 68 L 10 50 Z" stroke-width="3" fill="none"/>
+            <svg viewBox="0 0 80 80" class="mini-logo-svg" role="img" aria-label="Geza Horvath monogram gh">
+              <!-- Secondary thin wireframe lines -->
+              <g stroke="currentColor" stroke-width="1.3" stroke-opacity="0.55" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <line x1="12.66" y1="17.84" x2="34.34" y2="29.93"/>
+                <line x1="67.34" y1="18.67" x2="34.34" y2="29.93"/>
+                <line x1="34.34" y1="29.93" x2="28.68" y2="56.6"/>
+                <line x1="7.0" y1="44.93" x2="28.68" y2="56.6"/>
+                <line x1="73.0" y1="34.93" x2="51.18" y2="23.67"/>
+                <line x1="51.18" y1="23.67" x2="45.38" y2="50.21"/>
+                <line x1="45.38" y1="50.21" x2="67.2" y2="62.44"/>
+                <line x1="67.34" y1="18.67" x2="61.54" y2="45.63"/>
+                <line x1="64.3" y1="32.57" x2="67.34" y2="18.67"/>
+              </g>
+              <!-- Primary thick lines (Josef Albers Structural Constellation) -->
+              <g stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <line x1="12.66" y1="17.84" x2="45.8" y2="7.0"/>
+                <line x1="45.8" y1="7.0" x2="67.34" y2="18.67"/>
+                <line x1="12.66" y1="17.84" x2="7.0" y2="44.93"/>
+                <line x1="45.8" y1="7.0" x2="39.86" y2="34.51"/>
+                <line x1="18.32" y1="34.23" x2="39.86" y2="34.51"/>
+                <line x1="18.32" y1="34.23" x2="39.72" y2="45.63"/>
+                <line x1="39.86" y1="34.51" x2="61.54" y2="45.63"/>
+                <line x1="39.72" y1="45.63" x2="61.54" y2="45.63"/>
+                <line x1="61.54" y1="45.63" x2="64.3" y2="32.57"/>
+                <line x1="18.32" y1="34.23" x2="12.25" y2="61.88"/>
+                <line x1="12.25" y1="61.88" x2="33.92" y2="73.0"/>
+                <line x1="33.92" y1="73.0" x2="67.2" y2="62.44"/>
+                <line x1="67.2" y1="62.44" x2="73.0" y2="34.93"/>
+                <line x1="39.72" y1="45.63" x2="33.92" y2="73.0"/>
+              </g>
+              <!-- 'gh' Monogram -->
+              <text x="40" y="44" class="logo-monogram-halo" text-anchor="middle">gh</text>
+              <text x="40" y="44" class="logo-monogram-core" text-anchor="middle">gh</text>
             </svg>
-            <span class="mini-logo-text">gh</span>
           </div>
           <span class="brand-text">Geza Horvath</span>
         </a>
@@ -92,10 +122,40 @@
         <!-- Editorial Monogram Geometric Logo -->
         <div class="sidebar-logo-wrapper">
           <div class="logo">
-            <svg viewBox="0 0 80 80" class="logo-svg">
-              <path d="M 12 12 L 52 12 L 70 30 L 70 68 L 28 68 L 10 50 Z" stroke-width="2.5" fill="none"/>
+            <svg viewBox="0 0 80 80" class="logo-svg" role="img" aria-label="Geza Horvath monogram gh">
+              <!-- Secondary thin wireframe lines -->
+              <g stroke="currentColor" stroke-width="1.1" stroke-opacity="0.55" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <line x1="12.66" y1="17.84" x2="34.34" y2="29.93"/>
+                <line x1="67.34" y1="18.67" x2="34.34" y2="29.93"/>
+                <line x1="34.34" y1="29.93" x2="28.68" y2="56.6"/>
+                <line x1="7.0" y1="44.93" x2="28.68" y2="56.6"/>
+                <line x1="73.0" y1="34.93" x2="51.18" y2="23.67"/>
+                <line x1="51.18" y1="23.67" x2="45.38" y2="50.21"/>
+                <line x1="45.38" y1="50.21" x2="67.2" y2="62.44"/>
+                <line x1="67.34" y1="18.67" x2="61.54" y2="45.63"/>
+                <line x1="64.3" y1="32.57" x2="67.34" y2="18.67"/>
+              </g>
+              <!-- Primary thick lines (Josef Albers Structural Constellation) -->
+              <g stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <line x1="12.66" y1="17.84" x2="45.8" y2="7.0"/>
+                <line x1="45.8" y1="7.0" x2="67.34" y2="18.67"/>
+                <line x1="12.66" y1="17.84" x2="7.0" y2="44.93"/>
+                <line x1="45.8" y1="7.0" x2="39.86" y2="34.51"/>
+                <line x1="18.32" y1="34.23" x2="39.86" y2="34.51"/>
+                <line x1="18.32" y1="34.23" x2="39.72" y2="45.63"/>
+                <line x1="39.86" y1="34.51" x2="61.54" y2="45.63"/>
+                <line x1="39.72" y1="45.63" x2="61.54" y2="45.63"/>
+                <line x1="61.54" y1="45.63" x2="64.3" y2="32.57"/>
+                <line x1="18.32" y1="34.23" x2="12.25" y2="61.88"/>
+                <line x1="12.25" y1="61.88" x2="33.92" y2="73.0"/>
+                <line x1="33.92" y1="73.0" x2="67.2" y2="62.44"/>
+                <line x1="67.2" y1="62.44" x2="73.0" y2="34.93"/>
+                <line x1="39.72" y1="45.63" x2="33.92" y2="73.0"/>
+              </g>
+              <!-- 'gh' Monogram -->
+              <text x="40" y="43" class="logo-monogram-halo" text-anchor="middle">gh</text>
+              <text x="40" y="43" class="logo-monogram-core" text-anchor="middle">gh</text>
             </svg>
-            <span class="logo-text">gh</span>
           </div>
         </div>
 

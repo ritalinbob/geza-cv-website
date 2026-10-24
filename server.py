@@ -79,7 +79,7 @@ class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     server_address = ("", PORT)
-    httpd = http.server.HTTPServer(server_address, ProxyHTTPRequestHandler)
+    httpd = http.server.ThreadingHTTPServer(server_address, ProxyHTTPRequestHandler)
     print(f"🚀 Server running at http://localhost:{PORT}/ with /api/chat and /api/contact proxies")
     try:
         httpd.serve_forever()

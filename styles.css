@@ -513,15 +513,22 @@ button {
   }
 }
 
-.section-block {
-  margin-bottom: 80px;
+.section-block,
+.content-section {
+  margin-bottom: 72px;
   scroll-margin-top: 96px;
 }
 
 @media (min-width: 1024px) {
-  .section-block {
-    margin-bottom: 120px;
+  .section-block,
+  .content-section {
+    margin-bottom: 96px;
   }
+}
+
+/* Section Header Container */
+.sticky-section-header {
+  position: relative;
 }
 
 /* Mobile sticky section header */
@@ -560,6 +567,13 @@ button {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-bright);
+  padding: 16px 0 22px 0;
+  display: block;
+}
+
+.content-section:first-child .section-label,
+.section-block:first-child .section-label {
+  padding-top: 4px;
 }
 
 /* ==========================================================================

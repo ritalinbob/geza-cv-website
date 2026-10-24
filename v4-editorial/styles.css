@@ -170,17 +170,11 @@ button {
   width: 26px;
   height: 26px;
   stroke: #1a1a1a;
+  display: block;
 }
 
 .mini-logo-text {
-  position: absolute;
-  top: 52%;
-  right: 18%;
-  font-family: var(--font-logo);
-  font-size: 9.5px;
-  font-weight: 600;
-  color: #1a1a1a;
-  letter-spacing: -0.5px;
+  display: none;
 }
 
 .brand-link:hover .brand-logo-mini {
@@ -439,18 +433,47 @@ button {
   width: 100%;
   height: 100%;
   stroke: #1a1a1a;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.08));
 }
 
 .sidebar-logo-wrapper .logo-text {
-  position: absolute;
-  top: 54%;
-  right: 22%;
+  display: none;
+}
+
+/* SVG In-Shape Monogram Typography */
+.logo-monogram-halo {
   font-family: var(--font-logo);
-  font-size: 26px;
-  font-weight: 500;
-  color: #1a1a1a;
-  letter-spacing: -1.5px;
+  font-size: 17px;
+  font-weight: 700;
+  fill: var(--c-buff);
+  stroke: var(--c-buff);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  letter-spacing: -0.5px;
+  transition: fill var(--transition-normal), stroke var(--transition-normal);
+}
+
+.sidebar-logo-wrapper:hover .logo-monogram-halo,
+.brand-link:hover .logo-monogram-halo {
+  fill: var(--c-buff-dark);
+  stroke: var(--c-buff-dark);
+}
+
+.logo-monogram-core {
+  font-family: var(--font-logo);
+  font-size: 17px;
+  font-weight: 700;
+  fill: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.mini-logo-svg .logo-monogram-halo {
+  font-size: 21px;
+  stroke-width: 5px;
+}
+
+.mini-logo-svg .logo-monogram-core {
+  font-size: 21px;
 }
 
 .author-title {
@@ -569,15 +592,22 @@ button {
   }
 }
 
-.section-block {
-  margin-bottom: 80px;
+.section-block,
+.content-section {
+  margin-bottom: 72px;
   scroll-margin-top: 96px;
 }
 
 @media (min-width: 1024px) {
-  .section-block {
-    margin-bottom: 110px;
+  .section-block,
+  .content-section {
+    margin-bottom: 96px;
   }
+}
+
+/* Section Header Container */
+.sticky-section-header {
+  position: relative;
 }
 
 /* Mobile sticky section header */
@@ -612,11 +642,18 @@ button {
 
 .section-label {
   font-family: var(--font-title);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   color: var(--c-text-dark);
+  padding: 16px 0 22px 0;
+  display: block;
+}
+
+.content-section:first-child .section-label,
+.section-block:first-child .section-label {
+  padding-top: 4px;
 }
 
 /* ==========================================================================
