@@ -2,162 +2,175 @@
 
 === SECTION: EN ===
 # Geza Horvath
-**ServiceNow Architect & Enterprise Business Applications Lead**  
-Pressbaum / Vienna, Austria • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
+**ServiceNow Architect & Enterprise AI Automation Engineer**  
+Pressbaum (Vienna Area), Austria • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
 
 ### Executive Profile
-ServiceNow Architect and Enterprise Applications Lead with 8+ years directing multi-instance platform engineering, cross-system automation, and complex data migrations. Bootstrapped a greenfield multi-instance ServiceNow ecosystem, architected corporate divestiture splits across disparate data warehouses, and implemented core ITSM, CMDB/Discovery, HAM, and Vulnerability Response solutions. Built an in-house VS Code agentic AI toolchain and custom MCP API wrappers adopted team-wide to accelerate platform delivery, automate code review, and eliminate manual configuration overhead.
+ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations, and cross-system automation. Bootstrapped a greenfield 6-instance ecosystem, led full infrastructure and data decoupling through an enterprise divestiture, and directs core ITSM, CMDB/Discovery, HAM, and Vulnerability Response environments. Pioneers modern agentic engineering—building in-house VS Code MCP toolchains adopted team-wide to accelerate delivery and engineering automated n8n LLM workflows that eliminate operational overhead.
+
+### Key Metrics
+* **8+ Years Platform Experience:** ServiceNow Architecture & ITSM/CMDB
+* **6 Greenfield Instances:** Multi-Instance Topology & Release Gates
+* **100% Zero-Touch HR Boarding:** Cross-System Automation (Entra ID / BambooHR)
+* **AI VS Code Agentic Toolchain:** In-IDE Schema Inspection & GlideScript MCP
 
 ### Core Competencies
-* **Platform Architecture & Governance:** Multi-Instance Topology, Release Governance, Upgrade Cycles (Sub-Prod to Prod skipped-record capture), Clone Profile Management, Scoped Apps, Idempotent ATF Suites.
-* **Modules & Operations:** ITSM, CMDB, Discovery (MID Servers, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).
-* **Enterprise Automation & Identity:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST triggers, Zero-Touch HR Boarding & Role Transfers, Automated RBAC Group Provisioning.
-* **Integrations, Middleware & Data:** n8n, Cloudomation (Python), Jitterbit, Scripted REST, Webhooks, Relational Data Warehouses (SQL/Views), IntegrationHub.
-* **AI & Engineering Tooling:** VS Code Agentic Development Pipelines, Custom Model Context Protocol (MCP) ServiceNow API Wrappers, Custom Agent Skills, Modern JavaScript / GlideScript, Python (Foundational).
+* **Platform Architecture:** Multi-Instance Topology, Release Governance, Cloning Runbooks, Scoped Applications, ATF Automated Regression, Upgrade skipped-record resolution.
+* **IT Operations & Modules:** ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).
+* **AI & Agentic Engineering:** Custom MCP Server Wrappers, In-IDE Agent Toolchains, n8n LLM Workflows, Context Parsing, GlideScript Code Generation, Prompt Design.
+* **Integrations & Identity:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST APIs, Webhooks, Jitterbit, Cloudomation (Python), SQL Warehouses.
 
 ### Professional Experience
 #### **Ontinue** | *Remote / Vienna, Austria*
-**ServiceNow Architect & Business Applications Lead** | **2023-02 – Present**
-* Direct platform architecture, technical roadmaps, and upgrade governance for the ServiceNow landscape following the operational spin-off from Open Systems.
-* Architected end-to-end **HR boarding operations** (onboarding, offboarding, cross-boarding): delivered catalog items that trigger automated multi-system flows syncing employee records across BambooHR, ServiceNow, and Entra ID via REST.
-* Designed and deployed an automated **Salesforce Account Enrichment engine in n8n**, chaining public data APIs, ZoomInfo endpoints, deduplication logic, task queues, and structured LLM prompts.
-* Deployed **ITSM**, **CMDB**, **Hardware Asset Management (HAM)**, and **Vulnerability Response (VR)** integrated with Tenable and Nessus scanners for automated task orchestration.
-* Established continuous infrastructure discovery via **MID Servers**, **Azure Cloud Discovery**, **Agent Client Collector (ACC)**, and **Service Graph Connectors**.
-* Built a custom **VS Code agentic development pipeline** using custom MCP API wrappers to sync artifacts directly with instances, bypassing repetitive UI navigation and accelerating team velocity.
-* Supervise Business Applications access governance, user management, and administrative operations in **Salesforce**.
-* Maintain data pipelines across **Cloudomation** (Python) and **Jitterbit**, verifying ETL loads and troubleshooting data warehouse schemas using SQL (TablePlus, SSMS).
+**ServiceNow Architect – Business Applications** | **2023-02 – Present**
+* **Platform Ownership & Security:** Direct technical roadmap, platform governance, and continuous upgrades across enterprise IT instances; engineered CMDB/Discovery baselines and Vulnerability Response pipelines integrating Tenable and Nessus scanners.
+* **Agentic Developer Tooling:** Conceived and deployed an in-house VS Code agentic AI toolchain using custom MCP API wrappers, cutting development cycle times via automated code reviews and GlideScript generation.
+* **Zero-Touch Automation:** Built 100% automated HR boarding and offboarding lifecycle flows synchronizing BambooHR, ServiceNow, and Microsoft Entra ID via Power Automate and REST webhooks.
+* **Data Integration & Middleware:** Maintain high-reliability data synchronization and ETL pipelines across Cloudomation (Python) and Jitterbit into downstream corporate data warehouses.
+* **Tags:** ServiceNow Architecture, ITSM & CMDB, HAM & Vulnerability Response, VS Code Agentic AI, BambooHR & Entra ID, Cloudomation & SQL
 
 #### **Open Systems** | *Hybrid / Vienna, Austria*
 **ServiceNow Architect – Business Applications** | **2022-05 – 2023-02**
-* Bootstrapped the greenfield platform architecture by configuring **4 core ServiceNow instances** with automated Azure user/group provisioning, executing a structured operational handover to external development partners.
-* Architected the enterprise IT ServiceNow instance, implementing baseline ITSM workflows, security roles, and update-set pipelines.
-* Led technical platform decoupling and cross-system data migrations across data warehouses and core business applications during the corporate spin-off into Ontinue.
+* **Greenfield Architecture:** Bootstrapped the core ServiceNow landscape from scratch, configuring 6 initial instances with hardened security controls, role hierarchies, and update-set deployment pipelines.
+* **Corporate Spin-Off Execution:** Led platform decoupling, directory synchronization, and relational data migrations required for the operational spin-off into Ontinue without production downtime.
+* **Instance Governance & Handover:** Established baseline cloning runbooks and release gates, executing a structured operational handover of auxiliary departmental instances to external partners.
+* **Tags:** 6-Instance Topology, Greenfield Implementation, Platform Decoupling, Instance Cloning, Governance
 
 #### **Tricentis GmbH** | *Vienna, Austria*
 **Senior ServiceNow Developer** | **2018-08 – 2022-04**
-* Delivered high-availability platform solutions across ITSM and Custom Applications in an Agile/Scrum engineering team.
-* Engineered bi-directional REST integrations connecting ServiceNow with Workday, JIRA, Coveo AI Search, and Cornerstone.
-* Executed enterprise-level database migrations, including an ITSM-to-CSM schema migration and consolidating legacy acquisitions data into ServiceNow.
-* Rescued an external vendor's stalled implementation, refactoring broken custom scripts and data models under tight deadlines for successful production cutover.
+* **Enterprise Integrations:** Engineered mission-critical bi-directional REST integrations connecting ServiceNow with Workday, JIRA, Cornerstone, and Coveo AI Search.
+* **Complex Schema Migrations:** Planned and executed high-risk database transitions, including an ITSM-to-CSM schema migration and legacy acquisition data consolidation.
+* **Vendor Rescue:** Refactored broken custom scripts and corrected underlying relational schemas under tight deadlines to recover a stalled external partner implementation.
+* **Tags:** REST Integrations, ITSM to CSM Migration, Coveo AI Search, Agile/Scrum, Workday & JIRA
 
-#### **Early Career**
-* **Mobility Manager** | Service24 GmbH (2016 – 2018) • **Customer Care Specialist** | Avis Budget Group (2015 – 2016)
+#### **Early Career Operations · Service24 GmbH & Avis Budget Group** | **2015 – 2018**
+* **Mobility Manager** (Service24, 2016–2018) • **Customer Care Specialist** (Avis Budget Group, 2015–2016). Focus on process optimization, international operations, and workflow logistics.
+* **Tags:** Process Optimization, International Operations, Workflow Logistics
 
 ### Certifications
-* **Develop Generative AI Applications: Get Started** – IBM (Coursera, 2026)
-* **Certified System Administrator (CSA)** – ServiceNow (2020)
-* **Certified Application Developer (CAD)** – ServiceNow (2019)
+* **Develop Generative AI Applications: Get Started** – IBM (2026)
+* **Certified Application Developer (CAD)** – ServiceNow
+* **Certified System Administrator (CSA)** – ServiceNow
 * **Python Programming (Parts 1 & 2) & Principles of Computing** – Rice University
 
 ### Education
-* **Junior Java Programmer (Intensive 5-Month Program)** | Braining Hub, Budapest (2017 – 2018)
-* **Master of Arts: International Relations** | Corvinus University of Budapest (2012 – 2015)
-* **Bachelor of Science: Security and Defense Policy** | Zrínyi Miklós National Defence University (2006 – 2009)
+* **Junior Java Programmer (Intensive Program)** | Braining Hub, Budapest (2017–2018)
+* **Master of Arts: International Relations** | Corvinus University of Budapest
+* **Bachelor of Science: Security & Defense Policy** | Zrínyi Miklós National Defence University
 
-### Personality & Work Style
-* Based in Pressbaum / Vienna, Austria. Open to hybrid in Vienna area or remote.
-* Title distinction: ServiceNow Architect (not Lead).
+### Frequently Asked Questions & Core Philosophy
+* **How does Geza develop software?** Geza develops software using modern agentic and automation-driven engineering workflows. In VS Code, he leverages an in-house agentic AI toolchain with custom MCP (Model Context Protocol) API wrappers for real-time schema inspection, automated GlideScript code generation, and rigorous code reviews. He emphasizes clean architecture, automated testing (ATF), and reproducible deployment pipelines.
+* **What ServiceNow modules does Geza have experience with?** Geza has extensive hands-on architecture and development experience with core ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), and Vulnerability Response (integrated with Tenable and Nessus).
+* **What is Geza most proud of?** Geza is most proud of bootstrapping a greenfield 6-instance ServiceNow ecosystem from scratch, successfully decoupling infrastructure and data during a major corporate divestiture without production downtime, and pioneering an in-house VS Code MCP agentic toolchain adopted team-wide to accelerate platform delivery.
+* **What is Geza's approach to Out-of-the-Box (OOB) vs. custom code?** Geza strongly adheres to an "OOB-first" platform philosophy: leverage native ServiceNow capabilities, standard schema models, and configurable features wherever possible to minimize upgrade debt and skipped records. When custom code is required, he isolates it cleanly within Scoped Applications, adheres to strict GlideScript standards, and protects it with automated ATF test suites.
+* **Location & Availability:** Pressbaum (Vienna Area), Austria. Available for hybrid roles in the Vienna region or fully remote opportunities.
 
 
 === SECTION: DE ===
 # Geza Horvath
-**ServiceNow Architect & Enterprise Business Applications Lead**  
-Pressbaum / Wien, Österreich • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
+**ServiceNow Architect & Enterprise AI Automation Engineer**  
+Pressbaum (Wien Umgebung), Österreich • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
 
 ### Profil-Zusammenfassung
-ServiceNow Architect und Enterprise Applications Lead mit über 8 Jahren Erfahrung in der Leitung von Multi-Instanz-Plattform-Engineering, systemübergreifender Automatisierung und komplexen Datenmigrationen. Aufbau eines zukunftssicheren Greenfield-ServiceNow-Ökosystems, Konzeption und Durchführung von Carve-out-Splits über heterogene Data Warehouses im Rahmen von Unternehmensabspaltungen sowie Implementierung von Kernlösungen in ITSM, CMDB/Discovery, HAM und Vulnerability Response. Entwicklung einer internen VS Code Agentic AI-Toolchain und maßgeschneiderter MCP-API-Wrapper, die teamweit eingeführt wurden, um Plattform-Bereitstellungen zu beschleunigen, Code-Reviews zu automatisieren und manuelle Konfigurationsaufwände zu eliminieren.
+ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen und systemübergreifender Automatisierung. Aufbau eines zukunftssicheren Greenfield-Ökosystems mit 6 Instanzen, technische Plattform-Entflechtung im Rahmen einer Unternehmensabspaltung sowie Leitung von Kernumgebungen in ITSM, CMDB/Discovery, HAM und Vulnerability Response. Pionier im modernen Agentic Engineering—Entwicklung interner VS Code MCP-Toolchains, die teamweit eingeführt wurden, um Bereitstellungszyklen zu beschleunigen, sowie automatisierten n8n LLM-Workflows zur Eliminierung operativer Mehraufwände.
+
+### Kernmetriken
+* **8+ Jahre Plattform-Erfahrung:** ServiceNow-Architektur & ITSM/CMDB
+* **6 Greenfield-Instanzen:** Multi-Instanz-Topologie & Release-Gates
+* **100% Zero-Touch HR-Boarding:** Systemübergreifende Automatisierung (Entra ID / BambooHR)
+* **AI VS Code Agentic Toolchain:** In-IDE Schema-Inspektion & GlideScript MCP
 
 ### Kernkompetenzen
-* **Plattformarchitektur & Governance:** Multi-Instanz-Topologie, Release-Governance, Upgrade-Zyklen (Erfassung übersprungener Datensätze Sub-Prod zu Prod), Clone-Profil-Management, Scoped Applications, Idempotente ATF-Test-Suites.
-* **Module & Plattform-Betrieb:** ITSM, CMDB, Discovery (MID Server, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).
-* **Unternehmensautomatisierung & Identitätsmanagement:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST-Trigger, Zero-Touch HR Onboarding & Rollenwechsel, automatisierte RBAC-Gruppenbereitstellung.
-* **Integrationen, Middleware & Daten:** n8n, Cloudomation (Python), Jitterbit, Scripted REST, Webhooks, Relationale Data Warehouses (SQL/Views), IntegrationHub.
-* **KI & Software-Engineering-Tools:** VS Code Agentic Development Pipelines, maßgeschneiderte Model Context Protocol (MCP) ServiceNow API-Wrapper, Custom Agent Skills, Modernes JavaScript / GlideScript, Python (Grundlagen).
+* **Plattformarchitektur:** Multi-Instanz-Topologie, Release-Governance, Klon-Runbooks, Scoped Applications, ATF automatisierte Regressionstests, Upgrade Skipped-Record-Bereinigung.
+* **IT-Betrieb & Module:** ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).
+* **KI & Agentic Engineering:** Custom MCP Server Wrapper, In-IDE Agent Toolchains, n8n LLM-Workflows, Kontext-Parsing, GlideScript-Codegenerierung, Prompt Design.
+* **Integrationen & Identität:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST APIs, Webhooks, Jitterbit, Cloudomation (Python), SQL Warehouses.
 
 ### Berufserfahrung
 #### **Ontinue** | *Remote / Wien, Österreich*
-**ServiceNow Architect & Business Applications Lead** | **2023-02 – Heute**
-* Leitung der Plattformarchitektur, technischen Roadmaps und Upgrade-Governance für die ServiceNow-Landschaft nach dem operativen Spin-off von Open Systems.
-* Konzeption und Implementierung von End-to-End **HR-Boarding-Prozessen** (Onboarding, Offboarding, Cross-Boarding): Bereitstellung von Katalogelementen zur Auslösung automatisierter Multi-System-Workflows, die Mitarbeiterdaten über BambooHR, ServiceNow und Entra ID via REST synchronisieren.
-* Konzeption und Bereitstellung einer automatisierten **Salesforce Account Enrichment Engine in n8n**, die öffentliche Daten-APIs, ZoomInfo-Endpunkte, Deduplizierungslogik, Aufgaben-Warteschlangen und strukturierte LLM-Prompts verkettet.
-* Bereitstellung von **ITSM**, **CMDB**, **Hardware Asset Management (HAM)** und **Vulnerability Response (VR)** mit Anbindung an Tenable- und Nessus-Scanner für die automatisierte Aufgabenorchestrierung.
-* Etablierung kontinuierlicher Infrastruktur-Discovery mittels **MID Servern**, **Azure Cloud Discovery**, **Agent Client Collector (ACC)** und **Service Graph Connectors**.
-* Aufbau einer maßgeschneiderten **VS Code Agentic Development Pipeline** mit MCP-API-Wrappern zur direkten Synchronisierung von Artefakten mit Instanzen, wodurch repetitive UI-Interaktionen entfallen und das Entwicklungstempo gesteigert wurde.
-* Überwachung der Governance für Business-Applications-Zugriffe, Benutzerverwaltung und administrative Abläufe in **Salesforce**.
-* Pflege von Daten-Pipelines über **Cloudomation** (Python-Middleware) und **Jitterbit**, Überprüfung von ETL-Ladevorgängen und Fehlerbehebung in Data-Warehouse-Schemata mittels SQL (TablePlus, SSMS).
+**ServiceNow Architect – Business Applications** | **2023-02 – Heute**
+* **Plattform-Verantwortung & Sicherheit:** Leitung der technischen Roadmap, Governance und kontinuierlicher Upgrades über Unternehmens-IT-Instanzen; Konzeption von CMDB/Discovery-Baselines und Vulnerability-Response-Pipelines mit Tenable- und Nessus-Scannern.
+* **Agentic Developer Tooling:** Konzeption und Bereitstellung einer internen VS Code Agentic AI-Toolchain mit maßgeschneiderten MCP-API-Wrappern zur Verkürzung der Entwicklungszyklen durch automatische Code-Reviews und GlideScript-Generierung.
+* **Zero-Touch-Automatisierung:** Entwicklung vollständig automatisierter HR-Boarding- und Offboarding-Workflows zur Synchronisierung von BambooHR, ServiceNow und Microsoft Entra ID über Power Automate und REST-Webhooks.
+* **Datenintegration & Middleware:** Betreuung hochverfügbarer Datensynchronisations- und ETL-Pipelines über Cloudomation (Python) und Jitterbit in nachgelagerte Unternehmens-Data-Warehouses.
 
 #### **Open Systems** | *Hybrid / Wien, Österreich*
 **ServiceNow Architect – Business Applications** | **2022-05 – 2023-02**
-* Aufbau der Greenfield-Plattformarchitektur durch Konfiguration von **4 ServiceNow-Kerninstanzen** mit automatisierter Azure-Benutzer- und Gruppenbereitstellung sowie strukturierte Übergabe der Betriebsverantwortung an externe Entwicklungspartner.
-* Architektur der Enterprise-IT-ServiceNow-Instanz mit Implementierung von Baseline-ITSM-Workflows, Sicherheitsrollen und Update-Set-Pipelines.
-* Technische Plattform-Entflechtung und systemübergreifende Datenmigrationen über Data Warehouses und Kernanwendungen im Rahmen der Unternehmensabspaltung zu Ontinue.
+* **Greenfield-Architektur:** Aufbau der ServiceNow-Kernlandschaft von Grund auf, Konfiguration von 6 Anfangsinstanzen mit gehärteten Sicherheitskontrollen, Rollenhierarchien und Update-Set-Deployment-Pipelines.
+* **Unternehmensabspaltung:** Leitung der Plattform-Entflechtung, Verzeichnissynchronisation und relationalen Datenmigrationen für den operativen Spin-off zu Ontinue ohne Produktionsausfallzeiten.
+* **Instanz-Governance & Übergabe:** Etablierung standardisierter Klonprofil-Runbooks und Release-Gates sowie strukturierte operative Übergabe nachgelagerter Abteilungsinstanzen an externe Partner.
 
 #### **Tricentis GmbH** | *Wien, Österreich*
 **Senior ServiceNow Developer** | **2018-08 – 2022-04**
-* Bereitstellung hochverfügbarer Plattformlösungen in ITSM und Custom Applications innerhalb eines agilen Scrum-Entwicklungsteams.
-* Entwicklung bidirektionaler REST-Integrationen zur Anbindung von ServiceNow an Workday, JIRA, Coveo AI Search und Cornerstone.
-* Durchführung geschäftskritischer Datenbankmigrationen, darunter eine ITSM-zu-CSM-Schemamigration und die Konsolidierung von Altdaten aus Übernahmen in ServiceNow.
-* Rettung einer ins Stocken geratenen Implementierung eines externen Dienstleisters durch Refaktorisierung fehlerhafter Skripte und Datenmodelle unter engem Zeitplan für einen erfolgreichen Produktionsstart.
+* **Unternehmensintegrationen:** Entwicklung geschäftskritischer bidirektionaler REST-Integrationen zur Anbindung von ServiceNow an Workday, JIRA, Cornerstone und Coveo AI Search.
+* **Komplexe Schemamigrationen:** Planung und Durchführung risikoreicher Datenbankumstellungen, darunter eine ITSM-zu-CSM-Schemamigration und Konsolidierung von Übernahmedaten in ServiceNow.
+* **Projekt-Rettung:** Refaktorisierung fehlerhafter Skripte und Korrektur relationaler Schemata unter engem Zeitplan zur Rettung einer festgefahrenen externen Partnerimplementierung.
+
+#### **Frühere berufliche Stationen · Service24 GmbH & Avis Budget Group** | **2015 – 2018**
+* **Mobility Manager** (Service24, 2016–2018) • **Customer Care Specialist** (Avis Budget Group, 2015–2016). Schwerpunkt auf Prozessoptimierung, internationalen Abläufen und Workflow-Logistik.
 
 ### Zertifizierungen
-* **Develop Generative AI Applications: Get Started** – IBM (Coursera, 2026)
-* **Certified System Administrator (CSA)** – ServiceNow (2020)
-* **Certified Application Developer (CAD)** – ServiceNow (2019)
+* **Develop Generative AI Applications: Get Started** – IBM (2026)
+* **Certified Application Developer (CAD)** – ServiceNow
+* **Certified System Administrator (CSA)** – ServiceNow
 * **Python Programming (Parts 1 & 2) & Principles of Computing** – Rice University
 
 ### Ausbildung
-* **Junior Java Programmer (Intensivprogramm 5 Monate)** | Braining Hub, Budapest (2017 – 2018)
-* **Master of Arts: Internationale Beziehungen** | Corvinus-Universität Budapest (2012 – 2015)
-* **Bachelor of Science: Sicherheits- und Verteidigungspolitik** | Zrínyi Miklós Nationale Verteidigungsuniversität (2006 – 2009)
+* **Junior Java Programmer (Intensivprogramm)** | Braining Hub, Budapest (2017–2018)
+* **Master of Arts: Internationale Beziehungen** | Corvinus-Universität Budapest
+* **Bachelor of Science: Sicherheits- und Verteidigungspolitik** | Zrínyi Miklós Nationale Verteidigungsuniversität
 
 
 === SECTION: HU ===
 # Horváth Géza
-**ServiceNow Architekt & Vállalati Üzleti Alkalmazások Szakértő**  
-Pressbaum / Bécs, Ausztria • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
+**ServiceNow Architekt & Enterprise AI Automatizálási Mérnök**  
+Pressbaum (Bécs környéke), Ausztria • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
 
 ### Vezetői Összefoglaló
-ServiceNow Architekt és Vállalati Alkalmazások Szakértő több mint 8 év tapasztalattal többpéldányos platformtervezésben, rendszerek közötti automatizálásban és összetett adatmigrációkban. Zöldmezős beruházásként felépített egy többpéldányos ServiceNow környezetet, levezényelte a vállalati kiválásokhoz kapcsolódó adatbázis-szétválasztásokat heterogén adattárházak között, valamint alapvető ITSM, CMDB/Discovery, HAM és Sérülékenységkezelési (Vulnerability Response) megoldásokat valósított meg. Kifejlesztett egy belső, VS Code-alapú ágens AI eszköztárat és egyedi MCP API burkolókat, amelyeket a teljes fejlesztőcsapat átvett a platformszállítás felgyorsítására, az automatizált kódátvizsgálásra és a manuális konfigurációk megszüntetésére.
+ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős beruházásként felépített egy 6 példányos ökoszisztémát, levezényelte a teljes infrastruktúra- és adatszétválasztást egy vállalati kiválás során, valamint alapvető ITSM, CMDB/Discovery, HAM és Sérülékenységkezelési (VR) környezeteket irányít. Úttörő a modern ágens mérnökségben—belső VS Code MCP eszköztárak fejlesztésével, melyeket a teljes csapat átvett a szállítás felgyorsítására, valamint olyan automatizált n8n LLM munkafolyamatok megvalósításával, amelyek megszüntetik az operatív adminisztrációs terheket.
+
+### Fő Mutatók
+* **8+ Év platform tapasztalat:** ServiceNow architektúra & ITSM/CMDB
+* **6 Zöldmezős példány:** Többpéldányos topológia & kiadási ellenőrzések
+* **100% Zero-Touch HR beléptetés:** Rendszereken átívelő automatizáció (Entra ID / BambooHR)
+* **AI VS Code ágens eszköztár:** IDE-n belüli sémavizsgálat & GlideScript MCP
 
 ### Főbb Kompetenciák
-* **Platformarchitektúra & Irányítás (Governance):** Többpéldányos topológia, kiadási irányítás (Release Governance), frissítési ciklusok (Sub-Prod és Prod közötti kihagyott rekordok kezelése), klónozási profilkezelés, Scoped alkalmazások, idempotens ATF tesztcsomagok.
-* **Modulok & Üzemeltetés:** ITSM, CMDB, Discovery (MID szerverek, Azure Cloud, ACC), Service Graph Connectors, HAM, Sérülékenységkezelés (Vulnerability Response - Tenable, Nessus).
-* **Vállalati Automatizáció & Identitáskezelés:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST triggerek, érintésmentes (Zero-Touch) HR be- és kiléptetés, automatizált RBAC csoportkezelés.
-* **Integrációk, Köztesréteg (Middleware) & Adatok:** n8n, Cloudomation (Python), Jitterbit, Scripted REST, Webhookok, Relációs adattárházak (SQL/Nézetek), IntegrationHub.
-* **AI & Fejlesztői Eszközök:** VS Code ágens fejlesztési folyamatok, egyedi Model Context Protocol (MCP) ServiceNow API burkolók, egyedi ágens képességek (Skills), modern JavaScript / GlideScript, Python (alapok).
+* **Platformarchitektúra:** Többpéldányos topológia, kiadási irányítás, klónozási leírások, Scoped alkalmazások, ATF automatizált regressziós tesztelés, Upgrade kihagyott rekordok feloldása.
+* **IT Üzemeltetés & Modulok:** ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Sérülékenységkezelés (Tenable/Nessus).
+* **AI & Ágens Mérnökség:** Egyedi MCP szerver wrap-ek, IDE-n belüli ágens eszköztárak, n8n LLM munkafolyamatok, kontextusértelmezés, GlideScript kódgenerálás, prompt tervezés.
+* **Integrációk & Identitás:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST API-k, Webhookok, Jitterbit, Cloudomation (Python), SQL adattárházak.
 
 ### Szakmai Tapasztalat
 #### **Ontinue** | *Remote / Bécs, Ausztria*
-**ServiceNow Architekt & Üzleti Alkalmazások Szakértő** | **2023-02 – Jelenleg**
-* A ServiceNow platformarchitektúra, műszaki ütemtervek és frissítési irányítás vezetése az Open Systems-ből történt operatív kiválás után.
-* Teljes körű **HR beléptetési és kiléptetési folyamatok** (onboarding, offboarding, cross-boarding) tervezése: olyan katalóguselemek megvalósítása, amelyek több rendszert érintő automatizált folyamatokat indítanak, szinkronizálva az alkalmazotti adatokat a BambooHR, ServiceNow és Entra ID között REST interfészeken keresztül.
-* Egy automatizált **Salesforce Account Enrichment motor tervezése és bevezetése n8n-ben**, nyilvános adat API-k, ZoomInfo végpontok, duplikáció-szűrési logika, feladatsorok és strukturált LLM promptok láncolásával.
-* **ITSM**, **CMDB**, **Hardver Eszközkezelés (HAM)** és **Sérülékenységkezelés (VR)** bevezetése Tenable és Nessus szkenner integrációval az automatizált feladatkezeléshez.
-* Folyamatos infrastruktúra-felderítés kiépítése **MID szerverek**, **Azure Cloud Discovery**, **Agent Client Collector (ACC)** és **Service Graph Connectors** segítségével.
-* Egyedi **VS Code ágens fejlesztői környezet** kiépítése MCP API burkolókkal az elemek közvetlen példány-szinkronizálásához, kiiktatva a manuális felületi navigációt és gyorsítva a csapat sebességét.
-* Üzleti alkalmazások hozzáférés-irányításának, felhasználókezelésének és adminisztrációjának felügyelete **Salesforce-ban**.
-* Adatfolyamatok karbantartása **Cloudomation** (Python köztesréteg) és **Jitterbit** rendszerekben, ETL betöltések ellenőrzése és adattárház-sémák hibakeresése SQL segítségével (TablePlus, SSMS).
+**ServiceNow Architekt – Üzleti Alkalmazások** | **2023-02 – Jelenleg**
+* **Platform-irányítás & Biztonság:** A műszaki ütemterv, platform-governance és folyamatos frissítések vezetése vállalati IT példányokon; CMDB/Discovery alapok és Tenable/Nessus szkennerekkel integrált sérülékenységkezelési folyamatok kiépítése.
+* **Ágens Fejlesztői Eszközök:** Egyedi MCP API wrapper-ekre épülő belső VS Code ágens AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők csökkentése automatizált kódellenőrzéssel és GlideScript generálással.
+* **Zero-Touch Automatizáció:** 100%-ban automatizált HR be- és kiléptetési életciklus-folyamatok építése a BambooHR, ServiceNow és Microsoft Entra ID szinkronizálásával Power Automate és REST webhook-ok segítségével.
+* **Adatintegráció & Köztesréteg:** Magas megbízhatóságú adatszinkronizációs és ETL folyamatok fenntartása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.
 
 #### **Open Systems** | *Hibrid / Bécs, Ausztria*
 **ServiceNow Architekt – Üzleti Alkalmazások** | **2022-05 – 2023-02**
-* Zöldmezős platformarchitektúra felépítése: **4 alapvető ServiceNow példány** beállítása automatizált Azure felhasználó- és csoportkezeléssel, majd strukturált operatív átadás külső fejlesztőpartnereknek.
-* A vállalati IT ServiceNow példány megtervezése, alapszintű ITSM munkafolyamatok, biztonsági szerepkörök és update-set folyamatok bevezetése.
-* A technikai platform-szétválasztás és rendszerek közötti adatmigrációk vezetése adattárházak és üzleti alkalmazások között az Ontinue-ba történő kiválás során.
+* **Zöldmezős Architektúra:** A ServiceNow alaprendszer kiépítése az alapoktól, 6 kezdeti példány konfigurálása megerősített biztonsági szabályokkal, szerepkör-hierarchiákkal és update-set telepítési folyamatokkal.
+* **Vállalati Szétválás Lebonyolítása:** A platform szétválasztásának, címtárszinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, termeléskiesés nélkül.
+* **Példány-irányítás & Átadás:** Alapszintű klónozási leírások és kiadási ellenőrzőpontok kidolgozása, kiegészítő osztályos példányok strukturált operatív átadása külső partnereknek.
 
 #### **Tricentis GmbH** | *Bécs, Ausztria*
 **Senior ServiceNow Fejlesztő** | **2018-08 – 2022-04**
-* Magas rendelkezésre állású platformmegoldások szállítása ITSM és egyedi alkalmazások területén agilis Scrum csapatban.
-* Kétirányú REST integrációk fejlesztése a ServiceNow és vállalati rendszerek között: Workday, JIRA, Coveo AI Search és Cornerstone.
-* Nagy kockázatú adatbázis-migrációk végrehajtása, beleértve egy ITSM-ből CSM-be történő sémamigrációt és korábbi felvásárlásokból származó adatok konszolidációját.
-* Egy külső partner elakadt implementációjának sikeres megmentése hibás szkriptek és adatmodellek újratervezésével szoros határidők mellett.
+* **Vállalati Integrációk:** Üzletileg kritikus kétirányú REST integrációk kiépítése a ServiceNow és a Workday, JIRA, Cornerstone valamint Coveo AI Search között.
+* **Összetett Sémamigrációk:** Nagy kockázatú adatbázis-átállások megtervezése és végrehajtása, beleértve az ITSM-ről CSM-re történő sémamigrációt és korábbi cégfelvásárlások adatainak konszolidációját.
+* **Projektmentés:** Hibás egyedi szkriptek újragondolása és a mögöttes relációs adatmodellek javítása szoros határidők mellett egy elakadt külső partneri bevezetés helyreállítására.
+
+#### **Korábbi Szakmai Pályafutás · Service24 GmbH & Avis Budget Group** | **2015 – 2018**
+* **Mobilitási Menedzser** (Service24, 2016–2018) • **Ügyfélszolgálati Munkatárs** (Avis Budget Group, 2015–2016). Fókuszban a folyamatoptimalizálás, a nemzetközi műveletek és a munkafolyamat-logisztika.
 
 ### Képesítések & Tanúsítványok
-* **Develop Generative AI Applications: Get Started** – IBM (Coursera, 2026)
-* **Certified System Administrator (CSA)** – ServiceNow (2020)
-* **Certified Application Developer (CAD)** – ServiceNow (2019)
+* **Develop Generative AI Applications: Get Started** – IBM (2026)
+* **Certified Application Developer (CAD)** – ServiceNow
+* **Certified System Administrator (CSA)** – ServiceNow
 * **Python Programming (Parts 1 & 2) & Principles of Computing** – Rice University
 
 ### Tanulmányok
-* **Junior Java Programozó (Intenzív 5 hónapos képzés)** | Braining Hub, Budapest (2017 – 2018)
-* **Master of Arts: Nemzetközi Kapcsolatok** | Budapesti Corvinus Egyetem (2012 – 2015)
-* **Bachelor of Science: Biztonság- és Védelempolitika** | Zrínyi Miklós Nemzetvédelmi Egyetem (2006 – 2009)
+* **Junior Java Programozó (Intenzív képzés)** | Braining Hub, Budapest (2017–2018)
+* **Master of Arts: Nemzetközi Kapcsolatok** | Budapesti Corvinus Egyetem
+* **Bachelor of Science: Biztonság- és Védelempolitika** | Zrínyi Miklós Nemzetvédelmi Egyetem

@@ -46,10 +46,10 @@
       qPrefix: "Q: ",
       close: "Close",
       pills: [
-        { label: '⚡ 8+ Yrs ServiceNow', query: 'How many years of ServiceNow experience does Géza have?' },
-        { label: '🛠️ Architecture Projects', query: 'What enterprise architecture projects has he delivered?' },
-        { label: '📜 Certifications', query: 'What certifications does Géza hold?' },
-        { label: '🔌 Integrations', query: 'What systems and integrations has he connected to ServiceNow?' }
+        { label: '💻 Software Development', query: 'How does Geza develop software?' },
+        { label: '⚙️ ServiceNow Modules', query: 'What ServiceNow modules does Geza have experience with?' },
+        { label: '🏆 Most Proud Of', query: 'What is Geza most proud of?' },
+        { label: '⚡ OOB vs. Custom Code', query: "What is Geza's approach to Out-of-the-Box (OOB) vs. custom code?" }
       ],
       modal: {
         badge: "Architecture",
@@ -99,10 +99,10 @@
       qPrefix: "F: ",
       close: "Schließen",
       pills: [
-        { label: '⚡ 8+ Jahre ServiceNow', query: 'Wie viele Jahre Erfahrung mit ServiceNow hat Géza?' },
-        { label: '🛠️ Architekturprojekte', query: 'Welche Plattformarchitektur-Projekte hat er geleitet?' },
-        { label: '📜 Zertifizierungen', query: 'Welche Zertifizierungen besitzt Géza?' },
-        { label: '🔌 Schnittstellen & Integrationen', query: 'Welche Systeme hat er an ServiceNow angebunden?' }
+        { label: '💻 Softwareentwicklung', query: 'Wie entwickelt Geza Software?' },
+        { label: '⚙️ ServiceNow-Module', query: 'Mit welchen ServiceNow-Modulen hat Geza Erfahrung?' },
+        { label: '🏆 Größter Stolz', query: 'Worauf ist Geza am meisten stolz?' },
+        { label: '⚡ OOB vs. Custom Code', query: 'Wie ist Gezas Ansatz bei Standard (OOB) vs. individuellem Code?' }
       ],
       modal: {
         badge: "Architektur",
@@ -152,10 +152,10 @@
       qPrefix: "K: ",
       close: "Bezárás",
       pills: [
-        { label: '⚡ 8+ év ServiceNow', query: 'Hány év ServiceNow tapasztalattal rendelkezik Géza?' },
-        { label: '🛠️ Architektúra projektek', query: 'Milyen vállalati architektúra projekteket valósított meg?' },
-        { label: '📜 Képesítések', query: 'Milyen tanúsítványokkal rendelkezik Géza?' },
-        { label: '🔌 Integrációk', query: 'Milyen rendszereket kapcsolt össze a ServiceNow-val?' }
+        { label: '💻 Szoftverfejlesztés', query: 'Hogyan fejleszt szoftvert Géza?' },
+        { label: '⚙️ ServiceNow Modulok', query: 'Milyen ServiceNow modulokban van tapasztalata Gézának?' },
+        { label: '🏆 Legbüszkébb eredmény', query: 'Mire a legbüszkébb Géza?' },
+        { label: '⚡ OOB vs. Egyedi Kód', query: 'Mi Géza hozzáállása az Out-of-the-Box (OOB) és az egyedi kód kérdéséhez?' }
       ],
       modal: {
         badge: "Architektúra",
@@ -366,6 +366,24 @@
 
     var archBtnText = container.querySelector('.ai-arch-btn-text');
     if (archBtnText) archBtnText.innerHTML = t.archLink;
+
+    // Update suggestion pills if enabled
+    var pillsContainer = container.querySelector('#ai-suggestion-pills');
+    if (pillsContainer) {
+      pillsContainer.innerHTML = '';
+      t.pills.forEach(function (pill) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'ai-pill-btn';
+        btn.textContent = pill.label;
+        btn.addEventListener('click', function () {
+          var input = container.querySelector('#ai-input-field');
+          if (input) input.value = pill.query;
+          handleSubmit(pill.query);
+        });
+        pillsContainer.appendChild(btn);
+      });
+    }
 
     // Update modal if currently rendered
     updateModalText();
