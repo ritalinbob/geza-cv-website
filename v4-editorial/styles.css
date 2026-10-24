@@ -982,9 +982,6 @@ button {
   font-weight: 700;
   color: var(--c-text-dark);
   margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .competency-icon {
