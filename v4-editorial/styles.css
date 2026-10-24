@@ -789,7 +789,8 @@ button {
   margin-bottom: 14px;
 }
 
-.card-bullet-list {
+.card-bullet-list,
+.bullet-list {
   list-style: disc;
   margin-left: 18px;
   margin-bottom: 18px;
@@ -798,11 +799,13 @@ button {
   color: var(--c-text-body);
 }
 
-.card-bullet-list li {
+.card-bullet-list li,
+.bullet-list li {
   margin-bottom: 8px;
 }
 
-.card-bullet-list strong {
+.card-bullet-list strong,
+.bullet-list strong {
   color: var(--c-text-dark);
 }
 
@@ -810,17 +813,26 @@ button {
    TAG BADGES (WARM BUFF & ACCENT BADGES)
    ========================================================================== */
 
+.tag-cloud,
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  align-items: center;
+  gap: 7px 8px;
   list-style: none;
+  padding: 0;
+  margin-top: 14px;
 }
 
 .tag-badge {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
+  line-height: 1.4;
   padding: 4px 10px;
   border-radius: 999px;
   background: var(--c-buff);
@@ -838,6 +850,12 @@ button {
   background: rgba(217, 56, 30, 0.12);
   color: var(--c-accent-terracotta);
   border-color: rgba(217, 56, 30, 0.28);
+}
+
+.tag-badge.warm {
+  background: rgba(180, 83, 9, 0.12);
+  color: #b45309;
+  border-color: rgba(180, 83, 9, 0.28);
 }
 
 /* ==========================================================================
@@ -961,6 +979,7 @@ button {
 .contact-badge-pill {
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
   gap: 8px;
   background: rgba(92, 100, 112, 0.08);
   border: 1px solid rgba(92, 100, 112, 0.2);

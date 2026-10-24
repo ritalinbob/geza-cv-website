@@ -30,7 +30,7 @@ const TRANSLATIONS = {
     // Section 2: Experience
     section_experience: "Experience",
     exp_ontinue_period: "2023 &mdash; Present",
-    exp_ontinue_role: "ServiceNow Architect &ndash; Business Applications &middot; Ontinue",
+    exp_ontinue_role: "ServiceNow Architect – Business Applications · Ontinue",
     exp_ontinue_loc: "Remote / Vienna, Austria",
     exp_ontinue_b1: "Lead ServiceNow platform architecture, roadmaps, and release governance following the corporate operational spin-off from Open Systems.",
     exp_ontinue_b2: "Architected and deployed <strong>ITSM, CMDB, Hardware Asset Management (HAM)</strong>, and <strong>Vulnerability Response (VR)</strong> integrated with Tenable and Nessus scanners.",
@@ -41,14 +41,14 @@ const TRANSLATIONS = {
     exp_ontinue_b7: "Maintain data pipelines across Cloudomation (Python middleware) and Jitterbit, verifying ETL loads and troubleshooting data warehouse schemas using SQL.",
 
     exp_open_period: "2022 &mdash; 2023",
-    exp_open_role: "ServiceNow Architect &ndash; Business Applications &middot; Open Systems",
+    exp_open_role: "ServiceNow Architect – Business Applications · Open Systems",
     exp_open_loc: "Hybrid / Vienna, Austria",
     exp_open_b1: "Bootstrapped the greenfield ServiceNow ecosystem by standing up and configuring <strong>6 initial instances</strong> with standardized security, ACLs, and update-set pipelines.",
     exp_open_b2: "Established baseline instance cloning runbooks, release gates, and platform upgrade procedures.",
     exp_open_b3: "Executed technical platform separation and infrastructure decoupling required for the operational spin-off into Ontinue.",
 
     exp_tri_period: "2018 &mdash; 2022",
-    exp_tri_role: "Senior ServiceNow Developer &middot; Tricentis GmbH",
+    exp_tri_role: "Senior ServiceNow Developer · Tricentis GmbH",
     exp_tri_loc: "Vienna, Austria",
     exp_tri_b1: "Delivered high-availability platform solutions across ITSM and Custom Applications in an Agile/Scrum engineering team.",
     exp_tri_b2: "Engineered bi-directional REST integrations with core enterprise platforms: <strong>Workday, JIRA, Coveo AI Search</strong>, and <strong>Cornerstone</strong>.",
@@ -150,7 +150,7 @@ const TRANSLATIONS = {
     // Abschnitt 2: Berufserfahrung
     section_experience: "Berufserfahrung",
     exp_ontinue_period: "2023 &mdash; Heute",
-    exp_ontinue_role: "ServiceNow Architect &ndash; Business Applications &middot; Ontinue",
+    exp_ontinue_role: "ServiceNow Architect – Business Applications · Ontinue",
     exp_ontinue_loc: "Remote / Wien, Österreich",
     exp_ontinue_b1: "Leitung der ServiceNow-Plattformarchitektur, Roadmaps und Release-Governance nach dem operativen Spin-off von Open Systems.",
     exp_ontinue_b2: "Konzeption und Bereitstellung von <strong>ITSM, CMDB, Hardware Asset Management (HAM)</strong> und <strong>Vulnerability Response (VR)</strong> mit Tenable- und Nessus-Scanner-Anbindung.",
@@ -161,14 +161,14 @@ const TRANSLATIONS = {
     exp_ontinue_b7: "Pflege von Daten-Pipelines über Cloudomation (Python-Middleware) und Jitterbit, Verifizierung von ETL-Loads und Fehlerbehebung in Data Warehouses mittels SQL.",
 
     exp_open_period: "2022 &mdash; 2023",
-    exp_open_role: "ServiceNow Architect &ndash; Business Applications &middot; Open Systems",
+    exp_open_role: "ServiceNow Architect – Business Applications · Open Systems",
     exp_open_loc: "Hybrid / Wien, Österreich",
     exp_open_b1: "Aufbau des Greenfield-ServiceNow-Ökosystems durch Konfiguration von <strong>6 Kerninstanzen</strong> mit standardisierter Sicherheit, ACLs und Update-Set-Pipelines.",
     exp_open_b2: "Etablierung standardisierter Klonprofil-Runbooks, Release-Gates und Plattform-Upgrade-Verfahren.",
     exp_open_b3: "Durchführung der technischen Plattform-Entflechtung und Datenmigrationen für den operativen Spin-off zu Ontinue.",
 
     exp_tri_period: "2018 &mdash; 2022",
-    exp_tri_role: "Senior ServiceNow Developer &middot; Tricentis GmbH",
+    exp_tri_role: "Senior ServiceNow Developer · Tricentis GmbH",
     exp_tri_loc: "Wien, Österreich",
     exp_tri_b1: "Bereitstellung hochverfügbarer Plattformlösungen in ITSM und Custom Applications in einem agilen Scrum-Entwicklungsteam.",
     exp_tri_b2: "Entwicklung bidirektionaler REST-Integrationen mit zentralen Unternehmensplattformen: <strong>Workday, JIRA, Coveo AI Search</strong> und <strong>Cornerstone</strong>.",
@@ -270,7 +270,7 @@ const TRANSLATIONS = {
     // 2. szakasz: Szakmai tapasztalat
     section_experience: "Szakmai Tapasztalat",
     exp_ontinue_period: "2023 &mdash; Jelenleg",
-    exp_ontinue_role: "ServiceNow Architekt &ndash; Üzleti Alkalmazások &middot; Ontinue",
+    exp_ontinue_role: "ServiceNow Architekt – Üzleti Alkalmazások · Ontinue",
     exp_ontinue_loc: "Remote / Bécs, Ausztria",
     exp_ontinue_b1: "A ServiceNow platformarchitektúra, műszaki ütemtervek és kiadási irányítás (Release Governance) vezetése az Open Systems-ből történt operatív kiválás után.",
     exp_ontinue_b2: "<strong>ITSM, CMDB, Hardver Eszközkezelés (HAM)</strong> és Tenable/Nessus szkennerekkel integrált <strong>Sérülékenységkezelés (VR)</strong> tervezése és bevezetése.",
@@ -281,14 +281,14 @@ const TRANSLATIONS = {
     exp_ontinue_b7: "Adatfolyamatok karbantartása Cloudomation (Python köztesréteg) és Jitterbit rendszerekben, ETL betöltések ellenőrzése és adattárház-sémák hibakeresése SQL segítségével.",
 
     exp_open_period: "2022 &mdash; 2023",
-    exp_open_role: "ServiceNow Architekt &ndash; Üzleti Alkalmazások &middot; Open Systems",
+    exp_open_role: "ServiceNow Architekt – Üzleti Alkalmazások · Open Systems",
     exp_open_loc: "Hibrid / Bécs, Ausztria",
     exp_open_b1: "Zöldmezős ServiceNow ökoszisztéma felépítése <strong>6 kezdeti példány</strong> konfigurálásával, szabványosított biztonsági beállításokkal, ACL-ekkel és update-set folyamatokkal.",
     exp_open_b2: "Alapszintű klónozási leírások, kiadási ellenőrzőpontok és platformfrissítési eljárások kidolgozása.",
     exp_open_b3: "A technikai platform-szétválasztás és infrastruktúra-szétválasztás lebonyolítása az Ontinue-ba történő operatív kiváláshoz.",
 
     exp_tri_period: "2018 &mdash; 2022",
-    exp_tri_role: "Senior ServiceNow Fejlesztő &middot; Tricentis GmbH",
+    exp_tri_role: "Senior ServiceNow Fejlesztő · Tricentis GmbH",
     exp_tri_loc: "Bécs, Ausztria",
     exp_tri_b1: "Magas rendelkezésre állású platformmegoldások szállítása ITSM és egyedi alkalmazások területén agilis Scrum csapatban.",
     exp_tri_b2: "Kétirányú REST integrációk kiépítése alapvető vállalati rendszerekkel: <strong>Workday, JIRA, Coveo AI Search</strong> és <strong>Cornerstone</strong>.",
