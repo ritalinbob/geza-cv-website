@@ -12,15 +12,17 @@ import os
 
 PORT = int(os.environ.get("PORT", 3030))
 MAC_MINI_CHAT_ENDPOINTS = [
+    os.environ.get("MAC_MINI_CHAT_URL", "https://gezas-mac-mini.taild096ba.ts.net/webhook/resume-chat"),
     "http://Gezas-Mac-mini.local:5678/webhook/resume-chat",
-    "http://192.168.1.248:5678/webhook/resume-chat",
     "http://192.168.1.128:5678/webhook/resume-chat",
+    "http://192.168.1.248:5678/webhook/resume-chat",
 ]
 
 MAC_MINI_CONTACT_ENDPOINTS = [
+    os.environ.get("MAC_MINI_CONTACT_URL", "https://gezas-mac-mini.taild096ba.ts.net/webhook/contact-submit"),
     "http://Gezas-Mac-mini.local:5678/webhook/contact-submit",
-    "http://192.168.1.248:5678/webhook/contact-submit",
     "http://192.168.1.128:5678/webhook/contact-submit",
+    "http://192.168.1.248:5678/webhook/contact-submit",
 ]
 
 class ProxyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):

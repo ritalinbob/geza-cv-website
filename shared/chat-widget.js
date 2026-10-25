@@ -12,12 +12,21 @@
 (function () {
   'use strict';
 
-  var CANDIDATE_ENDPOINTS = [
+  var isLocalEnv = window.location.hostname === 'localhost' ||
+                   window.location.hostname === '127.0.0.1' ||
+                   window.location.hostname.endsWith('.local') ||
+                   window.location.hostname.startsWith('192.168.');
+
+  var CANDIDATE_ENDPOINTS = isLocalEnv ? [
     'http://Gezas-Mac-mini.local:5678/webhook/resume-chat',
+    'http://192.168.1.128:5678/webhook/resume-chat',
     'http://192.168.1.248:5678/webhook/resume-chat',
     '/api/chat',
-    'http://192.168.1.128:5678/webhook/resume-chat',
+    'https://gezas-mac-mini.taild096ba.ts.net/webhook/resume-chat',
     'http://localhost:5678/webhook/resume-chat'
+  ] : [
+    '/api/chat',
+    'https://gezas-mac-mini.taild096ba.ts.net/webhook/resume-chat'
   ];
 
   var activeEndpoint = CANDIDATE_ENDPOINTS[0];

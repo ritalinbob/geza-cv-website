@@ -188,12 +188,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // =========================================================================
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
-    const CANDIDATE_CONTACT_ENDPOINTS = [
+    const isLocalEnv = window.location.hostname === 'localhost' ||
+                       window.location.hostname === '127.0.0.1' ||
+                       window.location.hostname.endsWith('.local') ||
+                       window.location.hostname.startsWith('192.168.');
+
+    const CANDIDATE_CONTACT_ENDPOINTS = isLocalEnv ? [
       'http://Gezas-Mac-mini.local:5678/webhook/contact-submit',
+      'http://192.168.1.128:5678/webhook/contact-submit',
       'http://192.168.1.248:5678/webhook/contact-submit',
       '/api/contact',
-      'http://192.168.1.128:5678/webhook/contact-submit',
+      'https://gezas-mac-mini.taild096ba.ts.net/webhook/contact-submit',
       'http://localhost:5678/webhook/contact-submit'
+    ] : [
+      '/api/contact',
+      'https://gezas-mac-mini.taild096ba.ts.net/webhook/contact-submit'
     ];
 
     const submitBtn = document.getElementById("contact-submit-btn");
