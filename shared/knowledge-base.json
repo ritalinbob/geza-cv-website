@@ -91,26 +91,26 @@
     },
     "hu": {
       "profile": {
-        "title": "ServiceNow Architekt & Enterprise AI Automatizálási Mérnök",
+        "title": "ServiceNow Architekt & Enterprise AI Automation Engineer",
         "location": "Pressbaum (Bécs környéke), Ausztria",
-        "summary": "ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős beruházásként felépített egy 6 példányos ökoszisztémát, levezényelte a teljes infrastruktúra- és adatszétválasztást egy vállalati kiválás során, valamint alapvető ITSM, CMDB/Discovery, HAM és Sérülékenységkezelési (VR) környezeteket irányít."
+        "summary": "ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős (greenfield) környezetként épített fel egy 6 példányos ServiceNow architektúrát, levezényelte a teljes infrastruktúra- és adatbázis-szétválasztást egy vállalati kiválás során, valamint kiemelt ITSM, CMDB/Discovery, HAM és Vulnerability Response környezeteket irányít."
       },
       "frequently_asked_recruiter_questions": [
         {
           "q": "Hogyan fejleszt szoftvert Géza?",
-          "a": "Géza modern ágens- és automatizálás-vezérelt mérnöki munkafolyamatokat alkalmaz. VS Code környezetben egy belső ágens AI eszköztárat és egyedi MCP (Model Context Protocol) API burkolókat használ valós idejű sémavizsgálatra, automatizált GlideScript kódgenerálásra és kódátvizsgálásra. Kiemelt figyelmet fordít a tiszta architektúrára, az automatizált tesztelésre (ATF) és a reprodukálható kiadási folyamatokra."
+          "a": "Géza modern Agentic AI és automatizálás-vezérelt mérnöki munkafolyamatokat alkalmaz. VS Code környezetben egy belső Agentic AI eszköztárat és egyedi MCP (Model Context Protocol) API wrapper-eket használ valós idejű sémavizsgálatra, automatizált GlideScript kódgenerálásra és kódátvizsgálásra. Kiemelt figyelmet fordít a tiszta architektúrára, az automatizált tesztelésre (ATF) és a reprodukálható kiadási folyamatokra."
         },
         {
           "q": "Milyen ServiceNow modulokban van tapasztalata Gézának?",
-          "a": "Géza kiterjedt gyakorlati architektúra- és fejlesztési tapasztalattal rendelkezik az alapvető ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM) és Tenable/Nessus szkennerekkel integrált Sérülékenységkezelés (VR) terén."
+          "a": "Géza kiterjedt gyakorlati architektúra- és fejlesztési tapasztalattal rendelkezik az alapvető ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM) és Tenable/Nessus szkennerekkel integrált Vulnerability Response terén."
         },
         {
           "q": "Mire a legbüszkébb Géza?",
-          "a": "Géza a legbüszkébb a zöldmezős, 6 példányos ServiceNow ökoszisztéma alapoktól történő felépítésére, az infrastruktúra és adatok sikeres szétválasztására egy vállalati kiválás során leállás nélkül, valamint a csapat szinten bevezetett belső VS Code MCP ágens eszköztár megalkotására."
+          "a": "Géza a legbüszkébb a zöldmezős, 6 példányos ServiceNow ökoszisztéma alapoktól történő felépítésére, az infrastruktúra és adatok sikeres szétválasztására egy vállalati kiválás során leállás nélkül, valamint a csapat szinten bevezetett belső VS Code MCP Agentic eszköztár megalkotására."
         },
         {
           "q": "Mi Géza hozzáállása az Out-of-the-Box (OOB) és az egyedi kód kérdéséhez?",
-          "a": "Géza szigorúan 'OOB-first' elvet követ: a natív ServiceNow képességeket és szabványos konfigurációkat részesíti előnyben a frissítési adósság és a kihagyott rekordok minimalizálása érdekében. Ha egyedi kód szükséges, azt elkülönített Scoped alkalmazásokba szervezi, szigorú GlideScript szabványokat követ, és ATF tesztcsomagokkal védi."
+          "a": "Géza szigorúan 'OOB-first' elvet követ: a natív ServiceNow képességeket és szabványos konfigurációkat részesíti előnyben a frissítési adósság és a kihagyott rekordok (skipped records) minimalizálása érdekében. Ha egyedi kód szükséges, azt elkülönített Scoped alkalmazásokba szervezi, szigorú GlideScript szabványokat követ, és ATF tesztcsomagokkal védi."
         },
         {
           "q": "Hány év ServiceNow tapasztalattal rendelkezik Géza?",
@@ -125,7 +125,7 @@
           "a": "Igen, Géza Pressbaumban (Bécs környéke) él, és nyitott hibrid szerepkörökre a bécsi régióban, valamint teljes távmunkára (remote) is."
         }
       ],
-      "fallback_general": "Géza hiteles szakmai profilja alapján: ServiceNow Architekt & Enterprise AI Automatizálási Mérnök 8+ év tapasztalattal platformarchitektúrában, vállalati integrációkban (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Sérülékenységkezelés terén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com)."
+      "fallback_general": "Géza hiteles szakmai profilja alapján: ServiceNow Architekt & Enterprise AI Automation Engineer 8+ év tapasztalattal platformarchitektúrában, vállalati integrációkban (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Vulnerability Response terén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com)."
     }
   }
 }

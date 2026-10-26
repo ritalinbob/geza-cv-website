@@ -82,7 +82,7 @@ ssh "${MAC_USER}@${MAC_HOST}" 'bash -s' << 'EOF'
   fi
 
   # Restart via PM2
-  export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH
+  export PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
   pm2 restart n8n-server --update-env
   pm2 save
 EOF

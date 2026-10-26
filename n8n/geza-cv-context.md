@@ -77,11 +77,11 @@ ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unter
 ### Kernmetriken
 * **8+ Jahre Plattform-Erfahrung:** ServiceNow-Architektur & ITSM/CMDB
 * **6 Greenfield-Instanzen:** Multi-Instanz-Topologie & Release-Gates
-* **100% Zero-Touch HR-Boarding:** Systemübergreifende Automatisierung (Entra ID / BambooHR)
+* **100% Vollautomatisiertes HR-Boarding:** Systemübergreifende Automatisierung (Entra ID / BambooHR)
 * **AI VS Code Agentic Toolchain:** In-IDE Schema-Inspektion & GlideScript MCP
 
 ### Kernkompetenzen
-* **Plattformarchitektur:** Multi-Instanz-Topologie, Release-Governance, Klon-Runbooks, Scoped Applications, ATF automatisierte Regressionstests, Upgrade Skipped-Record-Bereinigung.
+* **Plattformarchitektur:** Multi-Instanz-Topologie, Release-Governance, Cloning-Runbooks, Scoped Applications, ATF automatisierte Regressionstests, Bereinigung von Skipped Records bei Upgrades.
 * **IT-Betrieb & Module:** ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).
 * **KI & Agentic Engineering:** Custom MCP Server Wrapper, In-IDE Agent Toolchains, n8n LLM-Workflows, Kontext-Parsing, GlideScript-Codegenerierung, Prompt Design.
 * **Integrationen & Identität:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST APIs, Webhooks, Jitterbit, Cloudomation (Python), SQL Warehouses.
@@ -89,22 +89,22 @@ ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unter
 ### Berufserfahrung
 #### **Ontinue** | *Remote / Wien, Österreich*
 **ServiceNow Architect – Business Applications** | **2023-02 – Heute**
-* **Plattform-Verantwortung & Sicherheit:** Leitung der technischen Roadmap, Governance und kontinuierlicher Upgrades über Unternehmens-IT-Instanzen; Konzeption von CMDB/Discovery-Baselines und Vulnerability-Response-Pipelines mit Tenable- und Nessus-Scannern.
-* **Agentic Developer Tooling:** Konzeption und Bereitstellung einer internen VS Code Agentic AI-Toolchain mit maßgeschneiderten MCP-API-Wrappern zur Verkürzung der Entwicklungszyklen durch automatische Code-Reviews und GlideScript-Generierung.
-* **Zero-Touch-Automatisierung:** Entwicklung vollständig automatisierter HR-Boarding- und Offboarding-Workflows zur Synchronisierung von BambooHR, ServiceNow und Microsoft Entra ID über Power Automate und REST-Webhooks.
+* **Plattform-Governance & Sicherheit:** Leitung der technischen Roadmap, Governance und kontinuierlicher Upgrades für alle Enterprise-IT-Instanzen; Konzeption von CMDB/Discovery-Baselines und Vulnerability-Response-Pipelines mit Tenable- und Nessus-Scannern.
+* **Agentic Developer Tooling:** Konzeption und Bereitstellung einer internen VS Code Agentic AI-Toolchain mit maßgeschneiderten MCP-API-Wrappern zur Verkürzung der Entwicklungszyklen durch automatisierte Code-Reviews und GlideScript-Generierung.
+* **Vollautomatisierung (Zero-Touch):** Entwicklung vollständig automatisierter HR-Boarding- und Offboarding-Workflows zur Synchronisierung von BambooHR, ServiceNow und Microsoft Entra ID über Power Automate und REST-Webhooks.
 * **Datenintegration & Middleware:** Betreuung hochverfügbarer Datensynchronisations- und ETL-Pipelines über Cloudomation (Python) und Jitterbit in nachgelagerte Unternehmens-Data-Warehouses.
 
 #### **Open Systems** | *Hybrid / Wien, Österreich*
 **ServiceNow Architect – Business Applications** | **2022-05 – 2023-02**
-* **Greenfield-Architektur:** Aufbau der ServiceNow-Kernlandschaft von Grund auf, Konfiguration von 6 Anfangsinstanzen mit gehärteten Sicherheitskontrollen, Rollenhierarchien und Update-Set-Deployment-Pipelines.
-* **Unternehmensabspaltung:** Leitung der Plattform-Entflechtung, Verzeichnissynchronisation und relationalen Datenmigrationen für den operativen Spin-off zu Ontinue ohne Produktionsausfallzeiten.
-* **Instanz-Governance & Übergabe:** Etablierung standardisierter Klonprofil-Runbooks und Release-Gates sowie strukturierte operative Übergabe nachgelagerter Abteilungsinstanzen an externe Partner.
+* **Greenfield-Architektur:** Aufbau der ServiceNow-Kernlandschaft von Grund auf, Konfiguration der ersten 6 Instanzen mit gehärteten Sicherheitskontrollen, Rollenhierarchien und Update-Set-Deployment-Pipelines.
+* **Unternehmensabspaltung (Spin-off):** Leitung der Plattform-Entflechtung, Verzeichnissynchronisation und relationalen Datenmigrationen für den operativen Spin-off zu Ontinue ohne Produktionsausfallzeiten.
+* **Instanz-Governance & Übergabe:** Etablierung standardisierter Cloning-Runbooks und Release-Gates sowie strukturierte operative Übergabe sekundärer Abteilungsinstanzen an externe Partner.
 
 #### **Tricentis GmbH** | *Wien, Österreich*
 **Senior ServiceNow Developer** | **2018-08 – 2022-04**
 * **Unternehmensintegrationen:** Entwicklung geschäftskritischer bidirektionaler REST-Integrationen zur Anbindung von ServiceNow an Workday, JIRA, Cornerstone und Coveo AI Search.
-* **Komplexe Schemamigrationen:** Planung und Durchführung risikoreicher Datenbankumstellungen, darunter eine ITSM-zu-CSM-Schemamigration und Konsolidierung von Übernahmedaten in ServiceNow.
-* **Projekt-Rettung:** Refaktorisierung fehlerhafter Skripte und Korrektur relationaler Schemata unter engem Zeitplan zur Rettung einer festgefahrenen externen Partnerimplementierung.
+* **Komplexe Schemamigrationen:** Planung und Durchführung risikoreicher Datenbankumstellungen, darunter eine ITSM-zu-CSM-Schemamigration und Konsolidierung von Daten aus Unternehmensübernahmen (M&A) in ServiceNow.
+* **Vendor Rescue (Projekt-Turnaround):** Refactoring fehlerhafter Skripte und Bereinigung relationaler Schemata unter engem Zeitplan zur Rettung einer festgefahrenen externen Partnerimplementierung.
 
 #### **Frühere berufliche Stationen · Service24 GmbH & Avis Budget Group** | **2015 – 2018**
 * **Mobility Manager** (Service24, 2016–2018) • **Customer Care Specialist** (Avis Budget Group, 2015–2016). Schwerpunkt auf Prozessoptimierung, internationalen Abläufen und Workflow-Logistik.
@@ -123,46 +123,46 @@ ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unter
 
 === SECTION: HU ===
 # Horváth Géza
-**ServiceNow Architekt & Enterprise AI Automatizálási Mérnök**  
+**ServiceNow Architekt & Enterprise AI Automation Engineer**  
 Pressbaum (Bécs környéke), Ausztria • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
 
 ### Vezetői Összefoglaló
-ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős beruházásként felépített egy 6 példányos ökoszisztémát, levezényelte a teljes infrastruktúra- és adatszétválasztást egy vállalati kiválás során, valamint alapvető ITSM, CMDB/Discovery, HAM és Sérülékenységkezelési (VR) környezeteket irányít. Úttörő a modern ágens mérnökségben—belső VS Code MCP eszköztárak fejlesztésével, melyeket a teljes csapat átvett a szállítás felgyorsítására, valamint olyan automatizált n8n LLM munkafolyamatok megvalósításával, amelyek megszüntetik az operatív adminisztrációs terheket.
+ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős (greenfield) környezetként épített fel egy 6 példányos ServiceNow architektúrát, levezényelte a teljes infrastruktúra- és adatbázis-szétválasztást egy vállalati kiválás (carve-out) során, valamint kiemelt ITSM, CMDB/Discovery, HAM és Vulnerability Response rendszereket irányít. Úttörő a modern Agentic AI fejlesztési megoldásokban—belső VS Code MCP eszköztárak fejlesztésével, melyeket a teljes csapat átvett a szállítási folyamatok felgyorsítására, valamint olyan automatizált n8n LLM munkafolyamatok megvalósításával, amelyek megszüntetik az operatív adminisztrációs terheket.
 
 ### Fő Mutatók
-* **8+ Év platform tapasztalat:** ServiceNow architektúra & ITSM/CMDB
-* **6 Zöldmezős példány:** Többpéldányos topológia & kiadási ellenőrzések
-* **100% Zero-Touch HR beléptetés:** Rendszereken átívelő automatizáció (Entra ID / BambooHR)
-* **AI VS Code ágens eszköztár:** IDE-n belüli sémavizsgálat & GlideScript MCP
+* **8+ Év platformtapasztalat:** ServiceNow architektúra & ITSM/CMDB
+* **6 Zöldmezős példány:** Többpéldányos topológia & release-gate-ek
+* **100% Beavatkozás nélküli HR beléptetés:** Rendszereken átívelő automatizáció (Entra ID / BambooHR)
+* **VS Code Agentic AI eszköztár:** IDE-n belüli sémavizsgálat & GlideScript MCP
 
 ### Főbb Kompetenciák
-* **Platformarchitektúra:** Többpéldányos topológia, kiadási irányítás, klónozási leírások, Scoped alkalmazások, ATF automatizált regressziós tesztelés, Upgrade kihagyott rekordok feloldása.
-* **IT Üzemeltetés & Modulok:** ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Sérülékenységkezelés (Tenable/Nessus).
-* **AI & Ágens Mérnökség:** Egyedi MCP szerver wrap-ek, IDE-n belüli ágens eszköztárak, n8n LLM munkafolyamatok, kontextusértelmezés, GlideScript kódgenerálás, prompt tervezés.
+* **Platformarchitektúra:** Többpéldányos topológia, Release Governance, klónozási runbookok, Scoped Applications, ATF automatizált regressziós tesztelés, Upgrade során kihagyott rekordok (skipped records) kezelése.
+* **IT Üzemeltetés & Modulok:** ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).
+* **AI & Agentic Engineering:** Egyedi MCP szerver wrapper-ek, IDE-be integrált Agentic eszköztárak, n8n LLM munkafolyamatok, kontextus-feldolgozás, GlideScript kódgenerálás, Prompt Design.
 * **Integrációk & Identitás:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST API-k, Webhookok, Jitterbit, Cloudomation (Python), SQL adattárházak.
 
 ### Szakmai Tapasztalat
 #### **Ontinue** | *Remote / Bécs, Ausztria*
 **ServiceNow Architekt – Üzleti Alkalmazások** | **2023-02 – Jelenleg**
-* **Platform-irányítás & Biztonság:** A műszaki ütemterv, platform-governance és folyamatos frissítések vezetése vállalati IT példányokon; CMDB/Discovery alapok és Tenable/Nessus szkennerekkel integrált sérülékenységkezelési folyamatok kiépítése.
-* **Ágens Fejlesztői Eszközök:** Egyedi MCP API wrapper-ekre épülő belső VS Code ágens AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők csökkentése automatizált kódellenőrzéssel és GlideScript generálással.
-* **Zero-Touch Automatizáció:** 100%-ban automatizált HR be- és kiléptetési életciklus-folyamatok építése a BambooHR, ServiceNow és Microsoft Entra ID szinkronizálásával Power Automate és REST webhook-ok segítségével.
-* **Adatintegráció & Köztesréteg:** Magas megbízhatóságú adatszinkronizációs és ETL folyamatok fenntartása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.
+* **Platform-governance & Biztonság:** A technikai ütemterv, platform-governance és folyamatos frissítések (upgrades) vezetése vállalati ServiceNow példányokon; CMDB/Discovery alapok és Tenable/Nessus szkennerekkel integrált Vulnerability Response folyamatok kiépítése.
+* **Agentic Developer Tooling:** Egyedi MCP API wrapper-ekre épülő belső VS Code Agentic AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők csökkentése automatizált kódellenőrzéssel és GlideScript generálással.
+* **Beavatkozás nélküli automatizáció:** 100%-ban automatizált HR be- és kiléptetési életciklus-folyamatok építése a BambooHR, ServiceNow és Microsoft Entra ID szinkronizálásával Power Automate és REST webhookok segítségével.
+* **Adatintegráció & Middleware:** Magas megbízhatóságú adatszinkronizációs és ETL folyamatok fenntartása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.
 
 #### **Open Systems** | *Hibrid / Bécs, Ausztria*
 **ServiceNow Architekt – Üzleti Alkalmazások** | **2022-05 – 2023-02**
-* **Zöldmezős Architektúra:** A ServiceNow alaprendszer kiépítése az alapoktól, 6 kezdeti példány konfigurálása megerősített biztonsági szabályokkal, szerepkör-hierarchiákkal és update-set telepítési folyamatokkal.
-* **Vállalati Szétválás Lebonyolítása:** A platform szétválasztásának, címtárszinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, termeléskiesés nélkül.
-* **Példány-irányítás & Átadás:** Alapszintű klónozási leírások és kiadási ellenőrzőpontok kidolgozása, kiegészítő osztályos példányok strukturált operatív átadása külső partnereknek.
+* **Greenfield architektúra:** A ServiceNow alaprendszer kiépítése az alapoktól, 6 kezdeti példány konfigurálása megerősített biztonsági szabályokkal, szerepkör-hierarchiákkal és Update Set deployment folyamatokkal.
+* **Vállalati kiválás (Spin-off) lebonyolítása:** A platform szétválasztásának, címtárszinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, termeléskiesés nélkül.
+* **Példány-governance & Átadás:** Alapszintű klónozási runbookok és release-gate-ek kidolgozása, kiegészítő osztályos példányok strukturált operatív átadása külső partnereknek.
 
 #### **Tricentis GmbH** | *Bécs, Ausztria*
 **Senior ServiceNow Fejlesztő** | **2018-08 – 2022-04**
 * **Vállalati Integrációk:** Üzletileg kritikus kétirányú REST integrációk kiépítése a ServiceNow és a Workday, JIRA, Cornerstone valamint Coveo AI Search között.
 * **Összetett Sémamigrációk:** Nagy kockázatú adatbázis-átállások megtervezése és végrehajtása, beleértve az ITSM-ről CSM-re történő sémamigrációt és korábbi cégfelvásárlások adatainak konszolidációját.
-* **Projektmentés:** Hibás egyedi szkriptek újragondolása és a mögöttes relációs adatmodellek javítása szoros határidők mellett egy elakadt külső partneri bevezetés helyreállítására.
+* **Beszállítói projekt mentése (Vendor Rescue):** Hibás egyedi szkriptek refaktorálása és a mögöttes relációs adatmodellek javítása szoros határidők mellett egy elakadt külső partneri bevezetés helyreállítására.
 
 #### **Korábbi Szakmai Pályafutás · Service24 GmbH & Avis Budget Group** | **2015 – 2018**
-* **Mobilitási Menedzser** (Service24, 2016–2018) • **Ügyfélszolgálati Munkatárs** (Avis Budget Group, 2015–2016). Fókuszban a folyamatoptimalizálás, a nemzetközi műveletek és a munkafolyamat-logisztika.
+* **Mobilitási Menedzser** (Service24, 2016–2018) • **Customer Care Specialist** (Avis Budget Group, 2015–2016). Fókuszban a folyamatoptimalizálás, a nemzetközi műveletek és a munkafolyamat-logisztika.
 
 ### Képesítések & Tanúsítványok
 * **Develop Generative AI Applications: Get Started** – IBM (2026)

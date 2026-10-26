@@ -1,19 +1,19 @@
 # Geza Horvath
-**ServiceNow Architect & Enterprise Business Applications Lead**  
+**ServiceNow Architect & Enterprise AI Automation Engineer**  
 Pressbaum / Wien, Österreich • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
 
 ---
 
 ### Profil-Zusammenfassung
-ServiceNow Architect und Enterprise Applications Lead mit über 8 Jahren Erfahrung in der Leitung von Multi-Instanz-Plattform-Engineering, systemübergreifender Automatisierung und komplexen Datenmigrationen. Aufbau eines zukunftssicheren Greenfield-ServiceNow-Ökosystems, Konzeption und Durchführung von Carve-out-Splits über heterogene Data Warehouses im Rahmen von Unternehmensabspaltungen sowie Implementierung von Kernlösungen in ITSM, CMDB/Discovery, HAM und Vulnerability Response. Entwicklung einer internen VS Code Agentic AI-Toolchain und maßgeschneiderter MCP-API-Wrapper, die teamweit eingeführt wurden, um Plattform-Bereitstellungen zu beschleunigen, Code-Reviews zu automatisieren und manuelle Konfigurationsaufwände zu eliminieren.
+ServiceNow Architect mit über 8 Jahren Erfahrung in der Leitung von Multi-Instanz-Plattform-Engineering, systemübergreifender Automatisierung und komplexen Datenmigrationen. Aufbau eines zukunftssicheren Greenfield-ServiceNow-Ökosystems, Konzeption und Durchführung von Carve-out-Splits über heterogene Data Warehouses im Rahmen von Unternehmensabspaltungen sowie Implementierung von Kernlösungen in ITSM, CMDB/Discovery, HAM und Vulnerability Response. Entwicklung einer internen VS Code Agentic AI-Toolchain und maßgeschneiderter MCP-API-Wrapper, die teamweit eingeführt wurden, um Plattform-Bereitstellungen zu beschleunigen, Code-Reviews zu automatisieren und manuelle Konfigurationsaufwände zu eliminieren.
 
 ---
 
 ### Kernkompetenzen
 
-* **Plattformarchitektur & Governance:** Multi-Instanz-Topologie, Release-Governance, Upgrade-Zyklen (Erfassung übersprungener Datensätze Sub-Prod zu Prod), Clone-Profil-Management, Scoped Applications, Idempotente ATF-Test-Suites.
+* **Plattformarchitektur & Governance:** Multi-Instanz-Topologie, Release-Governance, Upgrade-Zyklen (Bereinigung übersprungener Datensätze / Skipped Records Sub-Prod zu Prod), Cloning-Runbooks & Profil-Management, Scoped Applications, Idempotente ATF-Test-Suites.
 * **Module & Plattform-Betrieb:** ITSM, CMDB, Discovery (MID Server, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).
-* **Unternehmensautomatisierung & Identitätsmanagement:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST-Trigger, Zero-Touch HR Onboarding & Rollenwechsel, automatisierte RBAC-Gruppenbereitstellung.
+* **Unternehmensautomatisierung & Identitätsmanagement:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST-Trigger, Vollautomatisiertes (Zero-Touch) HR Onboarding & Rollenwechsel, automatisierte RBAC-Gruppenbereitstellung.
 * **Integrationen, Middleware & Daten:** n8n, Cloudomation (Python), Jitterbit, Scripted REST, Webhooks, Relationale Data Warehouses (SQL/Views), IntegrationHub.
 * **KI & Software-Engineering-Tools:** VS Code Agentic Development Pipelines, maßgeschneiderte Model Context Protocol (MCP) ServiceNow API-Wrapper, Custom Agent Skills, Modernes JavaScript / GlideScript, Python (Grundlagen).
 
@@ -22,7 +22,7 @@ ServiceNow Architect und Enterprise Applications Lead mit über 8 Jahren Erfahru
 ### Berufserfahrung
 
 #### **Ontinue** | *Remote / Wien, Österreich*
-**ServiceNow Architect & Business Applications Lead** | **2023-02 – Heute**
+**ServiceNow Architect – Business Applications** | **2023-02 – Heute**
 * Leitung der Plattformarchitektur, technischen Roadmaps und Upgrade-Governance für die ServiceNow-Landschaft nach dem operativen Spin-off von Open Systems.
 * Konzeption und Implementierung von End-to-End **HR-Boarding-Prozessen** (Onboarding, Offboarding, Cross-Boarding): Bereitstellung von Katalogelementen zur Auslösung automatisierter Multi-System-Workflows, die Mitarbeiterdaten über BambooHR, ServiceNow und Entra ID via REST synchronisieren.
 * Konzeption und Bereitstellung einer automatisierten **Salesforce Account Enrichment Engine in n8n**, die öffentliche Daten-APIs, ZoomInfo-Endpunkte, Deduplizierungslogik, Aufgaben-Warteschlangen und strukturierte LLM-Prompts verkettet.
@@ -43,7 +43,7 @@ ServiceNow Architect und Enterprise Applications Lead mit über 8 Jahren Erfahru
 * Bereitstellung hochverfügbarer Plattformlösungen in ITSM und Custom Applications innerhalb eines agilen Scrum-Entwicklungsteams.
 * Entwicklung bidirektionaler REST-Integrationen zur Anbindung von ServiceNow an Workday, JIRA, Coveo AI Search und Cornerstone.
 * Durchführung geschäftskritischer Datenbankmigrationen, darunter eine ITSM-zu-CSM-Schemamigration und die Konsolidierung von Altdaten aus Übernahmen in ServiceNow.
-* Rettung einer ins Stocken geratenen Implementierung eines externen Dienstleisters durch Refaktorisierung fehlerhafter Skripte und Datenmodelle unter engem Zeitplan für einen erfolgreichen Produktionsstart.
+* Rettung einer ins Stocken geratenen Implementierung eines externen Dienstleisters (Vendor Rescue) durch Refactoring fehlerhafter Skripte und Bereinigung von Datenmodellen unter engem Zeitplan für einen erfolgreichen Produktionsstart.
 
 #### **Frühere berufliche Stationen**
 * **Mobility Manager** | Service24 GmbH (2016 – 2018) • **Customer Care Specialist** | Avis Budget Group (2015 – 2016)
@@ -73,9 +73,9 @@ ServiceNow Architect und Enterprise Applications Lead mit über 8 Jahren Erfahru
 ### 1. Herausragende Erfolge & Schlüsselprojekte
 * **Greenfield-Plattformstart & Übergabe (Open Systems):** Konfiguration von 4 ServiceNow-Kerninstanzen von Grund auf mit automatisierter Azure AD / Entra ID Benutzerbereitstellung, Sicherheitsrichtlinien und Lifecycle-Management für Gruppen. Vollständige Dokumentation und erfolgreiche operative Übergabe an einen externen Entwicklungspartner (Wrangu).
 * **Unternehmensabspaltung & systemübergreifende Datenmigration (Open Systems -> Ontinue):** Aufrechterhaltung der unterbrechungsfreien Plattformverfügbarkeit während des Carve-outs. Übernahme der Verantwortung für die Entflechtung der Instanzen sowie für Datenmigrationen über Unternehmens-Data-Warehouses und Peripheriesysteme.
-* **End-to-End Enterprise HR-Boarding-Orchestrierung:** Aufbau eines integrierten, berührungsfreien HR-Lifecycle-Systems. Entwicklung von Katalogelementen für HR-Teams zur Auslösung automatisierter Workflows: Synchronisierung von Personalstammdaten über BambooHR, ServiceNow und Entra ID, Vergabe von Anwendungsberechtigungen und automatische Fehlerbehandlung.
+* **End-to-End Enterprise HR-Boarding-Orchestrierung:** Aufbau eines integrierten, vollautomatisierten (Zero-Touch) HR-Lifecycle-Systems. Entwicklung von Katalogelementen für HR-Teams zur Auslösung automatisierter Workflows: Synchronisierung von Personalstammdaten über BambooHR, ServiceNow und Entra ID, Vergabe von Anwendungsberechtigungen und automatische Fehlerbehandlung.
 * **KI- und API-gestützte Account Enrichment Engine (n8n & Salesforce):** Konzeption und Bereitstellung eines Workflows in n8n, der Salesforce-Accounts bereinigt, dedupliziert und über ZoomInfo-Endpunkte sowie strukturierte LLM-Prompts anreichert.
-* **Rettung einer Dienstleister-Implementierung (Tricentis):** Erfolgreiche Übernahme und Sanierung einer gescheiterten externen Implementierung unter strikten Deadlines ohne Produktionsunterbrechung.
+* **Rettung einer Dienstleister-Implementierung (Vendor Rescue - Tricentis):** Erfolgreiche Übernahme und Sanierung einer gescheiterten externen Implementierung unter strikten Deadlines ohne Produktionsunterbrechung.
 
 ### 2. Plattform-Verantwortung & Automatisierungsphilosophie
 * **Ganzheitliche funktionale Verantwortung:** Proaktiver Austausch mit Fachabteilungen und Stakeholdern zur Ermittlung betrieblicher Engpässe. Direkte Verantwortung für Machbarkeitsanalysen, Lösungsarchitektur, Spezifikationen, Sprint-Planung, Tests, Go-Live und Post-Go-Live-Support.
@@ -86,7 +86,7 @@ ServiceNow Architect und Enterprise Applications Lead mit über 8 Jahren Erfahru
 * **Design- und Dokumentationsstandards:** Übersetzung von Geschäftsanforderungen aus JIRA in Architekturbaupläne mittels draw.io-Ablaufdiagrammen und lückenlose Dokumentation technischer Entscheidungen in Confluence.
 * **Upgradesicherheit & Technical-Debt-Management:**
   * Strikte Release-Gates auf Sub-Produktionsumgebungen vor jeder Produktivänderung.
-  * Rigorose Klonprofil-Ausschlüsse, Datenerhaltungsregeln und ATF-Regressions-Suites.
+  * Rigorose Cloning-Runbooks, Profil-Ausschlüsse, Datenerhaltungsregeln und ATF-Regressions-Suites.
   * Systematische Überprüfung und Bereinigung veralteter Skripte, APIs und ungenutzter Schemata.
 
 ### 4. Arbeitsstil, Persönlichkeit & Zusammenarbeit

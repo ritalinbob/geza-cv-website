@@ -163,12 +163,12 @@
       pills: [
         { label: '💻 Szoftverfejlesztés', query: 'Hogyan fejleszt szoftvert Géza?' },
         { label: '⚙️ ServiceNow Modulok', query: 'Milyen ServiceNow modulokban van tapasztalata Gézának?' },
-        { label: '🏆 Legbüszkébb eredmény', query: 'Mire a legbüszkébb Géza?' },
+        { label: '🏆 Legfontosabb mérföldkő', query: 'Mire a legbüszkébb Géza?' },
         { label: '⚡ OOB vs. Egyedi Kód', query: 'Mi Géza hozzáállása az Out-of-the-Box (OOB) és az egyedi kód kérdéséhez?' }
       ],
       modal: {
         badge: "Architektúra",
-        badgeHighlight: "🔒 100% Saját Kiszolgálón Fut",
+        badgeHighlight: "🔒 100% Privát & Saját Kiszolgálón Fut",
         heading: "Hogyan működik Géza AI Asszisztense",
         subheading: "Egyszerűsített architektúra áttekintés",
         step1Badge: "01. LÉPÉS",
@@ -177,9 +177,9 @@
         step1Tag: "Látogatói Böngésző",
         step1Subnote: "Tiszta bemenet &middot; Böngésző",
         step2Badge: "02. LÉPÉS",
-        step2Title: "Továbbítás az otthoni Mac minire",
+        step2Title: "Továbbítás a helyi Mac minire",
         step2Desc: "A kérdés biztonságosan, titkosított privát hálózaton (n8n + Tailscale) fut be közvetlenül Géza bécsi Mac mini szerverére.",
-        step2Tag: "Otthoni Szerver",
+        step2Tag: "Saját Szerver",
         step2Subnote: "Mac mini M4 &middot; Titkosított",
         step3Badge: "03. LÉPÉS &middot; KÖZPONTI",
         step3Title: "Helyi LLM összeállítja a választ",
@@ -189,14 +189,14 @@
         step4Badge: "04. LÉPÉS",
         step4Title: "Válasz visszaküldése a weboldalra",
         step4Desc: "A hitelesített válasz kevesebb mint 2 másodpercen belül megjelenik a felületen, teljesen követés- és adatgyűjtés-mentesen.",
-        step4Tag: "Valós idejű szállítás",
+        step4Tag: "Valós idejű válaszadás",
         step4Subnote: "~1.8s válaszidő",
         takeaway1Title: "Nulla Külső Felhős Adatszivárgás",
         takeaway1Desc: "A kérdések soha nem kerülnek külső AI szolgáltatókhoz (pl. OpenAI vagy Google). Minden 100%-ban privát marad Géza saját hardverén.",
         takeaway2Title: "Szigorú Tényalapú Működés",
         takeaway2Desc: "A modell kizárólag a valós szakmai eredményekre támaszkodik. Nem talál ki képesítéseket és nem túloz.",
-        takeaway3Title: "Élő Architektúra Bizonyíték",
-        takeaway3Desc: "Közvetlen demonstrációja Géza vállalati szakértelmének: biztonságos alagútkezelés, API automatizálás (n8n) és helyi AI mérnökség.",
+        takeaway3Title: "Élő Architektúra Demonstráció",
+        takeaway3Desc: "Közvetlen demonstrációja Géza vállalati szakértelmének: biztonságos tunnel-kapcsolat, API automatizálás (n8n) és helyi AI mérnöki megoldások.",
         footerHint: "Gyorsbillentyű: <kbd>Esc</kbd> gomb a bezáráshoz",
         gotIt: "Értem, bezárás"
       }
@@ -304,7 +304,7 @@
     if (currentLanguage === 'de') {
       return "Basierend auf Gézas verifiziertem Profil: ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM und Vulnerability Response. Kontaktieren Sie ihn direkt unter [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
     } else if (currentLanguage === 'hu') {
-      return "Horváth Géza hitelesített szakmai profilja alapján: ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Sérülékenységkezelés területén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
+      return "Horváth Géza hitelesített szakmai profilja alapján: ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Vulnerability Response területén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
     }
 
     return "Based on Géza's verified profile: ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM, and Vulnerability Response. Contact him directly at [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
