@@ -1,6 +1,6 @@
 # Architecture Documentation: AI Resume Chat Assistant
 
-**Owner:** Géza Horváth — ServiceNow Architect  
+**Owner:** Géza Horváth — Lead ServiceNow Architect & Technical Lead  
 **Host Architecture:** Mac mini M4 (16GB Unified Memory, Gezas-Mac-mini.local)  
 **Selected Production Ingress:** Option A — Tailscale Funnel (`https://<node>.<tailnet>.ts.net`)  
 **Current Testing Mode:** Local Network Multi-Device Testing (`http://192.168.1.155:3000`)  
@@ -108,7 +108,7 @@ Rather than using complex chunked vector RAG (which frequently causes retrieval 
 3. **Deterministic Guardrails:** The complete profile is directly injected into the system prompt with strict negative boundary rules:
    - Must answer only from verified facts.
    - Refuses out-of-scope topics (general trivia, politics, compensation speculation).
-   - Clarifies title distinction: ServiceNow Architect (not Lead).
+   - Clarifies role and leadership titles: Lead ServiceNow Architect & Technical Lead (ServiceNow Architect & Tech Lead at Ontinue; Senior ServiceNow Developer & Technical Lead at Tricentis).
    - Provides direct contact channels (`ghorvath@gmail.com`, LinkedIn) when information is not in the public profile.
 
 ---

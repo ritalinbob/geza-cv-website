@@ -1,74 +1,78 @@
 {
   "profile": {
     "name": "Géza Horváth",
-    "title": "ServiceNow Architect & Enterprise AI Automation Engineer",
-    "location": "Pressbaum (Vienna Area), Austria",
+    "title": "Lead ServiceNow Architect & Technical Lead",
+    "location": "Vienna Area (Pressbaum), Austria",
     "email": "ghorvath@gmail.com",
     "phone": "+43 660 108 2050",
     "linkedin": "https://www.linkedin.com/in/geza-horvath-16288a185",
-    "summary": "ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations, and cross-system automation. Bootstrapped a greenfield 6-instance ecosystem, led full infrastructure and data decoupling through an enterprise divestiture, and directs core ITSM, CMDB/Discovery, HAM, and Vulnerability Response environments. Pioneers modern agentic engineering—building in-house VS Code MCP toolchains adopted team-wide to accelerate delivery and engineering automated n8n LLM workflows that eliminate operational overhead.",
-    "years_experience_servicenow": "8+ years (since 2018 in core ServiceNow development and architecture)",
-    "title_correction_note": "Accurate title is ServiceNow Architect & Enterprise AI Automation Engineer."
+    "summary": "Lead ServiceNow Architect & Technical Lead with 8+ years driving platform architecture, enterprise integrations, and modern workflow automation. Proven track record bootstrapping a greenfield 6-instance ecosystem, directing full infrastructure decoupling through corporate spin-off, and governing core ITSM, CMDB/Discovery, HAM, and Vulnerability Response environments. Hands-on pioneer in agentic AI tooling—architecting custom in-house VS Code MCP toolchains adopted team-wide to accelerate delivery and engineering automated n8n LLM workflows that eliminate operational overhead. Based in the Vienna area (Pressbaum) with valid Austrian work status, ready for hybrid or on-site engagement.",
+    "years_experience_servicenow": "8+ years (since 2018 in core ServiceNow development, technical leadership, and architecture)",
+    "title_correction_note": "Accurate headline title is Lead ServiceNow Architect & Technical Lead. Current role at Ontinue is ServiceNow Architect & Tech Lead."
   },
   "core_competencies": {
-    "platform_architecture": "Multi-Instance Topology, Release Governance, Cloning Runbooks, Scoped Applications, ATF Automated Regression, Upgrade skipped-record resolution.",
-    "modules_and_operations": "ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).",
-    "integrations_and_data": "Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST APIs, Webhooks, Jitterbit, Cloudomation (Python), SQL Warehouses.",
-    "ai_and_engineering_tooling": "Custom MCP Server Wrappers, In-IDE Agent Toolchains, n8n LLM Workflows, Context Parsing, GlideScript Code Generation, Prompt Design."
+    "platform_architecture": "Multi-Instance Topology, Release Governance, Cloning Runbooks, Scoped Applications, ATF Automated Regression Testing, Upgrades & Skipped-Record Resolution, RBAC.",
+    "modules_and_operations": "ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), Vulnerability Response (Tenable/Nessus).",
+    "integrations_and_data": "Scripted REST APIs, Webhooks, Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Jitterbit, Cloudomation (Python ETL), SQL Data Warehousing, Git Version Control.",
+    "ai_and_engineering_tooling": "Custom Model Context Protocol (MCP) Server Wrappers, In-IDE VS Code Agent Toolchains, n8n LLM Workflows, Context Parsing, Code Review Automation, Prompt Engineering."
   },
   "frequently_asked_recruiter_questions": [
     {
       "q": "How does Geza develop software?",
-      "a": "Géza develops software using modern agentic and automation-driven engineering workflows. In VS Code, he leverages an in-house agentic AI toolchain with custom MCP (Model Context Protocol) API wrappers for real-time schema inspection, automated GlideScript code generation, and rigorous code reviews. He emphasizes clean architecture, automated testing (ATF), and reproducible deployment pipelines."
+      "a": "Géza develops software using modern agentic and automation-driven engineering workflows. In VS Code, he leverages an in-house agentic AI toolchain with custom MCP (Model Context Protocol) API wrappers for schema validation, automated GlideScript code generation, and code review automation. He emphasizes clean architecture, automated regression testing (ATF), and reproducible deployment pipelines."
     },
     {
       "q": "What ServiceNow modules does Geza have experience with?",
-      "a": "Géza has extensive hands-on architecture and development experience with core ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), and Vulnerability Response (integrated with Tenable and Nessus)."
+      "a": "Géza has extensive hands-on architecture and governance experience with core ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), and Vulnerability Response (integrated with Tenable and Nessus), as well as ITSM-to-CSM migrations and customer/support portal enhancements with Coveo AI Search."
     },
     {
       "q": "What is Geza most proud of?",
-      "a": "Géza is most proud of bootstrapping a greenfield 6-instance ServiceNow ecosystem from scratch, successfully decoupling infrastructure and data during an enterprise divestiture without production downtime, and pioneering an in-house VS Code MCP agentic toolchain adopted team-wide to accelerate platform delivery."
+      "a": "Géza is most proud of bootstrapping a greenfield 6-instance ServiceNow ecosystem from scratch, directing full platform decoupling and relational data migrations during the corporate spin-off into Ontinue without production downtime, and pioneering an in-house VS Code MCP agentic toolchain adopted team-wide to accelerate platform delivery."
     },
     {
       "q": "What is Geza's approach to Out-of-the-Box (OOB) vs. custom code?",
-      "a": "Géza strongly adheres to an 'OOB-first' platform philosophy: leverage native ServiceNow capabilities, standard schema models, and configurable features wherever possible to minimize upgrade debt and skipped records. When custom code is required, he isolates it cleanly within Scoped Applications, adheres to strict GlideScript standards, and protects it with automated ATF test suites."
+      "a": "Géza strongly adheres to an 'OOB-first' platform philosophy: leverage native ServiceNow capabilities, standard schema models, and configurable features wherever possible to minimize upgrade debt and skipped records. When custom code is required, he isolates it cleanly within Scoped Applications, adheres to strict GlideScript standards, and protects it with automated ATF regression test suites."
     },
     {
       "q": "How many years of ServiceNow experience does he have?",
-      "a": "Géza has 8+ years of dedicated, hands-on experience in the ServiceNow ecosystem, working from Senior Developer up to ServiceNow Architect."
+      "a": "Géza has 8+ years of dedicated, hands-on experience in the ServiceNow ecosystem, progressing from Senior ServiceNow Developer & Technical Lead at Tricentis to ServiceNow Architect & Tech Lead at Ontinue."
+    },
+    {
+      "q": "What leadership and mentoring experience does he have?",
+      "a": "As ServiceNow Architect & Tech Lead at Ontinue, Géza technically guides and mentors a core team of 1–2 senior ServiceNow engineers, steers architectural standards, ticket scoping, and code reviews, and coordinates delivery within an 8+ developer external partner ecosystem."
     },
     {
       "q": "What integrations has he built?",
-      "a": "Géza has architected and delivered bi-directional scripted REST and webhook integrations connecting ServiceNow with Workday, Jira, Coveo AI Search, Cornerstone, BambooHR, and Microsoft Entra ID (Azure AD), as well as middleware pipelines via Cloudomation and Jitterbit."
+      "a": "Géza has architected and delivered bi-directional scripted REST and webhook integrations connecting ServiceNow with Workday, Jira, Coveo AI Search, Cornerstone, BambooHR, and Microsoft Entra ID (Azure AD) via Power Automate, as well as ETL and data synchronization pipelines via Cloudomation (Python) and Jitterbit into corporate data warehouses."
     },
     {
       "q": "What certifications does he hold?",
-      "a": "He holds ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), IBM Generative AI Applications certification (2026), and Python certifications from Rice University."
+      "a": "He holds ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), Develop Generative AI Applications from IBM (Coursera, 2026), and Python Programming & Principles of Computing from Rice University."
     },
     {
-      "q": "Is he open to remote or hybrid positions?",
-      "a": "Yes, Géza is based in Pressbaum (Vienna Area), Austria, and is available for hybrid roles in the Vienna region or fully remote opportunities."
+      "q": "Is he open to hybrid, on-site, or remote positions?",
+      "a": "Yes, Géza is based in the Vienna area (Pressbaum), Austria, with valid Austrian work status, and is ready for hybrid or on-site engagement in the Vienna region, as well as remote opportunities."
     }
   ],
   "translations": {
     "de": {
       "profile": {
-        "title": "ServiceNow Architect & Enterprise AI Automation Engineer",
-        "location": "Pressbaum (Wien Umgebung), Österreich",
-        "summary": "ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen und systemübergreifender Automatisierung. Aufbau eines zukunftssicheren Greenfield-Ökosystems mit 6 Instanzen, technische Plattform-Entflechtung im Rahmen einer Unternehmensabspaltung sowie Leitung von Kernumgebungen in ITSM, CMDB/Discovery, HAM und Vulnerability Response."
+        "title": "Lead ServiceNow Architect & Technical Lead",
+        "location": "Raum Wien (Pressbaum), Österreich",
+        "summary": "Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Nachweisliche Erfolge beim Aufbau einer Greenfield-Landschaft über 6 Instanzen, der vollständigen technischen Entflechtung im Zuge eines Corporate Spin-offs sowie der Governance von ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze."
       },
       "frequently_asked_recruiter_questions": [
         {
           "q": "Wie entwickelt Geza Software?",
-          "a": "Geza entwickelt Software mit modernen agentenbasierten und automatisierten Engineering-Workflows. In VS Code nutzt er eine interne KI-Toolchain mit maßgeschneiderten MCP (Model Context Protocol) API-Wrappern für Echtzeit-Schemainspektion, automatisierte GlideScript-Codegenerierung und Code-Reviews. Er legt großen Wert auf saubere Architektur, automatisierte ATF-Tests und reproduzierbare Release-Pipelines."
+          "a": "Geza entwickelt Software mit modernen agentenbasierten und automatisierten Engineering-Workflows. In VS Code nutzt er eine interne Agentic-AI-Toolchain auf Basis maßgeschneiderter MCP (Model Context Protocol) API-Wrapper für Schema-Validierung, automatisierte Code-Reviews und GlideScript-Generierung. Er legt großen Wert auf saubere Architektur, automatisierte ATF-Regressionstests und reproduzierbare Release-Pipelines."
         },
         {
           "q": "Mit welchen ServiceNow-Modulen hat Geza Erfahrung?",
-          "a": "Geza verfügt über umfassende Architektur- und Entwicklungserfahrung in ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM) und Vulnerability Response (integriert mit Tenable und Nessus)."
+          "a": "Geza verfügt über umfassende Architektur- und Governance-Erfahrung in ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM) und Vulnerability Response (integriert mit Tenable und Nessus) sowie CSM-Migrationen und Portal-Optimierungen mit Coveo AI Search."
         },
         {
           "q": "Worauf ist Geza am meisten stolz?",
-          "a": "Geza ist besonders stolz auf den Aufbau eines Greenfield-Ökosystems mit 6 Instanzen von Grund auf, die erfolgreiche technische Entflechtung während einer Unternehmensabspaltung ohne Ausfallzeiten sowie die Entwicklung einer internen VS Code MCP-Toolchain, die teamweit eingeführt wurde."
+          "a": "Geza ist besonders stolz auf den Aufbau einer Greenfield-Landschaft über 6 Instanzen von Grund auf, die federführende Steuerung der Plattform-Entflechtung im Zuge des Corporate Spin-offs zu Ontinue ohne produktive Ausfallzeiten sowie die Konzeption einer internen VS-Code-MCP-Toolchain, die unternehmensweit eingeführt wurde."
         },
         {
           "q": "Wie ist Gezas Ansatz bei Standard (OOB) vs. individuellem Code?",
@@ -76,56 +80,64 @@
         },
         {
           "q": "Wie viele Jahre Erfahrung mit ServiceNow hat Géza?",
-          "a": "Géza verfügt über mehr als 8 Jahre dedizierte Praxiserfahrung im ServiceNow-Ökosystem – vom Senior Developer bis zum Plattform-Architekten."
+          "a": "Géza verfügt über mehr als 8 Jahre dedizierte Praxiserfahrung im ServiceNow-Ökosystem – vom Senior ServiceNow Developer & Technical Lead bis zum ServiceNow Architect & Tech Lead."
+        },
+        {
+          "q": "Welche Führungserfahrung hat Géza?",
+          "a": "Als ServiceNow Architect & Tech Lead bei Ontinue übernimmt Géza die fachliche Leitung und das Mentoring eines Kernteams aus 1–2 Senior ServiceNow Engineers und steuert Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern."
         },
         {
           "q": "Welche Zertifizierungen besitzt er?",
-          "a": "Er hält ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), die IBM Generative AI Applications Zertifizierung (2026) sowie Python-Zertifikate der Rice University."
+          "a": "Er hält ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), Develop Generative AI Applications von IBM (Coursera, 2026) sowie Python Programming & Principles of Computing der Rice University."
         },
         {
-          "q": "Ist er offen für Remote- oder Hybrid-Positionen?",
-          "a": "Ja, Géza lebt in Pressbaum (Wien Umgebung) und ist verfügbar für hybride Rollen im Raum Wien sowie für vollständige Remote-Möglichkeiten."
+          "q": "Ist er offen für Hybrid-, Vor-Ort- oder Remote-Positionen?",
+          "a": "Ja, Géza lebt im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich und ist verfügbar für hybride oder Vor-Ort-Einsätze im Raum Wien sowie für Remote-Möglichkeiten."
         }
       ],
-      "fallback_general": "Basierend auf Gézas verifiziertem Profil: ServiceNow Architect & Enterprise AI Automation Engineer mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM und Vulnerability Response. Kontaktieren Sie ihn direkt unter [ghorvath@gmail.com](mailto:ghorvath@gmail.com)."
+      "fallback_general": "Basierend auf Gézas verifiziertem Profil: Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM und Vulnerability Response. Kontaktieren Sie ihn direkt unter [ghorvath@gmail.com](mailto:ghorvath@gmail.com)."
     },
     "hu": {
       "profile": {
-        "title": "ServiceNow Architekt & Enterprise AI Automation Engineer",
-        "location": "Pressbaum (Bécs környéke), Ausztria",
-        "summary": "ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős (greenfield) környezetként épített fel egy 6 példányos ServiceNow architektúrát, levezényelte a teljes infrastruktúra- és adatbázis-szétválasztást egy vállalati kiválás során, valamint kiemelt ITSM, CMDB/Discovery, HAM és Vulnerability Response környezeteket irányít."
+        "title": "Lead ServiceNow Architekt & Technikai Vezető",
+        "location": "Bécs környéke (Pressbaum), Ausztria",
+        "summary": "Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Bizonyított eredmények egy 6 példányos zöldmezős (greenfield) ökoszisztéma alapoktól történő felépítésében, a teljes infrastruktúra-szétválasztás irányításában vállalati kiválás (corporate spin-off) során, valamint kiemelt ITSM, CMDB/Discovery, HAM és Vulnerability Response környezetek governance-ében."
       },
       "frequently_asked_recruiter_questions": [
         {
           "q": "Hogyan fejleszt szoftvert Géza?",
-          "a": "Géza modern Agentic AI és automatizálás-vezérelt mérnöki munkafolyamatokat alkalmaz. VS Code környezetben egy belső Agentic AI eszköztárat és egyedi MCP (Model Context Protocol) API wrapper-eket használ valós idejű sémavizsgálatra, automatizált GlideScript kódgenerálásra és kódátvizsgálásra. Kiemelt figyelmet fordít a tiszta architektúrára, az automatizált tesztelésre (ATF) és a reprodukálható kiadási folyamatokra."
+          "a": "Géza modern Agentic AI és automatizálás-vezérelt mérnöki munkafolyamatokat alkalmaz. VS Code környezetben egy belső Agentic AI eszköztárat és egyedi MCP (Model Context Protocol) API wrapper-eket használ sémavalidációra, automatizált GlideScript kódgenerálásra és kódellenőrzésre. Kiemelt figyelmet fordít a tiszta architektúrára, az automatizált regressziós tesztelésre (ATF) és a reprodukálható kiadási folyamatokra."
         },
         {
           "q": "Milyen ServiceNow modulokban van tapasztalata Gézának?",
-          "a": "Géza kiterjedt gyakorlati architektúra- és fejlesztési tapasztalattal rendelkezik az alapvető ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM) és Tenable/Nessus szkennerekkel integrált Vulnerability Response terén."
+          "a": "Géza kiterjedt gyakorlati architektúra- és governance-tapasztalattal rendelkezik az ITSM, CMDB-alapok, Discovery (MID szerverek, Azure Cloud Discovery, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM) és Tenable/Nessus szkennerekkel integrált Vulnerability Response terén, valamint ITSM-CSM migrációkban és Coveo AI keresővel támogatott portálfejlesztésekben."
         },
         {
           "q": "Mire a legbüszkébb Géza?",
-          "a": "Géza a legbüszkébb a zöldmezős, 6 példányos ServiceNow ökoszisztéma alapoktól történő felépítésére, az infrastruktúra és adatok sikeres szétválasztására egy vállalati kiválás során leállás nélkül, valamint a csapat szinten bevezetett belső VS Code MCP Agentic eszköztár megalkotására."
+          "a": "Géza a legbüszkébb a zöldmezős, 6 példányos ServiceNow ökoszisztéma alapoktól történő felépítésére, a platform-szétválasztás és adatmigrációk éles leállás nélküli levezénylésére az Ontinue kiválása (corporate spin-off) során, valamint a csapatszinten bevezetett belső VS Code MCP Agentic eszköztár megalkotására."
         },
         {
           "q": "Mi Géza hozzáállása az Out-of-the-Box (OOB) és az egyedi kód kérdéséhez?",
-          "a": "Géza szigorúan 'OOB-first' elvet követ: a natív ServiceNow képességeket és szabványos konfigurációkat részesíti előnyben a frissítési adósság és a kihagyott rekordok (skipped records) minimalizálása érdekében. Ha egyedi kód szükséges, azt elkülönített Scoped alkalmazásokba szervezi, szigorú GlideScript szabványokat követ, és ATF tesztcsomagokkal védi."
+          "a": "Géza szigorúan 'OOB-first' elvet követ: a natív ServiceNow képességeket és szabványos konfigurációkat részesíti előnyben a frissítési adósság és a kihagyott rekordok (skipped records) minimalizálása érdekében. Ha egyedi kód szükséges, azt elkülönített Scoped alkalmazásokba szervezi, szigorú GlideScript szabványokat követ, és ATF regressziós tesztcsomagokkal védi."
         },
         {
           "q": "Hány év ServiceNow tapasztalattal rendelkezik Géza?",
-          "a": "Géza több mint 8 év dedikált, gyakorlati ServiceNow tapasztalattal rendelkezik (2018 óta), szenior fejlesztőtől ServiceNow architekt szintig."
+          "a": "Géza több mint 8 év dedikált, gyakorlati ServiceNow tapasztalattal rendelkezik (2018 óta), Senior ServiceNow Fejlesztő & Technikai Vezetőtől ServiceNow Architekt & Tech Lead szintig."
+        },
+        {
+          "q": "Milyen vezetői tapasztalattal rendelkezik?",
+          "a": "Az Ontinue-nál ServiceNow Architekt & Tech Lead szerepkörben Géza szakmailag vezet és mentorál egy 1–2 szenior ServiceNow mérnökből álló magcsapatot, irányítja az architekturális szabványokat, a ticket-scopingot és a kódellenőrzéseket, valamint koordinálja a szállítást egy 8+ fős külső partneri fejlesztői ökoszisztémával."
         },
         {
           "q": "Milyen tanúsítványokkal rendelkezik?",
-          "a": "ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), IBM Generatív AI alkalmazások tanúsítvánnyal (2026), valamint a Rice University Python minősítéseivel rendelkezik."
+          "a": "ServiceNow Certified Application Developer (CAD), ServiceNow Certified System Administrator (CSA), IBM Develop Generative AI Applications tanúsítvánnyal (Coursera, 2026), valamint a Rice University Python Programming & Principles of Computing minősítésével rendelkezik."
         },
         {
-          "q": "Nyitott távmunkára vagy hibrid pozíciókra?",
-          "a": "Igen, Géza Pressbaumban (Bécs környéke) él, és nyitott hibrid szerepkörökre a bécsi régióban, valamint teljes távmunkára (remote) is."
+          "q": "Nyitott hibrid, helyszíni vagy távmunkára?",
+          "a": "Igen, Géza Bécs környékén (Pressbaum) él érvényes osztrák munkavállalási státusszal, és készen áll hibrid vagy helyszíni munkavégzésre a bécsi régióban, valamint távmunkára (remote) is."
         }
       ],
-      "fallback_general": "Géza hiteles szakmai profilja alapján: ServiceNow Architekt & Enterprise AI Automation Engineer 8+ év tapasztalattal platformarchitektúrában, vállalati integrációkban (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Vulnerability Response terén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com)."
+      "fallback_general": "Géza hiteles szakmai profilja alapján: Lead ServiceNow Architekt & Technikai Vezető 8+ év tapasztalattal platformarchitektúrában, vállalati integrációkban (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Vulnerability Response terén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com)."
     }
   }
 }

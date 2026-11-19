@@ -6,8 +6,8 @@
 const TRANSLATIONS = {
   en: {
     // Document
-    page_title: "Geza Horvath — ServiceNow Architect & Enterprise AI Automation Engineer",
-    meta_description: "ServiceNow Architect & Enterprise AI Automation Engineer with 8+ years driving platform architecture, enterprise integrations, and cross-system automation.",
+    page_title: "Geza Horvath — Lead ServiceNow Architect & Technical Lead",
+    meta_description: "Lead ServiceNow Architect & Technical Lead with 8+ years driving platform architecture, enterprise integrations, and modern workflow automation.",
 
     // Top Navigation
     nav_about: "About",
@@ -18,10 +18,20 @@ const TRANSLATIONS = {
     nav_contact: "Contact",
 
     // Sidebar Bio & Identity
-    author_role: "ServiceNow Architect & Enterprise AI Automation Engineer",
+    author_role: "Lead ServiceNow Architect & Technical Lead",
     author_lead: "Platform Governance, Architecture & Agentic Engineering",
-    status_pill: "Available for Opportunities (Remote / Hybrid)",
-    location_text: "Pressbaum (Vienna Area), Austria",
+    status_pill: "Available for Opportunities (Hybrid / On-Site)",
+    location_text: "Vienna Area (Pressbaum), Austria",
+
+    // Resume Download (Respective to selected viewing language)
+    resume_download_btn: "Download Resume (PDF)",
+    resume_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf",
+    resume_pdf_filename: "Geza Horvath - Resume (English).pdf",
+    resume_download_title: "Download Geza Horvath's Resume (English PDF)",
+    resume_alt_label: "DE PDF",
+    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf",
+    resume_alt_pdf_filename: "Geza Horvath - Lebenslauf.pdf",
+    resume_alt_download_title: "Download German CV (Lebenslauf PDF)",
 
     // Key Interests Strip (Above the Fold)
     interest_1_title: "ServiceNow",
@@ -44,62 +54,65 @@ const TRANSLATIONS = {
     // Section 1: About
     section_about: "About",
     section_about_subtitle: "Platform Architecture & Agentic Automation",
-    about_p1: "<strong>ServiceNow Architect with 8+ years</strong> driving platform architecture, enterprise integrations, and cross-system automation. Bootstrapped a <strong>greenfield 6-instance ecosystem</strong>, led full infrastructure and data decoupling through an enterprise divestiture, and directs core <strong>ITSM, CMDB/Discovery, HAM, and Vulnerability Response</strong> environments.",
-    about_p2: "Pioneers modern agentic engineering—building in-house <strong>VS Code MCP toolchains</strong> adopted team-wide to accelerate delivery and engineering automated <strong>n8n LLM workflows</strong> that eliminate operational overhead.",
+    about_p1: "<strong>Lead ServiceNow Architect &amp; Technical Lead with 8+ years</strong> driving platform architecture, enterprise integrations, and modern workflow automation. Proven track record bootstrapping a <strong>greenfield 6-instance ecosystem</strong>, directing full infrastructure decoupling through corporate spin-off, and governing core <strong>ITSM, CMDB/Discovery, HAM, and Vulnerability Response</strong> environments.",
+    about_p2: "Hands-on pioneer in agentic AI tooling—architecting custom in-house <strong>VS Code MCP toolchains</strong> adopted team-wide to accelerate delivery and engineering automated <strong>n8n LLM workflows</strong> that eliminate operational overhead. Based in the Vienna area (Pressbaum) with valid Austrian work status, ready for hybrid or on-site engagement.",
 
     // Section 2: Experience
     section_experience: "Experience",
     exp_ontinue_period: "2023-02 &mdash; Present",
-    exp_ontinue_role: "ServiceNow Architect – Business Applications · Ontinue",
-    exp_ontinue_loc: "Remote / Vienna, Austria",
+    exp_ontinue_role: "ServiceNow Architect & Tech Lead · Ontinue",
+    exp_ontinue_loc: "Vienna (Remote/Hybrid)",
     exp_ontinue_b1: "<strong>Platform Ownership &amp; Security:</strong> Direct technical roadmap, platform governance, and continuous upgrades across enterprise IT instances; engineered CMDB/Discovery baselines and Vulnerability Response pipelines integrating Tenable and Nessus scanners.",
-    exp_ontinue_b2: "<strong>Agentic Developer Tooling:</strong> Conceived and deployed an in-house VS Code agentic AI toolchain using custom MCP API wrappers, cutting development cycle times via automated code reviews and GlideScript generation.",
-    exp_ontinue_b3: "<strong>Zero-Touch Automation:</strong> Built 100% automated HR boarding and offboarding lifecycle flows synchronizing BambooHR, ServiceNow, and Microsoft Entra ID via Power Automate and REST webhooks.",
-    exp_ontinue_b4: "<strong>Data Integration &amp; Middleware:</strong> Maintain high-reliability data synchronization and ETL pipelines across Cloudomation (Python) and Jitterbit into downstream corporate data warehouses.",
+    exp_ontinue_b2: "<strong>Technical Leadership &amp; Mentoring:</strong> Technically guide and mentor a core team of 1&ndash;2 senior ServiceNow engineers; steer architectural standards, ticket scoping, and code reviews while coordinating delivery within an 8+ developer external partner ecosystem.",
+    exp_ontinue_b3: "<strong>Agentic Developer Tooling:</strong> Conceived and deployed an in-house VS Code agentic AI toolchain using custom MCP API wrappers, cutting development cycle times via automated code reviews, schema validation, and GlideScript generation.",
+    exp_ontinue_b4: "<strong>Enterprise AI &amp; Workflow Automation:</strong> Architected asynchronous n8n LLM workflows chaining intelligence APIs with structured prompts, automating deduplication, task queue execution, and high-volume record enrichment.",
+    exp_ontinue_b5: "<strong>Automated HR Lifecycle &amp; Integrations:</strong> Engineered end-to-end user onboarding and offboarding synchronization pipelines connecting BambooHR, ServiceNow, and Microsoft Entra ID (Azure AD) via Power Automate and REST webhooks.",
+    exp_ontinue_b6: "<strong>Data Integration &amp; Middleware:</strong> Maintain high-reliability data synchronization and ETL pipelines across Cloudomation (Python) and Jitterbit into downstream corporate data warehouses.",
 
     exp_open_period: "2022-05 &mdash; 2023-02",
     exp_open_role: "ServiceNow Architect – Business Applications · Open Systems",
-    exp_open_loc: "Hybrid / Vienna, Austria",
-    exp_open_b1: "<strong>Greenfield Architecture:</strong> Bootstrapped the core ServiceNow landscape from scratch, configuring 6 initial instances with hardened security controls, role hierarchies, and update-set deployment pipelines.",
+    exp_open_loc: "Vienna (Hybrid)",
+    exp_open_b1: "<strong>Greenfield Architecture:</strong> Bootstrapped core ServiceNow landscape across 6 instances from scratch, establishing hardened security controls, role hierarchies, access controls (RBAC), and update-set deployment pipelines.",
     exp_open_b2: "<strong>Corporate Spin-Off Execution:</strong> Led platform decoupling, directory synchronization, and relational data migrations required for the operational spin-off into Ontinue without production downtime.",
     exp_open_b3: "<strong>Instance Governance &amp; Handover:</strong> Established baseline cloning runbooks and release gates, executing a structured operational handover of auxiliary departmental instances to external partners.",
 
     exp_tri_period: "2018-08 &mdash; 2022-04",
-    exp_tri_role: "Senior ServiceNow Developer · Tricentis GmbH",
+    exp_tri_role: "Senior ServiceNow Developer & Technical Lead · Tricentis GmbH",
     exp_tri_loc: "Vienna, Austria",
-    exp_tri_b1: "<strong>Enterprise Integrations:</strong> Engineered mission-critical bi-directional REST integrations connecting ServiceNow with Workday, JIRA, Cornerstone, and Coveo AI Search.",
-    exp_tri_b2: "<strong>Complex Schema Migrations:</strong> Planned and executed high-risk database transitions, including an ITSM-to-CSM schema migration and legacy acquisition data consolidation.",
-    exp_tri_b3: "<strong>Vendor Rescue:</strong> Refactored broken custom scripts and corrected underlying relational schemas under tight deadlines to recover a stalled external partner implementation.",
+    exp_tri_b1: "<strong>Enterprise Integrations &amp; Toolchain:</strong> Engineered mission-critical bi-directional REST integrations connecting ServiceNow with Workday, Jira, Cornerstone, and Coveo AI Search within an Agile/Scrum delivery model.",
+    exp_tri_b2: "<strong>AI Search &amp; Portal Enhancements:</strong> Spearheaded customer and support portal enhancements over 3+ years, integrating Coveo AI unified search to index disparate documentation repositories and optimize knowledge discovery.",
+    exp_tri_b3: "<strong>Complex Schema Migrations:</strong> Planned and executed high-risk database transitions, including an ITSM-to-CSM schema migration and legacy M&amp;A acquisition data consolidations.",
+    exp_tri_b4: "<strong>Codebase Stabilization &amp; Technical Remediation:</strong> Audited and refactored failing custom code and data schema architectures delivered by an external vendor under tight deadlines to stabilize the platform for production cutover.",
 
     exp_early_period: "2015 &mdash; 2018",
     exp_early_title: "Early Career Operations · Service24 GmbH & Avis Budget Group",
-    exp_early_r1: "<strong>Mobility Manager</strong> (Service24, 2016&ndash;2018) &bull; <strong>Customer Care Specialist</strong> (Avis Budget Group, 2015&ndash;2016). Focus on process optimization, international operations, and workflow logistics.",
+    exp_early_r1: "<strong>Mobility Manager</strong> (Service24 GmbH, 2016&ndash;2018) &bull; <strong>Customer Care Specialist</strong> (Avis Budget Group, 2015&ndash;2016) &ndash; Process optimization, international operations, and workflow logistics.",
     tag_ops: "Process Optimization",
     tag_incident: "International Operations",
     tag_customer: "Workflow Logistics",
 
     // Section 3: Competencies
     section_competencies: "Competencies",
-    comp_title_1: "Platform Architecture",
-    comp_desc_1: "Multi-Instance Topology, Release Governance, Cloning Runbooks, Scoped Applications, ATF Automated Regression, Upgrade skipped-record resolution.",
+    comp_title_1: "Platform Architecture & Governance",
+    comp_desc_1: "Multi-Instance Topology, Release Governance, Cloning Runbooks, Scoped Applications, ATF Automated Regression Testing, Upgrades & Skipped-Record Resolution, RBAC.",
     comp_title_2: "IT Operations & Modules",
-    comp_desc_2: "ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).",
+    comp_desc_2: "ITSM, CMDB Baselines, Discovery (MID Servers, Azure Cloud, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), Vulnerability Response (Tenable/Nessus).",
     comp_title_3: "AI & Agentic Engineering",
-    comp_desc_3: "Custom MCP Server Wrappers, In-IDE Agent Toolchains, n8n LLM Workflows, Context Parsing, GlideScript Code Generation, Prompt Design.",
+    comp_desc_3: "Custom Model Context Protocol (MCP) Server Wrappers, In-IDE VS Code Agent Toolchains, n8n LLM Workflows, Context Parsing, Code Review Automation, Prompt Engineering.",
     comp_title_4: "Integrations & Identity",
-    comp_desc_4: "Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST APIs, Webhooks, Jitterbit, Cloudomation (Python), SQL Warehouses.",
+    comp_desc_4: "Scripted REST APIs, Webhooks, Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Jitterbit, Cloudomation (Python ETL), SQL Data Warehousing, Git Version Control.",
 
     // Section 4: Credentials & Education
     section_credentials: "Credentials & Education",
     heading_certifications: "Certifications",
-    cert_1: "<strong>Develop Generative AI Applications: Get Started</strong> &mdash; IBM (2026)",
+    cert_1: "<strong>Develop Generative AI Applications</strong> &mdash; IBM (Coursera, 2026)",
     cert_2: "<strong>Certified Application Developer (CAD)</strong> &mdash; ServiceNow",
     cert_3: "<strong>Certified System Administrator (CSA)</strong> &mdash; ServiceNow",
-    cert_4: "<strong>Python Programming (Parts 1 &amp; 2) &amp; Principles of Computing</strong> &mdash; Rice University",
+    cert_4: "<strong>Python Programming &amp; Principles of Computing</strong> &mdash; Rice University",
     heading_education: "Education",
-    edu_1: "<strong>Junior Java Programmer (Intensive Program)</strong> &middot; Braining Hub, Budapest (2017&ndash;2018)",
-    edu_2: "<strong>Master of Arts: International Relations</strong> &middot; Corvinus University of Budapest",
-    edu_3: "<strong>Bachelor of Science: Security &amp; Defense Policy</strong> &middot; Zrínyi Miklós National Defence University",
+    edu_1: "<strong>Junior Java Programmer</strong> &middot; Braining Hub Budapest (Intensive 5-Month)",
+    edu_2: "<strong>M.A. International Relations</strong> &middot; Corvinus University of Budapest",
+    edu_3: "<strong>B.S. Security &amp; Defense Policy</strong> &middot; Zrínyi Miklós National Defence University",
 
     // Section 5: Contact
     section_contact: "Contact",
@@ -137,8 +150,8 @@ const TRANSLATIONS = {
 
   de: {
     // Dokument
-    page_title: "Geza Horvath — ServiceNow Architect & Enterprise AI Automation Engineer",
-    meta_description: "ServiceNow Architect & Enterprise AI Automation Engineer mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen und systemübergreifender Automatisierung.",
+    page_title: "Geza Horvath — Lead ServiceNow Architect & Technical Lead",
+    meta_description: "Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung.",
 
     // Hauptnavigation
     nav_about: "Über mich",
@@ -149,10 +162,20 @@ const TRANSLATIONS = {
     nav_contact: "Kontakt",
 
     // Seitenleiste Bio & Identität
-    author_role: "ServiceNow Architect & Enterprise AI Automation Engineer",
+    author_role: "Lead ServiceNow Architect & Technical Lead",
     author_lead: "Plattform-Governance, Architektur & Agentic Engineering",
-    status_pill: "Verfügbar für neue Möglichkeiten (Remote / Hybrid)",
-    location_text: "Pressbaum (Wien Umgebung), Österreich",
+    status_pill: "Verfügbar für Einsätze (Hybrid / Vor-Ort)",
+    location_text: "Raum Wien (Pressbaum), Österreich",
+
+    // Lebenslauf-Download (Entsprechend der gewählten Sprache)
+    resume_download_btn: "Lebenslauf herunterladen (PDF)",
+    resume_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf",
+    resume_pdf_filename: "Geza Horvath - Lebenslauf.pdf",
+    resume_download_title: "Geza Horvaths Lebenslauf herunterladen (Deutsch PDF)",
+    resume_alt_label: "EN PDF",
+    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf",
+    resume_alt_pdf_filename: "Geza Horvath - Resume (English).pdf",
+    resume_alt_download_title: "Englischen Lebenslauf herunterladen (Resume PDF)",
 
     // Key Interests Strip (Above the Fold)
     interest_1_title: "ServiceNow",
@@ -175,62 +198,65 @@ const TRANSLATIONS = {
     // Abschnitt 1: Über mich
     section_about: "Über mich",
     section_about_subtitle: "Plattformarchitektur & Agentic Automation",
-    about_p1: "<strong>ServiceNow Architect mit über 8 Jahren Erfahrung</strong> in Plattformarchitektur, Unternehmensintegrationen und systemübergreifender Automatisierung. Aufbau eines <strong>zukunftssicheren Greenfield-Ökosystems mit 6 Instanzen</strong>, technische Plattform-Entflechtung im Rahmen einer Unternehmensabspaltung sowie Leitung von Kernumgebungen in <strong>ITSM, CMDB/Discovery, HAM und Vulnerability Response</strong>.",
-    about_p2: "Pionier im modernen Agentic Engineering—Entwicklung interner <strong>VS Code MCP-Toolchains</strong>, die teamweit eingeführt wurden, um Bereitstellungszyklen zu beschleunigen, sowie automatisierten <strong>n8n LLM-Workflows</strong> zur Eliminierung operativer Mehraufwände.",
+    about_p1: "<strong>Lead ServiceNow Architect &amp; Technical Lead mit über 8 Jahren Erfahrung</strong> in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Nachweisliche Erfolge beim Aufbau einer <strong>Greenfield-Landschaft über 6 Instanzen</strong>, der vollständigen technischen Entflechtung im Zuge eines Corporate Spin-offs sowie der Governance von <strong>ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen</strong>.",
+    about_p2: "Fundierte Praxis in moderner Agentic-AI-Entwicklung: Konzeption und unternehmensweiter Rollout interner <strong>VS-Code-MCP-Toolchains</strong> zur Entwicklungsbeschleunigung sowie Entwicklung automatisierter <strong>n8n-LLM-Workflows</strong> zur signifikanten Reduktion des operativen Aufwands. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze.",
 
     // Abschnitt 2: Berufserfahrung
     section_experience: "Berufserfahrung",
     exp_ontinue_period: "2023-02 &mdash; Heute",
-    exp_ontinue_role: "ServiceNow Architect – Business Applications · Ontinue",
-    exp_ontinue_loc: "Remote / Wien, Österreich",
-    exp_ontinue_b1: "<strong>Plattform-Governance &amp; Sicherheit:</strong> Leitung der technischen Roadmap, Governance und kontinuierlicher Upgrades für alle Enterprise-IT-Instanzen; Konzeption von CMDB/Discovery-Baselines und Vulnerability-Response-Pipelines mit Tenable- und Nessus-Scannern.",
-    exp_ontinue_b2: "<strong>Agentic Developer Tooling:</strong> Konzeption und Bereitstellung einer internen VS Code Agentic AI-Toolchain mit maßgeschneiderten MCP-API-Wrappern zur Verkürzung der Entwicklungszyklen durch automatisierte Code-Reviews und GlideScript-Generierung.",
-    exp_ontinue_b3: "<strong>Vollautomatisierung (Zero-Touch):</strong> Entwicklung vollständig automatisierter HR-Boarding- und Offboarding-Workflows zur Synchronisierung von BambooHR, ServiceNow und Microsoft Entra ID über Power Automate und REST-Webhooks.",
-    exp_ontinue_b4: "<strong>Datenintegration &amp; Middleware:</strong> Betreuung hochverfügbarer Datensynchronisations- und ETL-Pipelines über Cloudomation (Python) und Jitterbit in nachgelagerte Unternehmens-Data-Warehouses.",
+    exp_ontinue_role: "ServiceNow Architect & Tech Lead · Ontinue",
+    exp_ontinue_loc: "Wien (Remote/Hybrid)",
+    exp_ontinue_b1: "<strong>Plattform-Governance &amp; IT-Sicherheit:</strong> Gesamtverantwortung für die technische Roadmap, Plattform-Governance und kontinuierliche Upgrades der Enterprise-Instanzen; Etablierung von CMDB/Discovery-Baselines sowie Implementierung von Vulnerability-Response-Pipelines mit nativer Einbindung von Tenable- und Nessus-Scannern.",
+    exp_ontinue_b2: "<strong>Fachliche Führung &amp; Delivery:</strong> Fachliche Leitung und Mentoring eines Kernteams aus 1&ndash;2 Senior ServiceNow Engineers; Steuerung von Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern.",
+    exp_ontinue_b3: "<strong>Agentic Developer Tooling:</strong> Konzeption und Bereitstellung einer internen VS-Code-Agentic-AI-Toolchain auf Basis maßgeschneiderter MCP-API-Wrapper; signifikante Verkürzung von Entwicklungszyklen durch automatisierte Code-Reviews, Schema-Validierung und GlideScript-Generierung.",
+    exp_ontinue_b4: "<strong>Enterprise-KI &amp; Workflow-Automatisierung:</strong> Architektur asynchroner n8n-LLM-Workflows mit strukturierter Prompt-Verkettung moderner KI-APIs zur automatisierten Deduplizierung, Abarbeitung von Aufgaben-Queues und intelligenten Datenanreicherung großer Datenbestände.",
+    exp_ontinue_b5: "<strong>Automatisiertes Identity Lifecycle Management:</strong> Konzeption und Implementierung robuster End-to-End-Prozesse für das Mitarbeiter-On- und -Offboarding mit nahtloser Synchronisierung zwischen BambooHR, ServiceNow und Microsoft Entra ID (Azure AD) via Power Automate und REST-Webhooks.",
+    exp_ontinue_b6: "<strong>Datenintegration &amp; Middleware:</strong> Betreuung und Optimierung hochverfügbarer Datensynchronisations- und ETL-Pipelines mit Cloudomation (Python) und Jitterbit zur Anbindung nachgelagerter Corporate Data Warehouses.",
 
     exp_open_period: "2022-05 &mdash; 2023-02",
     exp_open_role: "ServiceNow Architect – Business Applications · Open Systems",
-    exp_open_loc: "Hybrid / Wien, Österreich",
-    exp_open_b1: "<strong>Greenfield-Architektur:</strong> Aufbau der ServiceNow-Kernlandschaft von Grund auf, Konfiguration der ersten 6 Instanzen mit gehärteten Sicherheitskontrollen, Rollenhierarchien und Update-Set-Deployment-Pipelines.",
-    exp_open_b2: "<strong>Unternehmensabspaltung (Spin-off):</strong> Leitung der Plattform-Entflechtung, Verzeichnissynchronisation und relationalen Datenmigrationen für den operativen Spin-off zu Ontinue ohne Produktionsausfallzeiten.",
-    exp_open_b3: "<strong>Instanz-Governance &amp; Übergabe:</strong> Etablierung standardisierter Cloning-Runbooks und Release-Gates sowie strukturierte operative Übergabe sekundärer Abteilungsinstanzen an externe Partner.",
+    exp_open_loc: "Wien (Hybrid)",
+    exp_open_b1: "<strong>Greenfield-Architektur:</strong> Konzeption und Aufbau der zentralen ServiceNow-Landschaft über 6 Instanzen von Grund auf; Implementierung robuster Sicherheitskontrollen, Rollenhierarchien, Berechtigungskonzepte (RBAC) sowie Update-Set-Deployment-Pipelines.",
+    exp_open_b2: "<strong>Umsetzung des Corporate Spin-offs:</strong> Federführende Steuerung der Plattform-Entflechtung, Verzeichnis-Synchronisation und relationalen Datenmigrationen im Rahmen der Ausgründung von Ontinue &ndash; vollständig ohne produktive Ausfallzeiten.",
+    exp_open_b3: "<strong>Instanzen-Governance &amp; Übergabe:</strong> Erstellung standardisierter Klon-Runbooks und Release-Gates sowie strukturierte operative Übergabe von Fachbereichs-Instanzen an externe Partner.",
 
     exp_tri_period: "2018-08 &mdash; 2022-04",
-    exp_tri_role: "Senior ServiceNow Developer · Tricentis GmbH",
+    exp_tri_role: "Senior ServiceNow Developer & Technical Lead · Tricentis GmbH",
     exp_tri_loc: "Wien, Österreich",
-    exp_tri_b1: "<strong>Unternehmensintegrationen:</strong> Entwicklung geschäftskritischer bidirektionaler REST-Integrationen zur Anbindung von ServiceNow an Workday, JIRA, Cornerstone und Coveo AI Search.",
-    exp_tri_b2: "<strong>Komplexe Schemamigrationen:</strong> Planung und Durchführung risikoreicher Datenbankumstellungen, darunter eine ITSM-zu-CSM-Schemamigration und Konsolidierung von Daten aus Unternehmensübernahmen (M&amp;A) in ServiceNow.",
-    exp_tri_b3: "<strong>Vendor Rescue (Projekt-Turnaround):</strong> Refactoring fehlerhafter Skripte und Bereinigung relationaler Schemata unter engem Zeitplan zur Rettung einer festgefahrenen externen Partnerimplementierung.",
+    exp_tri_b1: "<strong>Enterprise-Integrationen &amp; Toolchain:</strong> Konzeption und Implementierung unternehmenskritischer, bidirektionaler REST-Schnittstellen zwischen ServiceNow, Workday, Jira, Cornerstone und Coveo AI Search im Rahmen agiler Scrum-Zyklen.",
+    exp_tri_b2: "<strong>KI-Suche &amp; Portal-Optimierung:</strong> Mehrjährige kontinuierliche Weiterentwicklung des Kunden- und Support-Portals; Anbindung der KI-basierten Unified Search von Coveo zur übergreifenden Erschließung heterogener Wissensdatenbanken.",
+    exp_tri_b3: "<strong>Komplexe Schema-Migrationen:</strong> Planung und Durchführung anspruchsvoller Datenbanktransformationen, einschließlich einer Migration von ITSM auf CSM sowie Datenkonsolidierungen infolge strategischer M&amp;A-Akquisitionen.",
+    exp_tri_b4: "<strong>Plattform-Sanierung &amp; Code-Refactoring:</strong> Technische Due Diligence und tiefgreifendes Refactoring fehlerhafter Custom-Code- und Datenarchitekturen eines externen Dienstleisters unter strikten Fristen zur planmäßigen Stabilisierung des Go-Lives.",
 
     exp_early_period: "2015 &mdash; 2018",
-    exp_early_title: "Frühere berufliche Stationen · Service24 GmbH & Avis Budget Group",
-    exp_early_r1: "<strong>Mobility Manager</strong> (Service24, 2016&ndash;2018) &bull; <strong>Customer Care Specialist</strong> (Avis Budget Group, 2015&ndash;2016). Schwerpunkt auf Prozessoptimierung, internationalen Abläufen und Workflow-Logistik.",
+    exp_early_title: "Frühere Stationen im operativen Bereich · Service24 GmbH & Avis Budget Group",
+    exp_early_r1: "<strong>Mobility Manager</strong> (Service24 GmbH, 2016&ndash;2018) &bull; <strong>Customer Care Specialist</strong> (Avis Budget Group, 2015&ndash;2016) &ndash; Prozessoptimierung, internationale operative Steuerung und Workflow-Logistik.",
     tag_ops: "Prozessoptimierung",
-    tag_incident: "Internationale Abläufe",
+    tag_incident: "Internationale Steuerung",
     tag_customer: "Workflow-Logistik",
 
     // Abschnitt 3: Kompetenzen
     section_competencies: "Kompetenzen",
-    comp_title_1: "Plattformarchitektur",
-    comp_desc_1: "Multi-Instanz-Topologie, Release-Governance, Cloning-Runbooks, Scoped Applications, ATF automatisierte Regressionstests, Bereinigung von Skipped Records bei Upgrades.",
-    comp_title_2: "IT-Betrieb & Module",
-    comp_desc_2: "ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).",
+    comp_title_1: "Plattformarchitektur & Governance",
+    comp_desc_1: "Multi-Instance-Topologie, Release-Governance, Klon-Runbooks, Scoped Applications, ATF (Automated Test Framework) Regressionstests, Upgrade-Management & Skipped-Record-Resolution, RBAC.",
+    comp_title_2: "IT-Operations & Module",
+    comp_desc_2: "ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), Vulnerability Response (Tenable/Nessus).",
     comp_title_3: "KI & Agentic Engineering",
-    comp_desc_3: "Custom MCP Server Wrapper, In-IDE Agent Toolchains, n8n LLM-Workflows, Kontext-Parsing, GlideScript-Codegenerierung, Prompt Design.",
-    comp_title_4: "Integrationen & Identität",
-    comp_desc_4: "Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST APIs, Webhooks, Jitterbit, Cloudomation (Python), SQL Warehouses.",
+    comp_desc_3: "Eigene Model Context Protocol (MCP) Server-Wrapper, In-IDE VS-Code-Agent-Toolchains, n8n-LLM-Workflows, Kontext-Parsing, automatisierte Code-Reviews, Prompt Engineering.",
+    comp_title_4: "Integrationen & Identity",
+    comp_desc_4: "Scripted REST APIs, Webhooks, Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Jitterbit, Cloudomation (Python ETL), SQL Data Warehousing, Git Versionskontrolle.",
 
     // Abschnitt 4: Qualifikationen & Ausbildung
     section_credentials: "Qualifikationen & Ausbildung",
     heading_certifications: "Zertifizierungen",
-    cert_1: "<strong>Develop Generative AI Applications: Get Started</strong> &mdash; IBM (2026)",
+    cert_1: "<strong>Develop Generative AI Applications</strong> &mdash; IBM (Coursera, 2026)",
     cert_2: "<strong>Certified Application Developer (CAD)</strong> &mdash; ServiceNow",
     cert_3: "<strong>Certified System Administrator (CSA)</strong> &mdash; ServiceNow",
-    cert_4: "<strong>Python Programming (Parts 1 &amp; 2) &amp; Principles of Computing</strong> &mdash; Rice University",
+    cert_4: "<strong>Python Programming &amp; Principles of Computing</strong> &mdash; Rice University",
     heading_education: "Ausbildung",
-    edu_1: "<strong>Junior Java Programmer (Intensivprogramm)</strong> &middot; Braining Hub, Budapest (2017&ndash;2018)",
-    edu_2: "<strong>Master of Arts: Internationale Beziehungen</strong> &middot; Corvinus-Universität Budapest",
-    edu_3: "<strong>Bachelor of Science: Sicherheits- und Verteidigungspolitik</strong> &middot; Zrínyi Miklós Nationale Verteidigungsuniversität",
+    edu_1: "<strong>Junior Java Programmer</strong> &middot; Braining Hub Budapest (5-monatiges Intensivprogramm)",
+    edu_2: "<strong>M.A. Internationale Beziehungen</strong> &middot; Corvinus-Universität Budapest",
+    edu_3: "<strong>B.S. Sicherheits- und Verteidigungspolitik</strong> &middot; Nationale Verteidigungsuniversität Zrínyi Miklós",
 
     // Abschnitt 5: Kontakt
     section_contact: "Kontakt",
@@ -268,8 +294,8 @@ const TRANSLATIONS = {
 
   hu: {
     // Dokumentum
-    page_title: "Horváth Géza — ServiceNow Architekt & Enterprise AI Automatizálási Mérnök",
-    meta_description: "ServiceNow Architekt & Enterprise AI Automatizálási Mérnök több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén.",
+    page_title: "Horváth Géza — Lead ServiceNow Architekt & Technikai Vezető",
+    meta_description: "Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén.",
 
     // Felső navigáció
     nav_about: "Rólam",
@@ -280,10 +306,20 @@ const TRANSLATIONS = {
     nav_contact: "Kapcsolat",
 
     // Oldalsáv Bio & Identitás
-    author_role: "ServiceNow Architekt & Enterprise AI Automation Engineer",
+    author_role: "Lead ServiceNow Architekt & Technical Lead",
     author_lead: "Platform-governance, Architektúra & Agentic AI",
-    status_pill: "Nyitott új lehetőségekre (Remote / Hibrid)",
-    location_text: "Pressbaum (Bécs környéke), Ausztria",
+    status_pill: "Nyitott új lehetőségekre (Hibrid / Helyszíni)",
+    location_text: "Bécs környéke (Pressbaum), Ausztria",
+
+    // Önéletrajz letöltése (A kiválasztott nyelvnek megfelelően)
+    resume_download_btn: "Önéletrajz letöltése (PDF · EN)",
+    resume_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf",
+    resume_pdf_filename: "Geza Horvath - Resume (English).pdf",
+    resume_download_title: "Horváth Géza angol nyelvű önéletrajzának letöltése (PDF)",
+    resume_alt_label: "DE PDF",
+    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf",
+    resume_alt_pdf_filename: "Geza Horvath - Lebenslauf.pdf",
+    resume_alt_download_title: "Német nyelvű önéletrajz letöltése (Lebenslauf PDF)",
 
     // Key Interests Strip (Above the Fold)
     interest_1_title: "ServiceNow",
@@ -306,62 +342,65 @@ const TRANSLATIONS = {
     // 1. szakasz: Rólam
     section_about: "Rólam",
     section_about_subtitle: "Platformarchitektúra & Agentic Automatizáció",
-    about_p1: "<strong>ServiceNow Architekt több mint 8 év tapasztalattal</strong> a platformarchitektúra, vállalati integrációk és rendszereken átívelő automatizálás területén. Zöldmezős (greenfield) környezetként épített fel egy <strong>6 példányos ServiceNow architektúrát</strong>, levezényelte a teljes infrastruktúra- és adatbázis-szétválasztást egy vállalati kiválás (carve-out) során, valamint kiemelt <strong>ITSM, CMDB/Discovery, HAM és Vulnerability Response</strong> rendszereket irányít.",
-    about_p2: "Úttörő a modern Agentic AI fejlesztési megoldásokban—belső <strong>VS Code MCP eszköztárak</strong> fejlesztésével, melyeket a teljes csapat átvett a szállítási folyamatok felgyorsítására, valamint olyan automatizált <strong>n8n LLM munkafolyamatok</strong> megvalósításával, amelyek megszüntetik az operatív adminisztrációs terheket.",
+    about_p1: "<strong>Lead ServiceNow Architekt &amp; Technikai Vezető több mint 8 év tapasztalattal</strong> a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Bizonyított eredmények egy <strong>6 példányos zöldmezős (greenfield) ökoszisztéma</strong> alapoktól történő felépítésében, a teljes infrastruktúra-szétválasztás irányításában vállalati kiválás (corporate spin-off) során, valamint kiemelt <strong>ITSM, CMDB/Discovery, HAM és Vulnerability Response</strong> környezetek governance-ében.",
+    about_p2: "Gyakorlati úttörő az agentic AI fejlesztői megoldásokban—egyedi belső <strong>VS Code MCP eszköztárak</strong> tervezésével, melyeket a teljes csapat átvett a szállítási folyamatok felgyorsítására, valamint az operatív adminisztrációs terheket kiváltó automatizált <strong>n8n LLM munkafolyamatok</strong> megvalósításával. Bécs környékén (Pressbaum) él érvényes osztrák munkavállalási státusszal, készen hibrid vagy helyszíni munkavégzésre.",
 
     // 2. szakasz: Szakmai tapasztalat
     section_experience: "Szakmai Tapasztalat",
     exp_ontinue_period: "2023-02 &mdash; Jelenleg",
-    exp_ontinue_role: "ServiceNow Architekt – Üzleti Alkalmazások · Ontinue",
-    exp_ontinue_loc: "Remote / Bécs, Ausztria",
-    exp_ontinue_b1: "<strong>Platform-governance &amp; Biztonság:</strong> A technikai ütemterv, platform-governance és folyamatos frissítések (upgrades) vezetése vállalati ServiceNow példányokon; CMDB/Discovery alapok és Tenable/Nessus szkennerekkel integrált Vulnerability Response folyamatok kiépítése.",
-    exp_ontinue_b2: "<strong>Agentic Developer Tooling:</strong> Egyedi MCP API wrapper-ekre épülő belső VS Code Agentic AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők csökkentése automatizált kódellenőrzéssel és GlideScript generálással.",
-    exp_ontinue_b3: "<strong>Beavatkozás nélküli automatizáció:</strong> 100%-ban automatizált HR be- és kiléptetési életciklus-folyamatok építése a BambooHR, ServiceNow és Microsoft Entra ID szinkronizálásával Power Automate és REST webhookok segítségével.",
-    exp_ontinue_b4: "<strong>Adatintegráció &amp; Middleware:</strong> Magas megbízhatóságú adatszinkronizációs és ETL folyamatok fenntartása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.",
+    exp_ontinue_role: "ServiceNow Architekt & Tech Lead · Ontinue",
+    exp_ontinue_loc: "Bécs (Remote/Hibrid)",
+    exp_ontinue_b1: "<strong>Platform-governance &amp; IT-biztonság:</strong> A technikai ütemterv, platform-governance és folyamatos frissítések (upgrades) teljes körű irányítása a vállalati IT példányokon; CMDB/Discovery alapok, valamint Tenable és Nessus szkennereket integráló Vulnerability Response folyamatok kiépítése.",
+    exp_ontinue_b2: "<strong>Technikai Vezetés &amp; Mentorálás:</strong> 1&ndash;2 szenior ServiceNow mérnökből álló magcsapat szakmai vezetése és mentorálása; architekturális szabványok, ticket-scoping és kódellenőrzések (code review) irányítása, valamint a szállítás koordinálása egy 8+ fős külső partneri fejlesztői ökoszisztémával.",
+    exp_ontinue_b3: "<strong>Agentic Developer Tooling:</strong> Egyedi MCP API wrapper-ekre épülő belső VS Code Agentic AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők jelentős csökkentése automatizált kódellenőrzéssel, sémavalidációval és GlideScript generálással.",
+    exp_ontinue_b4: "<strong>Vállalati AI &amp; Munkafolyamat-automatizálás:</strong> Aszinkron n8n LLM munkafolyamatok tervezése intelligens API-k és strukturált promptok láncolásával az automatizált deduplikációhoz, feladatsorok (task queues) végrehajtásához és nagy volumenű adatgazdagításhoz.",
+    exp_ontinue_b5: "<strong>Automatizált HR Életciklus &amp; Integrációk:</strong> Teljes körű (end-to-end) felhasználói be- és kiléptetési szinkronizációs folyamatok kiépítése a BambooHR, ServiceNow és Microsoft Entra ID (Azure AD) összekapcsolásával Power Automate és REST webhookok segítségével.",
+    exp_ontinue_b6: "<strong>Adatintegráció &amp; Middleware:</strong> Magas megbízhatóságú adatszinkronizációs és ETL folyamatok üzemeltetése és optimalizálása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.",
 
     exp_open_period: "2022-05 &mdash; 2023-02",
     exp_open_role: "ServiceNow Architekt – Üzleti Alkalmazások · Open Systems",
-    exp_open_loc: "Hibrid / Bécs, Ausztria",
-    exp_open_b1: "<strong>Greenfield architektúra:</strong> A ServiceNow alaprendszer kiépítése az alapoktól, 6 kezdeti példány konfigurálása megerősített biztonsági szabályokkal, szerepkör-hierarchiákkal és Update Set deployment folyamatokkal.",
-    exp_open_b2: "<strong>Vállalati kiválás (Spin-off) lebonyolítása:</strong> A platform szétválasztásának, címtárszinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, termeléskiesés nélkül.",
-    exp_open_b3: "<strong>Példány-governance &amp; Átadás:</strong> Alapszintű klónozási runbookok és release-gate-ek kidolgozása, kiegészítő osztályos példányok strukturált operatív átadása külső partnereknek.",
+    exp_open_loc: "Bécs (Hibrid)",
+    exp_open_b1: "<strong>Greenfield Architektúra:</strong> A központi ServiceNow környezet alapoktól történő felépítése 6 példányon keresztül; megerősített biztonsági kontrollok, szerepkör-hierarchiák, jogosultságkezelési koncepciók (RBAC) és Update Set deployment folyamatok kialakítása.",
+    exp_open_b2: "<strong>Vállalati Kiválás (Corporate Spin-off) Lebonyolítása:</strong> A platform szétválasztásának, címtár-szinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, éles üzemi leállás nélkül.",
+    exp_open_b3: "<strong>Példány-governance &amp; Átadás:</strong> Standardizált klónozási runbookok és release-gate-ek kidolgozása, valamint a szakági példányok strukturált operatív átadása külső partnereknek.",
 
     exp_tri_period: "2018-08 &mdash; 2022-04",
-    exp_tri_role: "Senior ServiceNow Fejlesztő · Tricentis GmbH",
+    exp_tri_role: "Senior ServiceNow Fejlesztő & Technikai Vezető · Tricentis GmbH",
     exp_tri_loc: "Bécs, Ausztria",
-    exp_tri_b1: "<strong>Vállalati Integrációk:</strong> Üzletileg kritikus kétirányú REST integrációk kiépítése a ServiceNow és a Workday, JIRA, Cornerstone valamint Coveo AI Search között.",
-    exp_tri_b2: "<strong>Összetett Sémamigrációk:</strong> Nagy kockázatú adatbázis-átállások megtervezése és végrehajtása, beleértve az ITSM-ről CSM-re történő sémamigrációt és korábbi cégfelvásárlások adatainak konszolidációját.",
-    exp_tri_b3: "<strong>Beszállítói projekt mentése (Vendor Rescue):</strong> Hibás egyedi szkriptek refaktorálása és a mögöttes relációs adatmodellek javítása szoros határidők mellett egy elakadt külső partneri bevezetés helyreállítására.",
+    exp_tri_b1: "<strong>Vállalati Integrációk &amp; Eszköztár:</strong> Üzletileg kritikus, kétirányú REST integrációk tervezése és megvalósítása a ServiceNow, Workday, Jira, Cornerstone és Coveo AI Search rendszerek között agilis Scrum szállítási modellben.",
+    exp_tri_b2: "<strong>AI Keresés &amp; Portálfejlesztés:</strong> Az ügyfél- és támogatói portál több mint 3 éven át tartó továbbfejlesztésének vezetése; a Coveo AI egységes kereső (unified search) integrálása a heterogén dokumentációs tárházak indexelésére és a tudáskeresés optimalizálására.",
+    exp_tri_b3: "<strong>Összetett Sémamigrációk:</strong> Magas kockázatú adatbázis-transzformációk megtervezése és végrehajtása, beleértve az ITSM-ről CSM-re történő sémamigrációt és a stratégiai M&amp;A cégfelvásárlásokból származó adatok konszolidációját.",
+    exp_tri_b4: "<strong>Kódbázis-stabilizáció &amp; Technikai Helyreállítás:</strong> Külső beszállító által szállított hibás egyedi kódok és adatséma-architektúrák technikai átvilágítása (audit) és mélyreható refaktorálása szoros határidők mellett a platform éles átállásának (production cutover) stabilizálására.",
 
     exp_early_period: "2015 &mdash; 2018",
-    exp_early_title: "Korábbi Szakmai Pályafutás · Service24 GmbH & Avis Budget Group",
-    exp_early_r1: "<strong>Mobilitási Menedzser</strong> (Service24, 2016&ndash;2018) &bull; <strong>Ügyfélszolgálati Munkatárs</strong> (Avis Budget Group, 2015&ndash;2016). Fókuszban a folyamatoptimalizálás, a nemzetközi műveletek és a munkafolyamat-logisztika.",
+    exp_early_title: "Korábbi Operatív Pályafutás · Service24 GmbH & Avis Budget Group",
+    exp_early_r1: "<strong>Mobility Manager</strong> (Service24 GmbH, 2016&ndash;2018) &bull; <strong>Customer Care Specialist</strong> (Avis Budget Group, 2015&ndash;2016) &ndash; Folyamatoptimalizálás, nemzetközi operatív irányítás és munkafolyamat-logisztika.",
     tag_ops: "Folyamatoptimalizálás",
     tag_incident: "Nemzetközi műveletek",
     tag_customer: "Munkafolyamat-logisztika",
 
     // 3. szakasz: Kompetenciák
     section_competencies: "Kompetenciák",
-    comp_title_1: "Platformarchitektúra",
-    comp_desc_1: "Többpéldányos topológia, Release Governance, klónozási runbookok, Scoped Applications, ATF automatizált regressziós tesztelés, Upgrade során kihagyott rekordok (skipped records) kezelése.",
-    comp_title_2: "IT Üzemeltetés & Modulok",
-    comp_desc_2: "ITSM, CMDB alapok, Discovery (MID szerverek, Azure Cloud, Agent Client Collector), Service Graph Connectors, HAM, Vulnerability Response (Tenable/Nessus).",
+    comp_title_1: "Platformarchitektúra & Governance",
+    comp_desc_1: "Többpéldányos (Multi-Instance) topológia, Release Governance, klónozási runbookok, Scoped Applications, ATF automatizált regressziós tesztelés, Upgrade-menedzsment & Skipped-Record feloldás, RBAC.",
+    comp_title_2: "IT-Operations & Modulok",
+    comp_desc_2: "ITSM, CMDB-alapok, Discovery (MID szerverek, Azure Cloud, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), Vulnerability Response (Tenable/Nessus).",
     comp_title_3: "AI & Agentic Engineering",
-    comp_desc_3: "Egyedi MCP szerver wrapper-ek, IDE-be integrált Agentic eszköztárak, n8n LLM munkafolyamatok, kontextus-feldolgozás, GlideScript kódgenerálás, Prompt Design.",
+    comp_desc_3: "Egyedi Model Context Protocol (MCP) szerver-wrapperek, In-IDE VS Code Agent eszköztárak, n8n LLM munkafolyamatok, kontextus-feldolgozás (Context Parsing), automatizált kódellenőrzés, Prompt Engineering.",
     comp_title_4: "Integrációk & Identitás",
-    comp_desc_4: "Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Scripted REST API-k, Webhookok, Jitterbit, Cloudomation (Python), SQL adattárházak.",
+    comp_desc_4: "Scripted REST API-k, Webhookok, Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Jitterbit, Cloudomation (Python ETL), SQL adattárházak (Data Warehousing), Git verziókezelés.",
 
     // 4. szakasz: Képesítések & Tanulmányok
     section_credentials: "Képesítések & Tanulmányok",
     heading_certifications: "Képesítések & Tanúsítványok",
-    cert_1: "<strong>Develop Generative AI Applications: Get Started</strong> &mdash; IBM (2026)",
+    cert_1: "<strong>Develop Generative AI Applications</strong> &mdash; IBM (Coursera, 2026)",
     cert_2: "<strong>Certified Application Developer (CAD)</strong> &mdash; ServiceNow",
     cert_3: "<strong>Certified System Administrator (CSA)</strong> &mdash; ServiceNow",
-    cert_4: "<strong>Python Programming (Parts 1 &amp; 2) &amp; Principles of Computing</strong> &mdash; Rice University",
+    cert_4: "<strong>Python Programming &amp; Principles of Computing</strong> &mdash; Rice University",
     heading_education: "Tanulmányok",
-    edu_1: "<strong>Junior Java Programozó (Intenzív képzés)</strong> &middot; Braining Hub, Budapest (2017&ndash;2018)",
-    edu_2: "<strong>Master of Arts: Nemzetközi Kapcsolatok</strong> &middot; Budapesti Corvinus Egyetem",
-    edu_3: "<strong>Bachelor of Science: Biztonság- és Védelempolitika</strong> &middot; Zrínyi Miklós Nemzetvédelmi Egyetem",
+    edu_1: "<strong>Junior Java Programozó</strong> &middot; Braining Hub Budapest (5 hónapos intenzív képzés)",
+    edu_2: "<strong>M.A. Nemzetközi Kapcsolatok</strong> &middot; Budapesti Corvinus Egyetem",
+    edu_3: "<strong>B.S. Biztonság- és Védelempolitika</strong> &middot; Zrínyi Miklós Nemzetvédelmi Egyetem",
 
     // 5. szakasz: Kapcsolat
     section_contact: "Kapcsolat",

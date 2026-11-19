@@ -1,6 +1,6 @@
 # Architektúra Dokumentáció: AI Karrier Asszisztens
 
-**Tulajdonos:** Horváth Géza — ServiceNow Architekt  
+**Tulajdonos:** Horváth Géza — Lead ServiceNow Architekt & Technikai Vezető  
 **Kiszolgáló architektúra:** Mac mini M4 (16 GB Egyesített Memória, Gezas-Mac-mini.local)  
 **Kiválasztott éles hozzáférés:** A opció — Tailscale Funnel (`https://<node>.<tailnet>.ts.net`)  
 **Jelenlegi tesztkörnyezet:** Helyi hálózati többeszközös tesztelés (`http://192.168.1.155:3000`)  

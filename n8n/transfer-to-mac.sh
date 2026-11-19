@@ -61,12 +61,14 @@ ssh "${MAC_USER}@${MAC_HOST}" 'bash -s' << 'EOF'
   $NODE_BIN $N8N_BIN import:workflow --input=/Users/gezahorvath/resume-ai/contact-form-workflow.json 2>/dev/null || true
   $NODE_BIN $N8N_BIN import:workflow --input=/Users/gezahorvath/resume-ai/resume-chat-workflow.json 2>/dev/null || true
 
-  # Ensure Contact Form workflow is active
+  # Ensure Contact Form workflow is active (deactivate older duplicates)
   CONTACT_WF_ID=$(sqlite3 ~/.n8n/database.sqlite "SELECT id FROM workflow_entity WHERE name LIKE '%Contact%Form%' ORDER BY updatedAt DESC LIMIT 1;")
   if [ -n "$CONTACT_WF_ID" ]; then
     echo "Publishing Contact Form Workflow ID: $CONTACT_WF_ID"
-    $NODE_BIN $N8N_BIN publish:workflow --id="$CONTACT_WF_ID" 2>/dev/null || true
+    sqlite3 ~/.n8n/database.sqlite "UPDATE workflow_entity SET active = 0 WHERE name LIKE '%Contact%Form%' AND id != '$CONTACT_WF_ID';"
     sqlite3 ~/.n8n/database.sqlite "UPDATE workflow_entity SET active = 1 WHERE id = '$CONTACT_WF_ID';"
+    $NODE_BIN $N8N_BIN publish:workflow --id="$CONTACT_WF_ID" 2>/dev/null || true
+    sqlite3 ~/.n8n/database.sqlite "DELETE FROM webhook_entity WHERE webhookPath = 'contact-submit';"
     sqlite3 ~/.n8n/database.sqlite "INSERT OR REPLACE INTO webhook_entity (workflowId, webhookPath, method, node, webhookId, pathLength) VALUES ('$CONTACT_WF_ID', 'contact-submit', 'POST', 'Webhook Trigger', '', 1);"
   fi
 
@@ -85,6 +87,16 @@ ssh "${MAC_USER}@${MAC_HOST}" 'bash -s' << 'EOF'
   export PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
   pm2 restart n8n-server --update-env
   pm2 save
+
+  # Pre-warm Ollama models and KV caches for EN (qwen2.5:7b) and HU (hermes3:8b) via n8n webhook
+  echo "🔥 Waiting for n8n webhook registration and pre-warming EN/HU KV caches..."
+  for i in {1..20}; do
+    if curl -sf -X POST http://localhost:5678/webhook/resume-chat -H "Content-Type: application/json" -d '{"question":"Hi","language":"en","sessionId":"warmup_en"}' > /dev/null 2>&1; then
+      break
+    fi
+    sleep 2
+  done
+  curl -sf -X POST http://localhost:5678/webhook/resume-chat -H "Content-Type: application/json" -d '{"question":"Szia","language":"hu","sessionId":"warmup_hu"}' > /dev/null 2>&1 || true
 EOF
 
 echo "--------------------------------------------------------"

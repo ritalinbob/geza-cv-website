@@ -1,6 +1,6 @@
 # Architektur-Dokumentation: KI-Karriereassistent
 
-**Inhaber:** Géza Horváth — ServiceNow Architect  
+**Inhaber:** Géza Horváth — Lead ServiceNow Architect & Technical Lead  
 **Host-Architektur:** Mac mini M4 (16 GB Unified Memory, Gezas-Mac-mini.local)  
 **Gewählter Produktions-Ingress:** Option A — Tailscale Funnel (`https://<node>.<tailnet>.ts.net`)  
 **Aktueller Testmodus:** Lokales Netzwerk Multi-Device (`http://192.168.1.155:3000`)  

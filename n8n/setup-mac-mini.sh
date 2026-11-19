@@ -28,18 +28,26 @@ else
   echo "✅ Ollama is installed."
 fi
 
-# 3. Ensure Ollama is running
+# 3. Ensure Ollama is running with optimized M4 unified memory settings
+export OLLAMA_HOST="0.0.0.0"
+export OLLAMA_KEEP_ALIVE="-1"
+export OLLAMA_MAX_LOADED_MODELS="2"
+export OLLAMA_NUM_PARALLEL="1"
+export OLLAMA_FLASH_ATTENTION="1"
+export OLLAMA_KV_CACHE_TYPE="q8_0"
+
 if ! pgrep -x "ollama" > /dev/null; then
   echo "Starting Ollama server in background..."
-  ollama serve > ~/resume-ai/ollama.log 2>&1 &
+  nohup /usr/local/bin/ollama serve > ~/resume-ai/ollama.log 2>&1 &
   sleep 3
 else
   echo "✅ Ollama server is currently running."
 fi
 
-# 4. Pull Qwen 2.5 7B model (optimized for M4 Metal unified memory)
-echo "📥 Ensuring qwen2.5:7b model is present in Ollama..."
-ollama pull qwen2.5:7b
+# 4. Pull & pre-warm Qwen 2.5 7B (EN/DE) and Hermes 3 8B (HU) models
+echo "📥 Ensuring qwen2.5:7b and hermes3:8b models are present in Ollama..."
+/usr/local/bin/ollama pull qwen2.5:7b
+/usr/local/bin/ollama pull hermes3:8b
 
 # 5. Check and configure Tailscale Funnel
 if command -v tailscale &> /dev/null; then

@@ -274,11 +274,11 @@
 
     if (!knowledgeBase) {
       if (currentLanguage === 'de') {
-        return "Géza Horváth ist ServiceNow Architect mit über 8 Jahren dedizierter Plattform-Erfahrung in Wien, Österreich. Kontaktieren Sie ihn direkt unter ghorvath@gmail.com oder auf [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
+        return "Géza Horváth ist Lead ServiceNow Architect & Technical Lead mit über 8 Jahren dedizierter Plattform-Erfahrung im Raum Wien, Österreich. Kontaktieren Sie ihn direkt unter ghorvath@gmail.com oder auf [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
       } else if (currentLanguage === 'hu') {
-        return "Horváth Géza ServiceNow Architekt több mint 8 év dedikált platformtapasztalattal Bécsben. Elérhetősége közvetlenül: ghorvath@gmail.com vagy [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
+        return "Horváth Géza Lead ServiceNow Architekt & Technikai Vezető több mint 8 év dedikált platformtapasztalattal Bécs környékén. Elérhetősége közvetlenül: ghorvath@gmail.com vagy [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
       }
-      return "Géza Horváth is a ServiceNow Architect with 8+ years of dedicated platform experience based in Vienna, Austria. You can connect with him directly via email at ghorvath@gmail.com or on [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
+      return "Géza Horváth is a Lead ServiceNow Architect & Technical Lead with 8+ years of dedicated platform experience based in the Vienna area, Austria. You can connect with him directly via email at ghorvath@gmail.com or on [LinkedIn](https://www.linkedin.com/in/geza-horvath-16288a185).";
     }
 
     var faqs = knowledgeBase.frequently_asked_recruiter_questions || [];
@@ -290,11 +290,11 @@
       var faq = faqs[i];
       var fq = faq.q.toLowerCase();
       if ((q.includes('year') || q.includes('how long') || q.includes('jahr') || q.includes('hány') || q.includes('tapasztalat')) && (fq.includes('year') || fq.includes('jahr') || fq.includes('tapasztalat'))) return faq.a;
-      if ((q.includes('lead') || q.includes('title') || q.includes('role') || q.includes('titel') || q.includes('pozíció')) && (fq.includes('lead') || fq.includes('pozíció'))) return faq.a;
+      if ((q.includes('lead') || q.includes('title') || q.includes('role') || q.includes('team') || q.includes('mentor') || q.includes('titel') || q.includes('führung') || q.includes('pozíció') || q.includes('vezető')) && (fq.includes('lead') || fq.includes('führung') || fq.includes('vezető'))) return faq.a;
       if ((q.includes('integration') || q.includes('connect') || q.includes('api') || q.includes('rest') || q.includes('schnittstelle') || q.includes('integráció')) && (fq.includes('integration') || fq.includes('integráció'))) return faq.a;
-      if ((q.includes('cmdb') || q.includes('discovery') || q.includes('csdm')) && fq.includes('cmdb')) return faq.a;
+      if ((q.includes('cmdb') || q.includes('discovery') || q.includes('csdm') || q.includes('module') || q.includes('modul')) && (fq.includes('cmdb') || fq.includes('module') || fq.includes('modul'))) return faq.a;
       if ((q.includes('cert') || q.includes('csa') || q.includes('cad') || q.includes('zertifikat') || q.includes('képesítés')) && (fq.includes('cert') || fq.includes('zertifikat') || fq.includes('tanúsítvány'))) return faq.a;
-      if ((q.includes('location') || q.includes('remote') || q.includes('hybrid') || q.includes('vienna') || q.includes('wien') || q.includes('bécs') || q.includes('távmunka')) && (fq.includes('remote') || fq.includes('távmunka'))) return faq.a;
+      if ((q.includes('location') || q.includes('remote') || q.includes('hybrid') || q.includes('on-site') || q.includes('onsite') || q.includes('vienna') || q.includes('wien') || q.includes('bécs') || q.includes('távmunka')) && (fq.includes('hybrid') || fq.includes('remote') || fq.includes('távmunka'))) return faq.a;
     }
 
     if (knowledgeBase.translations && knowledgeBase.translations[currentLanguage] && knowledgeBase.translations[currentLanguage].fallback_general) {
@@ -302,12 +302,12 @@
     }
 
     if (currentLanguage === 'de') {
-      return "Basierend auf Gézas verifiziertem Profil: ServiceNow Architect mit über 8 Jahren Erfahrung in Plattformarchitektur, Unternehmensintegrationen (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM und Vulnerability Response. Kontaktieren Sie ihn direkt unter [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
+      return "Basierend auf Gézas verifiziertem Profil: Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM und Vulnerability Response. Kontaktieren Sie ihn direkt unter [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
     } else if (currentLanguage === 'hu') {
-      return "Horváth Géza hitelesített szakmai profilja alapján: ServiceNow Architekt több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Vulnerability Response területén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
+      return "Horváth Géza hitelesített szakmai profilja alapján: Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM és Vulnerability Response területén. Közvetlen kapcsolat: [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
     }
 
-    return "Based on Géza's verified profile: ServiceNow Architect with 8+ years driving platform architecture, enterprise integrations (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM, and Vulnerability Response. Contact him directly at [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
+    return "Based on Géza's verified profile: Lead ServiceNow Architect & Technical Lead with 8+ years driving platform architecture, enterprise integrations (Workday, Jira, Entra ID, BambooHR), CMDB/Discovery, HAM, and Vulnerability Response. Contact him directly at [ghorvath@gmail.com](mailto:ghorvath@gmail.com).";
   }
 
   // Attempt fetch across candidate endpoints in order
@@ -476,9 +476,16 @@
     }
     loadKnowledgeBase(options.knowledgeBaseUrl);
 
-    // Endpoints priority
+    // Endpoints priority (skip insecure/LAN-only custom endpoints when on public HTTPS)
     var endpointsToTry = [];
-    if (options.endpoint) endpointsToTry.push(options.endpoint);
+    if (options.endpoint) {
+      var isLanEndpoint = options.endpoint.indexOf('http://') === 0 ||
+                          options.endpoint.indexOf('.local') !== -1 ||
+                          options.endpoint.indexOf('192.168.') !== -1;
+      if (isLocalEnv || !isLanEndpoint) {
+        endpointsToTry.push(options.endpoint);
+      }
+    }
     CANDIDATE_ENDPOINTS.forEach(function (ep) {
       if (endpointsToTry.indexOf(ep) === -1) endpointsToTry.push(ep);
     });

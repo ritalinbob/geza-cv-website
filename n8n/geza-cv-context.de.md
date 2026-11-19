@@ -1,69 +1,66 @@
 # Geza Horvath
-**ServiceNow Architect & Enterprise AI Automation Engineer**  
-Pressbaum / Wien, Österreich • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185)
+**Lead ServiceNow Architect & Technical Lead**  
+Raum Wien (Pressbaum), Österreich • +43 660 108 2050 • ghorvath@gmail.com • [linkedin.com/in/geza-horvath-16288a185](https://www.linkedin.com/in/geza-horvath-16288a185) • [gezahorvath.dev](https://gezahorvath.dev)
 
 ---
 
-### Profil-Zusammenfassung
-ServiceNow Architect mit über 8 Jahren Erfahrung in der Leitung von Multi-Instanz-Plattform-Engineering, systemübergreifender Automatisierung und komplexen Datenmigrationen. Aufbau eines zukunftssicheren Greenfield-ServiceNow-Ökosystems, Konzeption und Durchführung von Carve-out-Splits über heterogene Data Warehouses im Rahmen von Unternehmensabspaltungen sowie Implementierung von Kernlösungen in ITSM, CMDB/Discovery, HAM und Vulnerability Response. Entwicklung einer internen VS Code Agentic AI-Toolchain und maßgeschneiderter MCP-API-Wrapper, die teamweit eingeführt wurden, um Plattform-Bereitstellungen zu beschleunigen, Code-Reviews zu automatisieren und manuelle Konfigurationsaufwände zu eliminieren.
+### Kurzprofil
+Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Nachweisliche Erfolge beim Aufbau einer Greenfield-Landschaft über 6 Instanzen, der vollständigen technischen Entflechtung im Zuge eines Corporate Spin-offs sowie der Governance von ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen. Fundierte Praxis in moderner Agentic-AI-Entwicklung: Konzeption und unternehmensweiter Rollout interner VS-Code-MCP-Toolchains zur Entwicklungsbeschleunigung sowie Entwicklung automatisierter n8n-LLM-Workflows zur signifikanten Reduktion des operativen Aufwands. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze.
 
 ---
 
-### Kernkompetenzen
+### Kompetenzen & Technische Kenntnisse
 
-* **Plattformarchitektur & Governance:** Multi-Instanz-Topologie, Release-Governance, Upgrade-Zyklen (Bereinigung übersprungener Datensätze / Skipped Records Sub-Prod zu Prod), Cloning-Runbooks & Profil-Management, Scoped Applications, Idempotente ATF-Test-Suites.
-* **Module & Plattform-Betrieb:** ITSM, CMDB, Discovery (MID Server, Azure Cloud, ACC), Service Graph Connectors, HAM, Vulnerability Response (Tenable, Nessus).
-* **Unternehmensautomatisierung & Identitätsmanagement:** Microsoft Entra ID (Azure AD), BambooHR, Power Automate REST-Trigger, Vollautomatisiertes (Zero-Touch) HR Onboarding & Rollenwechsel, automatisierte RBAC-Gruppenbereitstellung.
-* **Integrationen, Middleware & Daten:** n8n, Cloudomation (Python), Jitterbit, Scripted REST, Webhooks, Relationale Data Warehouses (SQL/Views), IntegrationHub.
-* **KI & Software-Engineering-Tools:** VS Code Agentic Development Pipelines, maßgeschneiderte Model Context Protocol (MCP) ServiceNow API-Wrapper, Custom Agent Skills, Modernes JavaScript / GlideScript, Python (Grundlagen).
+* **Plattformarchitektur & Governance:** Multi-Instance-Topologie, Release-Governance, Klon-Runbooks, Scoped Applications, ATF (Automated Test Framework) Regressionstests, Upgrade-Management & Skipped-Record-Resolution, RBAC.
+* **KI & Agentic Engineering:** Eigene Model Context Protocol (MCP) Server-Wrapper, In-IDE VS-Code-Agent-Toolchains, n8n-LLM-Workflows, Kontext-Parsing, automatisierte Code-Reviews, Prompt Engineering.
+* **IT-Operations & Module:** ITSM, CMDB-Baselines, Discovery (MID Server, Azure Cloud, Agent Client Collector), Service Graph Connectors, Hardware Asset Management (HAM), Vulnerability Response (Tenable/Nessus).
+* **Integrationen & Identity:** Scripted REST APIs, Webhooks, Microsoft Entra ID (Azure AD), BambooHR, Power Automate, Jitterbit, Cloudomation (Python ETL), SQL Data Warehousing, Git Versionskontrolle.
 
 ---
 
-### Berufserfahrung
+### Beruflicher Werdegang
 
-#### **Ontinue** | *Remote / Wien, Österreich*
-**ServiceNow Architect – Business Applications** | **2023-02 – Heute**
-* Leitung der Plattformarchitektur, technischen Roadmaps und Upgrade-Governance für die ServiceNow-Landschaft nach dem operativen Spin-off von Open Systems.
-* Konzeption und Implementierung von End-to-End **HR-Boarding-Prozessen** (Onboarding, Offboarding, Cross-Boarding): Bereitstellung von Katalogelementen zur Auslösung automatisierter Multi-System-Workflows, die Mitarbeiterdaten über BambooHR, ServiceNow und Entra ID via REST synchronisieren.
-* Konzeption und Bereitstellung einer automatisierten **Salesforce Account Enrichment Engine in n8n**, die öffentliche Daten-APIs, ZoomInfo-Endpunkte, Deduplizierungslogik, Aufgaben-Warteschlangen und strukturierte LLM-Prompts verkettet.
-* Bereitstellung von **ITSM**, **CMDB**, **Hardware Asset Management (HAM)** und **Vulnerability Response (VR)** mit Anbindung an Tenable- und Nessus-Scanner für die automatisierte Aufgabenorchestrierung.
-* Etablierung kontinuierlicher Infrastruktur-Discovery mittels **MID Servern**, **Azure Cloud Discovery**, **Agent Client Collector (ACC)** und **Service Graph Connectors**.
-* Aufbau einer maßgeschneiderten **VS Code Agentic Development Pipeline** mit MCP-API-Wrappern zur direkten Synchronisierung von Artefakten mit Instanzen, wodurch repetitive UI-Interaktionen entfallen und das Entwicklungstempo gesteigert wurde.
-* Überwachung der Governance für Business-Applications-Zugriffe, Benutzerverwaltung und administrative Abläufe in **Salesforce**.
-* Pflege von Daten-Pipelines über **Cloudomation** (Python-Middleware) und **Jitterbit**, Überprüfung von ETL-Ladevorgängen und Fehlerbehebung in Data-Warehouse-Schemata mittels SQL (TablePlus, SSMS).
+#### **Ontinue** | *Wien (Remote/Hybrid)*
+**ServiceNow Architect & Tech Lead** | **02/2023 – Heute**
+* **Plattform-Governance & IT-Sicherheit:** Gesamtverantwortung für die technische Roadmap, Plattform-Governance und kontinuierliche Upgrades der Enterprise-Instanzen; Etablierung von CMDB/Discovery-Baselines sowie Implementierung von Vulnerability-Response-Pipelines mit nativer Einbindung von Tenable- und Nessus-Scannern.
+* **Fachliche Führung & Delivery:** Fachliche Leitung und Mentoring eines Kernteams aus 1–2 Senior ServiceNow Engineers; Steuerung von Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern.
+* **Agentic Developer Tooling:** Konzeption und Bereitstellung einer internen VS-Code-Agentic-AI-Toolchain auf Basis maßgeschneiderter MCP-API-Wrapper; signifikante Verkürzung von Entwicklungszyklen durch automatisierte Code-Reviews, Schema-Validierung und GlideScript-Generierung.
+* **Enterprise-KI & Workflow-Automatisierung:** Architektur asynchroner n8n-LLM-Workflows mit strukturierter Prompt-Verkettung moderner KI-APIs zur automatisierten Deduplizierung, Abarbeitung von Aufgaben-Queues und intelligenten Datenanreicherung großer Datenbestände.
+* **Automatisiertes Identity Lifecycle Management:** Konzeption und Implementierung robuster End-to-End-Prozesse für das Mitarbeiter-On- und -Offboarding mit nahtloser Synchronisierung zwischen BambooHR, ServiceNow und Microsoft Entra ID (Azure AD) via Power Automate und REST-Webhooks.
+* **Datenintegration & Middleware:** Betreuung und Optimierung hochverfügbarer Datensynchronisations- und ETL-Pipelines mit Cloudomation (Python) und Jitterbit zur Anbindung nachgelagerter Corporate Data Warehouses.
 
-#### **Open Systems** | *Hybrid / Wien, Österreich*
-**ServiceNow Architect – Business Applications** | **2022-05 – 2023-02**
-* Aufbau der Greenfield-Plattformarchitektur durch Konfiguration von **4 ServiceNow-Kerninstanzen** mit automatisierter Azure-Benutzer- und Gruppenbereitstellung sowie strukturierte Übergabe der Betriebsverantwortung an externe Entwicklungspartner.
-* Architektur der Enterprise-IT-ServiceNow-Instanz mit Implementierung von Baseline-ITSM-Workflows, Sicherheitsrollen und Update-Set-Pipelines.
-* Technische Plattform-Entflechtung und systemübergreifende Datenmigrationen über Data Warehouses und Kernanwendungen im Rahmen der Unternehmensabspaltung zu Ontinue.
+#### **Open Systems** | *Wien (Hybrid)*
+**ServiceNow Architect – Business Applications** | **05/2022 – 02/2023**
+* **Greenfield-Architektur:** Konzeption und Aufbau der zentralen ServiceNow-Landschaft über 6 Instanzen von Grund auf; Implementierung robuster Sicherheitskontrollen, Rollenhierarchien, Berechtigungskonzepte (RBAC) sowie Update-Set-Deployment-Pipelines.
+* **Umsetzung des Corporate Spin-offs:** Federführende Steuerung der Plattform-Entflechtung, Verzeichnis-Synchronisation und relationalen Datenmigrationen im Rahmen der Ausgründung von Ontinue – vollständig ohne produktive Ausfallzeiten.
+* **Instanzen-Governance & Übergabe:** Erstellung standardisierter Klon-Runbooks und Release-Gates sowie strukturierte operative Übergabe von Fachbereichs-Instanzen an externe Partner.
 
 #### **Tricentis GmbH** | *Wien, Österreich*
-**Senior ServiceNow Developer** | **2018-08 – 2022-04**
-* Bereitstellung hochverfügbarer Plattformlösungen in ITSM und Custom Applications innerhalb eines agilen Scrum-Entwicklungsteams.
-* Entwicklung bidirektionaler REST-Integrationen zur Anbindung von ServiceNow an Workday, JIRA, Coveo AI Search und Cornerstone.
-* Durchführung geschäftskritischer Datenbankmigrationen, darunter eine ITSM-zu-CSM-Schemamigration und die Konsolidierung von Altdaten aus Übernahmen in ServiceNow.
-* Rettung einer ins Stocken geratenen Implementierung eines externen Dienstleisters (Vendor Rescue) durch Refactoring fehlerhafter Skripte und Bereinigung von Datenmodellen unter engem Zeitplan für einen erfolgreichen Produktionsstart.
+**Senior ServiceNow Developer & Technical Lead** | **08/2018 – 04/2022**
+* **Enterprise-Integrationen & Toolchain:** Konzeption und Implementierung unternehmenskritischer, bidirektionaler REST-Schnittstellen zwischen ServiceNow, Workday, Jira, Cornerstone und Coveo AI Search im Rahmen agiler Scrum-Zyklen.
+* **KI-Suche & Portal-Optimierung:** Mehrjährige kontinuierliche Weiterentwicklung des Kunden- und Support-Portals; Anbindung der KI-basierten Unified Search von Coveo zur übergreifenden Erschließung heterogener Wissensdatenbanken.
+* **Komplexe Schema-Migrationen:** Planung und Durchführung anspruchsvoller Datenbanktransformationen, einschließlich einer Migration von ITSM auf CSM sowie Datenkonsolidierungen infolge strategischer M&A-Akquisitionen.
+* **Plattform-Sanierung & Code-Refactoring:** Technische Due Diligence und tiefgreifendes Refactoring fehlerhafter Custom-Code- und Datenarchitekturen eines externen Dienstleisters unter strikten Fristen zur planmäßigen Stabilisierung des Go-Lives.
 
-#### **Frühere berufliche Stationen**
-* **Mobility Manager** | Service24 GmbH (2016 – 2018) • **Customer Care Specialist** | Avis Budget Group (2015 – 2016)
+#### **Frühere Stationen im operativen Bereich**
+* **Mobility Manager** | Service24 GmbH (2016 – 2018) • **Customer Care Specialist** | Avis Budget Group (2015 – 2016) – Prozessoptimierung, internationale operative Steuerung und Workflow-Logistik.
 
 ---
 
 ### Zertifizierungen
 
-* **Develop Generative AI Applications: Get Started** – IBM (Coursera, 2026)
-* **Certified System Administrator (CSA)** – ServiceNow (2020)
-* **Certified Application Developer (CAD)** – ServiceNow (2019)
-* **Python Programming (Parts 1 & 2) & Principles of Computing** – Rice University
+* **Develop Generative AI Applications** – IBM (Coursera, 2026)
+* **Certified Application Developer (CAD)** – ServiceNow
+* **Certified System Administrator (CSA)** – ServiceNow
+* **Python Programming & Principles of Computing** – Rice University
 
 ---
 
 ### Ausbildung
 
-* **Junior Java Programmer (Intensivprogramm 5 Monate)** | Braining Hub, Budapest (2017 – 2018)
-* **Master of Arts: Internationale Beziehungen** | Corvinus-Universität Budapest (2012 – 2015)
-* **Bachelor of Science: Sicherheits- und Verteidigungspolitik** | Zrínyi Miklós Nationale Verteidigungsuniversität (2006 – 2009)
+* **Junior Java Programmer** | Braining Hub Budapest (5-monatiges Intensivprogramm)
+* **M.A. Internationale Beziehungen** | Corvinus-Universität Budapest
+* **B.S. Sicherheits- und Verteidigungspolitik** | Nationale Verteidigungsuniversität Zrínyi Miklós
 
 ---
 ---
@@ -71,26 +68,25 @@ ServiceNow Architect mit über 8 Jahren Erfahrung in der Leitung von Multi-Insta
 # Anhang: Kontext & Interview-Dossier für das KI-Modell
 
 ### 1. Herausragende Erfolge & Schlüsselprojekte
-* **Greenfield-Plattformstart & Übergabe (Open Systems):** Konfiguration von 4 ServiceNow-Kerninstanzen von Grund auf mit automatisierter Azure AD / Entra ID Benutzerbereitstellung, Sicherheitsrichtlinien und Lifecycle-Management für Gruppen. Vollständige Dokumentation und erfolgreiche operative Übergabe an einen externen Entwicklungspartner (Wrangu).
-* **Unternehmensabspaltung & systemübergreifende Datenmigration (Open Systems -> Ontinue):** Aufrechterhaltung der unterbrechungsfreien Plattformverfügbarkeit während des Carve-outs. Übernahme der Verantwortung für die Entflechtung der Instanzen sowie für Datenmigrationen über Unternehmens-Data-Warehouses und Peripheriesysteme.
-* **End-to-End Enterprise HR-Boarding-Orchestrierung:** Aufbau eines integrierten, vollautomatisierten (Zero-Touch) HR-Lifecycle-Systems. Entwicklung von Katalogelementen für HR-Teams zur Auslösung automatisierter Workflows: Synchronisierung von Personalstammdaten über BambooHR, ServiceNow und Entra ID, Vergabe von Anwendungsberechtigungen und automatische Fehlerbehandlung.
-* **KI- und API-gestützte Account Enrichment Engine (n8n & Salesforce):** Konzeption und Bereitstellung eines Workflows in n8n, der Salesforce-Accounts bereinigt, dedupliziert und über ZoomInfo-Endpunkte sowie strukturierte LLM-Prompts anreichert.
-* **Rettung einer Dienstleister-Implementierung (Vendor Rescue - Tricentis):** Erfolgreiche Übernahme und Sanierung einer gescheiterten externen Implementierung unter strikten Deadlines ohne Produktionsunterbrechung.
+* **Greenfield-Plattformstart & Übergabe (Open Systems):** Konzeption und Aufbau der zentralen ServiceNow-Landschaft über 6 Instanzen von Grund auf mit Sicherheitskontrollen, Rollenhierarchien, RBAC und Update-Set-Deployment-Pipelines. Erstellung standardisierter Klon-Runbooks und Release-Gates sowie strukturierte operative Übergabe von Fachbereichs-Instanzen an externe Entwicklungspartner.
+* **Corporate Spin-off & systemübergreifende Datenmigration (Open Systems -> Ontinue):** Federführende Steuerung der Plattform-Entflechtung, Verzeichnis-Synchronisation und relationalen Datenmigrationen im Rahmen der Ausgründung von Ontinue – vollständig ohne produktive Ausfallzeiten.
+* **Fachliche Führung & Delivery (Ontinue):** Fachliche Leitung und Mentoring eines Kernteams aus 1–2 Senior ServiceNow Engineers; Steuerung von Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern.
+* **Automatisiertes Identity Lifecycle Management:** Konzeption und Implementierung robuster End-to-End-Prozesse für das Mitarbeiter-On- und -Offboarding mit nahtloser Synchronisierung zwischen BambooHR, ServiceNow und Microsoft Entra ID (Azure AD) via Power Automate und REST-Webhooks.
+* **Enterprise-KI & Workflow-Automatisierung (n8n):** Architektur asynchroner n8n-LLM-Workflows mit strukturierter Prompt-Verkettung moderner KI-APIs zur automatisierten Deduplizierung, Abarbeitung von Aufgaben-Queues und intelligenten Datenanreicherung großer Datenbestände.
+* **Plattform-Sanierung & Code-Refactoring (Tricentis):** Technische Due Diligence und tiefgreifendes Refactoring fehlerhafter Custom-Code- und Datenarchitekturen eines externen Dienstleisters unter strikten Fristen zur planmäßigen Stabilisierung des Go-Lives.
 
 ### 2. Plattform-Verantwortung & Automatisierungsphilosophie
-* **Ganzheitliche funktionale Verantwortung:** Proaktiver Austausch mit Fachabteilungen und Stakeholdern zur Ermittlung betrieblicher Engpässe. Direkte Verantwortung für Machbarkeitsanalysen, Lösungsarchitektur, Spezifikationen, Sprint-Planung, Tests, Go-Live und Post-Go-Live-Support.
-* **Automation-First-Prinzip:** Systematische Identifizierung manueller Aufwände und deren Ablösung durch automatisierte Self-Service-Katalogelemente mit Genehmigungsworkflows und dynamischer Rechtevergabe.
+* **Ganzheitliche funktionale & technische Verantwortung:** Proaktiver Austausch mit Fachabteilungen und Stakeholdern zur Ermittlung betrieblicher Engpässe. Direkte Verantwortung für technische Roadmap, Lösungsarchitektur, Ticket-Scoping, Code-Reviews, Tests, Go-Live und kontinuierliche Upgrades.
+* **Automation-First-Prinzip:** Systematische Reduktion des operativen Aufwands durch End-to-End-Synchronisationspipelines, Self-Service-Prozesse und KI-gestützte Workflows.
 
 ### 3. Governance, Upgrades & Architekturentscheidungen
 * **Out-of-the-Box (OOB) vs. Individualentwicklung:** Konsequenter Vorzug von Standardfunktionen (OOB) für reibungslose Plattform-Upgrades und Herstellersupport. Sorgfältige Aufwand-Nutzen-Analyse bei individuellen Anpassungswünschen.
-* **Design- und Dokumentationsstandards:** Übersetzung von Geschäftsanforderungen aus JIRA in Architekturbaupläne mittels draw.io-Ablaufdiagrammen und lückenlose Dokumentation technischer Entscheidungen in Confluence.
 * **Upgradesicherheit & Technical-Debt-Management:**
   * Strikte Release-Gates auf Sub-Produktionsumgebungen vor jeder Produktivänderung.
-  * Rigorose Cloning-Runbooks, Profil-Ausschlüsse, Datenerhaltungsregeln und ATF-Regressions-Suites.
-  * Systematische Überprüfung und Bereinigung veralteter Skripte, APIs und ungenutzter Schemata.
+  * Rigorose Klon-Runbooks, Scoped Applications und ATF-Regressionstests.
+  * Systematisches Upgrade-Management und Skipped-Record-Resolution.
 
 ### 4. Arbeitsstil, Persönlichkeit & Zusammenarbeit
-* **Pragmatisch & lösungsorientiert:** Verbindet strategische Lösungsarchitektur mit tatkräftiger, direkter Umsetzung und Fehlerbehebung.
-* **Ruhig und besonnen in kritischen Situationen:** Bewährte Belastbarkeit bei risikoreichen Projekten wie Carve-outs, Großmigrationen und kurzfristigen Rettungsprojekten.
-* **Bereichsübergreifende Kommunikation:** Versiert im Dialog mit Fachabteilungen (HR, Vertrieb), Datenbank- und Sicherheitsingenieuren sowie der Führungsebene.
-* **Standort & Arbeitsmodell:** Wohnhaft in Pressbaum / Wien, Österreich. Offen für hybride Modelle im Großraum Wien sowie für Remote-Tätigkeiten.
+* **Pragmatischer Technical Lead & Architekt:** Verbindet strategische Plattform-Governance und fachliche Führung mit direkter, praxisnaher Umsetzung.
+* **Verlässlich in kritischen Situationen:** Bewährte Belastbarkeit bei komplexen Vorhaben wie Corporate Spin-offs, Schema-Migrationen (ITSM auf CSM, M&A-Datenkonsolidierungen) und Plattform-Sanierungen unter strikten Fristen.
+* **Standort & Arbeitsmodell:** Wohnhaft im Raum Wien (Pressbaum), Österreich, mit uneingeschränkter Arbeitserlaubnis für Österreich. Verfügbar für hybride oder Vor-Ort-Einsätze im Raum Wien sowie für Remote-Tätigkeiten.
