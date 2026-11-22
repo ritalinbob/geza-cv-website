@@ -25,11 +25,11 @@ const TRANSLATIONS = {
 
     // Resume Download (Respective to selected viewing language)
     resume_download_btn: "Download Resume (PDF)",
-    resume_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf",
+    resume_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf?v=factual1",
     resume_pdf_filename: "Geza Horvath - Resume (English).pdf",
     resume_download_title: "Download Geza Horvath's Resume (English PDF)",
     resume_alt_label: "DE PDF",
-    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf",
+    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf?v=factual1",
     resume_alt_pdf_filename: "Geza Horvath - Lebenslauf.pdf",
     resume_alt_download_title: "Download German CV (Lebenslauf PDF)",
 
@@ -169,11 +169,11 @@ const TRANSLATIONS = {
 
     // Lebenslauf-Download (Entsprechend der gewählten Sprache)
     resume_download_btn: "Lebenslauf herunterladen (PDF)",
-    resume_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf",
+    resume_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf?v=factual1",
     resume_pdf_filename: "Geza Horvath - Lebenslauf.pdf",
     resume_download_title: "Geza Horvaths Lebenslauf herunterladen (Deutsch PDF)",
     resume_alt_label: "EN PDF",
-    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf",
+    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf?v=factual1",
     resume_alt_pdf_filename: "Geza Horvath - Resume (English).pdf",
     resume_alt_download_title: "Englischen Lebenslauf herunterladen (Resume PDF)",
 
@@ -313,11 +313,11 @@ const TRANSLATIONS = {
 
     // Önéletrajz letöltése (A kiválasztott nyelvnek megfelelően)
     resume_download_btn: "Önéletrajz letöltése (PDF · EN)",
-    resume_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf",
+    resume_pdf_url: "docs/Geza%20Horvath%20-%20Resume%20(English).pdf?v=factual1",
     resume_pdf_filename: "Geza Horvath - Resume (English).pdf",
     resume_download_title: "Horváth Géza angol nyelvű önéletrajzának letöltése (PDF)",
     resume_alt_label: "DE PDF",
-    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf",
+    resume_alt_pdf_url: "docs/Geza%20Horvath%20-%20Lebenslauf.pdf?v=factual1",
     resume_alt_pdf_filename: "Geza Horvath - Lebenslauf.pdf",
     resume_alt_download_title: "Német nyelvű önéletrajz letöltése (Lebenslauf PDF)",
 
