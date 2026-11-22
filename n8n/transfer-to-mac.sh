@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# Transfer AI Resume Chat Bundle to Mac mini M4
+# Deploy AI Resume Chat & Recruiter Contact Automation to Mac mini M4
 # Target: gezahorvath@Gezas-Mac-mini.local:~/resume-ai/
 # ==============================================================================
 
@@ -14,23 +14,95 @@ MAC_USER="${MAC_USER:-gezahorvath}"
 DEST_DIR="~/resume-ai"
 
 echo "--------------------------------------------------------"
-echo "📡 Deploying AI Chat Bundle to ${MAC_USER}@${MAC_HOST}..."
+echo "📡 Deploying AI Chat & Contact Automation to ${MAC_USER}@${MAC_HOST}..."
 echo "--------------------------------------------------------"
 
 # 1. Create remote directories
 ssh "${MAC_USER}@${MAC_HOST}" "mkdir -p ${DEST_DIR} ~/.n8n-files"
 
-# 2. Transfer workflow, setup script, context file, and knowledge base
+# 2. Transfer workflows, scripts, context files, and knowledge base
 scp "${SCRIPT_DIR}/resume-chat-workflow.json" \
+    "${SCRIPT_DIR}/contact-form-workflow.json" \
+    "${SCRIPT_DIR}/save_contact.js" \
     "${SCRIPT_DIR}/geza-cv-context.md" \
+    "${SCRIPT_DIR}/geza-cv-context.de.md" \
+    "${SCRIPT_DIR}/geza-cv-context.hu.md" \
     "${SCRIPT_DIR}/setup-mac-mini.sh" \
     "${SCRIPT_DIR}/README.md" \
     "${REPO_ROOT}/shared/knowledge-base.json" \
     "${MAC_USER}@${MAC_HOST}:${DEST_DIR}/"
 
-# 3. Copy context file to ~/.n8n-files so n8n file-reader node has sandbox access
-ssh "${MAC_USER}@${MAC_HOST}" "cp ~/resume-ai/geza-cv-context.md ~/.n8n-files/geza-cv-context.md && chmod +x ${DEST_DIR}/setup-mac-mini.sh"
+# 3. Configure permissions and sandbox files
+ssh "${MAC_USER}@${MAC_HOST}" 'bash -s' << 'EOF'
+  set -e
+  cp ~/resume-ai/geza-cv-context*.md ~/.n8n-files/
+  chmod +x ~/resume-ai/setup-mac-mini.sh ~/resume-ai/save_contact.js
 
-echo "✅ All files successfully deployed to ${MAC_HOST}:${DEST_DIR}/"
-echo "Context file placed in ~/.n8n-files/geza-cv-context.md"
+  # Ensure contacts SQLite schema exists
+  sqlite3 ~/resume-ai/contacts.sqlite 'CREATE TABLE IF NOT EXISTS contacts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    submission_id TEXT UNIQUE,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    company TEXT,
+    role_or_interest TEXT,
+    phone TEXT,
+    message TEXT NOT NULL,
+    source TEXT,
+    ip_address TEXT,
+    user_agent TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  );'
+
+  # Import/update n8n workflows using Node 20 (required by n8n v2)
+  NODE_BIN="/usr/local/bin/node"
+  N8N_BIN="/usr/local/bin/n8n"
+
+  $NODE_BIN $N8N_BIN import:workflow --input=/Users/gezahorvath/resume-ai/contact-form-workflow.json 2>/dev/null || true
+  $NODE_BIN $N8N_BIN import:workflow --input=/Users/gezahorvath/resume-ai/resume-chat-workflow.json 2>/dev/null || true
+
+  # Ensure Contact Form workflow is active (deactivate older duplicates)
+  CONTACT_WF_ID=$(sqlite3 ~/.n8n/database.sqlite "SELECT id FROM workflow_entity WHERE name LIKE '%Contact%Form%' ORDER BY updatedAt DESC LIMIT 1;")
+  if [ -n "$CONTACT_WF_ID" ]; then
+    echo "Publishing Contact Form Workflow ID: $CONTACT_WF_ID"
+    sqlite3 ~/.n8n/database.sqlite "UPDATE workflow_entity SET active = 0 WHERE name LIKE '%Contact%Form%' AND id != '$CONTACT_WF_ID';"
+    sqlite3 ~/.n8n/database.sqlite "UPDATE workflow_entity SET active = 1 WHERE id = '$CONTACT_WF_ID';"
+    $NODE_BIN $N8N_BIN publish:workflow --id="$CONTACT_WF_ID" 2>/dev/null || true
+    sqlite3 ~/.n8n/database.sqlite "DELETE FROM webhook_entity WHERE webhookPath = 'contact-submit';"
+    sqlite3 ~/.n8n/database.sqlite "INSERT OR REPLACE INTO webhook_entity (workflowId, webhookPath, method, node, webhookId, pathLength) VALUES ('$CONTACT_WF_ID', 'contact-submit', 'POST', 'Webhook Trigger', '', 1);"
+  fi
+
+  # Ensure AI Resume Chat workflow is active (deactivate older duplicates)
+  CHAT_WF_ID=$(sqlite3 ~/.n8n/database.sqlite "SELECT id FROM workflow_entity WHERE name LIKE '%Resume%Chat%' ORDER BY updatedAt DESC LIMIT 1;")
+  if [ -n "$CHAT_WF_ID" ]; then
+    echo "Publishing AI Resume Chat Workflow ID: $CHAT_WF_ID"
+    sqlite3 ~/.n8n/database.sqlite "UPDATE workflow_entity SET active = 0 WHERE name LIKE '%Resume%Chat%' AND id != '$CHAT_WF_ID';"
+    sqlite3 ~/.n8n/database.sqlite "UPDATE workflow_entity SET active = 1 WHERE id = '$CHAT_WF_ID';"
+    $NODE_BIN $N8N_BIN publish:workflow --id="$CHAT_WF_ID" 2>/dev/null || true
+    sqlite3 ~/.n8n/database.sqlite "DELETE FROM webhook_entity WHERE webhookPath = 'resume-chat';"
+    sqlite3 ~/.n8n/database.sqlite "INSERT OR REPLACE INTO webhook_entity (workflowId, webhookPath, method, node, webhookId, pathLength) VALUES ('$CHAT_WF_ID', 'resume-chat', 'POST', 'Webhook Trigger', '', 1);"
+  fi
+
+  # Restart via PM2
+  export PATH=/usr/local/bin:/opt/homebrew/bin:$PATH
+  pm2 restart n8n-server --update-env
+  pm2 save
+
+  # Pre-warm Ollama models and KV caches for EN (qwen2.5:7b) and HU (hermes3:8b) via n8n webhook
+  echo "🔥 Waiting for n8n webhook registration and pre-warming EN/HU KV caches..."
+  for i in {1..20}; do
+    if curl -sf -X POST http://localhost:5678/webhook/resume-chat -H "Content-Type: application/json" -d '{"question":"Hi","language":"en","sessionId":"warmup_en"}' > /dev/null 2>&1; then
+      break
+    fi
+    sleep 2
+  done
+  curl -sf -X POST http://localhost:5678/webhook/resume-chat -H "Content-Type: application/json" -d '{"question":"Szia","language":"hu","sessionId":"warmup_hu"}' > /dev/null 2>&1 || true
+EOF
+
+echo "--------------------------------------------------------"
+echo "✅ All workflows and scripts successfully deployed & live on ${MAC_HOST}!"
+echo "Endpoints:"
+echo " - AI Assistant:  http://${MAC_HOST}:5678/webhook/resume-chat"
+echo " - Recruiter Form: http://${MAC_HOST}:5678/webhook/contact-submit"
+echo "Database: ~/resume-ai/contacts.sqlite"
 echo "--------------------------------------------------------"

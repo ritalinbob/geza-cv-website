@@ -1,6 +1,6 @@
 # Geza CV Website
 
-Personal portfolio and interactive resume website for **Géza Horváth**, ServiceNow Architect.
+Personal portfolio and interactive resume website for **Géza Horváth**, Lead ServiceNow Architect & Technical Lead.
 
 Features three curated responsive design variants and a live, grounded **AI Career Assistant** backed by an n8n workflow and local LLM inference.
 
