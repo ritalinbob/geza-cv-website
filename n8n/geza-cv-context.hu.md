@@ -5,7 +5,7 @@ Bécs környéke (Pressbaum), Ausztria • +43 660 108 2050 • ghorvath@gmail.c
 ---
 
 ### Szakmai Összefoglaló
-Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Bizonyított eredmények egy 6 példányos zöldmezős (greenfield) ökoszisztéma alapoktól történő felépítésében, a teljes infrastruktúra-szétválasztás irányításában vállalati kiválás (corporate spin-off) során, valamint kiemelt ITSM, CMDB/Discovery, HAM és Vulnerability Response környezetek governance-ében. Gyakorlati úttörő az agentic AI fejlesztői megoldásokban—egyedi belső VS Code MCP eszköztárak tervezésével, melyeket a teljes csapat átvett a szállítási folyamatok felgyorsítására, valamint az operatív adminisztrációs terheket kiváltó automatizált n8n LLM munkafolyamatok megvalósításával. Bécs környékén (Pressbaum) él érvényes osztrák munkavállalási státusszal, készen hibrid vagy helyszíni munkavégzésre.
+Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Egy 6 példányos ServiceNow környezet konfigurálása és kiépítése, architekturális fókusszal az éles és alárendelt (sub-prod) IT Service Desk környezetekre, miközben a többi példányon Azure SSO és jogosultsági alapbeállítások kerültek kialakításra. Helyi VS Code fejlesztési munkafolyamatok és egyedi Model Context Protocol (MCP) integrációk kialakítása a ServiceNow példánykontextusok közvetlen LLM-alapú elemzéséhez, valamint automatizált n8n LLM munkafolyamatok megvalósítása az operatív adminisztrációs terhek csökkentésére. Bécs környékén (Pressbaum) él érvényes osztrák munkavállalási státusszal, készen hibrid vagy helyszíni munkavégzésre.
 
 ---
 
@@ -24,15 +24,15 @@ Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a 
 **ServiceNow Architekt & Tech Lead** | **2023-02 – Jelenleg**
 * **Platform-governance & IT-biztonság:** A technikai ütemterv, platform-governance és folyamatos frissítések (upgrades) teljes körű irányítása a vállalati IT példányokon; CMDB/Discovery alapok, valamint Tenable és Nessus szkennereket integráló Vulnerability Response folyamatok kiépítése.
 * **Technikai Vezetés & Mentorálás:** 1–2 szenior ServiceNow mérnökből álló magcsapat szakmai vezetése és mentorálása; architekturális szabványok, ticket-scoping és kódellenőrzések (code review) irányítása, valamint a szállítás koordinálása egy 8+ fős külső partneri fejlesztői ökoszisztémával.
-* **Agentic Developer Tooling:** Egyedi MCP API wrapper-ekre épülő belső VS Code Agentic AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők jelentős csökkentése automatizált kódellenőrzéssel, sémavalidációval és GlideScript generálással.
+* **Fejlesztői Eszköztár & MCP Munkafolyamatok:** Gyakorlati helyi VS Code munkafolyamatok és egyedi Model Context Protocol (MCP) integrációk kiépítése, amelyek az IDE-eszközöket és LLM-eket a ServiceNow metaadataihoz és sémáihoz kapcsolják a gyorsabb hibakeresés, kódvizsgálat és fejlesztés érdekében.
 * **Vállalati AI & Munkafolyamat-automatizálás:** Aszinkron n8n LLM munkafolyamatok tervezése intelligens API-k és strukturált promptok láncolásával az automatizált deduplikációhoz, feladatsorok (task queues) végrehajtásához és nagy volumenű adatgazdagításhoz.
 * **Automatizált HR Életciklus & Integrációk:** Teljes körű (end-to-end) felhasználói be- és kiléptetési szinkronizációs folyamatok kiépítése a BambooHR, ServiceNow és Microsoft Entra ID (Azure AD) összekapcsolásával Power Automate és REST webhookok segítségével.
-* **Adatintegráció & Middleware:** Magas megbízhatóságú adatszinkronizációs és ETL folyamatok üzemeltetése és optimalizálása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.
+* **Adatintegráció & Middleware:** Együttműködés integrációs mérnökökkel a ServiceNow, a köztes réteg (Cloudomation, Jitterbit) és a vállalati adattárházak közötti kétirányú adatáramlások és ETL-szinkronizációk kialakításában és karbantartásában.
 
 #### **Open Systems** | *Bécs (Hibrid)*
 **ServiceNow Architekt – Üzleti Alkalmazások** | **2022-05 – 2023-02**
-* **Greenfield Architektúra:** A központi ServiceNow környezet alapoktól történő felépítése 6 példányon keresztül; megerősített biztonsági kontrollok, szerepkör-hierarchiák, jogosultságkezelési koncepciók (RBAC) és Update Set deployment folyamatok kialakítása.
-* **Vállalati Kiválás (Corporate Spin-off) Lebonyolítása:** A platform szétválasztásának, címtár-szinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, éles üzemi leállás nélkül.
+* **ServiceNow Környezet Kiépítése:** 6 példányos ServiceNow környezet konfigurálása és kiépítése a kiválás során; 4 példányon kezdeti alapbeállítások (Azure SSO, alapvető csoportbeállítások és átadás) készültek, míg a közvetlen napi architekturális tulajdonlás az elsődleges éles és sub-prod IT Service Desk példányokra összpontosult.
+* **Corporate Spin-Off Megvalósítás:** Együttműködés a műszaki vezetéssel az Ontinue Open Systems-ből történő kiválása során a platform szétválasztásában, közvetlenül megtervezve és végrehajtva a ServiceNow környezet technikai leválasztását és adatmigrációját.
 * **Példány-governance & Átadás:** Standardizált klónozási runbookok és release-gate-ek kidolgozása, valamint a szakági példányok strukturált operatív átadása külső partnereknek.
 
 #### **Tricentis GmbH** | *Bécs, Ausztria*
@@ -68,8 +68,8 @@ Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a 
 # Függelék: Kontextus és Interjú Dosszié az AI Modell Számára
 
 ### 1. Kiemelkedő Eredmények & Fő Projektek
-* **Greenfield Platform Felépítés & Átadás (Open Systems):** 6 példányos ServiceNow környezet felépítése az alapoktól, megerősített biztonsági kontrollok, szerepkör-hierarchiák, RBAC és Update Set deployment folyamatok kialakítása. Standardizált klónozási runbookok és release-gate-ek kidolgozása, valamint a szakági példányok strukturált operatív átadása külső fejlesztőpartnereknek.
-* **Vállalati Kiválás (Corporate Spin-off) & Rendszerközi Adatmigráció (Open Systems -> Ontinue):** A platform szétválasztásának, címtár-szinkronizációjának és relációs adatmigrációinak vezetése az Ontinue operatív kiválása során, éles leállás nélkül.
+* **ServiceNow Platform Kiépítés & Átadás (Open Systems):** 6 példányos ServiceNow környezet konfigurálása a kiválás során; 4 példányon kezdeti alapbeállítások (Azure SSO, alapvető csoportbeállítások és átadás külső fejlesztőpartnereknek) készültek, míg a közvetlen napi architekturális tulajdonlás az elsődleges éles és sub-prod IT Service Desk példányokra összpontosult.
+* **Vállalati Kiválás (Corporate Spin-off) & Rendszerközi Adatmigráció (Open Systems -> Ontinue):** Együttműködés a műszaki vezetéssel az Ontinue kiválása során a platform szétválasztásában, közvetlenül megtervezve és végrehajtva a ServiceNow környezet technikai leválasztását és adatmigrációját.
 * **Technikai Vezetés & Mentorálás (Ontinue):** 1–2 szenior ServiceNow mérnökből álló magcsapat szakmai vezetése és mentorálása; architekturális szabványok, ticket-scoping és kódellenőrzések (code review) irányítása, valamint a szállítás koordinálása egy 8+ fős külső partneri fejlesztői ökoszisztémával.
 * **Automatizált HR Életciklus & Integrációk:** Teljes körű (end-to-end) felhasználói be- és kiléptetési szinkronizációs folyamatok kiépítése a BambooHR, ServiceNow és Microsoft Entra ID (Azure AD) összekapcsolásával Power Automate és REST webhookok segítségével.
 * **Vállalati AI & Munkafolyamat-automatizálás (n8n):** Aszinkron n8n LLM munkafolyamatok tervezése intelligens API-k és strukturált promptok láncolásával az automatizált deduplikációhoz, feladatsorok végrehajtásához és nagy volumenű adatgazdagításhoz.

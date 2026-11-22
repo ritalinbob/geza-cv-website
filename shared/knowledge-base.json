@@ -6,7 +6,7 @@
     "email": "ghorvath@gmail.com",
     "phone": "+43 660 108 2050",
     "linkedin": "https://www.linkedin.com/in/geza-horvath-16288a185",
-    "summary": "Lead ServiceNow Architect & Technical Lead with 8+ years driving platform architecture, enterprise integrations, and modern workflow automation. Proven track record bootstrapping a greenfield 6-instance ecosystem, directing full infrastructure decoupling through corporate spin-off, and governing core ITSM, CMDB/Discovery, HAM, and Vulnerability Response environments. Hands-on pioneer in agentic AI tooling—architecting custom in-house VS Code MCP toolchains adopted team-wide to accelerate delivery and engineering automated n8n LLM workflows that eliminate operational overhead. Based in the Vienna area (Pressbaum) with valid Austrian work status, ready for hybrid or on-site engagement.",
+    "summary": "Lead ServiceNow Architect & Technical Lead with 8+ years driving platform architecture, enterprise integrations, and modern workflow automation. Configured and provisioned a 6-instance ServiceNow estate, focusing architectural ownership on the primary production and sub-production IT Service Desk environments while establishing Azure SSO and access baselines across remaining instances. Engineered local VS Code development workflows and custom Model Context Protocol (MCP) integrations, enabling direct extraction and analysis of ServiceNow instance context with LLMs for streamlined development, alongside automated n8n LLM workflows to reduce operational overhead. Based in the Vienna area (Pressbaum) with valid Austrian work status, ready for hybrid or on-site engagement.",
     "years_experience_servicenow": "8+ years (since 2018 in core ServiceNow development, technical leadership, and architecture)",
     "title_correction_note": "Accurate headline title is Lead ServiceNow Architect & Technical Lead. Current role at Ontinue is ServiceNow Architect & Tech Lead."
   },
@@ -19,7 +19,7 @@
   "frequently_asked_recruiter_questions": [
     {
       "q": "How does Geza develop software?",
-      "a": "Géza develops software using modern agentic and automation-driven engineering workflows. In VS Code, he leverages an in-house agentic AI toolchain with custom MCP (Model Context Protocol) API wrappers for schema validation, automated GlideScript code generation, and code review automation. He emphasizes clean architecture, automated regression testing (ATF), and reproducible deployment pipelines."
+      "a": "Géza builds practical local VS Code workflows connecting IDE tools and LLMs to ServiceNow metadata and schemas via custom Model Context Protocol (MCP) integrations for faster debugging, context extraction, and code inspection. He emphasizes clean architecture, automated regression testing (ATF), and reproducible deployment pipelines."
     },
     {
       "q": "What ServiceNow modules does Geza have experience with?",
@@ -27,7 +27,7 @@
     },
     {
       "q": "What is Geza most proud of?",
-      "a": "Géza is most proud of bootstrapping a greenfield 6-instance ServiceNow ecosystem from scratch, directing full platform decoupling and relational data migrations during the corporate spin-off into Ontinue without production downtime, and pioneering an in-house VS Code MCP agentic toolchain adopted team-wide to accelerate platform delivery."
+      "a": "Géza is most proud of partnering with engineering leadership on separation planning and directly designing and executing the ServiceNow platform decoupling and data migration during the Ontinue spin-off from Open Systems, configuring and provisioning the 6-instance ServiceNow estate (establishing Azure SSO and basic group baselines on 4 instances while owning the primary IT Service Desk production and sub-production environments), and engineering practical VS Code MCP workflows for LLM-assisted ServiceNow development."
     },
     {
       "q": "What is Geza's approach to Out-of-the-Box (OOB) vs. custom code?",
@@ -43,7 +43,7 @@
     },
     {
       "q": "What integrations has he built?",
-      "a": "Géza has architected and delivered bi-directional scripted REST and webhook integrations connecting ServiceNow with Workday, Jira, Coveo AI Search, Cornerstone, BambooHR, and Microsoft Entra ID (Azure AD) via Power Automate, as well as ETL and data synchronization pipelines via Cloudomation (Python) and Jitterbit into corporate data warehouses."
+      "a": "Géza has architected and delivered bi-directional scripted REST and webhook integrations connecting ServiceNow with Workday, Jira, Coveo AI Search, Cornerstone, BambooHR, and Microsoft Entra ID (Azure AD) via Power Automate, and collaborated with integration engineers to build and maintain bidirectional data flows and ETL syncs between ServiceNow, middleware (Cloudomation, Jitterbit), and corporate data warehouses."
     },
     {
       "q": "What certifications does he hold?",
@@ -59,12 +59,12 @@
       "profile": {
         "title": "Lead ServiceNow Architect & Technical Lead",
         "location": "Raum Wien (Pressbaum), Österreich",
-        "summary": "Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Nachweisliche Erfolge beim Aufbau einer Greenfield-Landschaft über 6 Instanzen, der vollständigen technischen Entflechtung im Zuge eines Corporate Spin-offs sowie der Governance von ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze."
+        "summary": "Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Konfiguration und Bereitstellung einer 6-Instanzen-ServiceNow-Landschaft mit architektonischem Fokus auf die produktiven und Sub-Produktions-IT-Service-Desk-Umgebungen sowie Baseline-Einrichtung von Azure-SSO und Gruppenberechtigungen für weitere Instanzen. Entwicklung lokaler VS-Code-Entwicklungs-Pipelines und MCP-Integrationen (Model Context Protocol), um ServiceNow-Instanzkontexte direkt für LLM-gestützte Analysen und Entwicklungen bereitzustellen. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze."
       },
       "frequently_asked_recruiter_questions": [
         {
           "q": "Wie entwickelt Geza Software?",
-          "a": "Geza entwickelt Software mit modernen agentenbasierten und automatisierten Engineering-Workflows. In VS Code nutzt er eine interne Agentic-AI-Toolchain auf Basis maßgeschneiderter MCP (Model Context Protocol) API-Wrapper für Schema-Validierung, automatisierte Code-Reviews und GlideScript-Generierung. Er legt großen Wert auf saubere Architektur, automatisierte ATF-Regressionstests und reproduzierbare Release-Pipelines."
+          "a": "Geza nutzt praxisnahe lokale VS-Code-Workflows, die IDE-Tools und LLMs über MCP-Integrationen (Model Context Protocol) mit ServiceNow-Metadaten und -Schemas verbinden – für schnelleres Debugging, Kontextextraktion und Code-Inspektion. Er legt großen Wert auf saubere Architektur, automatisierte ATF-Regressionstests und reproduzierbare Release-Pipelines."
         },
         {
           "q": "Mit welchen ServiceNow-Modulen hat Geza Erfahrung?",
@@ -72,7 +72,7 @@
         },
         {
           "q": "Worauf ist Geza am meisten stolz?",
-          "a": "Geza ist besonders stolz auf den Aufbau einer Greenfield-Landschaft über 6 Instanzen von Grund auf, die federführende Steuerung der Plattform-Entflechtung im Zuge des Corporate Spin-offs zu Ontinue ohne produktive Ausfallzeiten sowie die Konzeption einer internen VS-Code-MCP-Toolchain, die unternehmensweit eingeführt wurde."
+          "a": "Geza ist besonders stolz auf die enge Abstimmung mit dem Management bei der technischen Entkopplung und Datenmigration der ServiceNow-Landschaft während der Ausgliederung von Ontinue aus Open Systems, auf die Konfiguration und Bereitstellung der 6-Instanzen-ServiceNow-Landschaft (inklusive Azure-SSO- und Gruppen-Baselines für 4 Instanzen sowie architektonischem Fokus auf die produktiven und Sub-Produktions-IT-Service-Desk-Umgebungen) und auf die Entwicklung lokaler VS-Code-MCP-Workflows für LLM-gestützte Analysen und Entwicklungen."
         },
         {
           "q": "Wie ist Gezas Ansatz bei Standard (OOB) vs. individuellem Code?",
@@ -101,12 +101,12 @@
       "profile": {
         "title": "Lead ServiceNow Architekt & Technikai Vezető",
         "location": "Bécs környéke (Pressbaum), Ausztria",
-        "summary": "Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Bizonyított eredmények egy 6 példányos zöldmezős (greenfield) ökoszisztéma alapoktól történő felépítésében, a teljes infrastruktúra-szétválasztás irányításában vállalati kiválás (corporate spin-off) során, valamint kiemelt ITSM, CMDB/Discovery, HAM és Vulnerability Response környezetek governance-ében."
+        "summary": "Lead ServiceNow Architekt & Technikai Vezető több mint 8 év tapasztalattal a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Egy 6 példányos ServiceNow környezet konfigurálása és kiépítése, architekturális fókusszal az éles és alárendelt (sub-prod) IT Service Desk környezetekre, miközben a többi példányon Azure SSO és jogosultsági alapbeállítások kerültek kialakításra. Helyi VS Code fejlesztési munkafolyamatok és egyedi Model Context Protocol (MCP) integrációk kialakítása a ServiceNow példánykontextusok közvetlen LLM-alapú elemzéséhez."
       },
       "frequently_asked_recruiter_questions": [
         {
           "q": "Hogyan fejleszt szoftvert Géza?",
-          "a": "Géza modern Agentic AI és automatizálás-vezérelt mérnöki munkafolyamatokat alkalmaz. VS Code környezetben egy belső Agentic AI eszköztárat és egyedi MCP (Model Context Protocol) API wrapper-eket használ sémavalidációra, automatizált GlideScript kódgenerálásra és kódellenőrzésre. Kiemelt figyelmet fordít a tiszta architektúrára, az automatizált regressziós tesztelésre (ATF) és a reprodukálható kiadási folyamatokra."
+          "a": "Géza gyakorlati helyi VS Code munkafolyamatokkal dolgozik, amelyek egyedi Model Context Protocol (MCP) integrációkon keresztül kapcsolják össze az IDE-eszközöket és LLM-eket a ServiceNow metaadataival és sémáival a gyorsabb hibakeresés, kontextuskinyerés és kódvizsgálat érdekében. Kiemelt figyelmet fordít a tiszta architektúrára, az automatizált regressziós tesztelésre (ATF) és a reprodukálható kiadási folyamatokra."
         },
         {
           "q": "Milyen ServiceNow modulokban van tapasztalata Gézának?",
@@ -114,7 +114,7 @@
         },
         {
           "q": "Mire a legbüszkébb Géza?",
-          "a": "Géza a legbüszkébb a zöldmezős, 6 példányos ServiceNow ökoszisztéma alapoktól történő felépítésére, a platform-szétválasztás és adatmigrációk éles leállás nélküli levezénylésére az Ontinue kiválása (corporate spin-off) során, valamint a csapatszinten bevezetett belső VS Code MCP Agentic eszköztár megalkotására."
+          "a": "Géza arra a legbüszkébb, hogy a műszaki vezetéssel együttműködve közvetlenül megtervezte és végrehajtotta a ServiceNow platform leválasztását és adatmigrációját az Ontinue Open Systems-ből történő kiválása során, konfigurálta a 6 példányos ServiceNow környezetet (4 példányon Azure SSO és alapbeállítások kialakításával, miközben az elsődleges éles és sub-prod IT Service Desk környezeteket irányította), valamint gyakorlati VS Code MCP munkafolyamatokat épített ki az LLM-alapú ServiceNow fejlesztéshez."
         },
         {
           "q": "Mi Géza hozzáállása az Out-of-the-Box (OOB) és az egyedi kód kérdéséhez?",

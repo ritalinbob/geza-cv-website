@@ -5,7 +5,7 @@ Raum Wien (Pressbaum), Österreich • +43 660 108 2050 • ghorvath@gmail.com �
 ---
 
 ### Kurzprofil
-Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Nachweisliche Erfolge beim Aufbau einer Greenfield-Landschaft über 6 Instanzen, der vollständigen technischen Entflechtung im Zuge eines Corporate Spin-offs sowie der Governance von ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen. Fundierte Praxis in moderner Agentic-AI-Entwicklung: Konzeption und unternehmensweiter Rollout interner VS-Code-MCP-Toolchains zur Entwicklungsbeschleunigung sowie Entwicklung automatisierter n8n-LLM-Workflows zur signifikanten Reduktion des operativen Aufwands. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze.
+Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Konfiguration und Bereitstellung einer 6-Instanzen-ServiceNow-Landschaft mit architektonischem Fokus auf die produktiven und Sub-Produktions-IT-Service-Desk-Umgebungen sowie Baseline-Einrichtung von Azure-SSO und Gruppenberechtigungen für weitere Instanzen. Entwicklung lokaler VS-Code-Entwicklungs-Pipelines und MCP-Integrationen (Model Context Protocol), um ServiceNow-Instanzkontexte direkt für LLM-gestützte Analysen und Entwicklungen bereitzustellen, ergänzt durch automatisierte n8n-LLM-Workflows zur Reduktion des operativen Aufwands. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze.
 
 ---
 
@@ -24,15 +24,15 @@ Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Platt
 **ServiceNow Architect & Tech Lead** | **02/2023 – Heute**
 * **Plattform-Governance & IT-Sicherheit:** Gesamtverantwortung für die technische Roadmap, Plattform-Governance und kontinuierliche Upgrades der Enterprise-Instanzen; Etablierung von CMDB/Discovery-Baselines sowie Implementierung von Vulnerability-Response-Pipelines mit nativer Einbindung von Tenable- und Nessus-Scannern.
 * **Fachliche Führung & Delivery:** Fachliche Leitung und Mentoring eines Kernteams aus 1–2 Senior ServiceNow Engineers; Steuerung von Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern.
-* **Agentic Developer Tooling:** Konzeption und Bereitstellung einer internen VS-Code-Agentic-AI-Toolchain auf Basis maßgeschneiderter MCP-API-Wrapper; signifikante Verkürzung von Entwicklungszyklen durch automatisierte Code-Reviews, Schema-Validierung und GlideScript-Generierung.
+* **Developer Tooling & MCP-Workflows:** Entwicklung lokaler VS-Code-Entwicklungs-Pipelines und MCP-Integrationen (Model Context Protocol), um ServiceNow-Instanzkontexte, Metadaten und Schemas direkt für LLM-gestützte Analysen, schnelleres Debugging und Code-Inspektion bereitzustellen.
 * **Enterprise-KI & Workflow-Automatisierung:** Architektur asynchroner n8n-LLM-Workflows mit strukturierter Prompt-Verkettung moderner KI-APIs zur automatisierten Deduplizierung, Abarbeitung von Aufgaben-Queues und intelligenten Datenanreicherung großer Datenbestände.
 * **Automatisiertes Identity Lifecycle Management:** Konzeption und Implementierung robuster End-to-End-Prozesse für das Mitarbeiter-On- und -Offboarding mit nahtloser Synchronisierung zwischen BambooHR, ServiceNow und Microsoft Entra ID (Azure AD) via Power Automate und REST-Webhooks.
-* **Datenintegration & Middleware:** Betreuung und Optimierung hochverfügbarer Datensynchronisations- und ETL-Pipelines mit Cloudomation (Python) und Jitterbit zur Anbindung nachgelagerter Corporate Data Warehouses.
+* **Datenintegration & Middleware:** Zusammenarbeit mit Integrationsspezialisten zur Umsetzung und Betreuung bidirektionaler Datenflüsse zwischen ServiceNow, Middleware (Cloudomation, Jitterbit) und nachgelagerten Data Warehouses.
 
 #### **Open Systems** | *Wien (Hybrid)*
 **ServiceNow Architect – Business Applications** | **05/2022 – 02/2023**
-* **Greenfield-Architektur:** Konzeption und Aufbau der zentralen ServiceNow-Landschaft über 6 Instanzen von Grund auf; Implementierung robuster Sicherheitskontrollen, Rollenhierarchien, Berechtigungskonzepte (RBAC) sowie Update-Set-Deployment-Pipelines.
-* **Umsetzung des Corporate Spin-offs:** Federführende Steuerung der Plattform-Entflechtung, Verzeichnis-Synchronisation und relationalen Datenmigrationen im Rahmen der Ausgründung von Ontinue – vollständig ohne produktive Ausfallzeiten.
+* **ServiceNow-Instanzbereitstellung:** Konfiguration und Bereitstellung einer 6-Instanzen-ServiceNow-Landschaft im Zuge der Ausgliederung; 4 Instanzen erhielten eine initiale Baseline-Konfiguration (Azure-SSO, grundlegende Gruppenberechtigungen und Übergabe), während der architektonische Fokus auf den primären produktiven und Sub-Produktions-IT-Service-Desk-Umgebungen lag.
+* **Corporate-Spin-Off-Umsetzung:** Technische Entkopplung und Datenmigration der ServiceNow-Landschaft während der Ausgliederung von Ontinue aus Open Systems in enger Abstimmung mit dem Management.
 * **Instanzen-Governance & Übergabe:** Erstellung standardisierter Klon-Runbooks und Release-Gates sowie strukturierte operative Übergabe von Fachbereichs-Instanzen an externe Partner.
 
 #### **Tricentis GmbH** | *Wien, Österreich*
@@ -68,8 +68,8 @@ Lead ServiceNow Architect & Technical Lead mit über 8 Jahren Erfahrung in Platt
 # Anhang: Kontext & Interview-Dossier für das KI-Modell
 
 ### 1. Herausragende Erfolge & Schlüsselprojekte
-* **Greenfield-Plattformstart & Übergabe (Open Systems):** Konzeption und Aufbau der zentralen ServiceNow-Landschaft über 6 Instanzen von Grund auf mit Sicherheitskontrollen, Rollenhierarchien, RBAC und Update-Set-Deployment-Pipelines. Erstellung standardisierter Klon-Runbooks und Release-Gates sowie strukturierte operative Übergabe von Fachbereichs-Instanzen an externe Entwicklungspartner.
-* **Corporate Spin-off & systemübergreifende Datenmigration (Open Systems -> Ontinue):** Federführende Steuerung der Plattform-Entflechtung, Verzeichnis-Synchronisation und relationalen Datenmigrationen im Rahmen der Ausgründung von Ontinue – vollständig ohne produktive Ausfallzeiten.
+* **ServiceNow-Plattformbereitstellung & Übergabe (Open Systems):** Konfiguration und Bereitstellung einer 6-Instanzen-ServiceNow-Landschaft im Zuge der Ausgliederung; 4 Instanzen erhielten eine initiale Baseline-Konfiguration (Azure-SSO, grundlegende Gruppenberechtigungen und Übergabe an externe Entwicklungspartner), während die direkte architektonische Verantwortung auf den primären produktiven und Sub-Produktions-IT-Service-Desk-Instanzen lag.
+* **Corporate Spin-off & systemübergreifende Datenmigration (Open Systems -> Ontinue):** Technische Entkopplung und Datenmigration der ServiceNow-Landschaft während der Ausgliederung von Ontinue aus Open Systems in enger Abstimmung mit dem Management.
 * **Fachliche Führung & Delivery (Ontinue):** Fachliche Leitung und Mentoring eines Kernteams aus 1–2 Senior ServiceNow Engineers; Steuerung von Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern.
 * **Automatisiertes Identity Lifecycle Management:** Konzeption und Implementierung robuster End-to-End-Prozesse für das Mitarbeiter-On- und -Offboarding mit nahtloser Synchronisierung zwischen BambooHR, ServiceNow und Microsoft Entra ID (Azure AD) via Power Automate und REST-Webhooks.
 * **Enterprise-KI & Workflow-Automatisierung (n8n):** Architektur asynchroner n8n-LLM-Workflows mit strukturierter Prompt-Verkettung moderner KI-APIs zur automatisierten Deduplizierung, Abarbeitung von Aufgaben-Queues und intelligenten Datenanreicherung großer Datenbestände.

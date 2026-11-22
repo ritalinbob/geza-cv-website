@@ -54,8 +54,8 @@ const TRANSLATIONS = {
     // Section 1: About
     section_about: "About",
     section_about_subtitle: "Platform Architecture & Agentic Automation",
-    about_p1: "<strong>Lead ServiceNow Architect &amp; Technical Lead with 8+ years</strong> driving platform architecture, enterprise integrations, and modern workflow automation. Proven track record bootstrapping a <strong>greenfield 6-instance ecosystem</strong>, directing full infrastructure decoupling through corporate spin-off, and governing core <strong>ITSM, CMDB/Discovery, HAM, and Vulnerability Response</strong> environments.",
-    about_p2: "Hands-on pioneer in agentic AI tooling—architecting custom in-house <strong>VS Code MCP toolchains</strong> adopted team-wide to accelerate delivery and engineering automated <strong>n8n LLM workflows</strong> that eliminate operational overhead. Based in the Vienna area (Pressbaum) with valid Austrian work status, ready for hybrid or on-site engagement.",
+    about_p1: "<strong>Lead ServiceNow Architect &amp; Technical Lead with 8+ years</strong> driving platform architecture, enterprise integrations, and modern workflow automation. Configured and provisioned a 6-instance ServiceNow estate, focusing architectural ownership on the primary production and sub-production IT Service Desk environments while establishing Azure SSO and access baselines across remaining instances. Core platform governance spans <strong>ITSM, CMDB/Discovery, HAM, and Vulnerability Response</strong>.",
+    about_p2: "Engineered local VS Code development workflows and custom Model Context Protocol (MCP) integrations, enabling direct extraction and analysis of ServiceNow instance context with LLMs for streamlined development. Also built automated <strong>n8n LLM workflows</strong> to reduce manual operational overhead. Based in the Vienna area (Pressbaum) with valid Austrian work status, ready for hybrid or on-site engagement.",
 
     // Section 2: Experience
     section_experience: "Experience",
@@ -64,16 +64,16 @@ const TRANSLATIONS = {
     exp_ontinue_loc: "Vienna (Remote/Hybrid)",
     exp_ontinue_b1: "<strong>Platform Ownership &amp; Security:</strong> Direct technical roadmap, platform governance, and continuous upgrades across enterprise IT instances; engineered CMDB/Discovery baselines and Vulnerability Response pipelines integrating Tenable and Nessus scanners.",
     exp_ontinue_b2: "<strong>Technical Leadership &amp; Mentoring:</strong> Technically guide and mentor a core team of 1&ndash;2 senior ServiceNow engineers; steer architectural standards, ticket scoping, and code reviews while coordinating delivery within an 8+ developer external partner ecosystem.",
-    exp_ontinue_b3: "<strong>Agentic Developer Tooling:</strong> Conceived and deployed an in-house VS Code agentic AI toolchain using custom MCP API wrappers, cutting development cycle times via automated code reviews, schema validation, and GlideScript generation.",
+    exp_ontinue_b3: "<strong>Developer Tooling &amp; MCP Workflows:</strong> Built practical local VS Code workflows and custom Model Context Protocol (MCP) integrations connecting IDE tools and LLMs to ServiceNow metadata and schemas for faster debugging, code inspection, and GlideScript development.",
     exp_ontinue_b4: "<strong>Enterprise AI &amp; Workflow Automation:</strong> Architected asynchronous n8n LLM workflows chaining intelligence APIs with structured prompts, automating deduplication, task queue execution, and high-volume record enrichment.",
     exp_ontinue_b5: "<strong>Automated HR Lifecycle &amp; Integrations:</strong> Engineered end-to-end user onboarding and offboarding synchronization pipelines connecting BambooHR, ServiceNow, and Microsoft Entra ID (Azure AD) via Power Automate and REST webhooks.",
-    exp_ontinue_b6: "<strong>Data Integration &amp; Middleware:</strong> Maintain high-reliability data synchronization and ETL pipelines across Cloudomation (Python) and Jitterbit into downstream corporate data warehouses.",
+    exp_ontinue_b6: "<strong>Data Integration &amp; Middleware:</strong> Collaborated with integration engineers to build and maintain bidirectional data flows and ETL syncs between ServiceNow, middleware (Cloudomation, Jitterbit), and corporate data warehouses.",
 
     exp_open_period: "2022-05 &mdash; 2023-02",
     exp_open_role: "ServiceNow Architect – Business Applications · Open Systems",
     exp_open_loc: "Vienna (Hybrid)",
-    exp_open_b1: "<strong>Greenfield Architecture:</strong> Bootstrapped core ServiceNow landscape across 6 instances from scratch, establishing hardened security controls, role hierarchies, access controls (RBAC), and update-set deployment pipelines.",
-    exp_open_b2: "<strong>Corporate Spin-Off Execution:</strong> Led platform decoupling, directory synchronization, and relational data migrations required for the operational spin-off into Ontinue without production downtime.",
+    exp_open_b1: "<strong>Multi-Instance Provisioning:</strong> Configured and provisioned a 6-instance ServiceNow estate during the spin-off, establishing Azure SSO, basic group setups, RBAC baselines, and update-set pipelines while centering architectural ownership on the primary production and sub-production IT Service Desk instances.",
+    exp_open_b2: "<strong>Corporate Spin-Off Execution:</strong> Partnered with engineering leadership on platform separation during the Ontinue spin-off from Open Systems, directly designing and executing the decoupling and data migration of the ServiceNow estate.",
     exp_open_b3: "<strong>Instance Governance &amp; Handover:</strong> Established baseline cloning runbooks and release gates, executing a structured operational handover of auxiliary departmental instances to external partners.",
 
     exp_tri_period: "2018-08 &mdash; 2022-04",
@@ -198,8 +198,8 @@ const TRANSLATIONS = {
     // Abschnitt 1: Über mich
     section_about: "Über mich",
     section_about_subtitle: "Plattformarchitektur & Agentic Automation",
-    about_p1: "<strong>Lead ServiceNow Architect &amp; Technical Lead mit über 8 Jahren Erfahrung</strong> in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Nachweisliche Erfolge beim Aufbau einer <strong>Greenfield-Landschaft über 6 Instanzen</strong>, der vollständigen technischen Entflechtung im Zuge eines Corporate Spin-offs sowie der Governance von <strong>ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen</strong>.",
-    about_p2: "Fundierte Praxis in moderner Agentic-AI-Entwicklung: Konzeption und unternehmensweiter Rollout interner <strong>VS-Code-MCP-Toolchains</strong> zur Entwicklungsbeschleunigung sowie Entwicklung automatisierter <strong>n8n-LLM-Workflows</strong> zur signifikanten Reduktion des operativen Aufwands. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze.",
+    about_p1: "<strong>Lead ServiceNow Architect &amp; Technical Lead mit über 8 Jahren Erfahrung</strong> in Plattformarchitektur, Enterprise-Integrationen und moderner Prozessautomatisierung. Konfiguration und Bereitstellung einer 6-Instanzen-ServiceNow-Landschaft mit architektonischem Fokus auf die produktiven und Sub-Produktions-IT-Service-Desk-Umgebungen sowie Baseline-Einrichtung von Azure-SSO und Gruppenberechtigungen für weitere Instanzen. Die Plattform-Governance umfasst <strong>ITSM-, CMDB/Discovery-, HAM- und Vulnerability-Response-Umgebungen</strong>.",
+    about_p2: "Entwicklung lokaler VS-Code-Entwicklungs-Pipelines und MCP-Integrationen (Model Context Protocol), um ServiceNow-Instanzkontexte direkt für LLM-gestützte Analysen und Entwicklungen bereitzustellen. Ergänzend Umsetzung automatisierter <strong>n8n-LLM-Workflows</strong> zur Reduktion des operativen Aufwands. Wohnhaft im Raum Wien (Pressbaum) mit uneingeschränkter Arbeitserlaubnis für Österreich; verfügbar für hybride oder Vor-Ort-Einsätze.",
 
     // Abschnitt 2: Berufserfahrung
     section_experience: "Berufserfahrung",
@@ -208,16 +208,16 @@ const TRANSLATIONS = {
     exp_ontinue_loc: "Wien (Remote/Hybrid)",
     exp_ontinue_b1: "<strong>Plattform-Governance &amp; IT-Sicherheit:</strong> Gesamtverantwortung für die technische Roadmap, Plattform-Governance und kontinuierliche Upgrades der Enterprise-Instanzen; Etablierung von CMDB/Discovery-Baselines sowie Implementierung von Vulnerability-Response-Pipelines mit nativer Einbindung von Tenable- und Nessus-Scannern.",
     exp_ontinue_b2: "<strong>Fachliche Führung &amp; Delivery:</strong> Fachliche Leitung und Mentoring eines Kernteams aus 1&ndash;2 Senior ServiceNow Engineers; Steuerung von Code-Reviews, Ticket-Scoping und Architektur-Governance in enger Abstimmung mit dem Head of Business Applications und über 8 externen Entwicklern.",
-    exp_ontinue_b3: "<strong>Agentic Developer Tooling:</strong> Konzeption und Bereitstellung einer internen VS-Code-Agentic-AI-Toolchain auf Basis maßgeschneiderter MCP-API-Wrapper; signifikante Verkürzung von Entwicklungszyklen durch automatisierte Code-Reviews, Schema-Validierung und GlideScript-Generierung.",
+    exp_ontinue_b3: "<strong>Developer Tooling &amp; MCP-Workflows:</strong> Entwicklung lokaler VS-Code-Workflows und eigener Model-Context-Protocol-(MCP)-Integrationen zur Anbindung von IDE-Tools und LLMs an ServiceNow-Metadaten und -Schemas für schnelleres Debugging, Code-Inspektion und GlideScript-Entwicklung.",
     exp_ontinue_b4: "<strong>Enterprise-KI &amp; Workflow-Automatisierung:</strong> Architektur asynchroner n8n-LLM-Workflows mit strukturierter Prompt-Verkettung moderner KI-APIs zur automatisierten Deduplizierung, Abarbeitung von Aufgaben-Queues und intelligenten Datenanreicherung großer Datenbestände.",
     exp_ontinue_b5: "<strong>Automatisiertes Identity Lifecycle Management:</strong> Konzeption und Implementierung robuster End-to-End-Prozesse für das Mitarbeiter-On- und -Offboarding mit nahtloser Synchronisierung zwischen BambooHR, ServiceNow und Microsoft Entra ID (Azure AD) via Power Automate und REST-Webhooks.",
-    exp_ontinue_b6: "<strong>Datenintegration &amp; Middleware:</strong> Betreuung und Optimierung hochverfügbarer Datensynchronisations- und ETL-Pipelines mit Cloudomation (Python) und Jitterbit zur Anbindung nachgelagerter Corporate Data Warehouses.",
+    exp_ontinue_b6: "<strong>Datenintegration &amp; Middleware:</strong> Zusammenarbeit mit Integrationsspezialisten zur Umsetzung und Betreuung bidirektionaler Datenflüsse zwischen ServiceNow, Middleware (Cloudomation, Jitterbit) und nachgelagerten Data Warehouses.",
 
     exp_open_period: "2022-05 &mdash; 2023-02",
     exp_open_role: "ServiceNow Architect – Business Applications · Open Systems",
     exp_open_loc: "Wien (Hybrid)",
-    exp_open_b1: "<strong>Greenfield-Architektur:</strong> Konzeption und Aufbau der zentralen ServiceNow-Landschaft über 6 Instanzen von Grund auf; Implementierung robuster Sicherheitskontrollen, Rollenhierarchien, Berechtigungskonzepte (RBAC) sowie Update-Set-Deployment-Pipelines.",
-    exp_open_b2: "<strong>Umsetzung des Corporate Spin-offs:</strong> Federführende Steuerung der Plattform-Entflechtung, Verzeichnis-Synchronisation und relationalen Datenmigrationen im Rahmen der Ausgründung von Ontinue &ndash; vollständig ohne produktive Ausfallzeiten.",
+    exp_open_b1: "<strong>Multi-Instanz-Bereitstellung:</strong> Konfiguration und Bereitstellung einer 6-Instanzen-ServiceNow-Landschaft im Zuge der Ausgliederung mit Baseline-Einrichtung von Azure-SSO, Gruppenberechtigungen (RBAC) und Update-Set-Pipelines sowie architektonischem Fokus auf die produktiven und Sub-Produktions-IT-Service-Desk-Instanzen.",
+    exp_open_b2: "<strong>Corporate-Spin-Off-Umsetzung:</strong> Technische Entkopplung und Datenmigration der ServiceNow-Landschaft während der Ausgliederung von Ontinue aus Open Systems in enger Abstimmung mit dem Management.",
     exp_open_b3: "<strong>Instanzen-Governance &amp; Übergabe:</strong> Erstellung standardisierter Klon-Runbooks und Release-Gates sowie strukturierte operative Übergabe von Fachbereichs-Instanzen an externe Partner.",
 
     exp_tri_period: "2018-08 &mdash; 2022-04",
@@ -342,8 +342,8 @@ const TRANSLATIONS = {
     // 1. szakasz: Rólam
     section_about: "Rólam",
     section_about_subtitle: "Platformarchitektúra & Agentic Automatizáció",
-    about_p1: "<strong>Lead ServiceNow Architekt &amp; Technikai Vezető több mint 8 év tapasztalattal</strong> a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Bizonyított eredmények egy <strong>6 példányos zöldmezős (greenfield) ökoszisztéma</strong> alapoktól történő felépítésében, a teljes infrastruktúra-szétválasztás irányításában vállalati kiválás (corporate spin-off) során, valamint kiemelt <strong>ITSM, CMDB/Discovery, HAM és Vulnerability Response</strong> környezetek governance-ében.",
-    about_p2: "Gyakorlati úttörő az agentic AI fejlesztői megoldásokban—egyedi belső <strong>VS Code MCP eszköztárak</strong> tervezésével, melyeket a teljes csapat átvett a szállítási folyamatok felgyorsítására, valamint az operatív adminisztrációs terheket kiváltó automatizált <strong>n8n LLM munkafolyamatok</strong> megvalósításával. Bécs környékén (Pressbaum) él érvényes osztrák munkavállalási státusszal, készen hibrid vagy helyszíni munkavégzésre.",
+    about_p1: "<strong>Lead ServiceNow Architekt &amp; Technikai Vezető több mint 8 év tapasztalattal</strong> a platformarchitektúra, vállalati integrációk és modern munkafolyamat-automatizálás területén. Egy 6 példányos ServiceNow környezet konfigurálása és kiépítése, architekturális fókusszal az éles és alárendelt (sub-prod) IT Service Desk környezetekre, miközben a többi példányon Azure SSO és jogosultsági alapbeállítások kerültek kialakításra. A platform-governance kiterjed az <strong>ITSM, CMDB/Discovery, HAM és Vulnerability Response</strong> modulokra.",
+    about_p2: "Helyi VS Code fejlesztési munkafolyamatok és egyedi Model Context Protocol (MCP) integrációk kialakítása, lehetővé téve a ServiceNow példánykontextusok közvetlen kinyerését és LLM-alapú elemzését a hatékonyabb fejlesztés érdekében. Emellett automatizált <strong>n8n LLM munkafolyamatok</strong> megvalósítása az operatív adminisztrációs terhek csökkentésére. Bécs környékén (Pressbaum) él érvényes osztrák munkavállalási státusszal, készen hibrid vagy helyszíni munkavégzésre.",
 
     // 2. szakasz: Szakmai tapasztalat
     section_experience: "Szakmai Tapasztalat",
@@ -352,16 +352,16 @@ const TRANSLATIONS = {
     exp_ontinue_loc: "Bécs (Remote/Hibrid)",
     exp_ontinue_b1: "<strong>Platform-governance &amp; IT-biztonság:</strong> A technikai ütemterv, platform-governance és folyamatos frissítések (upgrades) teljes körű irányítása a vállalati IT példányokon; CMDB/Discovery alapok, valamint Tenable és Nessus szkennereket integráló Vulnerability Response folyamatok kiépítése.",
     exp_ontinue_b2: "<strong>Technikai Vezetés &amp; Mentorálás:</strong> 1&ndash;2 szenior ServiceNow mérnökből álló magcsapat szakmai vezetése és mentorálása; architekturális szabványok, ticket-scoping és kódellenőrzések (code review) irányítása, valamint a szállítás koordinálása egy 8+ fős külső partneri fejlesztői ökoszisztémával.",
-    exp_ontinue_b3: "<strong>Agentic Developer Tooling:</strong> Egyedi MCP API wrapper-ekre épülő belső VS Code Agentic AI eszköztár megtervezése és bevezetése, a fejlesztési ciklusidők jelentős csökkentése automatizált kódellenőrzéssel, sémavalidációval és GlideScript generálással.",
+    exp_ontinue_b3: "<strong>Fejlesztői Eszköztár &amp; MCP Munkafolyamatok:</strong> Gyakorlati helyi VS Code munkafolyamatok és egyedi Model Context Protocol (MCP) integrációk kiépítése, amelyek az IDE-eszközöket és LLM-eket a ServiceNow metaadataihoz és sémáihoz kapcsolják a gyorsabb hibakeresés, kódvizsgálat és GlideScript fejlesztés érdekében.",
     exp_ontinue_b4: "<strong>Vállalati AI &amp; Munkafolyamat-automatizálás:</strong> Aszinkron n8n LLM munkafolyamatok tervezése intelligens API-k és strukturált promptok láncolásával az automatizált deduplikációhoz, feladatsorok (task queues) végrehajtásához és nagy volumenű adatgazdagításhoz.",
     exp_ontinue_b5: "<strong>Automatizált HR Életciklus &amp; Integrációk:</strong> Teljes körű (end-to-end) felhasználói be- és kiléptetési szinkronizációs folyamatok kiépítése a BambooHR, ServiceNow és Microsoft Entra ID (Azure AD) összekapcsolásával Power Automate és REST webhookok segítségével.",
-    exp_ontinue_b6: "<strong>Adatintegráció &amp; Middleware:</strong> Magas megbízhatóságú adatszinkronizációs és ETL folyamatok üzemeltetése és optimalizálása Cloudomation (Python) és Jitterbit rendszereken keresztül a vállalati adattárházak felé.",
+    exp_ontinue_b6: "<strong>Adatintegráció &amp; Middleware:</strong> Együttműködés integrációs mérnökökkel a ServiceNow, a köztes réteg (Cloudomation, Jitterbit) és a vállalati adattárházak közötti kétirányú adatáramlások és ETL-szinkronizációk kialakításában és karbantartásában.",
 
     exp_open_period: "2022-05 &mdash; 2023-02",
     exp_open_role: "ServiceNow Architekt – Üzleti Alkalmazások · Open Systems",
     exp_open_loc: "Bécs (Hibrid)",
-    exp_open_b1: "<strong>Greenfield Architektúra:</strong> A központi ServiceNow környezet alapoktól történő felépítése 6 példányon keresztül; megerősített biztonsági kontrollok, szerepkör-hierarchiák, jogosultságkezelési koncepciók (RBAC) és Update Set deployment folyamatok kialakítása.",
-    exp_open_b2: "<strong>Vállalati Kiválás (Corporate Spin-off) Lebonyolítása:</strong> A platform szétválasztásának, címtár-szinkronizációjának és relációs adatmigrációinak vezetése az Ontinue-ba történő operatív kiváláshoz, éles üzemi leállás nélkül.",
+    exp_open_b1: "<strong>Többpéldányos Kiépítés:</strong> Egy 6 példányos ServiceNow környezet konfigurálása és előkészítése a kiválás során: Azure SSO, alapvető csoport- és jogosultsági (RBAC) alapbeállítások, valamint Update Set folyamatok kialakítása, az éles és sub-prod IT Service Desk példányok közvetlen architekturális tulajdonlásával.",
+    exp_open_b2: "<strong>Corporate Spin-Off Megvalósítás:</strong> Együttműködés a műszaki vezetéssel az Ontinue Open Systems-ből történő kiválása során a platform szétválasztásában, közvetlenül megtervezve és végrehajtva a ServiceNow környezet technikai leválasztását és adatmigrációját.",
     exp_open_b3: "<strong>Példány-governance &amp; Átadás:</strong> Standardizált klónozási runbookok és release-gate-ek kidolgozása, valamint a szakági példányok strukturált operatív átadása külső partnereknek.",
 
     exp_tri_period: "2018-08 &mdash; 2022-04",
